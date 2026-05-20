@@ -19,10 +19,28 @@
     </div>
   </header>
 
+  <!-- Navn-modal -->
+  <div id="navnModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-2xl shadow p-8 w-full max-w-sm">
+      <h2 class="text-2xl font-bold mb-4">Hva heter du?</h2>
+      <input id="brukerNavn" type="text" placeholder="Skriv ditt navn" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-600">
+      <button id="startSpillBtn" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
+        Start spill
+      </button>
+    </div>
+  </div>
+
   <main class="max-w-7xl mx-auto p-4 sm:p-6 flex-grow w-full">
-    <!-- Spillmodus velger -->
-    <div class="bg-white rounded-2xl shadow p-4 sm:p-6 mb-6">
-      <h2 class="text-xl font-semibold mb-4">Velg spillmodus</h2>
+    <!-- Ingenting å spille på -->
+    <div id="ingenBaner" class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 text-center">
+      <p class="text-yellow-800 font-semibold mb-2">Ingen baner lagt inn ennå</p>
+      <p class="text-yellow-700 mb-4">En admin må først legge til baner i systemet.</p>
+      <a href="admin-baner.html" class="inline-block px-4 py-2 bg-yellow-600 text-white rounded-full hover:bg-yellow-700 transition">Gå til admin</a>
+    </div>
+
+    <!-- Modus-velger -->
+    <div id="modusSkjerm" class="hidden bg-white rounded-2xl shadow p-6 mb-6">
+      <h2 class="text-2xl font-bold mb-4">Velg spillmodus</h2>
       <div id="modusContainer" class="flex flex-wrap gap-2">
         <!-- Fylt dynamisk av JavaScript -->
       </div>
@@ -30,30 +48,40 @@
 
     <!-- Spill-område -->
     <div id="spillContainer" class="hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Kart -->
-        <div class="lg:col-span-2">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <!-- Kart (venstre - 3 kolonner) -->
+        <div class="lg:col-span-3">
           <div class="bg-white rounded-2xl shadow overflow-hidden">
             <div id="map" style="height: 500px;"></div>
             <div class="p-4 text-center text-sm text-gray-600">
               <p>Klikk på kartet der du tror <strong id="baneNavn"></strong> ligger</p>
             </div>
           </div>
+
+          <!-- Feedback område -->
+          <div id="feedback" class="hidden mt-6 bg-white rounded-2xl shadow p-6 text-center">
+            <p id="feedbackTekst" class="text-lg font-semibold mb-2"></p>
+            <p id="feedbackDistanse" class="text-gray-600"></p>
+          </div>
         </div>
 
-        <!-- Info panel -->
-        <div class="bg-white rounded-2xl shadow p-6 flex flex-col">
-          <div class="mb-6">
-            <h3 class="text-sm font-semibold text-gray-500 uppercase mb-2">Nåværende bane</h3>
-            <p id="infoBaneNavn" class="text-2xl font-bold mb-2">-</p>
-            <p id="infoLag" class="text-gray-600 text-sm">Lag: -</p>
+        <!-- Info panel + Leaderboard (høyre - 1 kolonne) -->
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col h-fit">
+          <!-- Bruker info -->
+          <div class="mb-6 pb-6 border-b">
+            <p class="text-xs font-semibold text-gray-500 uppercase mb-1">Spiller</p>
+            <p id="spillerNavn" class="text-xl font-bold">-</p>
+            <button id="byttNavn" class="text-xs text-blue-600 hover:underline mt-2">Bytt navn</button>
           </div>
 
-          <div class="mb-6 p-3 bg-blue-50 rounded-lg">
-            <p class="text-xs text-gray-600 mb-1">Poeng denne runden</p>
-            <p id="rundePoeng" class="text-3xl font-bold text-blue-600">-</p>
+          <!-- Nåværende bane -->
+          <div class="mb-6 p-3 bg-green-50 rounded-lg">
+            <p class="text-xs text-gray-600 mb-1">Nåværende bane</p>
+            <p id="infoBaneNavn" class="text-lg font-bold">-</p>
+            <p id="infoLag" class="text-xs text-gray-600">Lag: -</p>
           </div>
 
+          <!-- Timer -->
           <div class="mb-6">
             <p class="text-xs text-gray-600 mb-2">Tid igjen</p>
             <div class="w-full bg-gray-200 rounded-full h-3">
@@ -62,32 +90,35 @@
             <p id="timerTekst" class="text-2xl font-bold mt-2 text-center">30s</p>
           </div>
 
-          <div class="mb-6">
-            <p class="text-xs text-gray-600 mb-2">Totalpoeng</p>
-            <p id="totalPoeng" class="text-3xl font-bold text-green-600">0</p>
+          <!-- Poeng denne runden -->
+          <div class="mb-6 p-3 bg-blue-50 rounded-lg">
+            <p class="text-xs text-gray-600 mb-1">Poeng denne runden</p>
+            <p id="rundePoeng" class="text-3xl font-bold text-blue-600">-</p>
           </div>
 
-          <button id="startKnapp" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
-            Start spill
+          <!-- Totalpoeng -->
+          <div class="mb-6 p-3 bg-amber-50 rounded-lg">
+            <p class="text-xs text-gray-600 mb-1">Totalpoeng</p>
+            <p id="totalPoeng" class="text-3xl font-bold text-amber-600">0</p>
+          </div>
+
+          <!-- Knapper -->
+          <button id="startKnapp" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition mb-2">
+            Start runde
           </button>
-          <button id="nesteKnapp" class="hidden w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition mt-2">
+          <button id="nesteKnapp" class="hidden w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition">
             Neste runde
           </button>
+
+          <!-- Leaderboard -->
+          <div class="mt-6 pt-6 border-t">
+            <h3 class="font-bold text-lg mb-4">🏆 Top 10</h3>
+            <div id="leaderboard" class="space-y-2 text-sm">
+              <p class="text-gray-500">Ingen scores ennå</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Feedback område -->
-      <div id="feedback" class="hidden mt-6 bg-white rounded-2xl shadow p-6 text-center">
-        <p id="feedbackTekst" class="text-lg font-semibold mb-2"></p>
-        <p id="feedbackDistanse" class="text-gray-600"></p>
-      </div>
-    </div>
-
-    <!-- Ingen baner melding -->
-    <div id="ingenBaner" class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 text-center">
-      <p class="text-yellow-800 font-semibold mb-2">Ingen baner lagt inn ennå</p>
-      <p class="text-yellow-700 mb-4">En admin må først legge til baner i systemet.</p>
-      <a href="admin-baner.html" class="inline-block px-4 py-2 bg-yellow-600 text-white rounded-full hover:bg-yellow-700 transition">Gå til admin</a>
     </div>
   </main>
 
@@ -96,21 +127,35 @@
   </footer>
 
   <script>
-    // ===== KART-OPPSETT =====
-    let map;
-    let markerKlikk;
+    // ===== SCORE DATA =====
+    class ScoreData {
+      static getScores() {
+        return JSON.parse(localStorage.getItem('scores') || '[]');
+      }
 
-    function initKart() {
-      map = L.map('map').setView([60.5, 10.5], 5);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap',
-        maxZoom: 13
-      }).addTo(map);
+      static setScores(scores) {
+        localStorage.setItem('scores', JSON.stringify(scores));
+      }
 
-      map.on('click', handleKartKlikk);
+      static leggTilScore(navn, poeng, modus) {
+        const scores = this.getScores();
+        scores.push({
+          id: Date.now(),
+          navn,
+          poeng,
+          modus,
+          dato: new Date().toISOString()
+        });
+        this.setScores(scores);
+      }
+
+      static getTopScores(limit = 10) {
+        const scores = this.getScores();
+        return scores.sort((a, b) => b.poeng - a.poeng).slice(0, limit);
+      }
     }
 
-    // ===== DATA MANAGEMENT =====
+    // ===== BANE DATA =====
     class BaneData {
       static getBaner() {
         return JSON.parse(localStorage.getItem('baner') || '[]');
@@ -130,11 +175,33 @@
       }
     }
 
+    // ===== KART-OPPSETT =====
+    let map;
+    let markerKlikk;
+    let allMarkere = [];
+
+    function initKart() {
+      map = L.map('map').setView([60.5, 10.5], 5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap',
+        maxZoom: 13
+      }).addTo(map);
+
+      map.on('click', handleKartKlikk);
+    }
+
+    function clearKart() {
+      allMarkere.forEach(m => m.remove());
+      allMarkere = [];
+      if (markerKlikk) markerKlikk.remove();
+      markerKlikk = null;
+    }
+
     // ===== SPILL-LOGIKK =====
     let spillState = {
+      spillerNavn: null,
       aktivModus: null,
       gjeldendeBane: null,
-      gjeldendePunkter: null,
       totalPoeng: 0,
       timerSekunder: 30,
       timerInterval: null,
@@ -148,12 +215,13 @@
 
       if (tags.length === 0) {
         document.getElementById('ingenBaner').classList.remove('hidden');
+        document.getElementById('modusSkjerm').classList.add('hidden');
         document.getElementById('spillContainer').classList.add('hidden');
         return;
       }
 
       document.getElementById('ingenBaner').classList.add('hidden');
-      document.getElementById('spillContainer').classList.remove('hidden');
+      document.getElementById('modusSkjerm').classList.remove('hidden');
 
       tags.forEach(tag => {
         const btn = document.createElement('button');
@@ -167,6 +235,8 @@
     function startModus(tag) {
       spillState.aktivModus = tag;
       spillState.totalPoeng = 0;
+      document.getElementById('spillContainer').classList.remove('hidden');
+      document.getElementById('modusSkjerm').classList.add('hidden');
       document.getElementById('totalPoeng').textContent = '0';
       startNyRunde();
     }
@@ -178,7 +248,7 @@
       spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
       spillState.timerSekunder = 30;
       spillState.runnePunktBeregnet = false;
-      markerKlikk?.remove();
+      clearKart();
 
       document.getElementById('baneNavn').textContent = spillState.gjeldendeBane.navn;
       document.getElementById('infoBaneNavn').textContent = spillState.gjeldendeBane.navn;
@@ -195,7 +265,7 @@
       if (spillState.timerInterval) clearInterval(spillState.timerInterval);
 
       spillState.timerInterval = setInterval(() => {
-        spillState.timerSekunder--;
+        spillState.timerSekunder -= 0.1;
         updateTimer();
 
         if (spillState.timerSekunder <= 0) {
@@ -208,7 +278,7 @@
     function updateTimer() {
       const prosent = (spillState.timerSekunder / 30) * 100;
       document.getElementById('timerBar').style.width = prosent + '%';
-      document.getElementById('timerTekst').textContent = (spillState.timerSekunder / 10).toFixed(1) + 's';
+      document.getElementById('timerTekst').textContent = Math.max(0, spillState.timerSekunder).toFixed(1) + 's';
     }
 
     function handleKartKlikk(e) {
@@ -229,9 +299,10 @@
         opacity: 1,
         fillOpacity: 0.7
       }).addTo(map);
+      allMarkere.push(markerKlikk);
 
       // Vis riktig posisjon
-      L.circleMarker([riktigPos.lat, riktigPos.lng], {
+      const correctMarker = L.circleMarker([riktigPos.lat, riktigPos.lng], {
         radius: 8,
         fillColor: '#22c55e',
         color: '#16a34a',
@@ -239,9 +310,11 @@
         opacity: 1,
         fillOpacity: 0.7
       }).addTo(map).bindPopup(spillState.gjeldendeBane.navn);
+      allMarkere.push(correctMarker);
 
       // Tegn linje mellom
-      L.polyline([klikketPos, riktigPos], { color: '#ef4444', weight: 2, opacity: 0.7 }).addTo(map);
+      const line = L.polyline([klikketPos, riktigPos], { color: '#ef4444', weight: 2, opacity: 0.7 }).addTo(map);
+      allMarkere.push(line);
 
       // Beregn avstand
       const avstand = klikketPos.distanceTo(riktigPos) / 1000; // i km
@@ -282,12 +355,11 @@
       if (avstandKm < 20) return 70;
       if (avstandKm < 50) return 40;
       if (avstandKm < 100) return 10;
-      return Math.max(0, -10); // minuspoeng for grov bom
+      return Math.max(0, -10);
     }
 
     function sluttRunde() {
       if (!spillState.runnePunktBeregnet) {
-        // Tidsavslått uten å klikke
         document.getElementById('rundePoeng').textContent = '0';
         document.getElementById('feedback').classList.remove('hidden');
         document.getElementById('feedbackTekst').textContent = '⏰ Tid ute!';
@@ -297,7 +369,47 @@
       document.getElementById('nesteKnapp').classList.remove('hidden');
     }
 
+    function oppdaterLeaderboard() {
+      const topScores = ScoreData.getTopScores();
+      const lb = document.getElementById('leaderboard');
+
+      if (topScores.length === 0) {
+        lb.innerHTML = '<p class="text-gray-500">Ingen scores ennå</p>';
+        return;
+      }
+
+      lb.innerHTML = topScores.map((score, idx) => `
+        <div class="flex justify-between items-center p-2 ${idx % 2 === 0 ? 'bg-gray-50' : ''}">
+          <span class="font-semibold">${idx + 1}. ${score.navn}</span>
+          <span class="text-blue-600 font-bold">${score.poeng}</span>
+        </div>
+      `).join('');
+    }
+
+    function sluttSpill() {
+      ScoreData.leggTilScore(spillState.spillerNavn, spillState.totalPoeng, spillState.aktivModus);
+      oppdaterLeaderboard();
+    }
+
+    function settNavnOgStart() {
+      const navn = document.getElementById('brukerNavn').value.trim();
+      if (!navn) {
+        alert('Skriv inn ditt navn');
+        return;
+      }
+
+      spillState.spillerNavn = navn;
+      document.getElementById('spillerNavn').textContent = navn;
+      document.getElementById('navnModal').classList.add('hidden');
+      visModus();
+    }
+
     // ===== EVENT LISTENERS =====
+    document.getElementById('startSpillBtn').addEventListener('click', settNavnOgStart);
+    document.getElementById('brukerNavn').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') settNavnOgStart();
+    });
+
     document.getElementById('startKnapp').addEventListener('click', () => {
       if (!spillState.aktivModus) {
         alert('Velg en modus først!');
@@ -306,12 +418,21 @@
       startNyRunde();
     });
 
-    document.getElementById('nesteKnapp').addEventListener('click', startNyRunde);
+    document.getElementById('nesteKnapp').addEventListener('click', () => {
+      sluttSpill();
+      startNyRunde();
+    });
+
+    document.getElementById('byttNavn').addEventListener('click', () => {
+      document.getElementById('navnModal').classList.remove('hidden');
+      document.getElementById('brukerNavn').value = spillState.spillerNavn;
+      document.getElementById('brukerNavn').focus();
+    });
 
     // ===== INIT =====
     window.addEventListener('load', () => {
       initKart();
-      visModus();
+      oppdaterLeaderboard();
     });
   </script>
 </body>
