@@ -103,7 +103,7 @@
 
           <!-- Knapper -->
           <button id="startKnapp" class="w-full px-3 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition text-sm">
-            Start runde
+            Spill igjen (30s)
           </button>
           <button id="nesteKnapp" class="hidden w-full px-3 py-2 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition text-sm">
             Neste runde
@@ -199,6 +199,16 @@
       map.on('click', handleKartKlikk);
     }
 
+    function ensureKartReady() {
+      if (!map) {
+        initKart();
+      }
+      setTimeout(() => {
+        map.invalidateSize();
+        map.fitBounds(NORGE_GRENSE);
+      }, 50);
+    }
+
     function clearKart() {
       allMarkere.forEach(m => m.remove());
       allMarkere = [];
@@ -214,7 +224,9 @@
       totalPoeng: 0,
       timerSekunder: 30,
       timerInterval: null,
-      runnePunktBeregnet: false
+      runnePunktBeregnet: false,
+      spilletAktivt: false,
+      antallGjettet: 0
     };
 
     function visModus() {
@@ -249,21 +261,25 @@
 
     function startModus(tag) {
       spillState.aktivModus = tag;
-      spillState.totalPoeng = 0;
       document.getElementById('spillContainer').classList.remove('hidden');
       document.getElementById('modusSkjerm').classList.add('hidden');
-      document.getElementById('totalPoeng').textContent = '0';
-      startNyRunde();
+      ensureKartReady();
+      startSpillokt();
     }
 
-    function startNyRunde() {
+    function finnAktiveBaner() {
+      return spillState.aktivModus === 'ALLE'
+        ? BaneData.getBaner()
+        : BaneData.getBanerByTag(spillState.aktivModus);
+    }
+
+    function velgNyBane() {
       const baner = spillState.aktivModus === 'ALLE'
         ? BaneData.getBaner()
         : BaneData.getBanerByTag(spillState.aktivModus);
       if (baner.length === 0) return;
 
       spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
-      spillState.timerSekunder = 30;
       spillState.runnePunktBeregnet = false;
       clearKart();
 
@@ -273,8 +289,28 @@
       document.getElementById('rundePoeng').textContent = '-';
       document.getElementById('feedback').classList.add('hidden');
       document.getElementById('nesteKnapp').classList.add('hidden');
-      document.getElementById('startKnapp').classList.add('hidden');
+      return true;
+    }
 
+    function startSpillokt() {
+      const baner = finnAktiveBaner();
+      if (baner.length === 0) {
+        alert('Ingen baner i denne modusen ennå.');
+        document.getElementById('modusSkjerm').classList.remove('hidden');
+        document.getElementById('spillContainer').classList.add('hidden');
+        return;
+      }
+
+      spillState.totalPoeng = 0;
+      spillState.antallGjettet = 0;
+      spillState.timerSekunder = 30;
+      spillState.spilletAktivt = true;
+
+      document.getElementById('totalPoeng').textContent = '0';
+      document.getElementById('startKnapp').classList.add('hidden');
+      document.getElementById('nesteKnapp').classList.add('hidden');
+      updateTimer();
+      velgNyBane();
       startTimer();
     }
 
@@ -282,12 +318,16 @@
       if (spillState.timerInterval) clearInterval(spillState.timerInterval);
 
       spillState.timerInterval = setInterval(() => {
+        if (!spillState.spilletAktivt) {
+          clearInterval(spillState.timerInterval);
+          return;
+        }
         spillState.timerSekunder -= 0.1;
         updateTimer();
 
         if (spillState.timerSekunder <= 0) {
           clearInterval(spillState.timerInterval);
-          sluttRunde();
+          sluttSpillokt();
         }
       }, 100);
     }
@@ -299,10 +339,10 @@
     }
 
     function handleKartKlikk(e) {
-      if (spillState.runnePunktBeregnet || !spillState.gjeldendeBane) return;
+      if (!spillState.spilletAktivt || spillState.runnePunktBeregnet || !spillState.gjeldendeBane) return;
 
       spillState.runnePunktBeregnet = true;
-      clearInterval(spillState.timerInterval);
+      spillState.antallGjettet += 1;
 
       const klikketPos = e.latlng;
       const riktigPos = L.latLng(spillState.gjeldendeBane.lat, spillState.gjeldendeBane.lng);
@@ -363,7 +403,12 @@
       feedbackDistanse.textContent = `Distanse: ${avstand.toFixed(1)} km | Poeng: ${poeng}`;
       feedback.classList.remove('hidden');
 
-      document.getElementById('nesteKnapp').classList.remove('hidden');
+      // Ny bane umiddelbart etter kort feedback, så lenge tiden ikke er ute.
+      setTimeout(() => {
+        if (spillState.spilletAktivt && spillState.timerSekunder > 0) {
+          velgNyBane();
+        }
+      }, 350);
     }
 
     function beregnPoeng(avstandKm) {
@@ -375,15 +420,20 @@
       return Math.max(0, -10);
     }
 
-    function sluttRunde() {
-      if (!spillState.runnePunktBeregnet) {
-        document.getElementById('rundePoeng').textContent = '0';
-        document.getElementById('feedback').classList.remove('hidden');
-        document.getElementById('feedbackTekst').textContent = '⏰ Tid ute!';
-        document.getElementById('feedbackTekst').className = 'text-lg font-semibold text-red-600 mb-2';
-        document.getElementById('feedbackDistanse').textContent = 'Du rakk ikke å klikke i tide';
+    function sluttSpillokt() {
+      spillState.spilletAktivt = false;
+      spillState.runnePunktBeregnet = true;
+
+      document.getElementById('feedback').classList.remove('hidden');
+      document.getElementById('feedbackTekst').textContent = '⏰ Tiden er ute!';
+      document.getElementById('feedbackTekst').className = 'text-lg font-semibold text-red-600 mb-2';
+      document.getElementById('feedbackDistanse').textContent = `Du rakk ${spillState.antallGjettet} gjetninger | Sluttpoeng: ${spillState.totalPoeng}`;
+      document.getElementById('startKnapp').classList.remove('hidden');
+
+      if (spillState.spillerNavn) {
+        ScoreData.leggTilScore(spillState.spillerNavn, spillState.totalPoeng, spillState.aktivModus);
+        oppdaterLeaderboard();
       }
-      document.getElementById('nesteKnapp').classList.remove('hidden');
     }
 
     function oppdaterLeaderboard() {
@@ -403,11 +453,6 @@
       `).join('');
     }
 
-    function sluttSpill() {
-      ScoreData.leggTilScore(spillState.spillerNavn, spillState.totalPoeng, spillState.aktivModus);
-      oppdaterLeaderboard();
-    }
-
     function settNavnOgStart() {
       const navn = document.getElementById('brukerNavn').value.trim();
       if (!navn) {
@@ -419,6 +464,7 @@
       document.getElementById('spillerNavn').textContent = navn;
       document.getElementById('navnModal').classList.add('hidden');
       visModus();
+      ensureKartReady();
     }
 
     // ===== EVENT LISTENERS =====
@@ -432,12 +478,11 @@
         alert('Velg en modus først!');
         return;
       }
-      startNyRunde();
+      startSpillokt();
     });
 
     document.getElementById('nesteKnapp').addEventListener('click', () => {
-      sluttSpill();
-      startNyRunde();
+      startSpillokt();
     });
 
     document.getElementById('byttNavn').addEventListener('click', () => {
@@ -448,8 +493,13 @@
 
     // ===== INIT =====
     window.addEventListener('load', () => {
-      initKart();
       oppdaterLeaderboard();
+    });
+
+    window.addEventListener('resize', () => {
+      if (map) {
+        map.invalidateSize();
+      }
     });
   </script>
 </body>
