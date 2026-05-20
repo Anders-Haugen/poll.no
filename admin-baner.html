@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Baner | Pøll.no</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+  <header class="bg-white shadow p-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Admin - Baner</h1>
+      <div class="flex gap-2">
+        <button id="logoutBtn" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition hidden">Logg ut</button>
+        <a href="skytebanespill.html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Til spillet</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login skjerm -->
+  <div id="loginSkjerm" class="flex-grow flex items-center justify-center p-6">
+    <div class="bg-white rounded-2xl shadow p-8 w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6">Admin Login</h2>
+      <div class="mb-4">
+        <label class="block text-sm font-semibold mb-2">Passord</label>
+        <input id="passordInput" type="password" placeholder="Skriv passord" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600">
+      </div>
+      <button id="loginBtn" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
+        Logg inn
+      </button>
+      <p class="text-xs text-gray-500 mt-4 text-center">Hint: Sjekk settings for passord</p>
+    </div>
+  </div>
+
+  <!-- Admin panel -->
+  <main id="adminPanel" class="hidden max-w-6xl mx-auto p-6 w-full flex-grow">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <!-- Legg til ny bane -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow p-6">
+        <h2 class="text-2xl font-bold mb-6">Legg til ny bane</h2>
+        <form id="baneForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1">Banenavn</label>
+            <input id="navn" type="text" placeholder="f.eks. Herre-NM Gål" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-1">Skytterlag</label>
+            <input id="lag" type="text" placeholder="f.eks. Lillesand Skytelag" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Breddegrad</label>
+              <input id="lat" type="number" step="0.0001" placeholder="f.eks. 58.5" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">Lengdegrad</label>
+              <input id="lng" type="number" step="0.0001" placeholder="f.eks. 8.5" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2">Tags (kommaseparert)</label>
+            <input id="tags" type="text" placeholder="f.eks. LS-bane, 300m, sommerkamp" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+            <p class="text-xs text-gray-500 mt-1">Eksempler: LS-bane, 300m, 25m, luftgevær, etc.</p>
+          </div>
+
+          <button type="submit" class="w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition">
+            Legg til bane
+          </button>
+        </form>
+      </div>
+
+      <!-- Statistikk -->
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-xl font-bold mb-4">Statistikk</h3>
+        <div class="space-y-3">
+          <div>
+            <p class="text-sm text-gray-600">Totalt antall baner</p>
+            <p id="totaltBaner" class="text-3xl font-bold text-blue-600">0</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Unike tags</p>
+            <p id="unikkeTags" class="text-3xl font-bold text-green-600">0</p>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-6 border-t">
+          <button id="eksportBtn" class="w-full px-4 py-2 bg-gray-600 text-white rounded-full text-sm font-semibold hover:bg-gray-700 transition mb-2">
+            Eksporter data
+          </button>
+          <button id="importBtn" class="w-full px-4 py-2 bg-gray-600 text-white rounded-full text-sm font-semibold hover:bg-gray-700 transition">
+            Importer data
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Baner liste -->
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-bold mb-4">Eksisterende baner</h2>
+      <div id="banerListe" class="space-y-3">
+        <!-- Fylt av JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white shadow mt-12 p-6 text-center text-sm">
+    <p class="text-gray-500">&copy; 2026 Pøll.no | Admin Panel</p>
+  </footer>
+
+  <script>
+    const PASSORD = 'admin1234'; // Bytt til en sikker passord!
+
+    // ===== LOGIN SYSTEM =====
+    function erLoggetInn() {
+      return sessionStorage.getItem('adminLoggedIn') === 'true';
+    }
+
+    function loggInn() {
+      const passord = document.getElementById('passordInput').value;
+      if (passord === PASSORD) {
+        sessionStorage.setItem('adminLoggedIn', 'true');
+        visPanelet();
+      } else {
+        alert('Feil passord');
+        document.getElementById('passordInput').value = '';
+      }
+    }
+
+    function loggUt() {
+      sessionStorage.removeItem('adminLoggedIn');
+      document.getElementById('passordInput').value = '';
+      visPanelet();
+    }
+
+    function visPanelet() {
+      const loggetInn = erLoggetInn();
+      document.getElementById('loginSkjerm').classList.toggle('hidden', loggetInn);
+      document.getElementById('adminPanel').classList.toggle('hidden', !loggetInn);
+      document.getElementById('logoutBtn').classList.toggle('hidden', !loggetInn);
+
+      if (loggetInn) {
+        oppdaterBaneListe();
+        oppdaterStatistikk();
+      }
+    }
+
+    // ===== DATA MANAGEMENT =====
+    class BaneData {
+      static getBaner() {
+        return JSON.parse(localStorage.getItem('baner') || '[]');
+      }
+
+      static setBaner(baner) {
+        localStorage.setItem('baner', JSON.stringify(baner));
+      }
+
+      static leggTilBane(bane) {
+        const baner = this.getBaner();
+        bane.id = Date.now();
+        baner.push(bane);
+        this.setBaner(baner);
+        return bane;
+      }
+
+      static slettBane(id) {
+        let baner = this.getBaner();
+        baner = baner.filter(b => b.id !== id);
+        this.setBaner(baner);
+      }
+
+      static getTags() {
+        const baner = this.getBaner();
+        const tags = new Set();
+        baner.forEach(b => {
+          b.tags.forEach(t => tags.add(t.trim()));
+        });
+        return Array.from(tags).sort();
+      }
+    }
+
+    // ===== FORM HANDLING =====
+    document.getElementById('baneForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const navn = document.getElementById('navn').value;
+      const lag = document.getElementById('lag').value;
+      const lat = parseFloat(document.getElementById('lat').value);
+      const lng = parseFloat(document.getElementById('lng').value);
+      const tagsString = document.getElementById('tags').value;
+      const tags = tagsString.split(',').map(t => t.trim()).filter(t => t);
+
+      if (!navn || !lag || !lat || !lng || tags.length === 0) {
+        alert('Fyll ut alle felt');
+        return;
+      }
+
+      if (lat < 57 || lat > 71 || lng < 4 || lng > 31) {
+        alert('Koordinater er utenfor Norge');
+        return;
+      }
+
+      const bane = { navn, lag, lat, lng, tags };
+      BaneData.leggTilBane(bane);
+
+      alert('Bane lagt til!');
+      document.getElementById('baneForm').reset();
+      oppdaterBaneListe();
+      oppdaterStatistikk();
+    });
+
+    // ===== LISTE OPPDATERING =====
+    function oppdaterBaneListe() {
+      const baner = BaneData.getBaner();
+      const liste = document.getElementById('banerListe');
+
+      if (baner.length === 0) {
+        liste.innerHTML = '<p class="text-gray-500">Ingen baner lagt inn ennå</p>';
+        return;
+      }
+
+      liste.innerHTML = baner.map(bane => `
+        <div class="border border-gray-200 rounded-lg p-4 bg-gray-50 flex justify-between items-start">
+          <div class="flex-grow">
+            <h3 class="font-bold text-lg">${bane.navn}</h3>
+            <p class="text-sm text-gray-600">Lag: ${bane.lag}</p>
+            <p class="text-sm text-gray-600">Koordinater: ${bane.lat.toFixed(4)}, ${bane.lng.toFixed(4)}</p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              ${bane.tags.map(tag => `<span class="inline-block px-2 py-1 bg-blue-200 text-blue-800 text-xs rounded">${tag}</span>`).join('')}
+            </div>
+          </div>
+          <button onclick="slettBane(${bane.id})" class="ml-4 px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700 transition">
+            Slett
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function slettBane(id) {
+      if (confirm('Sikker på at du vil slette denne banen?')) {
+        BaneData.slettBane(id);
+        oppdaterBaneListe();
+        oppdaterStatistikk();
+      }
+    }
+
+    function oppdaterStatistikk() {
+      const baner = BaneData.getBaner();
+      const tags = BaneData.getTags();
+
+      document.getElementById('totaltBaner').textContent = baner.length;
+      document.getElementById('unikkeTags').textContent = tags.length;
+    }
+
+    // ===== EKSPORT/IMPORT =====
+    document.getElementById('eksportBtn').addEventListener('click', () => {
+      const baner = BaneData.getBaner();
+      const data = JSON.stringify(baner, null, 2);
+      const blob = new Blob([data], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'baner-' + new Date().toISOString().split('T')[0] + '.json';
+      a.click();
+    });
+
+    document.getElementById('importBtn').addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const baner = JSON.parse(event.target.result);
+            BaneData.setBaner(baner);
+            alert('Data importert!');
+            oppdaterBaneListe();
+            oppdaterStatistikk();
+          } catch (err) {
+            alert('Feil ved import: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    });
+
+    // ===== EVENT LISTENERS =====
+    document.getElementById('loginBtn').addEventListener('click', loggInn);
+    document.getElementById('logoutBtn').addEventListener('click', loggUt);
+    document.getElementById('passordInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') loggInn();
+    });
+
+    // ===== INIT =====
+    window.addEventListener('load', visPanelet);
+
+    // Legg til demo-data første gang (fjern dette senere)
+    if (BaneData.getBaner().length === 0 && localStorage.getItem('demoDataAdded') !== 'true') {
+      BaneData.leggTilBane({
+        navn: 'Herre-NM Gål 300m',
+        lag: 'Lillesand Skytelag',
+        lat: 58.5534,
+        lng: 8.4229,
+        tags: ['300m', 'LS-bane', 'NM', 'sommerkamp']
+      });
+      BaneData.leggTilBane({
+        navn: 'Dame-NM 25m',
+        lag: 'Risør Skytelag',
+        lat: 58.7236,
+        lng: 9.2336,
+        tags: ['25m', 'NM', 'sommerkamp']
+      });
+      BaneData.leggTilBane({
+        navn: 'Luftgevær 10m',
+        lag: 'Tvedestrand Skytelag',
+        lat: 58.6589,
+        lng: 9.0178,
+        tags: ['luftgevær', '10m', 'ungdom']
+      });
+      localStorage.setItem('demoDataAdded', 'true');
+    }
+  </script>
+</body>
+</html>

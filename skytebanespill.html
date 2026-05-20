@@ -3,31 +3,316 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skytebanespill | Haugen's 3D-dingser</title>
+  <title>Skytebanespill | Pøll.no</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
-  <header class="bg-white shadow p-6">
-    <div class="max-w-6xl mx-auto flex justify-between items-center gap-3">
+  <header class="bg-white shadow p-4 sm:p-6">
+    <div class="max-w-full mx-auto flex justify-between items-center gap-3 flex-wrap">
       <h1 class="text-2xl sm:text-3xl font-bold">Skytebanespill</h1>
-      <a href="index.html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Tilbake til forsiden</a>
+      <div class="flex gap-2">
+        <a href="admin-baner.html" class="px-3 sm:px-4 py-2 bg-gray-600 text-white text-sm rounded-full hover:bg-gray-700 transition">Admin</a>
+        <a href="index.html" class="px-3 sm:px-4 py-2 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 transition">Hjem</a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6 flex-grow w-full">
-    <section class="bg-white rounded-2xl shadow p-6">
-      <h2 class="text-xl sm:text-2xl font-semibold mb-3">Egen underside for spillet</h2>
-      <p class="text-gray-600 mb-6">Her kan du legge inn skytebanespillet ditt. Siden er klar med egen URL og kan bygges ut med canvas, JavaScript og poengsystem.</p>
-
-      <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 sm:p-10 text-center">
-        <p class="text-lg font-medium mb-2">Skytebanespillet kommer her</p>
-        <p class="text-sm text-gray-500">Tips: legg spillkoden i en egen JS-fil og last den inn på denne siden.</p>
+  <main class="max-w-7xl mx-auto p-4 sm:p-6 flex-grow w-full">
+    <!-- Spillmodus velger -->
+    <div class="bg-white rounded-2xl shadow p-4 sm:p-6 mb-6">
+      <h2 class="text-xl font-semibold mb-4">Velg spillmodus</h2>
+      <div id="modusContainer" class="flex flex-wrap gap-2">
+        <!-- Fylt dynamisk av JavaScript -->
       </div>
-    </section>
+    </div>
+
+    <!-- Spill-område -->
+    <div id="spillContainer" class="hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Kart -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-2xl shadow overflow-hidden">
+            <div id="map" style="height: 500px;"></div>
+            <div class="p-4 text-center text-sm text-gray-600">
+              <p>Klikk på kartet der du tror <strong id="baneNavn"></strong> ligger</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info panel -->
+        <div class="bg-white rounded-2xl shadow p-6 flex flex-col">
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase mb-2">Nåværende bane</h3>
+            <p id="infoBaneNavn" class="text-2xl font-bold mb-2">-</p>
+            <p id="infoLag" class="text-gray-600 text-sm">Lag: -</p>
+          </div>
+
+          <div class="mb-6 p-3 bg-blue-50 rounded-lg">
+            <p class="text-xs text-gray-600 mb-1">Poeng denne runden</p>
+            <p id="rundePoeng" class="text-3xl font-bold text-blue-600">-</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-xs text-gray-600 mb-2">Tid igjen</p>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+              <div id="timerBar" class="bg-blue-600 h-3 rounded-full transition-all" style="width: 100%;"></div>
+            </div>
+            <p id="timerTekst" class="text-2xl font-bold mt-2 text-center">30s</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-xs text-gray-600 mb-2">Totalpoeng</p>
+            <p id="totalPoeng" class="text-3xl font-bold text-green-600">0</p>
+          </div>
+
+          <button id="startKnapp" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
+            Start spill
+          </button>
+          <button id="nesteKnapp" class="hidden w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition mt-2">
+            Neste runde
+          </button>
+        </div>
+      </div>
+
+      <!-- Feedback område -->
+      <div id="feedback" class="hidden mt-6 bg-white rounded-2xl shadow p-6 text-center">
+        <p id="feedbackTekst" class="text-lg font-semibold mb-2"></p>
+        <p id="feedbackDistanse" class="text-gray-600"></p>
+      </div>
+    </div>
+
+    <!-- Ingen baner melding -->
+    <div id="ingenBaner" class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 text-center">
+      <p class="text-yellow-800 font-semibold mb-2">Ingen baner lagt inn ennå</p>
+      <p class="text-yellow-700 mb-4">En admin må først legge til baner i systemet.</p>
+      <a href="admin-baner.html" class="inline-block px-4 py-2 bg-yellow-600 text-white rounded-full hover:bg-yellow-700 transition">Gå til admin</a>
+    </div>
   </main>
 
-  <footer class="bg-white shadow mt-12 p-6 text-center">
-    <p class="text-gray-500">&copy; 2026 Haugen's 3D-dingser. Alle rettigheter forbeholdt.</p>
+  <footer class="bg-white shadow mt-12 p-6 text-center text-sm">
+    <p class="text-gray-500">&copy; 2026 Pøll.no | Skytebanespill</p>
   </footer>
+
+  <script>
+    // ===== KART-OPPSETT =====
+    let map;
+    let markerKlikk;
+
+    function initKart() {
+      map = L.map('map').setView([60.5, 10.5], 5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap',
+        maxZoom: 13
+      }).addTo(map);
+
+      map.on('click', handleKartKlikk);
+    }
+
+    // ===== DATA MANAGEMENT =====
+    class BaneData {
+      static getBaner() {
+        return JSON.parse(localStorage.getItem('baner') || '[]');
+      }
+
+      static getTags() {
+        const baner = this.getBaner();
+        const tags = new Set();
+        baner.forEach(b => {
+          b.tags.forEach(t => tags.add(t));
+        });
+        return Array.from(tags).sort();
+      }
+
+      static getBanerByTag(tag) {
+        return this.getBaner().filter(b => b.tags.includes(tag));
+      }
+    }
+
+    // ===== SPILL-LOGIKK =====
+    let spillState = {
+      aktivModus: null,
+      gjeldendeBane: null,
+      gjeldendePunkter: null,
+      totalPoeng: 0,
+      timerSekunder: 30,
+      timerInterval: null,
+      runnePunktBeregnet: false
+    };
+
+    function visModus() {
+      const tags = BaneData.getTags();
+      const container = document.getElementById('modusContainer');
+      container.innerHTML = '';
+
+      if (tags.length === 0) {
+        document.getElementById('ingenBaner').classList.remove('hidden');
+        document.getElementById('spillContainer').classList.add('hidden');
+        return;
+      }
+
+      document.getElementById('ingenBaner').classList.add('hidden');
+      document.getElementById('spillContainer').classList.remove('hidden');
+
+      tags.forEach(tag => {
+        const btn = document.createElement('button');
+        btn.textContent = tag;
+        btn.className = 'px-4 py-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition font-semibold';
+        btn.onclick = () => startModus(tag);
+        container.appendChild(btn);
+      });
+    }
+
+    function startModus(tag) {
+      spillState.aktivModus = tag;
+      spillState.totalPoeng = 0;
+      document.getElementById('totalPoeng').textContent = '0';
+      startNyRunde();
+    }
+
+    function startNyRunde() {
+      const baner = BaneData.getBanerByTag(spillState.aktivModus);
+      if (baner.length === 0) return;
+
+      spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
+      spillState.timerSekunder = 30;
+      spillState.runnePunktBeregnet = false;
+      markerKlikk?.remove();
+
+      document.getElementById('baneNavn').textContent = spillState.gjeldendeBane.navn;
+      document.getElementById('infoBaneNavn').textContent = spillState.gjeldendeBane.navn;
+      document.getElementById('infoLag').textContent = 'Lag: ' + spillState.gjeldendeBane.lag;
+      document.getElementById('rundePoeng').textContent = '-';
+      document.getElementById('feedback').classList.add('hidden');
+      document.getElementById('nesteKnapp').classList.add('hidden');
+      document.getElementById('startKnapp').classList.add('hidden');
+
+      startTimer();
+    }
+
+    function startTimer() {
+      if (spillState.timerInterval) clearInterval(spillState.timerInterval);
+
+      spillState.timerInterval = setInterval(() => {
+        spillState.timerSekunder--;
+        updateTimer();
+
+        if (spillState.timerSekunder <= 0) {
+          clearInterval(spillState.timerInterval);
+          sluttRunde();
+        }
+      }, 100);
+    }
+
+    function updateTimer() {
+      const prosent = (spillState.timerSekunder / 30) * 100;
+      document.getElementById('timerBar').style.width = prosent + '%';
+      document.getElementById('timerTekst').textContent = (spillState.timerSekunder / 10).toFixed(1) + 's';
+    }
+
+    function handleKartKlikk(e) {
+      if (spillState.runnePunktBeregnet || !spillState.gjeldendeBane) return;
+
+      spillState.runnePunktBeregnet = true;
+      clearInterval(spillState.timerInterval);
+
+      const klikketPos = e.latlng;
+      const riktigPos = L.latLng(spillState.gjeldendeBane.lat, spillState.gjeldendeBane.lng);
+
+      // Vis marker hvor de klikket
+      markerKlikk = L.circleMarker([klikketPos.lat, klikketPos.lng], {
+        radius: 8,
+        fillColor: '#3b82f6',
+        color: '#1e40af',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.7
+      }).addTo(map);
+
+      // Vis riktig posisjon
+      L.circleMarker([riktigPos.lat, riktigPos.lng], {
+        radius: 8,
+        fillColor: '#22c55e',
+        color: '#16a34a',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.7
+      }).addTo(map).bindPopup(spillState.gjeldendeBane.navn);
+
+      // Tegn linje mellom
+      L.polyline([klikketPos, riktigPos], { color: '#ef4444', weight: 2, opacity: 0.7 }).addTo(map);
+
+      // Beregn avstand
+      const avstand = klikketPos.distanceTo(riktigPos) / 1000; // i km
+      const poeng = beregnPoeng(avstand);
+
+      spillState.totalPoeng += poeng;
+      document.getElementById('rundePoeng').textContent = poeng;
+      document.getElementById('totalPoeng').textContent = spillState.totalPoeng;
+
+      // Vis feedback
+      const feedback = document.getElementById('feedback');
+      const feedbackTekst = document.getElementById('feedbackTekst');
+      const feedbackDistanse = document.getElementById('feedbackDistanse');
+
+      if (avstand < 10) {
+        feedbackTekst.textContent = '🎯 Eksellent!';
+        feedbackTekst.className = 'text-lg font-semibold text-green-600 mb-2';
+      } else if (avstand < 30) {
+        feedbackTekst.textContent = '✓ Bra!';
+        feedbackTekst.className = 'text-lg font-semibold text-blue-600 mb-2';
+      } else if (avstand < 100) {
+        feedbackTekst.textContent = '~ Ok';
+        feedbackTekst.className = 'text-lg font-semibold text-yellow-600 mb-2';
+      } else {
+        feedbackTekst.textContent = '✗ Grov bom';
+        feedbackTekst.className = 'text-lg font-semibold text-red-600 mb-2';
+      }
+
+      feedbackDistanse.textContent = `Distanse: ${avstand.toFixed(1)} km | Poeng: ${poeng}`;
+      feedback.classList.remove('hidden');
+
+      document.getElementById('nesteKnapp').classList.remove('hidden');
+    }
+
+    function beregnPoeng(avstandKm) {
+      if (avstandKm < 5) return 100;
+      if (avstandKm < 10) return 90;
+      if (avstandKm < 20) return 70;
+      if (avstandKm < 50) return 40;
+      if (avstandKm < 100) return 10;
+      return Math.max(0, -10); // minuspoeng for grov bom
+    }
+
+    function sluttRunde() {
+      if (!spillState.runnePunktBeregnet) {
+        // Tidsavslått uten å klikke
+        document.getElementById('rundePoeng').textContent = '0';
+        document.getElementById('feedback').classList.remove('hidden');
+        document.getElementById('feedbackTekst').textContent = '⏰ Tid ute!';
+        document.getElementById('feedbackTekst').className = 'text-lg font-semibold text-red-600 mb-2';
+        document.getElementById('feedbackDistanse').textContent = 'Du rakk ikke å klikke i tide';
+      }
+      document.getElementById('nesteKnapp').classList.remove('hidden');
+    }
+
+    // ===== EVENT LISTENERS =====
+    document.getElementById('startKnapp').addEventListener('click', () => {
+      if (!spillState.aktivModus) {
+        alert('Velg en modus først!');
+        return;
+      }
+      startNyRunde();
+    });
+
+    document.getElementById('nesteKnapp').addEventListener('click', startNyRunde);
+
+    // ===== INIT =====
+    window.addEventListener('load', () => {
+      initKart();
+      visModus();
+    });
+  </script>
 </body>
 </html>
