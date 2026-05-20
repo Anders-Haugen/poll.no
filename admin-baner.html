@@ -14,7 +14,7 @@
       <h1 class="text-3xl font-bold">Admin - Baner</h1>
       <div class="flex gap-2">
         <button id="logoutBtn" class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition hidden">Logg ut</button>
-        <a href="skytebanespill.html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Til spillet</a>
+        <a href="skytebanespelet.html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Til spelet</a>
       </div>
     </div>
   </header>
@@ -41,6 +41,7 @@
       <div class="lg:col-span-2 bg-white rounded-2xl shadow p-6">
         <h2 class="text-2xl font-bold mb-6">Legg til ny bane</h2>
         <form id="baneForm" class="space-y-4">
+          <input id="redigerId" type="hidden" />
           <div>
             <label class="block text-sm font-semibold mb-1">Banenavn</label>
             <input id="navn" type="text" placeholder="f.eks. Herre-NM Gål" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
@@ -68,9 +69,14 @@
             <p class="text-xs text-gray-500 mt-1">Eksempler: LS-bane, 300m, 25m, luftgevær, etc.</p>
           </div>
 
-          <button type="submit" class="w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition">
-            Legg til bane
-          </button>
+          <div class="flex gap-2">
+            <button id="lagreBaneBtn" type="submit" class="w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition">
+              Legg til bane
+            </button>
+            <button id="avbrytRedigerBtn" type="button" class="hidden px-4 py-3 bg-gray-500 text-white rounded-full font-semibold hover:bg-gray-600 transition">
+              Avbryt
+            </button>
+          </div>
         </form>
       </div>
 
@@ -173,6 +179,12 @@
         this.setBaner(baner);
       }
 
+      static oppdaterBane(oppdatertBane) {
+        const baner = this.getBaner();
+        const nyListe = baner.map(b => (b.id === oppdatertBane.id ? oppdatertBane : b));
+        this.setBaner(nyListe);
+      }
+
       static getTags() {
         const baner = this.getBaner();
         const tags = new Set();
@@ -187,6 +199,7 @@
     document.getElementById('baneForm').addEventListener('submit', (e) => {
       e.preventDefault();
 
+      const redigerId = document.getElementById('redigerId').value;
       const navn = document.getElementById('navn').value;
       const lag = document.getElementById('lag').value;
       const lat = parseFloat(document.getElementById('lat').value);
@@ -205,10 +218,17 @@
       }
 
       const bane = { navn, lag, lat, lng, tags };
-      BaneData.leggTilBane(bane);
 
-      alert('Bane lagt til!');
-      document.getElementById('baneForm').reset();
+      if (redigerId) {
+        bane.id = Number(redigerId);
+        BaneData.oppdaterBane(bane);
+        alert('Bane oppdatert!');
+      } else {
+        BaneData.leggTilBane(bane);
+        alert('Bane lagt til!');
+      }
+
+      resetBaneForm();
       oppdaterBaneListe();
       oppdaterStatistikk();
     });
@@ -233,11 +253,44 @@
               ${bane.tags.map(tag => `<span class="inline-block px-2 py-1 bg-blue-200 text-blue-800 text-xs rounded">${tag}</span>`).join('')}
             </div>
           </div>
-          <button onclick="slettBane(${bane.id})" class="ml-4 px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700 transition">
-            Slett
-          </button>
+          <div class="ml-4 flex gap-2">
+            <button onclick="startRedigerBane(${bane.id})" class="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700 transition">
+              Rediger
+            </button>
+            <button onclick="slettBane(${bane.id})" class="px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700 transition">
+              Slett
+            </button>
+          </div>
         </div>
       `).join('');
+    }
+
+    function startRedigerBane(id) {
+      const bane = BaneData.getBaner().find(b => b.id === id);
+      if (!bane) {
+        return;
+      }
+
+      document.getElementById('redigerId').value = bane.id;
+      document.getElementById('navn').value = bane.navn;
+      document.getElementById('lag').value = bane.lag;
+      document.getElementById('lat').value = bane.lat;
+      document.getElementById('lng').value = bane.lng;
+      document.getElementById('tags').value = bane.tags.join(', ');
+      document.getElementById('lagreBaneBtn').textContent = 'Lagre endringer';
+      document.getElementById('lagreBaneBtn').classList.remove('bg-green-600', 'hover:bg-green-700');
+      document.getElementById('lagreBaneBtn').classList.add('bg-blue-600', 'hover:bg-blue-700');
+      document.getElementById('avbrytRedigerBtn').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetBaneForm() {
+      document.getElementById('baneForm').reset();
+      document.getElementById('redigerId').value = '';
+      document.getElementById('lagreBaneBtn').textContent = 'Legg til bane';
+      document.getElementById('lagreBaneBtn').classList.remove('bg-blue-600', 'hover:bg-blue-700');
+      document.getElementById('lagreBaneBtn').classList.add('bg-green-600', 'hover:bg-green-700');
+      document.getElementById('avbrytRedigerBtn').classList.add('hidden');
     }
 
     function slettBane(id) {
@@ -294,6 +347,7 @@
     // ===== EVENT LISTENERS =====
     document.getElementById('loginBtn').addEventListener('click', loggInn);
     document.getElementById('logoutBtn').addEventListener('click', loggUt);
+    document.getElementById('avbrytRedigerBtn').addEventListener('click', resetBaneForm);
     document.getElementById('passordInput').addEventListener('keypress', (e) => {
       if (e.key === 'Enter') loggInn();
     });

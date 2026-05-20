@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skytebanespill | Pøll.no</title>
+  <title>Skytebanespelet | Pøll.no</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -11,7 +11,7 @@
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
   <header class="bg-white shadow p-4 sm:p-6">
     <div class="max-w-full mx-auto flex justify-between items-center gap-3 flex-wrap">
-      <h1 class="text-2xl sm:text-3xl font-bold">Skytebanespill</h1>
+      <h1 class="text-2xl sm:text-3xl font-bold">Skytebanespelet</h1>
       <div class="flex gap-2">
         <a href="admin-baner.html" class="px-3 sm:px-4 py-2 bg-gray-600 text-white text-sm rounded-full hover:bg-gray-700 transition">Admin</a>
         <a href="index.html" class="px-3 sm:px-4 py-2 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 transition">Hjem</a>
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <main class="max-w-7xl mx-auto p-4 sm:p-6 flex-grow w-full">
+  <main class="max-w-7xl mx-auto p-3 sm:p-4 flex-grow w-full">
     <!-- Ingenting å spille på -->
     <div id="ingenBaner" class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 text-center">
       <p class="text-yellow-800 font-semibold mb-2">Ingen baner lagt inn ennå</p>
@@ -39,8 +39,8 @@
     </div>
 
     <!-- Modus-velger -->
-    <div id="modusSkjerm" class="hidden bg-white rounded-2xl shadow p-6 mb-6">
-      <h2 class="text-2xl font-bold mb-4">Velg spillmodus</h2>
+    <div id="modusSkjerm" class="hidden bg-white rounded-2xl shadow p-4 mb-4">
+      <h2 class="text-xl font-bold mb-3">Velg spillmodus</h2>
       <div id="modusContainer" class="flex flex-wrap gap-2">
         <!-- Fylt dynamisk av JavaScript -->
       </div>
@@ -48,72 +48,71 @@
 
     <!-- Spill-område -->
     <div id="spillContainer" class="hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
         <!-- Kart (venstre - 3 kolonner) -->
         <div class="lg:col-span-3">
           <div class="bg-white rounded-2xl shadow overflow-hidden">
-            <div id="map" style="height: 500px;"></div>
-            <div class="p-4 text-center text-sm text-gray-600">
+            <div id="map" style="height: min(62vh, 560px);"></div>
+            <div class="p-2 text-center text-xs text-gray-600">
               <p>Klikk på kartet der du tror <strong id="baneNavn"></strong> ligger</p>
             </div>
           </div>
 
           <!-- Feedback område -->
-          <div id="feedback" class="hidden mt-6 bg-white rounded-2xl shadow p-6 text-center">
-            <p id="feedbackTekst" class="text-lg font-semibold mb-2"></p>
-            <p id="feedbackDistanse" class="text-gray-600"></p>
+          <div id="feedback" class="hidden mt-3 bg-white rounded-2xl shadow p-3 text-center">
+            <p id="feedbackTekst" class="text-base font-semibold mb-1"></p>
+            <p id="feedbackDistanse" class="text-sm text-gray-600"></p>
           </div>
         </div>
 
         <!-- Info panel + Leaderboard (høyre - 1 kolonne) -->
-        <div class="bg-white rounded-2xl shadow p-6 flex flex-col h-fit">
+        <div class="bg-white rounded-2xl shadow p-3 flex flex-col gap-3 lg:sticky lg:top-3">
           <!-- Bruker info -->
-          <div class="mb-6 pb-6 border-b">
-            <p class="text-xs font-semibold text-gray-500 uppercase mb-1">Spiller</p>
-            <p id="spillerNavn" class="text-xl font-bold">-</p>
+          <div class="pb-2 border-b">
+            <p class="text-[10px] font-semibold text-gray-500 uppercase mb-1">Spiller</p>
+            <p id="spillerNavn" class="text-lg font-bold leading-tight">-</p>
             <button id="byttNavn" class="text-xs text-blue-600 hover:underline mt-2">Bytt navn</button>
           </div>
 
           <!-- Nåværende bane -->
-          <div class="mb-6 p-3 bg-green-50 rounded-lg">
-            <p class="text-xs text-gray-600 mb-1">Nåværende bane</p>
-            <p id="infoBaneNavn" class="text-lg font-bold">-</p>
+          <div class="p-2 bg-green-50 rounded-lg">
+            <p class="text-[10px] text-gray-600 mb-1">Nåværende bane</p>
+            <p id="infoBaneNavn" class="text-sm font-bold leading-tight">-</p>
             <p id="infoLag" class="text-xs text-gray-600">Lag: -</p>
           </div>
 
           <!-- Timer -->
-          <div class="mb-6">
-            <p class="text-xs text-gray-600 mb-2">Tid igjen</p>
+          <div>
+            <p class="text-[10px] text-gray-600 mb-1">Tid igjen</p>
             <div class="w-full bg-gray-200 rounded-full h-3">
               <div id="timerBar" class="bg-blue-600 h-3 rounded-full transition-all" style="width: 100%;"></div>
             </div>
-            <p id="timerTekst" class="text-2xl font-bold mt-2 text-center">30s</p>
+            <p id="timerTekst" class="text-xl font-bold mt-1 text-center">30s</p>
           </div>
 
-          <!-- Poeng denne runden -->
-          <div class="mb-6 p-3 bg-blue-50 rounded-lg">
-            <p class="text-xs text-gray-600 mb-1">Poeng denne runden</p>
-            <p id="rundePoeng" class="text-3xl font-bold text-blue-600">-</p>
-          </div>
-
-          <!-- Totalpoeng -->
-          <div class="mb-6 p-3 bg-amber-50 rounded-lg">
-            <p class="text-xs text-gray-600 mb-1">Totalpoeng</p>
-            <p id="totalPoeng" class="text-3xl font-bold text-amber-600">0</p>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="p-2 bg-blue-50 rounded-lg">
+              <p class="text-[10px] text-gray-600 mb-1">Runde</p>
+              <p id="rundePoeng" class="text-xl font-bold text-blue-600">-</p>
+            </div>
+            <div class="p-2 bg-amber-50 rounded-lg">
+              <p class="text-[10px] text-gray-600 mb-1">Total</p>
+              <p id="totalPoeng" class="text-xl font-bold text-amber-600">0</p>
+            </div>
           </div>
 
           <!-- Knapper -->
-          <button id="startKnapp" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition mb-2">
+          <button id="startKnapp" class="w-full px-3 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition text-sm">
             Start runde
           </button>
-          <button id="nesteKnapp" class="hidden w-full px-4 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition">
+          <button id="nesteKnapp" class="hidden w-full px-3 py-2 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition text-sm">
             Neste runde
           </button>
 
           <!-- Leaderboard -->
-          <div class="mt-6 pt-6 border-t">
-            <h3 class="font-bold text-lg mb-4">🏆 Top 10</h3>
-            <div id="leaderboard" class="space-y-2 text-sm">
+          <div class="pt-2 border-t">
+            <h3 class="font-bold text-sm mb-2">Top 10</h3>
+            <div id="leaderboard" class="space-y-1 text-xs max-h-44 overflow-auto">
               <p class="text-gray-500">Ingen scores ennå</p>
             </div>
           </div>
@@ -122,8 +121,8 @@
     </div>
   </main>
 
-  <footer class="bg-white shadow mt-12 p-6 text-center text-sm">
-    <p class="text-gray-500">&copy; 2026 Pøll.no | Skytebanespill</p>
+  <footer class="bg-white shadow mt-4 p-3 text-center text-xs">
+    <p class="text-gray-500">&copy; 2026 Pøll.no | Skytebanespelet</p>
   </footer>
 
   <script>
@@ -179,13 +178,23 @@
     let map;
     let markerKlikk;
     let allMarkere = [];
+    const NORGE_GRENSE = L.latLngBounds([[57.5, 3.0], [71.5, 31.5]]);
 
     function initKart() {
-      map = L.map('map').setView([60.5, 10.5], 5);
+      map = L.map('map', {
+        maxBounds: NORGE_GRENSE,
+        maxBoundsViscosity: 1.0,
+        minZoom: 4,
+        zoomSnap: 0.5
+      });
+
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap',
-        maxZoom: 13
+        maxZoom: 13,
+        noWrap: true
       }).addTo(map);
+
+      map.fitBounds(NORGE_GRENSE);
 
       map.on('click', handleKartKlikk);
     }
@@ -213,7 +222,7 @@
       const container = document.getElementById('modusContainer');
       container.innerHTML = '';
 
-      if (tags.length === 0) {
+      if (BaneData.getBaner().length === 0) {
         document.getElementById('ingenBaner').classList.remove('hidden');
         document.getElementById('modusSkjerm').classList.add('hidden');
         document.getElementById('spillContainer').classList.add('hidden');
@@ -222,6 +231,12 @@
 
       document.getElementById('ingenBaner').classList.add('hidden');
       document.getElementById('modusSkjerm').classList.remove('hidden');
+
+      const allBtn = document.createElement('button');
+      allBtn.textContent = 'Alle baner';
+      allBtn.className = 'px-4 py-2 bg-blue-600 text-white rounded-full transition font-semibold';
+      allBtn.onclick = () => startModus('ALLE');
+      container.appendChild(allBtn);
 
       tags.forEach(tag => {
         const btn = document.createElement('button');
@@ -242,7 +257,9 @@
     }
 
     function startNyRunde() {
-      const baner = BaneData.getBanerByTag(spillState.aktivModus);
+      const baner = spillState.aktivModus === 'ALLE'
+        ? BaneData.getBaner()
+        : BaneData.getBanerByTag(spillState.aktivModus);
       if (baner.length === 0) return;
 
       spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
@@ -379,8 +396,8 @@
       }
 
       lb.innerHTML = topScores.map((score, idx) => `
-        <div class="flex justify-between items-center p-2 ${idx % 2 === 0 ? 'bg-gray-50' : ''}">
-          <span class="font-semibold">${idx + 1}. ${score.navn}</span>
+        <div class="flex justify-between items-center p-1 rounded ${idx % 2 === 0 ? 'bg-gray-50' : ''}">
+          <span class="font-semibold truncate mr-2">${idx + 1}. ${score.navn}</span>
           <span class="text-blue-600 font-bold">${score.poeng}</span>
         </div>
       `).join('');
