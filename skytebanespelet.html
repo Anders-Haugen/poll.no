@@ -403,12 +403,10 @@
       feedbackDistanse.textContent = `Distanse: ${avstand.toFixed(1)} km | Poeng: ${poeng}`;
       feedback.classList.remove('hidden');
 
-      // Ny bane umiddelbart etter kort feedback, så lenge tiden ikke er ute.
-      setTimeout(() => {
-        if (spillState.spilletAktivt && spillState.timerSekunder > 0) {
-          velgNyBane();
-        }
-      }, 350);
+      // Ny bane med en gang, så flyten holder seg rask gjennom hele 30s-økten.
+      if (spillState.spilletAktivt && spillState.timerSekunder > 0) {
+        velgNyBane();
+      }
     }
 
     function beregnPoeng(avstandKm) {
