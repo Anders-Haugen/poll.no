@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skytebanespelet | Pøll.no</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
@@ -126,51 +127,64 @@
   </footer>
 
   <script>
+    const SUPABASE_URL = 'https://zatxxqyqgcismveykpbo.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InphdHh4cXlxZ2Npc212ZXlrcGJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDQ1OTksImV4cCI6MjA5NDg4MDU5OX0.DEfL_aTqQ2BG047c-EtaxUcicyjJloiNPCyBbiqsPYs';
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
     // ===== SCORE DATA =====
     class ScoreData {
-      static getScores() {
-        return JSON.parse(localStorage.getItem('scores') || '[]');
+      static async leggTilScore(navn, poeng, modus, guesses) {
+        const { error } = await supabaseClient.from('scores').insert([{
+          player_name: navn,
+          points: poeng,
+          mode: modus,
+          guesses
+        }]);
+
+        if (error) {
+          throw error;
+        }
       }
 
-      static setScores(scores) {
-        localStorage.setItem('scores', JSON.stringify(scores));
-      }
+      static async getTopScores(limit = 10) {
+        const { data, error } = await supabaseClient
+          .from('scores')
+          .select('player_name, points')
+          .order('points', { ascending: false })
+          .limit(limit);
 
-      static leggTilScore(navn, poeng, modus) {
-        const scores = this.getScores();
-        scores.push({
-          id: Date.now(),
-          navn,
-          poeng,
-          modus,
-          dato: new Date().toISOString()
-        });
-        this.setScores(scores);
-      }
+        if (error) {
+          throw error;
+        }
 
-      static getTopScores(limit = 10) {
-        const scores = this.getScores();
-        return scores.sort((a, b) => b.poeng - a.poeng).slice(0, limit);
+        return data || [];
       }
     }
 
     // ===== BANE DATA =====
     class BaneData {
-      static getBaner() {
-        return JSON.parse(localStorage.getItem('baner') || '[]');
+      static async getBaner() {
+        const { data, error } = await supabaseClient
+          .from('baner')
+          .select('id, navn, lag, lat, lng, tags')
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          throw error;
+        }
+
+        return (data || []).map((bane) => ({
+          ...bane,
+          tags: Array.isArray(bane.tags) ? bane.tags : []
+        }));
       }
 
-      static getTags() {
-        const baner = this.getBaner();
+      static getTags(baner) {
         const tags = new Set();
         baner.forEach(b => {
           b.tags.forEach(t => tags.add(t));
         });
         return Array.from(tags).sort();
-      }
-
-      static getBanerByTag(tag) {
-        return this.getBaner().filter(b => b.tags.includes(tag));
       }
     }
 
@@ -219,6 +233,7 @@
     // ===== SPILL-LOGIKK =====
     let spillState = {
       spillerNavn: null,
+      alleBaner: [],
       aktivModus: null,
       gjeldendeBane: null,
       totalPoeng: 0,
@@ -229,12 +244,20 @@
       antallGjettet: 0
     };
 
+    async function lastBaner() {
+      try {
+        spillState.alleBaner = await BaneData.getBaner();
+      } catch (err) {
+        spillState.alleBaner = [];
+      }
+    }
+
     function visModus() {
-      const tags = BaneData.getTags();
+      const tags = BaneData.getTags(spillState.alleBaner);
       const container = document.getElementById('modusContainer');
       container.innerHTML = '';
 
-      if (BaneData.getBaner().length === 0) {
+      if (spillState.alleBaner.length === 0) {
         document.getElementById('ingenBaner').classList.remove('hidden');
         document.getElementById('modusSkjerm').classList.add('hidden');
         document.getElementById('spillContainer').classList.add('hidden');
@@ -269,14 +292,14 @@
 
     function finnAktiveBaner() {
       return spillState.aktivModus === 'ALLE'
-        ? BaneData.getBaner()
-        : BaneData.getBanerByTag(spillState.aktivModus);
+        ? spillState.alleBaner
+        : spillState.alleBaner.filter(b => b.tags.includes(spillState.aktivModus));
     }
 
     function velgNyBane() {
       const baner = spillState.aktivModus === 'ALLE'
-        ? BaneData.getBaner()
-        : BaneData.getBanerByTag(spillState.aktivModus);
+        ? spillState.alleBaner
+        : spillState.alleBaner.filter(b => b.tags.includes(spillState.aktivModus));
       if (baner.length === 0) return;
 
       spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
@@ -418,7 +441,7 @@
       return Math.max(0, -10);
     }
 
-    function sluttSpillokt() {
+    async function sluttSpillokt() {
       spillState.spilletAktivt = false;
       spillState.runnePunktBeregnet = true;
 
@@ -429,13 +452,24 @@
       document.getElementById('startKnapp').classList.remove('hidden');
 
       if (spillState.spillerNavn) {
-        ScoreData.leggTilScore(spillState.spillerNavn, spillState.totalPoeng, spillState.aktivModus);
-        oppdaterLeaderboard();
+        try {
+          await ScoreData.leggTilScore(spillState.spillerNavn, spillState.totalPoeng, spillState.aktivModus, spillState.antallGjettet);
+          await oppdaterLeaderboard();
+        } catch (err) {
+          console.warn('Kunne ikke lagre score:', err);
+        }
       }
     }
 
-    function oppdaterLeaderboard() {
-      const topScores = ScoreData.getTopScores();
+    async function oppdaterLeaderboard() {
+      let topScores = [];
+      try {
+        topScores = await ScoreData.getTopScores();
+      } catch (err) {
+        document.getElementById('leaderboard').innerHTML = '<p class="text-red-600">Kunne ikke laste leaderboard.</p>';
+        return;
+      }
+
       const lb = document.getElementById('leaderboard');
 
       if (topScores.length === 0) {
@@ -445,18 +479,20 @@
 
       lb.innerHTML = topScores.map((score, idx) => `
         <div class="flex justify-between items-center p-1 rounded ${idx % 2 === 0 ? 'bg-gray-50' : ''}">
-          <span class="font-semibold truncate mr-2">${idx + 1}. ${score.navn}</span>
-          <span class="text-blue-600 font-bold">${score.poeng}</span>
+          <span class="font-semibold truncate mr-2">${idx + 1}. ${score.player_name}</span>
+          <span class="text-blue-600 font-bold">${score.points}</span>
         </div>
       `).join('');
     }
 
-    function settNavnOgStart() {
+    async function settNavnOgStart() {
       const navn = document.getElementById('brukerNavn').value.trim();
       if (!navn) {
         alert('Skriv inn ditt navn');
         return;
       }
+
+      await lastBaner();
 
       spillState.spillerNavn = navn;
       document.getElementById('spillerNavn').textContent = navn;
@@ -490,8 +526,9 @@
     });
 
     // ===== INIT =====
-    window.addEventListener('load', () => {
-      oppdaterLeaderboard();
+    window.addEventListener('load', async () => {
+      await lastBaner();
+      await oppdaterLeaderboard();
     });
 
     window.addEventListener('resize', () => {

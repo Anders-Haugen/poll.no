@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin - Baner | Pøll.no</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
@@ -30,7 +31,7 @@
       <button id="loginBtn" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
         Logg inn
       </button>
-      <p class="text-xs text-gray-500 mt-4 text-center">Hint: Sjekk settings for passord</p>
+      <p class="text-xs text-gray-500 mt-4 text-center">Logg inn med passordet du satte for Supabase-brukeren.</p>
     </div>
   </div>
 
@@ -119,74 +120,113 @@
   </footer>
 
   <script>
-    const PASSORD = 'pøll247365'; // Admin passord
+    const SUPABASE_URL = 'https://zatxxqyqgcismveykpbo.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InphdHh4cXlxZ2Npc212ZXlrcGJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDQ1OTksImV4cCI6MjA5NDg4MDU5OX0.DEfL_aTqQ2BG047c-EtaxUcicyjJloiNPCyBbiqsPYs';
+    const ADMIN_EMAIL = 'anderhau2@icloud.com';
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     // ===== LOGIN SYSTEM =====
-    function erLoggetInn() {
-      return sessionStorage.getItem('adminLoggedIn') === 'true';
+    async function erLoggetInn() {
+      const { data, error } = await supabaseClient.auth.getSession();
+      if (error) {
+        return false;
+      }
+      return !!data.session;
     }
 
-    function loggInn() {
+    async function loggInn() {
       const passord = document.getElementById('passordInput').value;
-      if (passord === PASSORD) {
-        sessionStorage.setItem('adminLoggedIn', 'true');
-        visPanelet();
-      } else {
+      const { error } = await supabaseClient.auth.signInWithPassword({
+        email: ADMIN_EMAIL,
+        password: passord
+      });
+
+      if (error) {
         alert('Feil passord');
         document.getElementById('passordInput').value = '';
+        return;
       }
-    }
 
-    function loggUt() {
-      sessionStorage.removeItem('adminLoggedIn');
       document.getElementById('passordInput').value = '';
-      visPanelet();
+      await visPanelet();
     }
 
-    function visPanelet() {
-      const loggetInn = erLoggetInn();
+    async function loggUt() {
+      await supabaseClient.auth.signOut();
+      document.getElementById('passordInput').value = '';
+      await visPanelet();
+    }
+
+    async function visPanelet() {
+      const loggetInn = await erLoggetInn();
       document.getElementById('loginSkjerm').classList.toggle('hidden', loggetInn);
       document.getElementById('adminPanel').classList.toggle('hidden', !loggetInn);
       document.getElementById('logoutBtn').classList.toggle('hidden', !loggetInn);
 
       if (loggetInn) {
-        oppdaterBaneListe();
-        oppdaterStatistikk();
+        await oppdaterBaneListe();
+        await oppdaterStatistikk();
       }
     }
 
     // ===== DATA MANAGEMENT =====
     class BaneData {
-      static getBaner() {
-        return JSON.parse(localStorage.getItem('baner') || '[]');
+      static async getBaner() {
+        const { data, error } = await supabaseClient
+          .from('baner')
+          .select('id, navn, lag, lat, lng, tags, created_at')
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          throw error;
+        }
+
+        return data.map((bane) => ({
+          ...bane,
+          tags: Array.isArray(bane.tags) ? bane.tags : []
+        }));
       }
 
-      static setBaner(baner) {
-        localStorage.setItem('baner', JSON.stringify(baner));
+      static async leggTilBane(bane) {
+        const { error } = await supabaseClient.from('baner').insert([{
+          navn: bane.navn,
+          lag: bane.lag,
+          lat: bane.lat,
+          lng: bane.lng,
+          tags: bane.tags
+        }]);
+
+        if (error) {
+          throw error;
+        }
       }
 
-      static leggTilBane(bane) {
-        const baner = this.getBaner();
-        bane.id = Date.now();
-        baner.push(bane);
-        this.setBaner(baner);
-        return bane;
+      static async slettBane(id) {
+        const { error } = await supabaseClient.from('baner').delete().eq('id', id);
+        if (error) {
+          throw error;
+        }
       }
 
-      static slettBane(id) {
-        let baner = this.getBaner();
-        baner = baner.filter(b => b.id !== id);
-        this.setBaner(baner);
+      static async oppdaterBane(oppdatertBane) {
+        const { error } = await supabaseClient
+          .from('baner')
+          .update({
+            navn: oppdatertBane.navn,
+            lag: oppdatertBane.lag,
+            lat: oppdatertBane.lat,
+            lng: oppdatertBane.lng,
+            tags: oppdatertBane.tags
+          })
+          .eq('id', oppdatertBane.id);
+
+        if (error) {
+          throw error;
+        }
       }
 
-      static oppdaterBane(oppdatertBane) {
-        const baner = this.getBaner();
-        const nyListe = baner.map(b => (b.id === oppdatertBane.id ? oppdatertBane : b));
-        this.setBaner(nyListe);
-      }
-
-      static getTags() {
-        const baner = this.getBaner();
+      static async getTags() {
+        const baner = await this.getBaner();
         const tags = new Set();
         baner.forEach(b => {
           b.tags.forEach(t => tags.add(t.trim()));
@@ -196,7 +236,7 @@
     }
 
     // ===== FORM HANDLING =====
-    document.getElementById('baneForm').addEventListener('submit', (e) => {
+    document.getElementById('baneForm').addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const redigerId = document.getElementById('redigerId').value;
@@ -219,23 +259,34 @@
 
       const bane = { navn, lag, lat, lng, tags };
 
-      if (redigerId) {
-        bane.id = Number(redigerId);
-        BaneData.oppdaterBane(bane);
-        alert('Bane oppdatert!');
-      } else {
-        BaneData.leggTilBane(bane);
-        alert('Bane lagt til!');
-      }
+      try {
+        if (redigerId) {
+          bane.id = redigerId;
+          await BaneData.oppdaterBane(bane);
+          alert('Bane oppdatert!');
+        } else {
+          await BaneData.leggTilBane(bane);
+          alert('Bane lagt til!');
+        }
 
-      resetBaneForm();
-      oppdaterBaneListe();
-      oppdaterStatistikk();
+        resetBaneForm();
+        await oppdaterBaneListe();
+        await oppdaterStatistikk();
+      } catch (err) {
+        alert('Kunne ikke lagre bane: ' + err.message);
+      }
     });
 
     // ===== LISTE OPPDATERING =====
-    function oppdaterBaneListe() {
-      const baner = BaneData.getBaner();
+    async function oppdaterBaneListe() {
+      let baner = [];
+      try {
+        baner = await BaneData.getBaner();
+      } catch (err) {
+        document.getElementById('banerListe').innerHTML = '<p class="text-red-600">Feil ved lasting av baner.</p>';
+        return;
+      }
+
       const liste = document.getElementById('banerListe');
 
       if (baner.length === 0) {
@@ -265,8 +316,9 @@
       `).join('');
     }
 
-    function startRedigerBane(id) {
-      const bane = BaneData.getBaner().find(b => b.id === id);
+    async function startRedigerBane(id) {
+      const baner = await BaneData.getBaner();
+      const bane = baner.find(b => b.id === id);
       if (!bane) {
         return;
       }
@@ -293,25 +345,29 @@
       document.getElementById('avbrytRedigerBtn').classList.add('hidden');
     }
 
-    function slettBane(id) {
+    async function slettBane(id) {
       if (confirm('Sikker på at du vil slette denne banen?')) {
-        BaneData.slettBane(id);
-        oppdaterBaneListe();
-        oppdaterStatistikk();
+        try {
+          await BaneData.slettBane(id);
+          await oppdaterBaneListe();
+          await oppdaterStatistikk();
+        } catch (err) {
+          alert('Kunne ikke slette bane: ' + err.message);
+        }
       }
     }
 
-    function oppdaterStatistikk() {
-      const baner = BaneData.getBaner();
-      const tags = BaneData.getTags();
+    async function oppdaterStatistikk() {
+      const baner = await BaneData.getBaner();
+      const tags = await BaneData.getTags();
 
       document.getElementById('totaltBaner').textContent = baner.length;
       document.getElementById('unikkeTags').textContent = tags.length;
     }
 
     // ===== EKSPORT/IMPORT =====
-    document.getElementById('eksportBtn').addEventListener('click', () => {
-      const baner = BaneData.getBaner();
+    document.getElementById('eksportBtn').addEventListener('click', async () => {
+      const baner = await BaneData.getBaner();
       const data = JSON.stringify(baner, null, 2);
       const blob = new Blob([data], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
@@ -328,13 +384,29 @@
       input.onchange = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
-        reader.onload = (event) => {
+        reader.onload = async (event) => {
           try {
             const baner = JSON.parse(event.target.result);
-            BaneData.setBaner(baner);
+            if (!Array.isArray(baner)) {
+              throw new Error('JSON må være en liste av baner');
+            }
+
+            const payload = baner.map((bane) => ({
+              navn: bane.navn,
+              lag: bane.lag,
+              lat: bane.lat,
+              lng: bane.lng,
+              tags: Array.isArray(bane.tags) ? bane.tags : []
+            }));
+
+            const { error } = await supabaseClient.from('baner').insert(payload);
+            if (error) {
+              throw error;
+            }
+
             alert('Data importert!');
-            oppdaterBaneListe();
-            oppdaterStatistikk();
+            await oppdaterBaneListe();
+            await oppdaterStatistikk();
           } catch (err) {
             alert('Feil ved import: ' + err.message);
           }
@@ -345,41 +417,21 @@
     });
 
     // ===== EVENT LISTENERS =====
-    document.getElementById('loginBtn').addEventListener('click', loggInn);
-    document.getElementById('logoutBtn').addEventListener('click', loggUt);
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      loggInn();
+    });
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      loggUt();
+    });
     document.getElementById('avbrytRedigerBtn').addEventListener('click', resetBaneForm);
     document.getElementById('passordInput').addEventListener('keypress', (e) => {
       if (e.key === 'Enter') loggInn();
     });
 
     // ===== INIT =====
-    window.addEventListener('load', visPanelet);
-
-    // Legg til demo-data første gang (fjern dette senere)
-    if (BaneData.getBaner().length === 0 && localStorage.getItem('demoDataAdded') !== 'true') {
-      BaneData.leggTilBane({
-        navn: 'Herre-NM Gål 300m',
-        lag: 'Lillesand Skytelag',
-        lat: 58.5534,
-        lng: 8.4229,
-        tags: ['300m', 'LS-bane', 'NM', 'sommerkamp']
-      });
-      BaneData.leggTilBane({
-        navn: 'Dame-NM 25m',
-        lag: 'Risør Skytelag',
-        lat: 58.7236,
-        lng: 9.2336,
-        tags: ['25m', 'NM', 'sommerkamp']
-      });
-      BaneData.leggTilBane({
-        navn: 'Luftgevær 10m',
-        lag: 'Tvedestrand Skytelag',
-        lat: 58.6589,
-        lng: 9.0178,
-        tags: ['luftgevær', '10m', 'ungdom']
-      });
-      localStorage.setItem('demoDataAdded', 'true');
-    }
+    window.addEventListener('load', async () => {
+      await visPanelet();
+    });
   </script>
 </body>
 </html>
