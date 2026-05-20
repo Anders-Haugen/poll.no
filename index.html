@@ -3,254 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haugen's 3D-dingser</title>
+  <title>Pøll.no | Anders Haugen</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
 
   <header class="bg-white shadow p-6">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Haugen's 3D-dingser</h1>
-      <nav class="flex items-center gap-2">
-        <button id="tab-produkt" class="tab-btn px-4 py-2 bg-blue-600 text-white rounded-full mr-2">Produkter</button>
-        <button id="tab-info" class="tab-btn px-4 py-2 bg-gray-200 rounded-full">Farger</button>
-        <a href="skytebanespill.html" class="px-4 py-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition">Skytebanespel</a>
-      </nav>
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold">Pøll.no</h1>
+      <p class="text-gray-600 mt-2">Utforsk prosjekter og spill fra Anders Haugen</p>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6 flex-grow">
-    <!-- Produkter-tab -->
+  <main class="max-w-6xl mx-auto p-6 flex-grow w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- 3D Dingser Card -->
+      <a href="3d-dingser.html" class="group">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6 h-full">
+          <div class="text-5xl mb-4">🖨️</div>
+          <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Haugen's 3D-dingser</h2>
+          <p class="text-gray-600 mb-4">
+            Utforsk mitt utvalg av 3D-printede produkter. Fra praktiske skytebaneprodukter til morsomme hverdagsgjenstander – alle tilgjengelig i flere farger.
+          </p>
+          <div class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full group-hover:bg-blue-700 transition">
+            Se produkter →
+          </div>
+        </div>
+      </a>
+
+      <!-- Skytebanespill Card -->
+      <a href="skytebanespill.html" class="group">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6 h-full">
+          <div class="text-5xl mb-4">🎮</div>
+          <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Skytebanespill</h2>
+          <p class="text-gray-600 mb-4">
+            Et interaktivt spill hvor du kan teste dine skyteferdigheter. Målrettet og moro for hele familien!
+          </p>
+          <div class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full group-hover:bg-blue-700 transition">
+            Spill nå →
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Om meg section -->
     <section id="tab-content-produkt">
-      <div class="flex justify-center mb-6 space-x-4">
-        <button onclick="filterProducts('all', event)" class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-full">Alle</button>
-        <button onclick="filterProducts('skyting', event)" class="filter-btn px-4 py-2 bg-gray-200 rounded-full">Skyting</button>
-        <button onclick="filterProducts('hverdags', event)" class="filter-btn px-4 py-2 bg-gray-200 rounded-full">Kvardagsprodukter</button>
-      </div>
-
-      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <!-- Produkt 1 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="magasinbunn-bilde" src="bilder/magasinbunn_engbo_22/gul.JPG" alt="Magasinbunn" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Magasinbunn for Engbo 22LR</h2>
-          <p class="text-gray-600">Bytt ut bunnen på Engbo 22LR-magasin med freshe farger og navn</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 30 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/gul.JPG')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/rosa.JPG')" class="w-6 h-6 rounded-full bg-pink-600 border border-gray-300" aria-label="Rosa farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/raud.JPG')" class="w-6 h-6 rounded-full bg-red-600 border border-gray-300" aria-label="Raud farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/grøn.JPG')" class="w-6 h-6 rounded-full bg-green-600 border border-gray-300" aria-label="Grøn farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/oransje.JPG')" class="w-6 h-6 rounded-full bg-orange-600 border border-gray-300" aria-label="Oransje farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 2 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="sluttstykkerør_65-bilde" src="sluttstykkerør_65_gul.JPG" alt="Sluttstykkerør_6,5" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Sluttstykkerør for 6,5</h2>
-          <p class="text-gray-600">Spenner ned og beskytter sluttstykket</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 150 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('sluttstykkerør_65-bilde', 'gul')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 3 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="kolbeforlenger-bilde" src="kolbeforlenger_rosa.JPG" alt="Kolbeforlenger" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Kolbeforlenger</h2>
-          <p class="text-gray-600">Forleng kolba. 8mm er standard, men kan bestilles i andre tykkelser.</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 100 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('kolbeforlenger-bilde', 'rosa')" class="w-6 h-6 rounded-full bg-pink-300 border border-gray-300" aria-label="Rosa farge"></button>
-              <button onclick="changeProductColor('kolbeforlenger-bilde', 'svart')" class="w-6 h-6 rounded-full bg-black border border-gray-300" aria-label="Svart farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 4 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="sluttstykkerør_22-bilde" src="sluttstykkerør_22_grøn.JPG" alt="Sluttstykkerør_22" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Sluttstykkerør for 22</h2>
-          <p class="text-gray-600">Spenn ned og beskytt sluttstykket</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 150 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('sluttstykkerør_22-bilde', 'grøn')" class="w-6 h-6 rounded-full bg-green-600 border border-gray-300" aria-label="Grøn farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 5 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="magasinboks_65-bilde" src="magasinboks_65_gul.JPG" alt="Magasinboks_65" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Magasinboks for 6,5</h2>
-          <p class="text-gray-600">Plass til 10 magasiner, men kan og lagast mindre</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 200 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('magasinboks_65-bilde', 'gul')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 6 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="ladehjelp-bilde" src="ladehjelp_oransje.JPG" alt="ladehjelp" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Ladehjelp 22</h2>
-          <p class="text-gray-600">Løfter opp annakrart skot så det blir enklare å få tak</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('ladehjelp-bilde', 'oransje')" class="w-6 h-6 rounded-full bg-orange-300 border border-gray-300" aria-label="Oransje farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 5 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="hverdags">
-          <img id="diskstativ-bilde" src="diskstativ_raud.JPG" alt="Diskstativ" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Diskstativ</h2>
-          <p class="text-gray-600">Still ut kule disker</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('diskstativ-bilde', 'red')" class="w-6 h-6 rounded-full bg-red-600 border border-gray-300" aria-label="Raud farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 6 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="hverdags">
-          <img id="tøysetilt-bilde" src="tøysetilt_svart.JPG" alt="Tøysetilt" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Tøysetilt</h2>
-          <p class="text-gray-600">Tilt-inspirert mini-markør for diskgolf</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('tøysetilt-bilde', 'svart')" class="w-6 h-6 rounded-full bg-black border border-gray-300" aria-label="Svart farge"></button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- Farger & Kontakt-tab -->
-    <section id="tab-content-info" class="hidden bg-white rounded-2xl shadow p-6">
-      <h2 class="text-2xl font-semibold mb-4">Tilgjengelige farger</h2>
-      <div class="flex space-x-4 mb-8">
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-red-600 border border-gray-300"></span><span>Raud</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-pink-600 border border-gray-300"></span><span>Rosa</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-green-600 border border-gray-300"></span><span>Grøn</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-black border border-gray-300"></span><span>Svart</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-purple-600 border border-gray-300"></span><span>Lilla</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-orange-500 border border-gray-300"></span><span>Oransje</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300"></span><span>Gul</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-white-300 border border-gray-300"></span><span>Kvit</span>
-        </div>
-      </div>
-
-      <!-- <h2 class="text-2xl font-semibold mb-4">Kontaktinformasjon</h2> -->
-      <!-- <p>Har du spørsmål eller ønsker å bestille? Ta kontakt på:</p> -->
-      <!-- <ul class="list-disc list-inside mt-2 text-gray-700">
-        <li>E-post: <a href="mailto:kontakt@lia-verkstedet.no" class="text-blue-600 underline">kontakt@lia-verkstedet.no</a></li>
-        <li>Telefon: <a href="tel:+4712345678" class="text-blue-600 underline">+47 12 34 56 78</a></li>
-      </ul> -->
+    <!-- Om meg section -->
+    <section class="bg-white rounded-2xl shadow p-6 mt-10">
+      <h2 class="text-2xl font-bold mb-4">Om Pøll.no</h2>
+      <p class="text-gray-600 mb-3">
+        Velkommen til mitt digitale hjørne! Her finner du både mine 3D-printeprodukter og noen interaktive spill som jeg har laget.
+      </p>
+      <p class="text-gray-600">
+        Denne nettsiden er et sted hvor jeg deler prosjektene mine. Trykk på kortene over for å utforske mer!
+      </p>
     </section>
   </main>
 
   <footer class="bg-white shadow mt-12 p-6 text-center">
-    <p class="text-gray-500">&copy; 2025 Haugen's 3D-dingser. Alle rettigheter forbeholdt.</p>
+    <p class="text-gray-500">&copy; 2026 Pøll.no | Anders Haugen. Alle rettigheter forbeholdt.</p>
   </footer>
 
-  <script>
-    // Tab-switching
-    const btnProdukt = document.getElementById('tab-produkt');
-    const btnInfo = document.getElementById('tab-info');
-    const contentProdukt = document.getElementById('tab-content-produkt');
-    const contentInfo = document.getElementById('tab-content-info');
-
-    btnProdukt.addEventListener('click', () => {
-      btnProdukt.classList.add('bg-blue-600', 'text-white');
-      btnProdukt.classList.remove('bg-gray-200');
-      btnInfo.classList.remove('bg-blue-600', 'text-white');
-      btnInfo.classList.add('bg-gray-200');
-
-      contentProdukt.classList.remove('hidden');
-      contentInfo.classList.add('hidden');
-    });
-
-    btnInfo.addEventListener('click', () => {
-      btnInfo.classList.add('bg-blue-600', 'text-white');
-      btnInfo.classList.remove('bg-gray-200');
-      btnProdukt.classList.remove('bg-blue-600', 'text-white');
-      btnProdukt.classList.add('bg-gray-200');
-
-      contentInfo.classList.remove('hidden');
-      contentProdukt.classList.add('hidden');
-    });
-
-    // Produktfilter
-    function filterProducts(category, event) {
-      const products = document.querySelectorAll('[data-category]');
-      products.forEach(p => {
-        if (category === 'all' || p.dataset.category === category) {
-          p.classList.remove('hidden');
-        } else {
-          p.classList.add('hidden');
-        }
-      });
-
-      // Endre knappfarger
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('bg-blue-600', 'text-white');
-        btn.classList.add('bg-gray-200');
-      });
-      event.target.classList.add('bg-blue-600', 'text-white');
-      event.target.classList.remove('bg-gray-200');
-    }
-
-    // Fargebytte funksjon for produktbilder
-    function changeProductColor(productId, color) {
-      const image = document.getElementById(productId);
-      if (image) {
-        if (color.includes('/')) {
-          image.src = color;
-          return;
-        }
-        const baseName = productId.split('-')[0];
-        image.src = `${baseName}_${color}.JPG`;
-      }
-    }
-  </script>
 </body>
 </html>
 
