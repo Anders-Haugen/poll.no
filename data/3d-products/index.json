@@ -7,6 +7,10 @@
       "meta": "data/3d-products/products/magasinbunn-engbo-22/product.json"
     },
     {
+      "id": "hullkorn-hjerte",
+      "meta": "data/3d-products/products/hullkorn-hjerte/product.json"
+    },
+    {
       "id": "kolbeforlenger",
       "meta": "data/3d-products/products/kolbeforlenger/product.json"
     },
@@ -17,10 +21,6 @@
     {
       "id": "sluttstykkeholder-65",
       "meta": "data/3d-products/products/sluttstykkeholder-65/product.json"
-    },
-    {
-      "id": "hullkorn-hjerte",
-      "meta": "data/3d-products/products/hullkorn-hjerte/product.json"
     }
   ]
 }

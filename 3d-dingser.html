@@ -693,16 +693,14 @@
       loader.load(
         stlFilePath,
         (geometry) => {
-          const smoothGeometry = createSmoothedGeometry(geometry);
-          smoothGeometry.computeVertexNormals();
           const material = new THREE.MeshStandardMaterial({
             color: 0x1f6fa8,
             metalness: 0.16,
             roughness: 0.54
           });
 
-          state.mesh = new THREE.Mesh(smoothGeometry, material);
-          smoothGeometry.center();
+          state.mesh = new THREE.Mesh(geometry, material);
+          geometry.center();
 
           const box = new THREE.Box3().setFromObject(state.mesh);
           const size = box.getSize(new THREE.Vector3()).length();
@@ -710,7 +708,7 @@
           state.camera.position.set(fit * 0.75, fit * 0.65, fit * 1.05);
 
           state.scene.add(state.mesh);
-          stlStatusEl.textContent = `STL lasta (smooth): ${stlFilePath}`;
+          stlStatusEl.textContent = `STL lasta: ${stlFilePath}`;
         },
         undefined,
         (error) => {
@@ -719,42 +717,6 @@
           stlCanvasEl.textContent = "Sjekk at filstien er rett og at STL-fila finst i repoet.";
         }
       );
-    }
-
-    function createSmoothedGeometry(inputGeometry) {
-      const source = inputGeometry.index ? inputGeometry.toNonIndexed() : inputGeometry;
-      const position = source.getAttribute("position");
-
-      if (!position || !position.array) {
-        return source;
-      }
-
-      const scale = 10000;
-      const vertices = [];
-      const indices = [];
-      const uniqueMap = new Map();
-      const src = position.array;
-
-      for (let i = 0; i < position.count; i += 1) {
-        const x = src[i * 3 + 0];
-        const y = src[i * 3 + 1];
-        const z = src[i * 3 + 2];
-        const key = `${Math.round(x * scale)}_${Math.round(y * scale)}_${Math.round(z * scale)}`;
-
-        let index = uniqueMap.get(key);
-        if (index === undefined) {
-          index = vertices.length / 3;
-          uniqueMap.set(key, index);
-          vertices.push(x, y, z);
-        }
-
-        indices.push(index);
-      }
-
-      const geometry = new THREE.BufferGeometry();
-      geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
-      geometry.setIndex(indices);
-      return geometry;
     }
 
     function teardownStlViewer() {
