@@ -1,0 +1,17 @@
+{
+  "id": "hullkorn-hjerte",
+  "slug": "hullkorn-hjerte",
+  "name": "Hjertehullkorn",
+  "description": "Sjarmer dine skyttervenar med dette hjerteforna hullkornet.",
+  "priceNok": 69,
+  "category": "skyting",
+  "images": [
+    "data/3d-products/products/hullkorn-hjerte/images/hjertehullkorn.png",
+    "data/3d-products/products/hullkorn-hjerte/images/sluttstykkerør_65_gul.JPG"
+  ],
+  "stl": {
+    "file": "data/3d-products/products/hullkorn-hjerte/models/Hullkorn hjerte ø2 t1_5.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}
