@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1001,
+    "navn": "Herre-NM Gaal 300m",
+    "lag": "Lillesand Skytelag",
+    "lat": 58.5534,
+    "lng": 8.4229,
+    "tags": ["300m", "LS-bane", "NM", "sommerkamp"]
+  },
+  {
+    "id": 1002,
+    "navn": "Dame-NM 25m",
+    "lag": "Risor Skytelag",
+    "lat": 58.7236,
+    "lng": 9.2336,
+    "tags": ["25m", "NM", "sommerkamp"]
+  },
+  {
+    "id": 1003,
+    "navn": "Luftgevaer 10m",
+    "lag": "Tvedestrand Skytelag",
+    "lat": 58.6589,
+    "lng": 9.0178,
+    "tags": ["luftgevaer", "10m", "ungdom"]
+  }
+]

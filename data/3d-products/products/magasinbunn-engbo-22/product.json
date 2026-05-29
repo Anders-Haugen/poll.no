@@ -1,0 +1,24 @@
+{
+  "id": "magasinbunn-engbo-22",
+  "slug": "magasinbunn-engbo-22",
+  "name": "Magasinbunn for Engbo 22LR",
+  "description": "Bytt ut botnen på Engbo 22LR-magasin med frisk farge og valgfri tekst.",
+  "priceNok": 30,
+  "category": "skyting",
+  "tags": [
+    "engbo",
+    "22lr",
+    "magasin"
+  ],
+  "images": [
+    "data/3d-products/products/magasinbunn-engbo-22/images/gron.JPG",
+    "data/3d-products/products/magasinbunn-engbo-22/images/gul.JPG",
+    "data/3d-products/products/magasinbunn-engbo-22/images/raud.JPG",
+    "data/3d-products/products/magasinbunn-engbo-22/images/rosa.JPG"
+  ],
+  "stl": {
+    "file": "data/3d-products/products/magasinbunn-engbo-22/models/Magasin_bunn_utan_navn.STL",
+    "units": "mm"
+  },
+  "status": "active"
+}

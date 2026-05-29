@@ -1,0 +1,17 @@
+{
+  "id": "sluttstykkeholder-65",
+  "slug": "sluttstykkeholder-65",
+  "name": "Sluttstykkeholder 6,5",
+  "description": "",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [],
+  "images": [
+    "data/3d-products/products/sluttstykkeholder-65/images/sluttstykkerør_65_gul.JPG"
+  ],
+  "stl": {
+    "file": "data/3d-products/products/sluttstykkeholder-65/models/Sluttstykkerør_6_5_uten_navn.STL",
+    "units": "mm"
+  },
+  "status": "active"
+}

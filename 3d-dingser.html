@@ -3,247 +3,789 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haugen's 3D-dingser</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+  <title>Haugen 3D-dingser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <style>
+    :root {
+      --ink: #18212f;
+      --mist: #f4f7fb;
+      --card: #ffffff;
+      --accent: #0a8f8f;
+      --accent-2: #f6ad55;
+      --line: #d7e0ec;
+      --shadow: 0 16px 40px rgba(10, 36, 66, 0.15);
+    }
 
-  <header class="bg-white shadow p-6">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Haugen's 3D-dingser</h1>
-      <nav class="flex items-center gap-2">
-        <button id="tab-produkt" class="tab-btn px-4 py-2 bg-blue-600 text-white rounded-full mr-2">Produkter</button>
-        <button id="tab-info" class="tab-btn px-4 py-2 bg-gray-200 rounded-full">Farger</button>
-        <a href="skytebanespelet.html" class="px-4 py-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition">Skytebanespelet</a>
-        <a href="index.html" class="px-4 py-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition">Hjem</a>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 0%, #caeef5 0, transparent 36%),
+        radial-gradient(circle at 85% 20%, #ffe8cc 0, transparent 34%),
+        linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(7px);
+      background: rgba(247, 250, 252, 0.9);
+      border-bottom: 1px solid rgba(24, 33, 47, 0.1);
+    }
+
+    .topbar {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    .muted {
+      margin: 0.35rem 0 0;
+      color: #3c4e64;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.58rem 1rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: 0 4px 12px rgba(20, 40, 60, 0.08);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #0d6c8e);
+      color: #fff;
+    }
+
+    main { padding: 1.5rem 0 3rem; }
+
+    .hero {
+      border: 1px solid #d8e5ef;
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(242, 247, 252, 0.9));
+      border-radius: 20px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0 1.4rem;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.8rem;
+    }
+
+    .panel-title {
+      margin: 0 0 0.65rem;
+      font-size: 0.93rem;
+      color: #43596f;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .chip {
+      border: 1px solid #b8cae1;
+      background: #f7fbff;
+      color: #1f3a5a;
+      border-radius: 999px;
+      padding: 0.38rem 0.7rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: linear-gradient(135deg, #194569, #2f6ca6);
+      color: #fff;
+      border-color: #194569;
+    }
+
+    #products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 26px rgba(22, 42, 61, 0.09);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #edf2f7;
+    }
+
+    .card-body {
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      flex-grow: 1;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .desc {
+      margin: 0;
+      color: #455b70;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #14304d;
+    }
+
+    .card-actions {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .btn-ghost {
+      border: 1px solid #a9c2dc;
+      background: #f4f9ff;
+      color: #15426a;
+      border-radius: 10px;
+      padding: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-warn {
+      border: 1px solid #e3b06a;
+      background: #fff3df;
+      color: #744604;
+      border-radius: 10px;
+      padding: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .status {
+      margin: 0.5rem 0 0;
+      font-family: "IBM Plex Mono", monospace;
+      color: #214f5e;
+      font-size: 0.85rem;
+    }
+
+    dialog {
+      width: min(980px, calc(100% - 1rem));
+      border: 1px solid #cad8e6;
+      border-radius: 16px;
+      padding: 0;
+    }
+
+    dialog::backdrop { background: rgba(11, 20, 31, 0.58); }
+
+    .modal-body {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 0.8rem;
+      padding: 0.95rem;
+      max-height: min(84vh, 820px);
+      overflow: auto;
+      background: #f8fbff;
+    }
+
+    .viewer,
+    .gallery {
+      background: #fff;
+      border: 1px solid #d4deea;
+      border-radius: 14px;
+      padding: 0.8rem;
+    }
+
+    #stl-canvas {
+      width: 100%;
+      min-height: 300px;
+      border-radius: 10px;
+      border: 1px solid #d8e4f1;
+      background: linear-gradient(180deg, #f6faff, #edf3fa);
+      display: grid;
+      place-items: center;
+      color: #34516f;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      overflow: hidden;
+    }
+
+    #stl-canvas canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+    }
+
+    .thumbs button {
+      border: 1px solid #b7cadf;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .thumbs img {
+      width: 100%;
+      height: 76px;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      color: #536a80;
+      padding: 1rem 0 2rem;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 860px) {
+      .toolbar,
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+
+      .card img { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div>
+        <h1>Haugen 3D-dingser</h1>
+        <p class="muted">Produkter med bildegalleri og mogleg STL-visning.</p>
+      </div>
+      <nav>
+        <a class="btn" href="index.html">Heim</a>
+        <a class="btn" href="skytebanespelet.html">Skytebanespelet</a>
+        <a class="btn btn-primary" href="admin-3d-dingser.html">Admin 3D</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6 flex-grow">
-    <!-- Produkter-tab -->
-    <section id="tab-content-produkt">
-      <div class="flex justify-center mb-6 space-x-4">
-        <button onclick="filterProducts('all', event)" class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-full">Alle</button>
-        <button onclick="filterProducts('skyting', event)" class="filter-btn px-4 py-2 bg-gray-200 rounded-full">Skyting</button>
-        <button onclick="filterProducts('hverdags', event)" class="filter-btn px-4 py-2 bg-gray-200 rounded-full">Kvardagsprodukter</button>
-      </div>
-
-      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <!-- Produkt 1 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="magasinbunn-bilde" src="bilder/magasinbunn_engbo_22/gul.JPG" alt="Magasinbunn" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Magasinbunn for Engbo 22LR</h2>
-          <p class="text-gray-600">Bytt ut bunnen på Engbo 22LR-magasin med freshe farger og navn</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 30 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/gul.JPG')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/rosa.JPG')" class="w-6 h-6 rounded-full bg-pink-600 border border-gray-300" aria-label="Rosa farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/raud.JPG')" class="w-6 h-6 rounded-full bg-red-600 border border-gray-300" aria-label="Raud farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/grøn.JPG')" class="w-6 h-6 rounded-full bg-green-600 border border-gray-300" aria-label="Grøn farge"></button>
-              <button onclick="changeProductColor('magasinbunn-bilde', 'bilder/magasinbunn_engbo_22/oransje.JPG')" class="w-6 h-6 rounded-full bg-orange-600 border border-gray-300" aria-label="Oransje farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 2 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="sluttstykkerør_65-bilde" src="sluttstykkerør_65_gul.JPG" alt="Sluttstykkerør_6,5" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Sluttstykkerør for 6,5</h2>
-          <p class="text-gray-600">Spenner ned og beskytter sluttstykket</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 150 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('sluttstykkerør_65-bilde', 'gul')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 3 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="kolbeforlenger-bilde" src="kolbeforlenger_rosa.JPG" alt="Kolbeforlenger" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Kolbeforlenger</h2>
-          <p class="text-gray-600">Forleng kolba. 8mm er standard, men kan bestilles i andre tykkelser.</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 100 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('kolbeforlenger-bilde', 'rosa')" class="w-6 h-6 rounded-full bg-pink-300 border border-gray-300" aria-label="Rosa farge"></button>
-              <button onclick="changeProductColor('kolbeforlenger-bilde', 'svart')" class="w-6 h-6 rounded-full bg-black border border-gray-300" aria-label="Svart farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 4 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="sluttstykkerør_22-bilde" src="sluttstykkerør_22_grøn.JPG" alt="Sluttstykkerør_22" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Sluttstykkerør for 22</h2>
-          <p class="text-gray-600">Spenn ned og beskytt sluttstykket</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 150 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('sluttstykkerør_22-bilde', 'grøn')" class="w-6 h-6 rounded-full bg-green-600 border border-gray-300" aria-label="Grøn farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 5 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="magasinboks_65-bilde" src="magasinboks_65_gul.JPG" alt="Magasinboks_65" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Magasinboks for 6,5</h2>
-          <p class="text-gray-600">Plass til 10 magasiner, men kan og lagast mindre</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 200 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('magasinboks_65-bilde', 'gul')" class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300" aria-label="Gul farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 6 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="skyting">
-          <img id="ladehjelp-bilde" src="ladehjelp_oransje.JPG" alt="ladehjelp" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Ladehjelp 22</h2>
-          <p class="text-gray-600">Løfter opp annakrart skot så det blir enklare å få tak</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('ladehjelp-bilde', 'oransje')" class="w-6 h-6 rounded-full bg-orange-300 border border-gray-300" aria-label="Oransje farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 7 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="hverdags">
-          <img id="diskstativ-bilde" src="diskstativ_raud.JPG" alt="Diskstativ" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Diskstativ</h2>
-          <p class="text-gray-600">Still ut kule disker</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('diskstativ-bilde', 'red')" class="w-6 h-6 rounded-full bg-red-600 border border-gray-300" aria-label="Raud farge"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produkt 8 -->
-        <div class="bg-white rounded-2xl shadow p-4" data-category="hverdags">
-          <img id="tøysetilt-bilde" src="tøysetilt_svart.JPG" alt="Tøysetilt" class="w-full h-48 object-cover rounded-xl" />
-          <h2 class="text-xl font-semibold mt-4">Tøysetilt</h2>
-          <p class="text-gray-600">Tilt-inspirert mini-markør for diskgolf</p>
-          <p class="mt-2 text-gray-800 font-medium">Pris: 50 kr</p>
-          <div class="mt-2">
-            <p class="text-gray-600 mb-1">Klikk for å sjå i anna farge:</p>
-            <div class="flex space-x-2">
-              <button onclick="changeProductColor('tøysetilt-bilde', 'svart')" class="w-6 h-6 rounded-full bg-black border border-gray-300" aria-label="Svart farge"></button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <main class="container">
+    <section class="hero">
+      <strong>Ny struktur:</strong> kvart produkt har eiga mappe med <code>product.json</code>, <code>images/</code> og eventuelt <code>models/</code>.
+      <p class="status" id="load-status">Lastar katalog ...</p>
     </section>
 
-    <!-- Farger & Kontakt-tab -->
-    <section id="tab-content-info" class="hidden bg-white rounded-2xl shadow p-6">
-      <h2 class="text-2xl font-semibold mb-4">Tilgjengelige farger</h2>
-      <div class="flex space-x-4 mb-8">
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-red-600 border border-gray-300"></span><span>Raud</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-pink-600 border border-gray-300"></span><span>Rosa</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-green-600 border border-gray-300"></span><span>Grøn</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-black border border-gray-300"></span><span>Svart</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-purple-600 border border-gray-300"></span><span>Lilla</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-orange-500 border border-gray-300"></span><span>Oransje</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-yellow-300 border border-gray-300"></span><span>Gul</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="w-6 h-6 rounded-full bg-white-300 border border-gray-300"></span><span>Kvit</span>
-        </div>
+    <section class="toolbar">
+      <div class="panel">
+        <p class="panel-title">Kategori</p>
+        <div class="chips" id="category-chips"></div>
       </div>
     </section>
+
+    <section id="products"></section>
   </main>
 
-  <footer class="bg-white shadow mt-12 p-6 text-center">
-    <p class="text-gray-500">&copy; 2026 Haugen's 3D-dingser. Alle rettigheter forbeholdt.</p>
+  <dialog id="product-modal">
+    <div class="modal-body">
+      <article class="gallery">
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc" class="desc"></p>
+        <p id="modal-price" class="price"></p>
+        <img id="modal-main-image" src="" alt="Produktbilete" style="width:100%;height:280px;object-fit:cover;border-radius:10px;border:1px solid #d2ddeb;background:#f1f5fa;" />
+        <div class="thumbs" id="modal-thumbs"></div>
+      </article>
+      <article class="viewer">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+          <h3 style="margin:0;">3D-modell (STL)</h3>
+          <div style="display:flex;gap:0.4rem;">
+            <button id="close-modal" class="btn-ghost" type="button">Lukk</button>
+          </div>
+        </div>
+        <div id="stl-canvas">Ingen STL-fil vald.</div>
+        <p class="status" id="stl-status">Trykk paa "Vis produkt" paa eit produkt.</p>
+      </article>
+    </div>
+  </dialog>
+
+  <footer>
+    <p>&copy; 2026 Haugen 3D-dingser</p>
   </footer>
 
   <script>
-    // Tab-switching
-    const btnProdukt = document.getElementById('tab-produkt');
-    const btnInfo = document.getElementById('tab-info');
-    const contentProdukt = document.getElementById('tab-content-produkt');
-    const contentInfo = document.getElementById('tab-content-info');
+    const state = {
+      products: [],
+      selectedCategory: "all",
+      renderer: null,
+      scene: null,
+      camera: null,
+      mesh: null,
+      controls: null,
+      animationFrame: null
+    };
 
-    btnProdukt.addEventListener('click', () => {
-      btnProdukt.classList.add('bg-blue-600', 'text-white');
-      btnProdukt.classList.remove('bg-gray-200');
-      btnInfo.classList.remove('bg-blue-600', 'text-white');
-      btnInfo.classList.add('bg-gray-200');
+    const statusEl = document.getElementById("load-status");
+    const productsEl = document.getElementById("products");
+    const categoryChipsEl = document.getElementById("category-chips");
+    const modalEl = document.getElementById("product-modal");
+    const modalTitleEl = document.getElementById("modal-title");
+    const modalDescEl = document.getElementById("modal-desc");
+    const modalPriceEl = document.getElementById("modal-price");
+    const modalMainImageEl = document.getElementById("modal-main-image");
+    const modalThumbsEl = document.getElementById("modal-thumbs");
+    const stlCanvasEl = document.getElementById("stl-canvas");
+    const stlStatusEl = document.getElementById("stl-status");
 
-      contentProdukt.classList.remove('hidden');
-      contentInfo.classList.add('hidden');
-    });
+    const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"];
 
-    btnInfo.addEventListener('click', () => {
-      btnInfo.classList.add('bg-blue-600', 'text-white');
-      btnInfo.classList.remove('bg-gray-200');
-      btnProdukt.classList.remove('bg-blue-600', 'text-white');
-      btnProdukt.classList.add('bg-gray-200');
-
-      contentInfo.classList.remove('hidden');
-      contentProdukt.classList.add('hidden');
-    });
-
-    // Produktfilter
-    function filterProducts(category, event) {
-      const products = document.querySelectorAll('[data-category]');
-      products.forEach(p => {
-        if (category === 'all' || p.dataset.category === category) {
-          p.classList.remove('hidden');
-        } else {
-          p.classList.add('hidden');
-        }
-      });
-
-      // Endre knappfarger
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('bg-blue-600', 'text-white');
-        btn.classList.add('bg-gray-200');
-      });
-      event.target.classList.add('bg-blue-600', 'text-white');
-      event.target.classList.remove('bg-gray-200');
+    function hasExtension(fileName, allowedExtensions) {
+      const lower = String(fileName || "").toLowerCase();
+      return allowedExtensions.some((extension) => lower.endsWith(extension));
     }
 
-    // Fargebytte funksjon for produktbilder
-    function changeProductColor(productId, color) {
-      const image = document.getElementById(productId);
-      if (image) {
-        if (color.includes('/')) {
-          image.src = color;
-          return;
+    async function listDirectoryFiles(dirPath) {
+      try {
+        const response = await fetch(dirPath, { cache: "no-store" });
+        if (!response.ok) {
+          return [];
         }
-        const baseName = productId.split('-')[0];
-        image.src = `${baseName}_${color}.JPG`;
+
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const directoryUrl = new URL(dirPath, window.location.href);
+
+        const files = Array.from(doc.querySelectorAll("a"))
+          .map((anchor) => anchor.getAttribute("href") || "")
+          .map((href) => {
+            try {
+              return new URL(href, directoryUrl);
+            } catch (_) {
+              return null;
+            }
+          })
+          .filter(Boolean)
+          .filter((url) => url.pathname.startsWith(directoryUrl.pathname))
+          .map((url) => decodeURIComponent(url.pathname.slice(directoryUrl.pathname.length)))
+          .filter((name) => name && name !== "../" && !name.endsWith("/"))
+          .filter((name) => !name.includes("/"));
+
+        return [...new Set(files)].sort((a, b) => a.localeCompare(b, "no"));
+      } catch (_) {
+        return [];
       }
     }
+
+    async function autoFillAssets(product, metaPath) {
+      const result = {
+        ...product,
+        images: [...(product.images || [])],
+        stl: {
+          file: product.stl?.file || "",
+          units: product.stl?.units || "mm"
+        }
+      };
+
+      const baseDir = String(metaPath || "").replace(/product\.json$/i, "");
+      if (!baseDir) {
+        return result;
+      }
+
+      if ((result.images || []).length === 0) {
+        const imageFiles = await listDirectoryFiles(`${baseDir}images/`);
+        result.images = imageFiles
+          .filter((fileName) => hasExtension(fileName, IMAGE_EXTENSIONS))
+          .map((fileName) => `${baseDir}images/${fileName}`);
+      }
+
+      if (!result.stl.file) {
+        const modelFiles = await listDirectoryFiles(`${baseDir}models/`);
+        const stlFile = modelFiles.find((fileName) => fileName.toLowerCase().endsWith(".stl"));
+        if (stlFile) {
+          result.stl.file = `${baseDir}models/${stlFile}`;
+        }
+      }
+
+      return result;
+    }
+
+    async function loadCatalog() {
+      try {
+        const indexResponse = await fetch("data/3d-products/index.json", { cache: "no-store" });
+        if (!indexResponse.ok) {
+          throw new Error("Fann ikkje data/3d-products/index.json");
+        }
+
+        const indexData = await indexResponse.json();
+        const productPromises = (indexData.products || []).map(async (entry) => {
+          const productResponse = await fetch(entry.meta, { cache: "no-store" });
+          if (!productResponse.ok) {
+            throw new Error(`Fann ikkje ${entry.meta}`);
+          }
+
+          const product = await productResponse.json();
+          return autoFillAssets(product, entry.meta);
+        });
+
+        state.products = (await Promise.all(productPromises)).filter((product) => product.status !== "hidden");
+        statusEl.textContent = `${state.products.length} produkt lasta inn.`;
+        buildFilterChips();
+        renderProducts();
+      } catch (error) {
+        const isFileProtocol = window.location.protocol === "file:";
+        const rawMessage = String(error && error.message ? error.message : error);
+        const likelyFetchBlock = /failed to fetch|fetch/i.test(rawMessage);
+
+        if (isFileProtocol || likelyFetchBlock) {
+          statusEl.textContent = "Klarte ikkje laste produktdata. Opne sida via lokal server (ikkje file://), t.d. python -m http.server 4173, og bruk http://localhost:4173/3d-dingser.html";
+        } else {
+          statusEl.textContent = `Feil ved lasting: ${rawMessage}`;
+        }
+
+        productsEl.innerHTML = "";
+      }
+    }
+
+    function buildFilterChips() {
+      const categories = ["all", ...new Set(state.products.map((product) => product.category || "anna"))];
+
+      categoryChipsEl.innerHTML = "";
+
+      categories.forEach((category) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = `chip ${state.selectedCategory === category ? "active" : ""}`;
+        chip.textContent = category;
+        chip.addEventListener("click", () => {
+          state.selectedCategory = category;
+          buildFilterChips();
+          renderProducts();
+        });
+        categoryChipsEl.appendChild(chip);
+      });
+    }
+
+    function filteredProducts() {
+      return state.products.filter((product) => {
+        const categoryOk = state.selectedCategory === "all" || product.category === state.selectedCategory;
+        return categoryOk;
+      });
+    }
+
+    function renderProducts() {
+      const products = filteredProducts();
+      productsEl.innerHTML = "";
+
+      if (products.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "status";
+        empty.textContent = "Ingen produkt treff vala filter akkurat no.";
+        productsEl.appendChild(empty);
+        return;
+      }
+
+      products.forEach((product) => {
+        const card = document.createElement("article");
+        card.className = "card";
+
+        const previewImage = (product.images || [])[0] || "";
+        const hasStl = Boolean(product.stl && product.stl.file);
+
+        card.innerHTML = `
+          <img src="${previewImage}" alt="${product.name}" loading="lazy" />
+          <div class="card-body">
+            <h3>${product.name}</h3>
+            <p class="desc">${product.description || ""}</p>
+            <p class="price">Pris: ${product.priceNok ?? "?"} kr</p>
+            <div class="card-actions">
+              <button type="button" class="${hasStl ? "btn-warn" : "btn-ghost"}">Vis produkt</button>
+            </div>
+          </div>
+        `;
+
+        const actionBtn = card.querySelector("button");
+        actionBtn.addEventListener("click", () => openModal(product));
+
+        productsEl.appendChild(card);
+      });
+    }
+
+    function openModal(product) {
+      modalTitleEl.textContent = product.name;
+      modalDescEl.textContent = product.description || "";
+      modalPriceEl.textContent = `Pris: ${product.priceNok ?? "?"} kr`;
+
+      const images = product.images || [];
+      modalMainImageEl.src = images[0] || "";
+      modalMainImageEl.alt = product.name;
+      modalThumbsEl.innerHTML = "";
+
+      images.forEach((imagePath, index) => {
+        const thumbBtn = document.createElement("button");
+        thumbBtn.type = "button";
+        thumbBtn.title = `Bilete ${index + 1}`;
+        thumbBtn.innerHTML = `<img src="${imagePath}" alt="${product.name} - ${index + 1}" />`;
+        thumbBtn.addEventListener("click", () => {
+          modalMainImageEl.src = imagePath;
+        });
+        modalThumbsEl.appendChild(thumbBtn);
+      });
+
+      modalEl.showModal();
+      if (product.stl && product.stl.file) {
+        loadStl(product.stl && product.stl.file ? product.stl.file : "");
+      } else {
+        teardownStlViewer();
+        stlStatusEl.textContent = "Dette produktet manglar STL-fil.";
+        stlCanvasEl.textContent = "Ingen STL-fil registrert i product.json.";
+      }
+    }
+
+    function setupStlViewer() {
+      teardownStlViewer();
+
+      if (!window.THREE) {
+        stlStatusEl.textContent = "Three.js er ikkje lasta i nettlesaren.";
+        stlCanvasEl.textContent = "3D-bibliotek manglar. Sjekk nettverk/blokkering av script-CDN.";
+        return false;
+      }
+
+      if (!THREE.OrbitControls) {
+        stlStatusEl.textContent = "OrbitControls manglar.";
+        stlCanvasEl.textContent = "Klarte ikkje laste kontroller for 3D-visning.";
+        return false;
+      }
+
+      const width = stlCanvasEl.clientWidth;
+      const height = Math.max(320, Math.floor(width * 0.68));
+      stlCanvasEl.textContent = "";
+
+      state.scene = new THREE.Scene();
+      state.scene.background = new THREE.Color(0xf0f5fb);
+
+      state.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 5000);
+      state.camera.position.set(80, 80, 120);
+
+      state.renderer = new THREE.WebGLRenderer({ antialias: true });
+      state.renderer.setSize(width, height);
+      state.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      stlCanvasEl.appendChild(state.renderer.domElement);
+
+      const ambient = new THREE.AmbientLight(0xffffff, 1.0);
+      const key = new THREE.DirectionalLight(0xffffff, 0.8);
+      key.position.set(60, 100, 40);
+      const fill = new THREE.DirectionalLight(0xbcd9ff, 0.6);
+      fill.position.set(-70, 40, -30);
+      state.scene.add(ambient, key, fill);
+
+      state.controls = new THREE.OrbitControls(state.camera, state.renderer.domElement);
+      state.controls.enableDamping = true;
+      state.controls.dampingFactor = 0.06;
+
+      const grid = new THREE.GridHelper(120, 12, 0xa8bad0, 0xd6e1ee);
+      grid.position.y = -22;
+      state.scene.add(grid);
+
+      const animate = () => {
+        state.animationFrame = requestAnimationFrame(animate);
+        if (state.mesh) {
+          state.mesh.rotation.y += 0.003;
+        }
+        if (state.controls) {
+          state.controls.update();
+        }
+        if (state.renderer && state.scene && state.camera) {
+          state.renderer.render(state.scene, state.camera);
+        }
+      };
+      animate();
+      return true;
+    }
+
+    function loadStl(stlFilePath) {
+      if (!stlFilePath) {
+        teardownStlViewer();
+        stlStatusEl.textContent = "Dette produktet manglar STL-fil.";
+        stlCanvasEl.textContent = "Ingen STL-fil registrert i product.json.";
+        return;
+      }
+
+      stlStatusEl.textContent = "Lastar STL-modell ...";
+      const viewerReady = setupStlViewer();
+      if (!viewerReady) {
+        return;
+      }
+
+      if (!window.THREE || !THREE.STLLoader) {
+        teardownStlViewer();
+        stlStatusEl.textContent = "STLLoader manglar.";
+        stlCanvasEl.textContent = "Klarte ikkje laste STL-loader. Sjekk script-kjeldene i toppen av sida.";
+        return;
+      }
+
+      const loader = new THREE.STLLoader();
+      loader.load(
+        stlFilePath,
+        (geometry) => {
+          const smoothGeometry = createSmoothedGeometry(geometry);
+          smoothGeometry.computeVertexNormals();
+          const material = new THREE.MeshStandardMaterial({
+            color: 0x1f6fa8,
+            metalness: 0.16,
+            roughness: 0.54
+          });
+
+          state.mesh = new THREE.Mesh(smoothGeometry, material);
+          smoothGeometry.center();
+
+          const box = new THREE.Box3().setFromObject(state.mesh);
+          const size = box.getSize(new THREE.Vector3()).length();
+          const fit = Math.max(size, 1);
+          state.camera.position.set(fit * 0.75, fit * 0.65, fit * 1.05);
+
+          state.scene.add(state.mesh);
+          stlStatusEl.textContent = `STL lasta (smooth): ${stlFilePath}`;
+        },
+        undefined,
+        (error) => {
+          teardownStlViewer();
+          stlStatusEl.textContent = `Klarte ikkje laste STL (${error.message || "ukjent feil"}).`;
+          stlCanvasEl.textContent = "Sjekk at filstien er rett og at STL-fila finst i repoet.";
+        }
+      );
+    }
+
+    function createSmoothedGeometry(inputGeometry) {
+      const source = inputGeometry.index ? inputGeometry.toNonIndexed() : inputGeometry;
+      const position = source.getAttribute("position");
+
+      if (!position || !position.array) {
+        return source;
+      }
+
+      const scale = 10000;
+      const vertices = [];
+      const indices = [];
+      const uniqueMap = new Map();
+      const src = position.array;
+
+      for (let i = 0; i < position.count; i += 1) {
+        const x = src[i * 3 + 0];
+        const y = src[i * 3 + 1];
+        const z = src[i * 3 + 2];
+        const key = `${Math.round(x * scale)}_${Math.round(y * scale)}_${Math.round(z * scale)}`;
+
+        let index = uniqueMap.get(key);
+        if (index === undefined) {
+          index = vertices.length / 3;
+          uniqueMap.set(key, index);
+          vertices.push(x, y, z);
+        }
+
+        indices.push(index);
+      }
+
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+      geometry.setIndex(indices);
+      return geometry;
+    }
+
+    function teardownStlViewer() {
+      if (state.animationFrame) {
+        cancelAnimationFrame(state.animationFrame);
+      }
+      if (state.controls) {
+        state.controls.dispose();
+      }
+      if (state.renderer) {
+        state.renderer.dispose();
+      }
+      state.renderer = null;
+      state.scene = null;
+      state.camera = null;
+      state.controls = null;
+      state.mesh = null;
+      state.animationFrame = null;
+    }
+
+    document.getElementById("close-modal").addEventListener("click", () => {
+      modalEl.close();
+      teardownStlViewer();
+      stlStatusEl.textContent = "Lukka. Opne eit produkt for ny visning.";
+      stlCanvasEl.textContent = "Ingen STL-fil vald.";
+    });
+
+    modalEl.addEventListener("close", teardownStlViewer);
+    window.addEventListener("beforeunload", teardownStlViewer);
+
+    loadCatalog();
   </script>
 </body>
 </html>

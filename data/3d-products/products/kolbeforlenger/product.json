@@ -1,0 +1,18 @@
+{
+  "id": "kolbeforlenger",
+  "slug": "kolbeforlenger",
+  "name": "Kolbeforlenger",
+  "description": "Forlenger kolba. 8 mm er standard, men kan lagast i andre tjukkelsar.",
+  "priceNok": 100,
+  "category": "skyting",
+  "tags": ["kolbe", "tilpassing"],
+  "images": [
+    "data/3d-products/products/kolbeforlenger/images/rosa.JPG",
+    "data/3d-products/products/kolbeforlenger/images/svart.JPG"
+  ],
+  "stl": {
+    "file": "",
+    "units": "mm"
+  },
+  "status": "active"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "diskstativ",
+  "slug": "diskstativ",
+  "name": "Diskstativ",
+  "description": "Still ut diskar paa hylla i valfri farge.",
+  "priceNok": 50,
+  "category": "kvardag",
+  "tags": ["diskgolf", "stativ"],
+  "images": [
+    "data/3d-products/products/diskstativ/images/raud.JPG"
+  ],
+  "stl": {
+    "file": "",
+    "units": "mm"
+  },
+  "status": "active"
+}

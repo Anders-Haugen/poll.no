@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin 3D-dingser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c2432;
+      --line: #cfdae6;
+      --card: #ffffff;
+      --bg: #eef3f8;
+      --accent: #0f766e;
+      --warn: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f7f9fc 0%, #e9f0f6 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1rem 0 2.2rem;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    h1 { margin: 0; }
+
+    .muted {
+      margin: 0.35rem 0 0;
+      color: #435870;
+      font-size: 0.92rem;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      color: #fff;
+      background: #1e4f86;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn.alt {
+      background: #5b7087;
+    }
+
+    .btn.green { background: var(--accent); }
+    .btn.orange { background: var(--warn); }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 1rem;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.9rem;
+      box-shadow: 0 8px 18px rgba(18, 36, 57, 0.08);
+    }
+
+    .product-list {
+      display: grid;
+      gap: 0.45rem;
+      margin-top: 0.7rem;
+      max-height: 540px;
+      overflow: auto;
+      padding-right: 0.2rem;
+    }
+
+    .product-item {
+      border: 1px solid #c8d6e5;
+      border-radius: 12px;
+      padding: 0.65rem;
+      cursor: pointer;
+      background: #f7fbff;
+    }
+
+    .product-item.active {
+      border-color: #3b82f6;
+      background: #ecf5ff;
+    }
+
+    .product-item h3 {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .product-item p {
+      margin: 0.3rem 0 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.73rem;
+      color: #4b6078;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      font-size: 0.83rem;
+      margin-bottom: 0.24rem;
+      color: #4a5d73;
+      font-weight: 600;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid #c2d1e1;
+      border-radius: 10px;
+      padding: 0.56rem 0.62rem;
+      font-family: inherit;
+      font-size: 0.93rem;
+      background: #fcfeff;
+    }
+
+    textarea {
+      min-height: 84px;
+      resize: vertical;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.8rem;
+      line-height: 1.38;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .code {
+      margin-top: 0.8rem;
+      border-radius: 12px;
+      background: #0f1d2e;
+      color: #dce8f5;
+      padding: 0.65rem;
+      min-height: 120px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      overflow: auto;
+      border: 1px solid #283a50;
+    }
+
+    .small {
+      font-size: 0.81rem;
+      color: #52677d;
+      margin-top: 0.45rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
+      form { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top">
+      <div>
+        <h1>Admin 3D-dingser</h1>
+        <p class="muted">Rediger produktinfo og generer JSON for commit i repo.</p>
+      </div>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+        <a class="btn alt" href="3d-dingser.html">Til 3D-sida</a>
+        <a class="btn" href="index.html">Til heim</a>
+      </div>
+    </header>
+
+    <section class="layout">
+      <aside class="panel">
+        <button class="btn green" id="new-product-btn" type="button">Nytt produkt</button>
+        <div class="product-list" id="product-list"></div>
+        <p class="small">
+          Denne admin-sida kan ikkje lage mapper i GitHub direkte (statisk nettside), men ho lagar ferdige JSON-filer og mappeforslag du kan committe.
+        </p>
+      </aside>
+
+      <article class="panel">
+        <form id="product-form">
+          <div>
+            <label for="id">ID</label>
+            <input id="id" required />
+          </div>
+          <div>
+            <label for="slug">Slug</label>
+            <input id="slug" required />
+          </div>
+
+          <div class="full">
+            <label for="name">Namn</label>
+            <input id="name" required />
+          </div>
+
+          <div class="full">
+            <label for="description">Beskriving</label>
+            <textarea id="description"></textarea>
+          </div>
+
+          <div>
+            <label for="priceNok">Pris (NOK)</label>
+            <input id="priceNok" type="number" min="0" step="1" required />
+          </div>
+          <div>
+            <label for="category">Kategori</label>
+            <input id="category" placeholder="skyting / kvardag" />
+          </div>
+
+          <div class="full">
+            <label for="images">Bilde-filer (ein sti per linje)</label>
+            <textarea id="images" placeholder="data/3d-products/products/slug/images/gul.JPG"></textarea>
+          </div>
+
+          <div class="full">
+            <label for="stlFile">STL-filsti</label>
+            <input id="stlFile" placeholder="data/3d-products/products/slug/models/produkt.stl" />
+          </div>
+
+          <div>
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="active">active</option>
+              <option value="hidden">hidden</option>
+            </select>
+          </div>
+          <div>
+            <label for="units">STL units</label>
+            <input id="units" value="mm" />
+          </div>
+
+          <div class="full actions">
+            <button class="btn green" type="submit">Oppdater i admin</button>
+            <button class="btn" id="download-product-json" type="button">Last ned product.json</button>
+            <button class="btn" id="download-index-json" type="button">Last ned index.json</button>
+            <button class="btn orange" id="delete-product" type="button">Slett fra index</button>
+          </div>
+        </form>
+
+        <div class="code" id="output">Vel eit produkt for aa vise ferdig JSON og mappeplan.</div>
+      </article>
+    </section>
+  </div>
+
+  <script>
+    const state = {
+      indexData: { schemaVersion: 1, updatedAt: "", products: [] },
+      productsByMeta: {},
+      selectedMeta: null
+    };
+
+    const productListEl = document.getElementById("product-list");
+    const outputEl = document.getElementById("output");
+
+    const form = {
+      id: document.getElementById("id"),
+      slug: document.getElementById("slug"),
+      name: document.getElementById("name"),
+      description: document.getElementById("description"),
+      priceNok: document.getElementById("priceNok"),
+      category: document.getElementById("category"),
+      images: document.getElementById("images"),
+      stlFile: document.getElementById("stlFile"),
+      status: document.getElementById("status"),
+      units: document.getElementById("units")
+    };
+
+    function toTodayIso() {
+      return new Date().toISOString().slice(0, 10);
+    }
+
+    function sanitizeSlug(value) {
+      return value
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    async function loadData() {
+      const indexResponse = await fetch("data/3d-products/index.json", { cache: "no-store" });
+      if (!indexResponse.ok) {
+        throw new Error("Fann ikkje data/3d-products/index.json");
+      }
+
+      state.indexData = await indexResponse.json();
+      state.productsByMeta = {};
+
+      for (const entry of state.indexData.products || []) {
+        const response = await fetch(entry.meta, { cache: "no-store" });
+        if (!response.ok) {
+          continue;
+        }
+        state.productsByMeta[entry.meta] = await response.json();
+      }
+
+      renderList();
+      if ((state.indexData.products || []).length) {
+        selectProduct(state.indexData.products[0].meta);
+      }
+    }
+
+    function renderList() {
+      const entries = state.indexData.products || [];
+      productListEl.innerHTML = "";
+
+      entries.forEach((entry) => {
+        const product = state.productsByMeta[entry.meta];
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `product-item ${state.selectedMeta === entry.meta ? "active" : ""}`;
+        button.innerHTML = `<h3>${product?.name || entry.id}</h3><p>${entry.meta}</p>`;
+        button.addEventListener("click", () => selectProduct(entry.meta));
+        productListEl.appendChild(button);
+      });
+    }
+
+    function productFromForm() {
+      return {
+        id: form.id.value.trim(),
+        slug: sanitizeSlug(form.slug.value),
+        name: form.name.value.trim(),
+        description: form.description.value.trim(),
+        priceNok: Number(form.priceNok.value),
+        category: form.category.value.trim(),
+        images: form.images.value.split("\n").map((line) => line.trim()).filter(Boolean),
+        stl: {
+          file: form.stlFile.value.trim(),
+          units: form.units.value.trim() || "mm"
+        },
+        status: form.status.value
+      };
+    }
+
+    function fillForm(product) {
+      form.id.value = product.id || "";
+      form.slug.value = product.slug || "";
+      form.name.value = product.name || "";
+      form.description.value = product.description || "";
+      form.priceNok.value = Number.isFinite(product.priceNok) ? product.priceNok : 0;
+      form.category.value = product.category || "";
+      form.images.value = (product.images || []).join("\n");
+      form.stlFile.value = product.stl?.file || "";
+      form.units.value = product.stl?.units || "mm";
+      form.status.value = product.status || "active";
+    }
+
+    function generateMetaPathFromSlug(slug) {
+      return `data/3d-products/products/${slug}/product.json`;
+    }
+
+    function selectProduct(metaPath) {
+      state.selectedMeta = metaPath;
+      const product = state.productsByMeta[metaPath];
+      if (!product) {
+        return;
+      }
+      fillForm(product);
+      renderList();
+      renderOutput();
+    }
+
+    function ensureEntryForCurrentProduct(product, oldMetaPath) {
+      const newMetaPath = generateMetaPathFromSlug(product.slug);
+      let entry = (state.indexData.products || []).find((item) => item.meta === oldMetaPath || item.meta === newMetaPath);
+      if (!entry) {
+        entry = { id: product.id, meta: newMetaPath };
+        state.indexData.products.push(entry);
+      }
+
+      entry.id = product.id;
+      entry.meta = newMetaPath;
+
+      if (oldMetaPath && oldMetaPath !== newMetaPath) {
+        delete state.productsByMeta[oldMetaPath];
+      }
+
+      state.productsByMeta[newMetaPath] = product;
+      state.selectedMeta = newMetaPath;
+      state.indexData.updatedAt = toTodayIso();
+    }
+
+    function renderOutput() {
+      const product = productFromForm();
+      const metaPath = generateMetaPathFromSlug(product.slug);
+      const productJson = JSON.stringify(product, null, 2);
+      const indexJson = JSON.stringify(state.indexData, null, 2);
+
+      outputEl.textContent = [
+        "=== product.json ===",
+        productJson,
+        "",
+        "=== index.json ===",
+        indexJson,
+        "",
+        "=== mappeforslag ===",
+        `data/3d-products/products/${product.slug}/`,
+        `data/3d-products/products/${product.slug}/images/`,
+        `data/3d-products/products/${product.slug}/models/`,
+        "",
+        "Legg inn filer manuelt, commit deretter endringane."
+      ].join("\n");
+
+      return { productJson, indexJson, metaPath, slug: product.slug };
+    }
+
+    function downloadText(filename, content) {
+      const blob = new Blob([content], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById("product-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const oldMeta = state.selectedMeta;
+      const product = productFromForm();
+
+      if (!product.id || !product.slug || !product.name) {
+        outputEl.textContent = "ID, slug og namn maa fyllast ut.";
+        return;
+      }
+
+      ensureEntryForCurrentProduct(product, oldMeta);
+      renderList();
+      renderOutput();
+    });
+
+    document.getElementById("new-product-btn").addEventListener("click", () => {
+      state.selectedMeta = null;
+      fillForm({
+        id: "",
+        slug: "",
+        name: "",
+        description: "",
+        priceNok: 0,
+        category: "",
+        images: [],
+        stl: { file: "", units: "mm" },
+        status: "active"
+      });
+      renderList();
+      renderOutput();
+    });
+
+    document.getElementById("delete-product").addEventListener("click", () => {
+      if (!state.selectedMeta) {
+        outputEl.textContent = "Vel eit produkt i lista for aa slette det fra index.";
+        return;
+      }
+
+      state.indexData.products = (state.indexData.products || []).filter((entry) => entry.meta !== state.selectedMeta);
+      delete state.productsByMeta[state.selectedMeta];
+      state.selectedMeta = null;
+      state.indexData.updatedAt = toTodayIso();
+      renderList();
+      fillForm({ id: "", slug: "", name: "", description: "", priceNok: 0, category: "", images: [], stl: { file: "", units: "mm" }, status: "active" });
+      renderOutput();
+    });
+
+    document.getElementById("download-product-json").addEventListener("click", () => {
+      const { productJson, slug } = renderOutput();
+      if (!slug) {
+        outputEl.textContent = "Slug maa fyllast ut for aa laste ned product.json.";
+        return;
+      }
+      downloadText("product.json", productJson);
+    });
+
+    document.getElementById("download-index-json").addEventListener("click", () => {
+      const { indexJson } = renderOutput();
+      downloadText("index.json", indexJson);
+    });
+
+    [
+      form.id,
+      form.slug,
+      form.name,
+      form.description,
+      form.priceNok,
+      form.category,
+      form.images,
+      form.stlFile,
+      form.status,
+      form.units
+    ].forEach((field) => {
+      field.addEventListener("input", renderOutput);
+      field.addEventListener("change", renderOutput);
+    });
+
+    loadData().catch((error) => {
+      outputEl.textContent = `Klarte ikkje laste data: ${error.message}`;
+    });
+  </script>
+</body>
+</html>

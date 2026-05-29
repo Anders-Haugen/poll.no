@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-29",
+  "products": [
+    {
+      "id": "magasinbunn-engbo-22",
+      "meta": "data/3d-products/products/magasinbunn-engbo-22/product.json"
+    },
+    {
+      "id": "kolbeforlenger",
+      "meta": "data/3d-products/products/kolbeforlenger/product.json"
+    },
+    {
+      "id": "diskstativ",
+      "meta": "data/3d-products/products/diskstativ/product.json"
+    },
+    {
+      "id": "sluttstykkeholder-65",
+      "meta": "data/3d-products/products/sluttstykkeholder-65/product.json"
+    }
+  ]
+}
