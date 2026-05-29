@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pøll.no | Dårleg unskyldningsgenerator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+
+  <header class="bg-white shadow p-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold">Dårleg unskyldningsgenerator</h1>
+      <p class="text-gray-600 mt-2">Trykk på knappen for ei tilfeldig unskyldning som sannsynlegvis ikke held mål.</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6 flex-grow w-full">
+    <section class="bg-white rounded-2xl shadow p-6 sm:p-8">
+      <div class="flex flex-col items-center text-center gap-6">
+        <p id="status" class="text-sm text-gray-500">Laster unskyldninger...</p>
+
+        <div id="excuse-box" class="w-full min-h-28 bg-gray-50 border border-gray-200 rounded-xl p-5 flex items-center justify-center">
+          <p id="excuse-text" class="text-lg sm:text-xl font-semibold text-gray-700">Trykk på knappen for å starte.</p>
+        </div>
+
+        <button
+          id="new-excuse-btn"
+          type="button"
+          disabled
+          class="px-6 py-3 rounded-full font-semibold bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+        >
+          Gje meg ei dårleg unskyldning
+        </button>
+
+        <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Tilbake til framsida</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white shadow mt-12 p-6 text-center">
+    <p class="text-gray-500">&copy; 2026 Pøll.no | Anders Haugen. Alle rettigheter forbeholdt.</p>
+  </footer>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const excuseTextEl = document.getElementById('excuse-text');
+    const buttonEl = document.getElementById('new-excuse-btn');
+
+    let excuses = [];
+
+    function pickRandomExcuse() {
+      if (!excuses.length) {
+        excuseTextEl.textContent = 'Fant ingen unskyldninger i fila.';
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * excuses.length);
+      excuseTextEl.textContent = excuses[randomIndex];
+    }
+
+    async function fetchExcusesFromFile() {
+      const candidatePaths = [
+        'data/unskyldninger.json',
+        './data/unskyldninger.json',
+        '/data/unskyldninger.json'
+      ];
+
+      for (const path of candidatePaths) {
+        try {
+          const response = await fetch(path, { cache: 'no-store' });
+          if (!response.ok) {
+            continue;
+          }
+
+          const data = await response.json();
+          if (Array.isArray(data)) {
+            return data;
+          }
+          if (Array.isArray(data.unskyldninger)) {
+            return data.unskyldninger;
+          }
+        } catch (error) {
+          // Try next path candidate.
+        }
+      }
+
+      throw new Error('Klarte ikke å finne gyldig datafil for unskyldninger.');
+    }
+
+    async function loadExcuses() {
+      if (window.location.protocol === 'file:') {
+        statusEl.textContent = 'Denne sida må åpnes via en webserver, ikke direkte som fil.';
+        excuseTextEl.textContent = 'Start lokal server og åpne siden via http://...';
+        return;
+      }
+
+      try {
+        excuses = await fetchExcusesFromFile();
+        if (!excuses.length) {
+          throw new Error('Datafilen ble lest, men inneholdt ingen unskyldninger.');
+        }
+
+        statusEl.textContent = `Lastet ${excuses.length} unskyldninger.`;
+        buttonEl.disabled = false;
+        pickRandomExcuse();
+      } catch (error) {
+        statusEl.textContent = 'Klarte ikke å laste unskyldninger fra datafil.';
+        excuseTextEl.textContent = 'Sjekk data/unskyldninger.json og at siden kjøres via webserver.';
+      }
+    }
+
+    buttonEl.addEventListener('click', pickRandomExcuse);
+    loadExcuses();
+  </script>
+
+</body>
+</html>
