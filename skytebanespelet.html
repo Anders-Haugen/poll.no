@@ -8,6 +8,38 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <style>
+    .guess-pin {
+      background: transparent;
+      border: 0;
+    }
+
+    .guess-pin__marker {
+      position: relative;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px 9999px 9999px 0;
+      transform: rotate(-45deg);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.28);
+    }
+
+    .guess-pin__marker::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .guess-pin--blue {
+      background: #2563eb;
+    }
+
+    .guess-pin--red {
+      background: #dc2626;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
   <header class="bg-white shadow p-4 sm:p-6">
@@ -112,7 +144,7 @@
 
           <!-- Leaderboard -->
           <div class="pt-2 border-t">
-            <h3 class="font-bold text-sm mb-2">Top 10</h3>
+            <h3 id="leaderboardTittel" class="font-bold text-sm mb-2">Top 10</h3>
             <div id="leaderboard" class="space-y-1 text-xs max-h-44 overflow-auto">
               <p class="text-gray-500">Ingen scores ennå</p>
             </div>
@@ -146,12 +178,18 @@
         }
       }
 
-      static async getTopScores(limit = 10) {
-        const { data, error } = await supabaseClient
+      static async getTopScores(mode, limit = 10) {
+        let query = supabaseClient
           .from('scores')
           .select('player_name, points')
           .order('points', { ascending: false })
           .limit(limit);
+
+        if (mode) {
+          query = query.eq('mode', mode);
+        }
+
+        const { data, error } = await query;
 
         if (error) {
           throw error;
@@ -230,12 +268,23 @@
       markerKlikk = null;
     }
 
+    function lagPinIkon(farge) {
+      return L.divIcon({
+        className: 'guess-pin',
+        html: `<span class="guess-pin__marker guess-pin--${farge}"></span>`,
+        iconSize: [18, 18],
+        iconAnchor: [9, 18],
+        popupAnchor: [0, -18]
+      });
+    }
+
     // ===== SPILL-LOGIKK =====
     let spillState = {
       spillerNavn: null,
       alleBaner: [],
       aktivModus: null,
       gjeldendeBane: null,
+      forrigeBaneId: null,
       totalPoeng: 0,
       timerSekunder: 30,
       timerInterval: null,
@@ -287,6 +336,7 @@
       document.getElementById('spillContainer').classList.remove('hidden');
       document.getElementById('modusSkjerm').classList.add('hidden');
       ensureKartReady();
+      oppdaterLeaderboard();
       startSpillokt();
     }
 
@@ -302,9 +352,14 @@
         : spillState.alleBaner.filter(b => b.tags.includes(spillState.aktivModus));
       if (baner.length === 0) return;
 
-      spillState.gjeldendeBane = baner[Math.floor(Math.random() * baner.length)];
+      const kandidatBaner = baner.length > 1
+        ? baner.filter((bane) => bane.id !== spillState.forrigeBaneId)
+        : baner;
+      const nesteBane = kandidatBaner[Math.floor(Math.random() * kandidatBaner.length)];
+
+      spillState.gjeldendeBane = nesteBane;
+      spillState.forrigeBaneId = nesteBane.id;
       spillState.runnePunktBeregnet = false;
-      clearKart();
 
       document.getElementById('baneNavn').textContent = spillState.gjeldendeBane.navn;
       document.getElementById('infoBaneNavn').textContent = spillState.gjeldendeBane.navn;
@@ -328,6 +383,7 @@
       spillState.antallGjettet = 0;
       spillState.timerSekunder = 30;
       spillState.spilletAktivt = true;
+      clearKart();
 
       document.getElementById('totalPoeng').textContent = '0';
       document.getElementById('startKnapp').classList.add('hidden');
@@ -366,35 +422,22 @@
 
       spillState.runnePunktBeregnet = true;
       spillState.antallGjettet += 1;
+      clearKart();
 
       const klikketPos = e.latlng;
       const riktigPos = L.latLng(spillState.gjeldendeBane.lat, spillState.gjeldendeBane.lng);
 
-      // Vis marker hvor de klikket
-      markerKlikk = L.circleMarker([klikketPos.lat, klikketPos.lng], {
-        radius: 8,
-        fillColor: '#3b82f6',
-        color: '#1e40af',
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0.7
+      // Vis nål der spilleren trykket.
+      markerKlikk = L.marker([klikketPos.lat, klikketPos.lng], {
+        icon: lagPinIkon('blue')
       }).addTo(map);
       allMarkere.push(markerKlikk);
 
-      // Vis riktig posisjon
-      const correctMarker = L.circleMarker([riktigPos.lat, riktigPos.lng], {
-        radius: 8,
-        fillColor: '#22c55e',
-        color: '#16a34a',
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0.7
+      // Vis riktig plassering for banen.
+      const correctMarker = L.marker([riktigPos.lat, riktigPos.lng], {
+        icon: lagPinIkon('red')
       }).addTo(map).bindPopup(spillState.gjeldendeBane.navn);
       allMarkere.push(correctMarker);
-
-      // Tegn linje mellom
-      const line = L.polyline([klikketPos, riktigPos], { color: '#ef4444', weight: 2, opacity: 0.7 }).addTo(map);
-      allMarkere.push(line);
 
       // Beregn avstand
       const avstand = klikketPos.distanceTo(riktigPos) / 1000; // i km
@@ -463,17 +506,23 @@
 
     async function oppdaterLeaderboard() {
       let topScores = [];
+      const aktivModus = spillState.aktivModus;
+      const lb = document.getElementById('leaderboard');
+      const lbTittel = document.getElementById('leaderboardTittel');
+
+      lbTittel.textContent = aktivModus ? `Top 10 - ${aktivModus}` : 'Top 10';
+
       try {
-        topScores = await ScoreData.getTopScores();
+        topScores = await ScoreData.getTopScores(aktivModus);
       } catch (err) {
-        document.getElementById('leaderboard').innerHTML = '<p class="text-red-600">Kunne ikke laste leaderboard.</p>';
+        lb.innerHTML = '<p class="text-red-600">Kunne ikke laste leaderboard.</p>';
         return;
       }
 
-      const lb = document.getElementById('leaderboard');
-
       if (topScores.length === 0) {
-        lb.innerHTML = '<p class="text-gray-500">Ingen scores ennå</p>';
+        lb.innerHTML = aktivModus
+          ? `<p class="text-gray-500">Ingen scores ennå for ${aktivModus}</p>`
+          : '<p class="text-gray-500">Ingen scores ennå</p>';
         return;
       }
 
