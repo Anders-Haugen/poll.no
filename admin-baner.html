@@ -31,7 +31,9 @@
       <button id="loginBtn" class="w-full px-4 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
         Logg inn
       </button>
+      <p id="loginFeil" class="hidden text-sm text-red-600 mt-3 text-center"></p>
       <p class="text-xs text-gray-500 mt-4 text-center">Logg inn med passordet du satte for Supabase-brukeren.</p>
+      <p class="text-xs text-gray-500 mt-1 text-center">Bruker: anderhau2@icloud.com</p>
     </div>
   </div>
 
@@ -125,6 +127,40 @@
     const ADMIN_EMAIL = 'anderhau2@icloud.com';
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+    function visLoginFeil(melding) {
+      const feilfelt = document.getElementById('loginFeil');
+      feilfelt.textContent = melding;
+      feilfelt.classList.remove('hidden');
+    }
+
+    function skjulLoginFeil() {
+      const feilfelt = document.getElementById('loginFeil');
+      feilfelt.textContent = '';
+      feilfelt.classList.add('hidden');
+    }
+
+    function formatLoginFeil(error) {
+      const melding = (error?.message || '').toLowerCase();
+
+      if (!melding) {
+        return 'Innlogging feilet. Prøv igjen.';
+      }
+
+      if (melding.includes('invalid login credentials')) {
+        return 'Feil passord for admin-brukeren, eller brukeren finnes ikke i Supabase.';
+      }
+
+      if (melding.includes('email not confirmed')) {
+        return 'Supabase-brukeren må bekrefte e-postadressen før innlogging virker.';
+      }
+
+      if (melding.includes('fetch') || melding.includes('network')) {
+        return 'Klarte ikke å kontakte Supabase. Sjekk nettverk, domene og at prosjektet er oppe.';
+      }
+
+      return error.message;
+    }
+
     // ===== LOGIN SYSTEM =====
     async function erLoggetInn() {
       const { data, error } = await supabaseClient.auth.getSession();
@@ -135,18 +171,34 @@
     }
 
     async function loggInn() {
-      const passord = document.getElementById('passordInput').value;
+      const passord = document.getElementById('passordInput').value.trim();
+      const loginBtn = document.getElementById('loginBtn');
+
+      skjulLoginFeil();
+
+      if (!passord) {
+        visLoginFeil('Skriv inn passordet først.');
+        return;
+      }
+
+      loginBtn.disabled = true;
+      loginBtn.textContent = 'Logger inn...';
+
       const { error } = await supabaseClient.auth.signInWithPassword({
         email: ADMIN_EMAIL,
         password: passord
       });
 
+      loginBtn.disabled = false;
+      loginBtn.textContent = 'Logg inn';
+
       if (error) {
-        alert('Feil passord');
         document.getElementById('passordInput').value = '';
+        visLoginFeil(formatLoginFeil(error));
         return;
       }
 
+      skjulLoginFeil();
       document.getElementById('passordInput').value = '';
       await visPanelet();
     }
@@ -427,6 +479,7 @@
     document.getElementById('passordInput').addEventListener('keypress', (e) => {
       if (e.key === 'Enter') loggInn();
     });
+    document.getElementById('passordInput').addEventListener('input', skjulLoginFeil);
 
     // ===== INIT =====
     window.addEventListener('load', async () => {
