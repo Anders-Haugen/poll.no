@@ -3,84 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pøll.no | Anders Haugen</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+<body>
 
-  <header class="bg-white shadow p-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold">Pøll.no</h1>
-      <p class="text-gray-600 mt-2">Diverse skyterelatert frå Anders Haugen</p>
-    </div>
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen — skytesport, 3D-print og diverse tull</p>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6 flex-grow w-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      <!-- 3D Dingser Card -->
-      <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6 h-full">
-        <a href="3d-dingser.html" class="group block">
-          <div class="text-5xl mb-4">🖨️</div>
-          <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Haugen's 3D-dingser</h2>
-          <p class="text-gray-600 mb-4">
-            Utforsk utval av 3D-printa produkt med bildegalleri og mogleg STL-visning.
-          </p>
-          <div class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full group-hover:bg-blue-700 transition">
-            Se produkter →
-          </div>
-        </a>
-        <a href="admin-3d-dingser.html" class="inline-block mt-3 px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition text-sm font-semibold">
-          Admin 3D
-        </a>
-      </div>
+  <nav>
+    <a href="index.html" class="aktiv">Framsida</a>
+    <a href="3d-dingser.html">3D-dingser</a>
+    <a href="skyteteori.html">Skyteteori</a>
+    <a href="darlig-unskyldningsgenerator.html">Unskyldningsgeneratoren</a>
+  </nav>
 
-      <!-- Skytebanespelet Card -->
-      <a href="skytebanespelet.html" class="group">
-        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6 h-full">
-          <div class="text-5xl mb-4">🎮</div>
-          <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Skytebanespelet</h2>
-          <p class="text-gray-600 mb-4">
-            Et interaktivt spill hvor du kan teste dine skyteferdigheter. Målrettet og moro for hele familien!
-          </p>
-          <div class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full group-hover:bg-blue-700 transition">
-            Spel nå →
-          </div>
-        </div>
+  <main>
+    <p class="seksjon-tittel">Innhald</p>
+    <div class="kort-grid">
+      <a class="kort" href="3d-dingser.html">
+        <div class="kort-ikon">🖨️</div>
+        <h2>3D-dingser</h2>
+        <p>Ting eg har printa — magasinbotnar, sluttstykkehalderar og anna skyterelatert småtteri.</p>
       </a>
-
-      <!-- Dårleg unskyldningsgenerator Card -->
-      <a href="darlig-unskyldningsgenerator.html" class="group">
-        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-6 h-full">
-          <div class="text-5xl mb-4">🙈</div>
-          <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Dårleg unskyldningsgenerator</h2>
-          <p class="text-gray-600 mb-4">
-            Trykk på knappen og få ei tilfeldig, tvilsam unskyldning. Perfekt når du burde skote betre.
-          </p>
-          <div class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full group-hover:bg-blue-700 transition">
-            Få unskyldning →
-          </div>
-        </div>
+      <a class="kort" href="skyteteori.html">
+        <div class="kort-ikon">📖</div>
+        <h2>Skyteteori</h2>
+        <p>Notatar om skytesport — stilling, sikt, avtrekk og pust. Under arbeid.</p>
       </a>
-
+      <a class="kort" href="darlig-unskyldningsgenerator.html">
+        <div class="kort-ikon">🙈</div>
+        <h2>Unskyldningsgeneratoren</h2>
+        <p>For når resultatlista ikkje er til å vise til nokon.</p>
+      </a>
     </div>
 
-    <!-- Om meg section -->
-    <section id="tab-content-produkt">
-    <!-- Om meg section -->
-    <section class="bg-white rounded-2xl shadow p-6 mt-10">
-      <h2 class="text-2xl font-bold mb-4">Om Pøll.no</h2>
-      <p class="text-gray-600 mb-3">
-        Velkommen til mitt digitale hjørne! Her finner du både mine 3D-printeprodukter og noen interaktive spill som jeg har laget.
-      </p>
-      <p class="text-gray-600">
-        Denne nettsiden er et sted hvor jeg deler prosjektene mine. Trykk på kortene over for å utforske mer!
-      </p>
-    </section>
+    <div class="under-arbeid-seksjon">
+      <p class="seksjon-tittel">Under arbeid</p>
+      <div class="kort-grid">
+        <span class="kort deaktivert">
+          <div class="kort-ikon">🎮</div>
+          <h2>Skytebanespelet</h2>
+          <p>Kjem tilbake seinare.</p>
+        </span>
+      </div>
+    </div>
+
+    <div class="om-boks">
+      <p>Dette er nettsida til Anders Haugen. Litt hobbyprosjekt, litt lager for ting eg ikkje veit kor eg elles skulle putte.</p>
+    </div>
   </main>
 
-  <footer class="bg-white shadow mt-12 p-6 text-center">
-    <p class="text-gray-500">&copy; 2026 Pøll.no | Anders Haugen. Alle rettigheter forbeholdt.</p>
+  <footer>
+    &copy; 2026 Anders Haugen &middot; Pøll.no
   </footer>
 
 </body>

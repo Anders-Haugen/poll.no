@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -25,7 +26,6 @@
 
     body {
       margin: 0;
-      font-family: "Sora", sans-serif;
       color: var(--ink);
       background:
         radial-gradient(circle at 15% 0%, #caeef5 0, transparent 36%),
@@ -34,12 +34,16 @@
       min-height: 100vh;
     }
 
+    main, .product-topbar {
+      font-family: "Sora", sans-serif;
+    }
+
     .container {
       width: min(1120px, calc(100% - 2rem));
       margin: 0 auto;
     }
 
-    header {
+    .product-topbar {
       position: sticky;
       top: 0;
       z-index: 20;
@@ -57,7 +61,7 @@
       flex-wrap: wrap;
     }
 
-    h1 {
+    .topbar h1 {
       margin: 0;
       font-size: clamp(1.5rem, 4vw, 2.4rem);
       letter-spacing: -0.02em;
@@ -67,12 +71,6 @@
       margin: 0.35rem 0 0;
       color: #3c4e64;
       font-size: 0.95rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 0.55rem;
-      flex-wrap: wrap;
     }
 
     .btn {
@@ -305,12 +303,7 @@
       display: block;
     }
 
-    footer {
-      text-align: center;
-      color: #536a80;
-      padding: 1rem 0 2rem;
-      font-size: 0.88rem;
-    }
+    /* footer handled by style.css */
 
     @media (max-width: 860px) {
       .toolbar,
@@ -323,19 +316,27 @@
   </style>
 </head>
 <body>
+
   <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen — skytesport, 3D-print og diverse tull</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Framsida</a>
+    <a href="3d-dingser.html" class="aktiv">3D-dingser</a>
+    <a href="skyteteori.html">Skyteteori</a>
+    <a href="darlig-unskyldningsgenerator.html">Unskyldningsgeneratoren</a>
+  </nav>
+
+  <div class="product-topbar">
     <div class="container topbar">
       <div>
         <h1>Haugen 3D-dingser</h1>
         <p class="muted">Produkter med bildegalleri og mogleg STL-visning.</p>
       </div>
-      <nav>
-        <a class="btn" href="index.html">Heim</a>
-        <a class="btn" href="skytebanespelet.html">Skytebanespelet</a>
-        <a class="btn btn-primary" href="admin-3d-dingser.html">Admin 3D</a>
-      </nav>
     </div>
-  </header>
+  </div>
 
   <main class="container">
     <section class="hero">
@@ -376,7 +377,7 @@
   </dialog>
 
   <footer>
-    <p>&copy; 2026 Haugen 3D-dingser</p>
+    &copy; 2026 Anders Haugen · Pøll.no
   </footer>
 
   <script>
