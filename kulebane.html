@@ -27,6 +27,47 @@
       letter-spacing: 0;
       margin-top: 0.5rem;
     }
+    .simulator-kontroll {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.4rem 1rem;
+      align-items: center;
+      margin: 1.25rem 0 1rem;
+    }
+    .simulator-kontroll label {
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .simulator-fart {
+      font-size: 0.9rem;
+      font-weight: 900;
+      color: #222;
+    }
+    .simulator-kontroll input {
+      grid-column: 1 / -1;
+      width: 100%;
+      accent-color: #222;
+    }
+    .bane-canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .simulator-resultat {
+      margin: 0.8rem 0 0;
+      font-size: 0.85rem;
+      color: #555;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .simulator-resultat strong {
+      color: #222;
+    }
   </style>
 </head>
 <body>
@@ -77,13 +118,24 @@
 
       <h2 id="kalkulator">Kalkulator</h2>
       <p>
-        Her kjem ein interaktiv kalkulator. Du skal kunne legge inn munningstakt, BC (ballistisk koeffisient),
-        nullpunktsavstand og sikthøgde — og få opp ei live-kurve som viser banefall per avstand.
+        Denne enkle modellen viser kor langt kula fell frå ei vassrett løpslinje. Han reknar berre med
+        tyngdekraft, utan luftmotstand, vind eller sikteinnstilling.
       </p>
 
       <div class="kalkulator-ramme">
-        <p>Kalkulator</p>
-        <p class="placeholder-tekst">Under arbeid — kjem her</p>
+        <p>Fritt fall frå løpet</p>
+        <div class="simulator-kontroll">
+          <label for="utgangshastighet">Utgangshastigheit</label>
+          <output class="simulator-fart" id="fart-verdi" for="utgangshastighet">800 m/s</output>
+          <input id="utgangshastighet" type="range" min="200" max="1200" value="800" step="10" />
+        </div>
+        <div class="simulator-kontroll">
+          <label for="innskytingsavstand">Innskytingsavstand</label>
+          <output class="simulator-fart" id="innskyting-verdi" for="innskytingsavstand">100 m</output>
+          <input id="innskytingsavstand" type="range" min="25" max="250" value="100" step="5" />
+        </div>
+        <canvas class="bane-canvas" id="bane-canvas" width="760" height="360" aria-label="2D-visning av kulebane relativt til sikte-linja"></canvas>
+        <p class="simulator-resultat">Avvik ved <strong id="visningsavstand">300 m</strong>: <strong id="fall-verdi">-0,46 m</strong></p>
       </div>
 
       <h2 id="knepptabell">Knepptabell</h2>
@@ -107,6 +159,119 @@
   <footer>
     &copy; 2026 Anders Haugen · Pøll.no
   </footer>
+
+  <script>
+    const gravity = 9.81;
+    const viewDistance = 300;
+    const speedInput = document.getElementById('utgangshastighet');
+    const zeroDistanceInput = document.getElementById('innskytingsavstand');
+    const speedValue = document.getElementById('fart-verdi');
+    const zeroDistanceValue = document.getElementById('innskyting-verdi');
+    const dropValue = document.getElementById('fall-verdi');
+    const canvas = document.getElementById('bane-canvas');
+    const context = canvas.getContext('2d');
+
+    function formatNumber(value, decimals) {
+      return value.toLocaleString('no-NO', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      });
+    }
+
+    function drawTrajectory() {
+      const speed = Number(speedInput.value);
+      const zeroDistance = Number(zeroDistanceInput.value);
+      const padding = { top: 36, right: 30, bottom: 46, left: 58 };
+      const plotWidth = canvas.width - padding.left - padding.right;
+      const plotHeight = canvas.height - padding.top - padding.bottom;
+      const trajectoryAt = (distance) => 0.5 * gravity * distance * (zeroDistance - distance) / Math.pow(speed, 2);
+      const trajectoryAtViewDistance = trajectoryAt(viewDistance);
+      const peakDistance = zeroDistance / 2;
+      const maximumHeight = Math.max(trajectoryAt(peakDistance), 0.05);
+      const maximumDrop = Math.max(-trajectoryAtViewDistance, 0.05);
+      const verticalRange = (maximumHeight + maximumDrop) * 1.2;
+      const zeroLineY = padding.top + (maximumHeight * 1.2 / verticalRange) * plotHeight;
+      const yAt = (height) => zeroLineY - (height / verticalRange) * plotHeight;
+
+      speedValue.textContent = speed + ' m/s';
+      zeroDistanceValue.textContent = zeroDistance + ' m';
+      dropValue.textContent = formatNumber(trajectoryAtViewDistance, 2) + ' m';
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      context.strokeStyle = '#e5e5e5';
+      context.lineWidth = 1;
+      context.font = '12px Montserrat, Arial, sans-serif';
+      context.fillStyle = '#777';
+      context.textAlign = 'right';
+      for (let line = 0; line <= 4; line += 1) {
+        const y = padding.top + (plotHeight * line / 4);
+        const height = (zeroLineY - y) * verticalRange / plotHeight;
+        context.beginPath();
+        context.moveTo(padding.left, y);
+        context.lineTo(canvas.width - padding.right, y);
+        context.stroke();
+        context.fillText(formatNumber(height, 2) + ' m', padding.left - 9, y + 4);
+      }
+
+      context.strokeStyle = '#222';
+      context.lineWidth = 1.5;
+      context.beginPath();
+      context.moveTo(padding.left, padding.top);
+      context.lineTo(padding.left, canvas.height - padding.bottom);
+      context.stroke();
+
+      context.setLineDash([5, 5]);
+      context.strokeStyle = '#aaa';
+      context.beginPath();
+      context.moveTo(padding.left, zeroLineY);
+      context.lineTo(canvas.width - padding.right, zeroLineY);
+      context.stroke();
+      context.setLineDash([]);
+
+      context.strokeStyle = '#c9362b';
+      context.lineWidth = 3;
+      context.beginPath();
+      for (let distance = 0; distance <= viewDistance; distance += 2) {
+        const height = trajectoryAt(distance);
+        const x = padding.left + (distance / viewDistance) * plotWidth;
+        const y = yAt(height);
+        if (distance === 0) {
+          context.moveTo(x, y);
+        } else {
+          context.lineTo(x, y);
+        }
+      }
+      context.stroke();
+
+      const zeroX = padding.left + (zeroDistance / viewDistance) * plotWidth;
+      context.fillStyle = '#222';
+      context.beginPath();
+      context.arc(zeroX, zeroLineY, 4, 0, Math.PI * 2);
+      context.fill();
+
+      context.fillStyle = '#777';
+      context.textAlign = 'center';
+      context.fillText('Avstand (m)', padding.left + plotWidth / 2, canvas.height - 12);
+      context.textAlign = 'left';
+      context.fillText('Sikte-linje', padding.left + 8, zeroLineY - 10);
+      context.fillStyle = '#c9362b';
+      context.fillText('Kulebane', canvas.width - padding.right - 65, yAt(trajectoryAt(viewDistance)) - 10);
+      context.fillStyle = '#222';
+      context.textAlign = 'center';
+      context.fillText('Innskyting', zeroX, zeroLineY - 12);
+
+      context.fillStyle = '#777';
+      context.textAlign = 'center';
+      for (let distance = 0; distance <= viewDistance; distance += 50) {
+        const x = padding.left + (distance / viewDistance) * plotWidth;
+        context.fillText(distance + '', x, canvas.height - padding.bottom + 21);
+      }
+    }
+
+    speedInput.addEventListener('input', drawTrajectory);
+    zeroDistanceInput.addEventListener('input', drawTrajectory);
+    drawTrajectory();
+  </script>
 
 </body>
 </html>
