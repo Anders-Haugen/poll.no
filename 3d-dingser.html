@@ -4,22 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Haugen 3D-dingser</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <style>
     :root {
-      --ink: #18212f;
-      --mist: #f4f7fb;
+      --ink: #222;
       --card: #ffffff;
-      --accent: #0a8f8f;
-      --accent-2: #f6ad55;
-      --line: #d7e0ec;
-      --shadow: 0 16px 40px rgba(10, 36, 66, 0.15);
+      --line: #e0e0e0;
     }
 
     * { box-sizing: border-box; }
@@ -27,29 +20,22 @@
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 15% 0%, #caeef5 0, transparent 36%),
-        radial-gradient(circle at 85% 20%, #ffe8cc 0, transparent 34%),
-        linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+      background: #fff;
       min-height: 100vh;
     }
 
     main, .product-topbar {
-      font-family: "Sora", sans-serif;
+      font-family: inherit;
     }
 
     .container {
-      width: min(1120px, calc(100% - 2rem));
+      width: min(1000px, calc(100% - 4rem));
       margin: 0 auto;
     }
 
     .product-topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(7px);
-      background: rgba(247, 250, 252, 0.9);
-      border-bottom: 1px solid rgba(24, 33, 47, 0.1);
+      background: #fff;
+      border-bottom: 1px solid #eee;
     }
 
     .topbar {
@@ -57,32 +43,35 @@
       gap: 1rem;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      padding: 1.8rem 0 1.2rem;
       flex-wrap: wrap;
     }
 
     .topbar h1 {
       margin: 0;
-      font-size: clamp(1.5rem, 4vw, 2.4rem);
-      letter-spacing: -0.02em;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .muted {
       margin: 0.35rem 0 0;
-      color: #3c4e64;
-      font-size: 0.95rem;
+      color: #888;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .btn {
-      border: 0;
-      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      border-radius: 0;
       padding: 0.58rem 1rem;
       font-family: inherit;
       font-weight: 600;
       cursor: pointer;
       background: var(--card);
       color: var(--ink);
-      box-shadow: 0 4px 12px rgba(20, 40, 60, 0.08);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -93,19 +82,18 @@
     .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #0d6c8e);
+      background: #222;
       color: #fff;
     }
 
     main { padding: 1.5rem 0 3rem; }
 
     .hero {
-      border: 1px solid #d8e5ef;
-      background: linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(242, 247, 252, 0.9));
-      border-radius: 20px;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      border-radius: 0;
       padding: 1.2rem;
       margin-bottom: 1rem;
-      box-shadow: var(--shadow);
     }
 
     .toolbar {
@@ -118,14 +106,17 @@
     .panel {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 0;
       padding: 0.8rem;
     }
 
     .panel-title {
       margin: 0 0 0.65rem;
       font-size: 0.93rem;
-      color: #43596f;
+      color: #aaa;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
 
     .chips {
@@ -135,20 +126,20 @@
     }
 
     .chip {
-      border: 1px solid #b8cae1;
-      background: #f7fbff;
-      color: #1f3a5a;
-      border-radius: 999px;
+      border: 1px solid #d0d0d0;
+      background: #fff;
+      color: #777;
+      border-radius: 0;
       padding: 0.38rem 0.7rem;
-      font-family: "IBM Plex Mono", monospace;
+      font-family: inherit;
       font-size: 0.75rem;
       cursor: pointer;
     }
 
     .chip.active {
-      background: linear-gradient(135deg, #194569, #2f6ca6);
+      background: #222;
       color: #fff;
-      border-color: #194569;
+      border-color: #222;
     }
 
     #products {
@@ -160,9 +151,9 @@
     .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 0;
       overflow: hidden;
-      box-shadow: 0 12px 26px rgba(22, 42, 61, 0.09);
+      box-shadow: none;
       display: flex;
       flex-direction: column;
     }
@@ -171,7 +162,7 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
-      background: #edf2f7;
+      background: #f7f7f7;
     }
 
     .card-body {
@@ -189,14 +180,14 @@
 
     .desc {
       margin: 0;
-      color: #455b70;
+      color: #777;
       font-size: 0.92rem;
       line-height: 1.45;
     }
 
     .price {
       font-weight: 700;
-      color: #14304d;
+      color: #222;
     }
 
     .card-actions {
@@ -207,20 +198,20 @@
     }
 
     .btn-ghost {
-      border: 1px solid #a9c2dc;
-      background: #f4f9ff;
-      color: #15426a;
-      border-radius: 10px;
+      border: 1px solid #d0d0d0;
+      background: #fff;
+      color: #222;
+      border-radius: 0;
       padding: 0.5rem;
       font-weight: 600;
       cursor: pointer;
     }
 
     .btn-warn {
-      border: 1px solid #e3b06a;
-      background: #fff3df;
-      color: #744604;
-      border-radius: 10px;
+      border: 1px solid #d0d0d0;
+      background: #222;
+      color: #fff;
+      border-radius: 0;
       padding: 0.5rem;
       font-weight: 600;
       cursor: pointer;
@@ -228,15 +219,15 @@
 
     .status {
       margin: 0.5rem 0 0;
-      font-family: "IBM Plex Mono", monospace;
-      color: #214f5e;
+      font-family: inherit;
+      color: #888;
       font-size: 0.85rem;
     }
 
     dialog {
       width: min(980px, calc(100% - 1rem));
-      border: 1px solid #cad8e6;
-      border-radius: 16px;
+      border: 1px solid #ccc;
+      border-radius: 0;
       padding: 0;
     }
 
@@ -249,27 +240,27 @@
       padding: 0.95rem;
       max-height: min(84vh, 820px);
       overflow: auto;
-      background: #f8fbff;
+      background: #fff;
     }
 
     .viewer,
     .gallery {
       background: #fff;
-      border: 1px solid #d4deea;
-      border-radius: 14px;
+      border: 1px solid #e0e0e0;
+      border-radius: 0;
       padding: 0.8rem;
     }
 
     #stl-canvas {
       width: 100%;
       min-height: 300px;
-      border-radius: 10px;
-      border: 1px solid #d8e4f1;
-      background: linear-gradient(180deg, #f6faff, #edf3fa);
+      border-radius: 0;
+      border: 1px solid #e0e0e0;
+      background: #f7f7f7;
       display: grid;
       place-items: center;
-      color: #34516f;
-      font-family: "IBM Plex Mono", monospace;
+      color: #777;
+      font-family: inherit;
       font-size: 0.85rem;
       overflow: hidden;
     }
@@ -339,10 +330,7 @@
   </div>
 
   <main class="container">
-    <section class="hero">
-      <strong>Ny struktur:</strong> kvart produkt har eiga mappe med <code>product.json</code>, <code>images/</code> og eventuelt <code>models/</code>.
-      <p class="status" id="load-status">Lastar katalog ...</p>
-    </section>
+    <p class="status" id="load-status">Lastar katalog ...</p>
 
     <section class="toolbar">
       <div class="panel">
@@ -360,7 +348,7 @@
         <h2 id="modal-title"></h2>
         <p id="modal-desc" class="desc"></p>
         <p id="modal-price" class="price"></p>
-        <img id="modal-main-image" src="" alt="Produktbilete" style="width:100%;height:280px;object-fit:cover;border-radius:10px;border:1px solid #d2ddeb;background:#f1f5fa;" />
+        <img id="modal-main-image" src="" alt="Produktbilete" style="width:100%;height:280px;object-fit:cover;border-radius:0;border:1px solid #e0e0e0;background:#f7f7f7;" />
         <div class="thumbs" id="modal-thumbs"></div>
       </article>
       <article class="viewer">
@@ -565,13 +553,15 @@
             <p class="desc">${product.description || ""}</p>
             <p class="price">Pris: ${product.priceNok ?? "?"} kr</p>
             <div class="card-actions">
-              <button type="button" class="${hasStl ? "btn-warn" : "btn-ghost"}">Vis produkt</button>
+              ${hasStl ? '<button type="button" class="btn-warn">Sjå i 3D</button>' : ""}
+              <button type="button" class="btn-ghost">Vis produkt</button>
             </div>
           </div>
         `;
 
-        const actionBtn = card.querySelector("button");
-        actionBtn.addEventListener("click", () => openModal(product));
+        card.querySelectorAll("button").forEach((actionBtn) => {
+          actionBtn.addEventListener("click", () => openModal(product));
+        });
 
         productsEl.appendChild(card);
       });
