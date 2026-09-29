@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hvilken DFS-er er du? – Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .quiz-sporsmal {
+      border: 0;
+      border-top: 1px solid #e0e0e0;
+      padding: 1.4rem 0;
+    }
+
+    .quiz-sporsmal legend {
+      width: 100%;
+      padding: 0 0 0.8rem;
+      font-weight: 900;
+      font-size: 0.95rem;
+    }
+
+    .quiz-svar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+
+    .quiz-svar button,
+    .quiz-handling {
+      border: 1px solid #d8d8d8;
+      background: #fff;
+      color: #222;
+      padding: 0.85rem 1rem;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .quiz-svar button:hover,
+    .quiz-svar button[aria-pressed="true"] {
+      border-color: #222;
+      background: #f4f4f0;
+    }
+
+    .quiz-svar strong {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.2rem;
+    }
+
+    .quiz-svar span {
+      display: block;
+      color: #666;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .quiz-handling {
+      display: inline-block;
+      background: #222;
+      border-color: #222;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .quiz-handling:disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+
+    .quiz-resultat {
+      margin-top: 1.5rem;
+      padding: 1.2rem;
+      border-left: 3px solid #222;
+      background: #f4f4f0;
+    }
+
+    .quiz-resultat h2 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .quiz-resultat p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 520px) {
+      .quiz-svar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen — diverse innan DFS-skyting</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Framsida</a>
+    <a href="3d-dingser.html">3D-dingser</a>
+    <a href="skyteteori.html">Skyteteori</a>
+    <a href="darlig-unskyldningsgenerator.html">Unnskyldningsgeneratoren</a>
+    <a href="dfs-personlighet.html" class="aktiv">Hvilken DFS-er er du?</a>
+  </nav>
+
+  <main>
+    <article>
+      <h1>Hvilken DFS-er er du?</h1>
+      <p class="ingress">Svar på tre spørsmål og finn ut kva slags skyttar du er.</p>
+
+      <form id="personlighet-quiz">
+        <fieldset class="quiz-sporsmal" data-question>
+          <legend>1. Du kjem på skytebanen. Kva gjer du først?</legend>
+          <div class="quiz-svar">
+            <button type="button" data-answer="a" aria-pressed="false"><strong>A</strong><span>Sjekkar utstyret og gjer klart i god tid.</span></button>
+            <button type="button" data-answer="b" aria-pressed="false"><strong>B</strong><span>Slår av ein prat og finn ut av resten etter kvart.</span></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-sporsmal" data-question>
+          <legend>2. Ein serie går ikkje heilt som planlagt. Kva tenkjer du?</legend>
+          <div class="quiz-svar">
+            <button type="button" data-answer="a" aria-pressed="false"><strong>A</strong><span>Eg veit kva eg skal justere til neste serie.</span></button>
+            <button type="button" data-answer="b" aria-pressed="false"><strong>B</strong><span>Sånn skjer. Neste serie blir betre!</span></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-sporsmal" data-question>
+          <legend>Kva er den beste delen av ein konkurransedag?</legend>
+          <div class="quiz-svar">
+            <button type="button" data-answer="a" aria-pressed="false"><strong>A</strong><span>Å få gjennomført ein god plan og skyte jamt.</span></button>
+            <button type="button" data-answer="b" aria-pressed="false"><strong>B</strong><span>Folk, stemning og gode historier mellom seriane.</span></button>
+          </div>
+        </fieldset>
+
+        <button class="quiz-handling" id="vis-resultat" type="submit" disabled>Vis resultat</button>
+        <section class="quiz-resultat" id="quiz-resultat" aria-live="polite" hidden></section>
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2026 Anders Haugen &middot; Pøll.no
+  </footer>
+
+  <script>
+    const quiz = document.querySelector('#personlighet-quiz');
+    const questions = [...quiz.querySelectorAll('[data-question]')];
+    const submitButton = document.querySelector('#vis-resultat');
+    const result = document.querySelector('#quiz-resultat');
+    const answers = new Map();
+
+    questions.forEach((question, index) => {
+      question.querySelectorAll('[data-answer]').forEach((button) => {
+        button.addEventListener('click', () => {
+          question.querySelectorAll('[data-answer]').forEach((option) => {
+            option.setAttribute('aria-pressed', String(option === button));
+          });
+          answers.set(index, button.dataset.answer);
+          submitButton.disabled = answers.size !== questions.length;
+          result.hidden = true;
+        });
+      });
+    });
+
+    quiz.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const aCount = [...answers.values()].filter((answer) => answer === 'a').length;
+      const isPlanner = aCount >= 2;
+
+      result.innerHTML = isPlanner
+        ? '<h2>Du er den systematiske finjusteraren!</h2><p>Du likar å ha kontroll på utstyret, planen og detaljane. Når du finn rytmen, er du stødig som få.</p>'
+        : '<h2>Du er den rolege lagspelaren!</h2><p>Du tek ting på strak arm og veit at skyting handlar om meir enn poeng. God stemning og neste serie er alltid innan rekkevidde.</p>';
+      result.hidden = false;
+    });
+  </script>
+</body>
+</html>
