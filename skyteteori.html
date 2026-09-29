@@ -64,11 +64,11 @@
     </table>
     
     <div class="rekneverktoy">
-      <label for="sum-first">Tal 1
+      <label for="sum-first">Høgde
         <input id="sum-first" type="number" step="any" />
       </label>
       <span aria-hidden="true">+</span>
-      <label for="sum-second">Tal 2
+      <label for="sum-second">Bredde
         <input id="sum-second" type="number" step="any" />
       </label>
       <span aria-hidden="true">=</span>
@@ -141,7 +141,7 @@
 
       sumResult.textContent = Number.isNaN(firstValue) || Number.isNaN(secondValue)
         ? "–"
-        : String(firstValue + secondValue);
+        : String(firstValue * secondValue);
     }
 
     firstInput.addEventListener("input", updateSum);
