@@ -310,7 +310,7 @@
 
   <header>
     <h1>Pøll.no</h1>
-    <p>Anders Haugen — skytesport, 3D-print og diverse tull</p>
+    <p>Anders Haugen — diverse innan DFS-skyting</p>
   </header>
 
   <nav>
@@ -324,7 +324,7 @@
     <div class="container topbar">
       <div>
         <h1>Haugen 3D-dingser</h1>
-        <p class="muted">Produkter med bildegalleri og mogleg STL-visning.</p>
+        <p class="muted">3D-printa dingsar for skyting.</p>
       </div>
     </div>
   </div>
@@ -699,7 +699,7 @@
           state.camera.position.set(fit * 0.75, fit * 0.65, fit * 1.05);
 
           state.scene.add(state.mesh);
-          stlStatusEl.textContent = `STL lasta: ${stlFilePath}`;
+          stlStatusEl.textContent = "";
         },
         undefined,
         (error) => {

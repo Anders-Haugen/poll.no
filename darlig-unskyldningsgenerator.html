@@ -41,7 +41,7 @@
 
   <header>
     <h1>Pøll.no</h1>
-    <p>Anders Haugen — skytesport, 3D-print og diverse tull</p>
+    <p>Anders Haugen — diverse innan DFS-skyting</p>
   </header>
 
   <nav>
@@ -94,9 +94,9 @@
 
     async function fetchExcusesFromFile() {
       const candidatePaths = [
-        'data/unskyldninger.json',
-        './data/unskyldninger.json',
-        '/data/unskyldninger.json'
+        'data/unnskyldninger.json',
+        './data/unnskyldninger.json',
+        '/data/unnskyldninger.json'
       ];
 
       for (const path of candidatePaths) {
@@ -139,7 +139,7 @@
         pickRandomExcuse();
       } catch (error) {
         statusEl.textContent = 'Klarte ikke å laste unskyldninger fra datafil.';
-        excuseTextEl.textContent = 'Sjekk data/unskyldninger.json og at siden kjøres via webserver.';
+        excuseTextEl.textContent = 'Sjekk data/unnskyldninger.json og at siden kjøres via webserver.';
       }
     }
 

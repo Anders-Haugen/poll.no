@@ -10,7 +10,7 @@
 
   <header>
     <h1>Pøll.no</h1>
-    <p>Anders Haugen — skytesport, 3D-print og diverse tull</p>
+    <p>Anders Haugen — diverse innan DFS-skyting</p>
   </header>
 
   <nav>
@@ -28,6 +28,7 @@
     <div class="toc">
       <p>Innhald</p>
       <ol>
+        <li><a href="#skru">Hjelp! Kva skal eg skru?</a></li>
         <li><a href="#kulebane">Kulebane</a></li>
         <li><a href="#vind">Vindavdrift</a></li>
         <li><a href="#sikt">Sikting</a></li>
@@ -36,10 +37,49 @@
       </ol>
     </div>
 
+    <h2 id="skru">Hjelp! Kva skal eg skru?</h2>
+    <p>
+      Er du av dei som aldri hugsar kva du skal skru når du går frå inne til ute?
+    </p>
+    <table class="teori-tabell">
+      <thead>
+        <tr>
+          <th scope="col">Rad / kolonne</th>
+          <th scope="col">Kolonne 1</th>
+          <th scope="col">Kolonne 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Rad 1</th>
+          <td>a</td>
+          <td>b</td>
+        </tr>
+        <tr>
+          <th scope="row">Rad 2</th>
+          <td>c</td>
+          <td>d</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="rekneverktoy">
+      <label for="sum-first">Tal 1
+        <input id="sum-first" type="number" step="any" />
+      </label>
+      <span aria-hidden="true">+</span>
+      <label for="sum-second">Tal 2
+        <input id="sum-second" type="number" step="any" />
+      </label>
+      <span aria-hidden="true">=</span>
+      <output id="sum-result" aria-live="polite">–</output>
+    </div>
+
     <h2 id="kulebane">Kulebane</h2>
     <p>
       Teori om kulebane.
     </p>
+
     <p>→ <a href="kulebane.html">Ballistisk kalkulator og knepptabell</a></p>
 
     <h2 id="vind">Vindavdrift</h2>
@@ -90,5 +130,22 @@
     &copy; 2026 Anders Haugen · Pøll.no
   </footer>
 
+  <script>
+    const firstInput = document.getElementById("sum-first");
+    const secondInput = document.getElementById("sum-second");
+    const sumResult = document.getElementById("sum-result");
+
+    function updateSum() {
+      const firstValue = firstInput.valueAsNumber;
+      const secondValue = secondInput.valueAsNumber;
+
+      sumResult.textContent = Number.isNaN(firstValue) || Number.isNaN(secondValue)
+        ? "–"
+        : String(firstValue + secondValue);
+    }
+
+    firstInput.addEventListener("input", updateSum);
+    secondInput.addEventListener("input", updateSum);
+  </script>
 </body>
 </html>
