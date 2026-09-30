@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Har det vorte skote 350?</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #000;
+      --text: #f2f2f2;
+      --no: #ef233c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    .heim {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 2;
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 180ms ease;
+    }
+
+    .heim:hover,
+    .heim:focus-visible {
+      color: #fff;
+    }
+
+    .scene {
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .sporsmal,
+    .nei {
+      grid-area: 1 / 1;
+      margin: 0;
+    }
+
+    .sporsmal {
+      max-width: 42rem;
+      font-size: clamp(1.6rem, 4vw, 3.3rem);
+      line-height: 1.15;
+      transition: transform 1300ms cubic-bezier(0.9, 0, 0.1, 1), opacity 700ms ease;
+    }
+
+    .sporsmal.flytt {
+      transform: translateY(-35vh) scale(0.7);
+      opacity: 0.72;
+    }
+
+    .nei {
+      color: var(--no);
+      font-family: Arial, sans-serif;
+      font-size: clamp(4rem, 16vw, 11rem);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      opacity: 0;
+      transform: scale(0.5) rotate(-8deg);
+    }
+
+    .nei.vis {
+      animation: nei-kommer 650ms cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+    }
+
+    @keyframes nei-kommer {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-8deg);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1.08) rotate(2deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sporsmal {
+        transition-duration: 1ms;
+      }
+
+      .nei.vis {
+        animation-duration: 1ms;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="heim" href="index.html">Hjem</a>
+
+  <main class="scene" aria-live="polite">
+    <p class="sporsmal" id="sporsmal"></p>
+    <p class="nei" id="nei" aria-label="Nei">NEI</p>
+  </main>
+
+  <script>
+    const question = 'Har det vorte skote 350 i klasse 3-5 på LS?';
+    const questionElement = document.getElementById('sporsmal');
+    const noElement = document.getElementById('nei');
+    let characterIndex = 0;
+
+    function skrivNesteBokstav() {
+      questionElement.textContent = question.slice(0, characterIndex + 1);
+      characterIndex += 1;
+
+      if (characterIndex < question.length) {
+        const progress = characterIndex / (question.length - 1);
+        const speedRamp = Math.sin(progress * Math.PI);
+        const delay = 120 - speedRamp * 85;
+        window.setTimeout(skrivNesteBokstav, delay);
+        return;
+      }
+
+      window.setTimeout(() => {
+        questionElement.classList.add('flytt');
+        window.setTimeout(() => noElement.classList.add('vis'), 720);
+      }, 500);
+    }
+
+    window.setTimeout(skrivNesteBokstav, 350);
+  </script>
+</body>
+</html>
