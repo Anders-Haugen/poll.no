@@ -87,17 +87,15 @@
 
     async function loadMemes() {
       try {
-        const response = await fetch("data/memes/", { cache: "no-store" });
+        const response = await fetch("data/memes/index.json", { cache: "no-store" });
         if (!response.ok) {
-          throw new Error("Klarte ikkje lese meme-mappa.");
+          throw new Error("Klarte ikkje laste meme-lista.");
         }
 
-        const html = await response.text();
-        const documentFragment = new DOMParser().parseFromString(html, "text/html");
-        const files = Array.from(documentFragment.querySelectorAll("a"))
-          .map((anchor) => anchor.getAttribute("href") || "")
-          .map((href) => decodeURIComponent(href.split("?")[0]))
-          .filter((fileName) => fileName && !fileName.endsWith("/") && hasImageExtension(fileName))
+        const manifest = await response.json();
+        const files = (Array.isArray(manifest.images) ? manifest.images : [])
+          .filter((fileName) => typeof fileName === "string")
+          .filter((fileName) => !fileName.includes("/") && !fileName.includes("\\") && hasImageExtension(fileName))
           .sort((first, second) => first.localeCompare(second, "no"));
 
         memeGridEl.innerHTML = "";
@@ -109,13 +107,19 @@
         files.forEach((fileName) => {
           const card = document.createElement("section");
           card.className = "meme";
-          card.innerHTML = `
-            <img class="meme-image" src="data/memes/${encodeURIComponent(fileName)}" alt="${displayName(fileName)}" loading="lazy" />
-          `;
+          const image = document.createElement("img");
+          image.className = "meme-image";
+          image.src = `data/memes/${encodeURIComponent(fileName)}`;
+          image.alt = displayName(fileName);
+          image.loading = "lazy";
+          card.appendChild(image);
           memeGridEl.appendChild(card);
         });
       } catch (error) {
-        memeGridEl.innerHTML = `<p class="meme-intro">${error.message} Opne sida via lokal server.</p>`;
+        const message = window.location.protocol === "file:"
+          ? "Opne sida via lokal server for å laste meme-lista."
+          : `${error.message} Kontroller at data/memes/index.json og bildefilene er publiserte.`;
+        memeGridEl.innerHTML = `<p class="meme-intro">${message}</p>`;
       }
     }
 
