@@ -41,10 +41,11 @@
     .topbar {
       display: flex;
       gap: 1rem;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 1.8rem 0 1.2rem;
       flex-wrap: wrap;
+      text-align: center;
     }
 
     .topbar h1 {
@@ -88,6 +89,17 @@
 
     main { padding: 1.5rem 0 3rem; }
 
+    main.container {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    main.container > #load-status {
+      grid-column: 1 / -1;
+    }
+
     .hero {
       border: 1px solid #e0e0e0;
       background: #fff;
@@ -100,7 +112,8 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.8rem;
-      margin: 1rem 0 1.4rem;
+      grid-column: 1;
+      margin: 0;
     }
 
     .panel {
@@ -142,7 +155,29 @@
       border-color: #222;
     }
 
+    .filter-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-reset {
+      border: 0;
+      padding: 0.38rem 0;
+      background: transparent;
+      color: #777;
+      font-family: inherit;
+      font-size: 0.75rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .filter-reset:hover { color: #222; }
+
     #products {
+      grid-column: 2;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
       gap: 1rem;
@@ -226,9 +261,15 @@
 
     dialog {
       width: min(980px, calc(100% - 1rem));
+      max-height: 90vh;
       border: 1px solid #ccc;
       border-radius: 0;
+      margin: 0;
       padding: 0;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     dialog::backdrop { background: rgba(11, 20, 31, 0.58); }
@@ -294,9 +335,61 @@
       display: block;
     }
 
+    .image-stage {
+      position: relative;
+      margin-top: 0.8rem;
+    }
+
+    .image-stage img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border: 1px solid #e0e0e0;
+      background: #f7f7f7;
+      display: block;
+    }
+
+    .image-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.3rem;
+      height: 3rem;
+      border: 1px solid #d0d0d0;
+      background: rgba(255, 255, 255, 0.9);
+      color: #222;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      display: none;
+      place-items: center;
+    }
+
+    .image-nav:hover { background: #fff; }
+
+    .image-nav.previous { left: 0.5rem; }
+    .image-nav.next { right: 0.5rem; }
+
+    .image-stage.has-navigation .image-nav { display: grid; }
+
+    .card-image-stage.has-navigation:hover .image-nav,
+    .card-image-stage.has-navigation:focus-within .image-nav { display: grid; }
+
+    .card-image-stage {
+      position: relative;
+    }
+
     /* footer handled by style.css */
 
     @media (max-width: 860px) {
+      main.container {
+        display: block;
+      }
+
+      .toolbar {
+        margin: 1rem 0 1.4rem;
+      }
+
       .toolbar,
       .modal-body {
         grid-template-columns: 1fr;
@@ -338,6 +431,13 @@
         <p class="panel-title">Kategori</p>
         <div class="chips" id="category-chips"></div>
       </div>
+      <div class="panel">
+        <div class="filter-actions">
+          <p class="panel-title">Eigenskapar</p>
+          <button id="reset-filters" class="filter-reset" type="button">Nullstill filter</button>
+        </div>
+        <div class="chips" id="tag-chips"></div>
+      </div>
     </section>
 
     <section id="products"></section>
@@ -349,7 +449,11 @@
         <h2 id="modal-title"></h2>
         <p id="modal-desc" class="desc"></p>
         <p id="modal-price" class="price"></p>
-        <img id="modal-main-image" src="" alt="Produktbilete" style="width:100%;height:280px;object-fit:cover;border-radius:0;border:1px solid #e0e0e0;background:#f7f7f7;" />
+        <div class="image-stage" id="modal-image-stage">
+          <button id="previous-image" class="image-nav previous" type="button" aria-label="Førre bilete">&#8592;</button>
+          <img id="modal-main-image" src="" alt="Produktbilete" />
+          <button id="next-image" class="image-nav next" type="button" aria-label="Neste bilete">&#8594;</button>
+        </div>
         <div class="thumbs" id="modal-thumbs"></div>
       </article>
       <article class="viewer">
@@ -373,6 +477,7 @@
     const state = {
       products: [],
       selectedCategory: "all",
+      selectedTags: [],
       renderer: null,
       scene: null,
       camera: null,
@@ -384,14 +489,22 @@
     const statusEl = document.getElementById("load-status");
     const productsEl = document.getElementById("products");
     const categoryChipsEl = document.getElementById("category-chips");
+    const tagChipsEl = document.getElementById("tag-chips");
+    const resetFiltersEl = document.getElementById("reset-filters");
     const modalEl = document.getElementById("product-modal");
     const modalTitleEl = document.getElementById("modal-title");
     const modalDescEl = document.getElementById("modal-desc");
     const modalPriceEl = document.getElementById("modal-price");
     const modalMainImageEl = document.getElementById("modal-main-image");
     const modalThumbsEl = document.getElementById("modal-thumbs");
+    const modalImageStageEl = document.getElementById("modal-image-stage");
+    const previousImageEl = document.getElementById("previous-image");
+    const nextImageEl = document.getElementById("next-image");
     const stlCanvasEl = document.getElementById("stl-canvas");
     const stlStatusEl = document.getElementById("stl-status");
+
+    let modalImages = [];
+    let modalImageIndex = 0;
 
     const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"];
 
@@ -447,12 +560,11 @@
         return result;
       }
 
-      if ((result.images || []).length === 0) {
-        const imageFiles = await listDirectoryFiles(`${baseDir}images/`);
-        result.images = imageFiles
-          .filter((fileName) => hasExtension(fileName, IMAGE_EXTENSIONS))
-          .map((fileName) => `${baseDir}images/${fileName}`);
-      }
+      const imageFiles = await listDirectoryFiles(`${baseDir}images/`);
+      const discoveredImages = imageFiles
+        .filter((fileName) => hasExtension(fileName, IMAGE_EXTENSIONS))
+        .map((fileName) => `${baseDir}images/${fileName}`);
+      result.images = [...new Set([...result.images, ...discoveredImages])];
 
       if (!result.stl.file) {
         const modelFiles = await listDirectoryFiles(`${baseDir}models/`);
@@ -502,16 +614,24 @@
       }
     }
 
+    function formatFilterLabel(value) {
+      const label = String(value || "").replace(/[-_]+/g, " ");
+      return label.charAt(0).toUpperCase() + label.slice(1);
+    }
+
     function buildFilterChips() {
       const categories = ["all", ...new Set(state.products.map((product) => product.category || "anna"))];
+      const tags = [...new Set(state.products.flatMap((product) => Array.isArray(product.tags) ? product.tags : []))]
+        .sort((first, second) => String(first).localeCompare(String(second), "no"));
 
       categoryChipsEl.innerHTML = "";
+      tagChipsEl.innerHTML = "";
 
       categories.forEach((category) => {
         const chip = document.createElement("button");
         chip.type = "button";
         chip.className = `chip ${state.selectedCategory === category ? "active" : ""}`;
-        chip.textContent = category;
+        chip.textContent = category === "all" ? "Alle" : formatFilterLabel(category);
         chip.addEventListener("click", () => {
           state.selectedCategory = category;
           buildFilterChips();
@@ -519,12 +639,38 @@
         });
         categoryChipsEl.appendChild(chip);
       });
+
+      tags.forEach((tag) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = `chip ${state.selectedTags.includes(tag) ? "active" : ""}`;
+        chip.textContent = formatFilterLabel(tag);
+        chip.addEventListener("click", () => {
+          if (state.selectedTags.includes(tag)) {
+            state.selectedTags = state.selectedTags.filter((selectedTag) => selectedTag !== tag);
+          } else {
+            state.selectedTags = [...state.selectedTags, tag];
+          }
+          buildFilterChips();
+          renderProducts();
+        });
+        tagChipsEl.appendChild(chip);
+      });
     }
+
+    resetFiltersEl.addEventListener("click", () => {
+      state.selectedCategory = "all";
+      state.selectedTags = [];
+      buildFilterChips();
+      renderProducts();
+    });
 
     function filteredProducts() {
       return state.products.filter((product) => {
         const categoryOk = state.selectedCategory === "all" || product.category === state.selectedCategory;
-        return categoryOk;
+        const productTags = Array.isArray(product.tags) ? product.tags : [];
+        const tagsOk = state.selectedTags.every((tag) => productTags.includes(tag));
+        return categoryOk && tagsOk;
       });
     }
 
@@ -544,11 +690,16 @@
         const card = document.createElement("article");
         card.className = "card";
 
-        const previewImage = (product.images || [])[0] || "";
+        const images = product.images || [];
+        const previewImage = images[0] || "";
         const hasStl = Boolean(product.stl && product.stl.file);
 
         card.innerHTML = `
-          <img src="${previewImage}" alt="${product.name}" loading="lazy" />
+          <div class="card-image-stage${images.length > 1 ? " has-navigation" : ""}">
+            <button class="image-nav previous card-previous" type="button" aria-label="Førre bilete">&#8592;</button>
+            <img class="card-image" src="${previewImage}" alt="${product.name}" loading="lazy" />
+            <button class="image-nav next card-next" type="button" aria-label="Neste bilete">&#8594;</button>
+          </div>
           <div class="card-body">
             <h3>${product.name}</h3>
             <p class="desc">${product.description || ""}</p>
@@ -560,7 +711,17 @@
           </div>
         `;
 
-        card.querySelectorAll("button").forEach((actionBtn) => {
+        let cardImageIndex = 0;
+        const cardImageEl = card.querySelector(".card-image");
+        const showCardImage = (step) => {
+          cardImageIndex = (cardImageIndex + step + images.length) % images.length;
+          cardImageEl.src = images[cardImageIndex];
+        };
+
+        card.querySelector(".card-previous").addEventListener("click", () => showCardImage(-1));
+        card.querySelector(".card-next").addEventListener("click", () => showCardImage(1));
+
+        card.querySelectorAll(".card-actions button").forEach((actionBtn) => {
           actionBtn.addEventListener("click", () => openModal(product));
         });
 
@@ -573,18 +734,21 @@
       modalDescEl.textContent = product.description || "";
       modalPriceEl.textContent = `Pris: ${product.priceNok ?? "?"} kr`;
 
-      const images = product.images || [];
-      modalMainImageEl.src = images[0] || "";
+      modalImages = product.images || [];
+      modalImageIndex = 0;
+      modalImageStageEl.classList.toggle("has-navigation", modalImages.length > 1);
+      modalMainImageEl.src = modalImages[modalImageIndex] || "";
       modalMainImageEl.alt = product.name;
       modalThumbsEl.innerHTML = "";
 
-      images.forEach((imagePath, index) => {
+      modalImages.forEach((imagePath, index) => {
         const thumbBtn = document.createElement("button");
         thumbBtn.type = "button";
         thumbBtn.title = `Bilete ${index + 1}`;
         thumbBtn.innerHTML = `<img src="${imagePath}" alt="${product.name} - ${index + 1}" />`;
         thumbBtn.addEventListener("click", () => {
-          modalMainImageEl.src = imagePath;
+          modalImageIndex = index;
+          modalMainImageEl.src = modalImages[modalImageIndex];
         });
         modalThumbsEl.appendChild(thumbBtn);
       });
@@ -598,6 +762,18 @@
         stlCanvasEl.textContent = "Ingen STL-fil registrert i product.json.";
       }
     }
+
+    function showAdjacentImage(step) {
+      if (modalImages.length < 2) {
+        return;
+      }
+
+      modalImageIndex = (modalImageIndex + step + modalImages.length) % modalImages.length;
+      modalMainImageEl.src = modalImages[modalImageIndex];
+    }
+
+    previousImageEl.addEventListener("click", () => showAdjacentImage(-1));
+    nextImageEl.addEventListener("click", () => showAdjacentImage(1));
 
     function setupStlViewer() {
       teardownStlViewer();
