@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Unskyldningsgeneratoren – Pøll.no</title>
+  <title>Unnskyldningsgeneratoren – Pøll.no</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .generator-boks {
@@ -48,27 +48,27 @@
     <a href="index.html">Framsida</a>
     <a href="3d-dingser.html">3D-dingser</a>
     <a href="skyteteori.html">Skyteteori</a>
-    <a href="darlig-unskyldningsgenerator.html" class="aktiv">Unskyldningsgeneratoren</a>
+    <a href="darlig-unnskyldningsgenerator.html" class="aktiv">Unnskyldningsgeneratoren</a>
     <a href="memes.html">Memes</a>
   </nav>
 
   <main>
     <article>
-      <h1>Dårleg unskyldningsgenerator</h1>
+      <h1>Dårleg unnskyldningsgenerator</h1>
       <p class="ingress">For når resultatlista ikkje er til å vise til nokon.</p>
 
       <div class="generator-boks">
         <span id="excuse-text">Trykk på knappen.</span>
       </div>
 
-      <p class="generator-status" id="status">Lastar unskyldningar...</p>
+      <p class="generator-status" id="status">Lastar unnskyldningar...</p>
 
       <button
         id="new-excuse-btn"
         type="button"
         disabled
         class="generator-knapp"
-      >Ny unskyldning</button>
+      >Ny unnskyldning</button>
     </article>
   </main>
 
@@ -85,7 +85,7 @@
 
     function pickRandomExcuse() {
       if (!excuses.length) {
-        excuseTextEl.textContent = 'Fant ingen unskyldninger i fila.';
+        excuseTextEl.textContent = 'Fant ingen unnskyldninger i fila.';
         return;
       }
 
@@ -111,15 +111,15 @@
           if (Array.isArray(data)) {
             return data;
           }
-          if (Array.isArray(data.unskyldninger)) {
-            return data.unskyldninger;
+          if (Array.isArray(data.unnskyldninger)) {
+            return data.unnskyldninger;
           }
         } catch (error) {
           // Try next path candidate.
         }
       }
 
-      throw new Error('Klarte ikke å finne gyldig datafil for unskyldninger.');
+      throw new Error('Klarte ikke å finne gyldig datafil for unnskyldninger.');
     }
 
     async function loadExcuses() {
@@ -132,14 +132,14 @@
       try {
         excuses = await fetchExcusesFromFile();
         if (!excuses.length) {
-          throw new Error('Datafilen ble lest, men inneholdt ingen unskyldninger.');
+          throw new Error('Datafilen ble lest, men inneholdt ingen unnskyldninger.');
         }
 
-        statusEl.textContent = `Lastet ${excuses.length} unskyldninger.`;
+        statusEl.textContent = `Lastet ${excuses.length} unnskyldninger.`;
         buttonEl.disabled = false;
         pickRandomExcuse();
       } catch (error) {
-        statusEl.textContent = 'Klarte ikke å laste unskyldninger fra datafil.';
+        statusEl.textContent = 'Klarte ikke å laste unnskyldninger fra datafil.';
         excuseTextEl.textContent = 'Sjekk data/unnskyldninger.json og at siden kjøres via webserver.';
       }
     }
