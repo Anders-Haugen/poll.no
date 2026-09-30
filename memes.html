@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memes – Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .meme-intro {
+      color: #777;
+      font-size: 0.9rem;
+      margin: -0.4rem 0 1.8rem;
+    }
+
+    .meme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .meme {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #deded9;
+      background: #fff;
+    }
+
+    .meme-art {
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.3rem;
+      text-align: center;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .meme-top,
+    .meme-bottom {
+      font-size: clamp(1.05rem, 3vw, 1.55rem);
+      line-height: 1.25;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .meme-center {
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+
+    .meme-art--score {
+      color: #f9f5e8;
+      background: linear-gradient(145deg, #234f47 0 48%, #d4a33b 48% 51%, #263b33 51%);
+    }
+
+    .meme-art--score .meme-top,
+    .meme-art--score .meme-bottom {
+      text-shadow: 2px 2px 0 #17231f;
+    }
+
+    .meme-art--wind {
+      color: #272c36;
+      background: repeating-linear-gradient(135deg, #f1d58a 0 28px, #f7e6b9 28px 56px);
+    }
+
+    .meme-art--gear {
+      color: #f4f4ed;
+      background: linear-gradient(155deg, #c84931 0 49%, #262a30 49%);
+    }
+
+    .meme .caption {
+      padding: 0.9rem 1rem 1rem;
+      font-size: 0.78rem;
+      color: #666;
+    }
+
+    @media (max-width: 620px) {
+      .meme-grid { grid-template-columns: 1fr; }
+      .meme-art { min-height: 235px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen — diverse innan DFS-skyting</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Framsida</a>
+    <a href="3d-dingser.html">3D-dingser</a>
+    <a href="skyteteori.html">Skyteteori</a>
+    <a href="darlig-unnskyldningsgenerator.html">Unnskyldningsgeneratoren</a>
+    <a href="memes.html" class="aktiv">Memes</a>
+  </nav>
+
+  <main>
+    <article>
+      <h1>DFS-memes</h1>
+      <p class="ingress">Små glimt frå livet på skytebana.</p>
+      <p class="meme-intro">Treffsikker humor. Som regel.</p>
+
+      <div class="meme-grid">
+        <section class="meme">
+          <div class="meme-art meme-art--score" role="img" aria-label="Mem: Når du planlegg ein perfekt serie, men kjem på at du gløymde å puste">
+            <span class="meme-top">Planlegg den perfekte serien</span>
+            <span class="meme-center" aria-hidden="true">🎯</span>
+            <span class="meme-bottom">Kjem på at eg må puste òg</span>
+          </div>
+          <p class="caption">Når planen møter verkelegheita.</p>
+        </section>
+
+        <section class="meme">
+          <div class="meme-art meme-art--wind" role="img" aria-label="Mem: Vindmålaren seier stille, flagget seier storm">
+            <span class="meme-top">Vindmålaren: heilt stille</span>
+            <span class="meme-center" aria-hidden="true">🌬️</span>
+            <span class="meme-bottom">Flagget på bana: orkan</span>
+          </div>
+          <p class="caption">Mikroklimaet på standplass har eigne planar.</p>
+        </section>
+
+        <section class="meme">
+          <div class="meme-art meme-art--gear" role="img" aria-label="Mem: Eg skal berre ta med det viktigaste, så kjem eg med alt utstyret">
+            <span class="meme-top">Eg skal berre ta med det viktigaste</span>
+            <span class="meme-center" aria-hidden="true">🎒</span>
+            <span class="meme-bottom">Pakkar som om eg skal flytte inn</span>
+          </div>
+          <p class="caption">Ein kan jo få bruk for den ekstra reima.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2026 Anders Haugen &middot; Pøll.no
+  </footer>
+</body>
+</html>
