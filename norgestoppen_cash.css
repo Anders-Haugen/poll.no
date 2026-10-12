@@ -1,0 +1,8 @@
+.norgestoppen-cash-page .resultat-filter { border-top-color: #c76224; }
+.norgestoppen-cash-page .resultat-heading h2 { color: #174f42; }
+.norgestoppen-cash-page .resultat-tabell th:nth-last-child(1),
+.norgestoppen-cash-page .resultat-tabell td:nth-last-child(1) { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.norgestoppen-cash-page .resultat-tabell td:nth-last-child(1) { font-weight: 900; color: #174f42; }
+.norgestoppen-cash-page .resultat-tabell td:nth-child(5) { min-width: 180px; max-width: 300px; }
+.norgestoppen-cash-page .resultat-tabell details p { margin: .45rem 0; }
+.norgestoppen-cash-page .resultat-tabell details small { color: #666; }

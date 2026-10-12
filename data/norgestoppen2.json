@@ -1,7 +1,7 @@
 {
   "start": "2026-10-01",
   "end": "2027-10-01",
-  "updatedAt": "2026-10-12T06:52:42.891004+00:00",
+  "updatedAt": "2026-10-12T11:49:30.276672+00:00",
   "source": "https://mittdfs.no/hovedside/aktuelt-na/resultater/",
   "complete": true,
   "events": [
@@ -113,7 +113,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Jim R Aronsen",
@@ -133,7 +135,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Noah Rommetveit",
@@ -153,7 +157,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Anita Kjærnes",
@@ -173,7 +179,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 70,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Inger Johanne Haabet",
@@ -193,7 +201,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 12,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Mia Olette Kristensen",
@@ -213,7 +223,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Heika B Horndal",
@@ -233,7 +245,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Yme Sirius Didriksen",
@@ -253,7 +267,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 4,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vetle Ruud Kibsgaard",
@@ -273,7 +289,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 91,
+      "medal": ""
     },
     {
       "shooter": "Josefine Pritchard",
@@ -293,7 +311,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 5,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 59,
+      "medal": ""
     },
     {
       "shooter": "Dis Asora Didriksen",
@@ -313,7 +333,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 2,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Danil Kliakhin",
@@ -333,7 +355,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 17,
-      "eventId": "262774"
+      "eventId": "262774",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Ida Kristiansen",
@@ -353,7 +377,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 140,
+      "medal": ""
     },
     {
       "shooter": "Noah Rommetveit",
@@ -373,7 +399,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jim R Aronsen",
@@ -393,7 +421,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 5,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Anita Kjærnes",
@@ -413,7 +443,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 12,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Inger Johanne Haabet",
@@ -433,7 +465,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 2,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Mona Marie Eliasdottir",
@@ -453,7 +487,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 4,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Mia Olette Kristensen",
@@ -473,7 +509,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 40,
+      "medal": ""
     },
     {
       "shooter": "Heika B Horndal",
@@ -493,7 +531,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 13,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Yme Sirius Didriksen",
@@ -513,7 +553,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 2,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vetle Ruud Kibsgaard",
@@ -533,7 +575,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 2,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 50,
+      "medal": ""
     },
     {
       "shooter": "Josefine Pritchard",
@@ -553,7 +597,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 18,
-      "eventId": "262775"
+      "eventId": "262775",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Ida Kristiansen",
@@ -573,7 +619,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 314,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Marius Rinde",
@@ -593,7 +641,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 259,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Anders Haugen",
@@ -613,7 +663,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 120,
+      "medal": ""
     },
     {
       "shooter": "Per Arve Strømstad",
@@ -633,7 +685,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 159,
+      "medal": ""
     },
     {
       "shooter": "Gaute Grøterud",
@@ -653,7 +707,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 91,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Lars Bugge",
@@ -673,7 +729,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 129,
+      "medal": ""
     },
     {
       "shooter": "Lars Myrstuen",
@@ -693,7 +751,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 77,
+      "medal": ""
     },
     {
       "shooter": "Sander Årskog Vikhagen",
@@ -713,7 +773,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 184,
+      "medal": ""
     },
     {
       "shooter": "Jenny R. Lund",
@@ -733,7 +795,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 110,
+      "medal": ""
     },
     {
       "shooter": "Thorbjørn Samland",
@@ -753,7 +817,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jørgen A. Bruserud Elstad",
@@ -773,7 +839,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 130,
+      "medal": ""
     },
     {
       "shooter": "Kjell Ivar Løvbrøtte",
@@ -793,7 +861,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 91,
+      "medal": ""
     },
     {
       "shooter": "Even Gultvedt",
@@ -813,7 +883,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 68,
+      "medal": ""
     },
     {
       "shooter": "Reidun Oline Foss Nilsen",
@@ -833,7 +905,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 71,
+      "medal": ""
     },
     {
       "shooter": "Nikolai Hansen Snesrud",
@@ -853,7 +927,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 94,
+      "medal": ""
     },
     {
       "shooter": "Ingrid Finnestad",
@@ -873,7 +949,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 103,
+      "medal": ""
     },
     {
       "shooter": "Torjus Lindeland",
@@ -893,7 +971,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørn Einar Andersen",
@@ -913,7 +993,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Andreas Finnestad Lund",
@@ -933,7 +1015,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Siw Anita Dramstad",
@@ -953,7 +1037,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Monica Saxebøl",
@@ -973,7 +1059,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Balder H. Jensen",
@@ -993,7 +1081,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Espen Skaarer-Johansen",
@@ -1013,7 +1103,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristi Skår",
@@ -1033,7 +1125,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Silje Jeanett Holter",
@@ -1053,7 +1147,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rune Raknerud",
@@ -1073,7 +1169,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 357,
+      "medal": ""
     },
     {
       "shooter": "Jo Inge S. Auren",
@@ -1093,7 +1191,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 171,
+      "medal": ""
     },
     {
       "shooter": "Hans Petter Aas-Hveem",
@@ -1113,7 +1213,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 124,
+      "medal": ""
     },
     {
       "shooter": "Sverre Saxebøl",
@@ -1133,7 +1235,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eskil Dahlen Solberg",
@@ -1153,7 +1257,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 77,
+      "medal": ""
     },
     {
       "shooter": "Erik Wik",
@@ -1173,7 +1279,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 72,
+      "medal": ""
     },
     {
       "shooter": "Trond Andresen",
@@ -1193,7 +1301,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjarne Sigurd Ramsjø",
@@ -1213,7 +1323,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Elin Jeanette Lauritsen",
@@ -1233,7 +1345,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 123,
+      "medal": ""
     },
     {
       "shooter": "Helle Andrea Lystad Johansen",
@@ -1253,7 +1367,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Magnus Berger Wear",
@@ -1273,7 +1389,9 @@
       "exercise": "main",
       "score": 224,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Per Erik Mytting",
@@ -1293,7 +1411,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 252,
+      "medal": ""
     },
     {
       "shooter": "Anders Stanes Enger",
@@ -1313,7 +1433,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 98,
+      "medal": ""
     },
     {
       "shooter": "Markus Aleksander Rosenberger",
@@ -1333,7 +1455,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 154,
+      "medal": ""
     },
     {
       "shooter": "Carina Berg Emilsen",
@@ -1353,7 +1477,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olav Aaker",
@@ -1373,7 +1499,9 @@
       "exercise": "main",
       "score": 218,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jan Cato Berg Emilsen",
@@ -1393,7 +1521,9 @@
       "exercise": "main",
       "score": 218,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Trond Erling Andersen",
@@ -1413,7 +1543,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 201,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Magnus Madsen",
@@ -1433,7 +1565,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 183,
+      "medal": ""
     },
     {
       "shooter": "Tomas Andersen",
@@ -1453,7 +1587,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 159,
+      "medal": ""
     },
     {
       "shooter": "Dagfinn Aaserud",
@@ -1473,7 +1609,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 234,
+      "medal": ""
     },
     {
       "shooter": "Knut Haraldseid",
@@ -1493,7 +1631,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 158,
+      "medal": ""
     },
     {
       "shooter": "Dag Jordbru",
@@ -1513,7 +1653,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 81,
+      "medal": ""
     },
     {
       "shooter": "Morten Andre Johansen",
@@ -1533,7 +1675,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 124,
+      "medal": ""
     },
     {
       "shooter": "Espen Lauritsen",
@@ -1553,7 +1697,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 124,
+      "medal": ""
     },
     {
       "shooter": "Erik Solbrække",
@@ -1573,7 +1719,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jens Olbergsveen",
@@ -1593,7 +1741,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Pål Gisle",
@@ -1613,7 +1763,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anders Aas-Hveem",
@@ -1633,7 +1785,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 81,
+      "medal": ""
     },
     {
       "shooter": "Svein Kåre Lintho",
@@ -1653,7 +1807,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tone M. Gimle",
@@ -1673,7 +1829,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Truls Hjortnæs",
@@ -1693,7 +1851,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Øystein Langlien",
@@ -1713,7 +1873,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Rolfsrud",
@@ -1733,7 +1895,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 224,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Markus Steinwagner",
@@ -1753,7 +1917,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 152,
+      "medal": ""
     },
     {
       "shooter": "Geir Hysestad",
@@ -1773,7 +1939,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 147,
+      "medal": ""
     },
     {
       "shooter": "Jan Alexander Lislelid",
@@ -1793,7 +1961,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 77,
+      "medal": ""
     },
     {
       "shooter": "Karl Georg Rosenberger",
@@ -1813,7 +1983,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 72,
+      "medal": ""
     },
     {
       "shooter": "Dag Høie",
@@ -1833,7 +2005,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Janne Christin Nymark-Hansen",
@@ -1853,7 +2027,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Daniel Hildebrandt",
@@ -1873,7 +2049,9 @@
       "exercise": "main",
       "score": 228,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Roger Stemsrudhagen",
@@ -1893,7 +2071,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 260,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Knut Bråthen",
@@ -1913,7 +2093,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 230,
+      "medal": ""
     },
     {
       "shooter": "Jan Håkon Hensel",
@@ -1933,7 +2115,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 210,
+      "medal": ""
     },
     {
       "shooter": "Trine Gromsrud",
@@ -1953,7 +2137,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 166,
+      "medal": ""
     },
     {
       "shooter": "Ivar Rinde",
@@ -1973,7 +2159,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 116,
+      "medal": ""
     },
     {
       "shooter": "Roar Hellebakken",
@@ -1993,7 +2181,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Truls Hagen",
@@ -2013,7 +2203,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Terje Grøterud",
@@ -2033,7 +2225,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Roy Jøran Fredriksen",
@@ -2053,7 +2247,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 79,
+      "medal": ""
     },
     {
       "shooter": "Hans Gunnar Lien",
@@ -2073,7 +2269,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Sylvia Ulrike Steinwagner-Bublitz",
@@ -2093,7 +2291,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Johnny Helgesen",
@@ -2113,7 +2313,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Øivind Dramstad",
@@ -2133,7 +2335,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tore Finstad",
@@ -2153,7 +2357,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Runar Holter-Belgen",
@@ -2173,7 +2379,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Heidi Kristin Pedersen",
@@ -2193,7 +2401,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vegard Gultvedt",
@@ -2213,7 +2423,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 17,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 285,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Odd Petter Nythe",
@@ -2233,7 +2445,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 228,
+      "medal": ""
     },
     {
       "shooter": "Rune Wallin",
@@ -2253,7 +2467,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 182,
+      "medal": ""
     },
     {
       "shooter": "Rune Solberg",
@@ -2273,7 +2489,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 216,
+      "medal": ""
     },
     {
       "shooter": "Jan Vidar Lundtveit",
@@ -2293,7 +2511,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jan Jansen",
@@ -2313,7 +2533,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 19,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 275,
+      "medal": ""
     },
     {
       "shooter": "Torfinn Gaustad",
@@ -2333,7 +2555,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 138,
+      "medal": ""
     },
     {
       "shooter": "Johan Andresen",
@@ -2353,7 +2577,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 90,
+      "medal": ""
     },
     {
       "shooter": "May Lise Aas",
@@ -2373,7 +2599,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 122,
+      "medal": ""
     },
     {
       "shooter": "Lars Esse",
@@ -2393,7 +2621,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 14,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 144,
+      "medal": ""
     },
     {
       "shooter": "Arild Båheim",
@@ -2413,7 +2643,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Erling Grøterud",
@@ -2433,7 +2665,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Leif Hagen",
@@ -2453,7 +2687,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anne Sofie Grimstad",
@@ -2473,7 +2709,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Ånneland",
@@ -2493,7 +2731,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ove Johansen",
@@ -2513,7 +2753,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Per Asle Nordli",
@@ -2533,7 +2775,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Andersrød",
@@ -2553,7 +2797,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anne-Lise Hovde Holstad",
@@ -2573,7 +2819,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jarle Gården",
@@ -2593,7 +2841,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thore Hynne",
@@ -2613,7 +2863,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 84,
+      "medal": ""
     },
     {
       "shooter": "Terje H. Jensen",
@@ -2633,7 +2885,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 159,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Silje Malene Fredriksen",
@@ -2653,7 +2907,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 111,
+      "medal": ""
     },
     {
       "shooter": "William Melby",
@@ -2673,7 +2929,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 95,
+      "medal": ""
     },
     {
       "shooter": "Theo Ottesen-Sørgaard",
@@ -2693,7 +2951,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 61,
+      "medal": ""
     },
     {
       "shooter": "Emil Ottesen",
@@ -2713,7 +2973,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 84,
+      "medal": ""
     },
     {
       "shooter": "Karl Emil Gauterud",
@@ -2733,7 +2995,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Milla Skåland",
@@ -2753,7 +3017,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Magnus Strøm",
@@ -2773,7 +3039,9 @@
       "exercise": "main",
       "score": 226,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eirik Gleditsch",
@@ -2793,7 +3061,9 @@
       "exercise": "main",
       "score": 65,
       "inner": 0,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jonas Andersen",
@@ -2813,7 +3083,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 141,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Elise Evensen Austad",
@@ -2833,7 +3105,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 118,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Elle Andresen",
@@ -2853,7 +3127,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 135,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Jonas Sørli Runhovde",
@@ -2873,7 +3149,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 113,
+      "medal": ""
     },
     {
       "shooter": "Emelie Thorsteinsen",
@@ -2893,7 +3171,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 113,
+      "medal": ""
     },
     {
       "shooter": "Andrea Johanne Solbrække",
@@ -2913,7 +3193,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 88,
+      "medal": ""
     },
     {
       "shooter": "Tobias Rooth Olbergsveen",
@@ -2933,7 +3215,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 104,
+      "medal": ""
     },
     {
       "shooter": "Mette Amalie Ødegård",
@@ -2953,7 +3237,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 98,
+      "medal": ""
     },
     {
       "shooter": "Elias Skarpodde Prestkvern",
@@ -2973,7 +3259,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 36,
+      "medal": ""
     },
     {
       "shooter": "Adrian Kokkerud Nygaard",
@@ -2993,7 +3281,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 55,
+      "medal": ""
     },
     {
       "shooter": "Sanna Skarpodde Prestkvern",
@@ -3013,7 +3303,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 10,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 41,
+      "medal": ""
     },
     {
       "shooter": "Milla Aaserud",
@@ -3033,7 +3325,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Daniel Lystad Johansen",
@@ -3053,7 +3347,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 50,
+      "medal": ""
     },
     {
       "shooter": "Mathias Kjoberg",
@@ -3073,7 +3369,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 46,
+      "medal": ""
     },
     {
       "shooter": "Maya Josephine Fosser",
@@ -3093,7 +3391,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 47,
+      "medal": ""
     },
     {
       "shooter": "Lilly H. Madsen",
@@ -3113,7 +3413,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kasper Kristiansen",
@@ -3133,7 +3435,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vegard Lunde",
@@ -3153,7 +3457,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 39,
+      "medal": ""
     },
     {
       "shooter": "Martine Vestveit Nervold",
@@ -3173,7 +3479,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 36,
+      "medal": ""
     },
     {
       "shooter": "Martin Storløkken Hanssen",
@@ -3193,7 +3501,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rose Andersen",
@@ -3213,7 +3523,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Achilles Opdahl-Garborg",
@@ -3233,7 +3545,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 16,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 163,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Alan Jin Rolfsrud",
@@ -3253,7 +3567,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 154,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Malin Husebye Madsen",
@@ -3273,7 +3589,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 128,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Endre Kvisler",
@@ -3293,7 +3611,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 126,
+      "medal": ""
     },
     {
       "shooter": "Leon Løkken Prabhu",
@@ -3313,7 +3633,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 85,
+      "medal": ""
     },
     {
       "shooter": "Frøya Pihl Strømstad",
@@ -3333,7 +3655,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 102,
+      "medal": ""
     },
     {
       "shooter": "Henrik Johansen Myrhaug",
@@ -3353,7 +3677,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 64,
+      "medal": ""
     },
     {
       "shooter": "Maiken Hysestad",
@@ -3373,7 +3699,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Nikolai Stemsrudhagen Dahler",
@@ -3393,7 +3721,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oscar Nymark-Hansen",
@@ -3413,7 +3743,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Henrik Bøhn Gjerde",
@@ -3433,7 +3765,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 39,
+      "medal": ""
     },
     {
       "shooter": "Ingeborg Lillegraven",
@@ -3453,7 +3787,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 52,
+      "medal": ""
     },
     {
       "shooter": "Kiran Nickolay Lislelid",
@@ -3473,7 +3809,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 0,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristoffer Eklo Bjørnstad",
@@ -3493,7 +3831,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 47,
+      "medal": ""
     },
     {
       "shooter": "Anker Keys",
@@ -3513,7 +3853,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 0,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Petter Marensius Kaspersen",
@@ -3533,7 +3875,9 @@
       "exercise": "main",
       "score": 170,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Konrad Keys",
@@ -3553,7 +3897,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 13,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 138,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Markus Aamodt-Amundsen",
@@ -3573,7 +3919,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 111,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Alicia Broen",
@@ -3593,7 +3941,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 78,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Anders Skei Larsen",
@@ -3613,7 +3963,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 88,
+      "medal": ""
     },
     {
       "shooter": "Jensine Vestveit Nervold",
@@ -3633,7 +3985,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 65,
+      "medal": ""
     },
     {
       "shooter": "Sondre Andrè Risting Johansen",
@@ -3653,7 +4007,9 @@
       "exercise": "main",
       "score": 226,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Emilie Tufte",
@@ -3673,7 +4029,9 @@
       "exercise": "main",
       "score": 228,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hannah Hildebrandt",
@@ -3693,7 +4051,9 @@
       "exercise": "main",
       "score": 218,
       "inner": 1,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thorvald Haram",
@@ -3713,7 +4073,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 14,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 275,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Odd Kolsrud",
@@ -3733,7 +4095,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 191,
+      "medal": ""
     },
     {
       "shooter": "Kurt Arne Berglund",
@@ -3753,7 +4117,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 85,
+      "medal": ""
     },
     {
       "shooter": "Knut Bingen",
@@ -3773,7 +4139,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 17,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 280,
+      "medal": ""
     },
     {
       "shooter": "Kåre Lund",
@@ -3793,7 +4161,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Odd-Bjørn Vatne",
@@ -3813,7 +4183,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 132,
+      "medal": ""
     },
     {
       "shooter": "Tore Dahl",
@@ -3833,7 +4205,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 15,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 285,
+      "medal": ""
     },
     {
       "shooter": "Harald Buuer",
@@ -3853,7 +4227,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Arne Johan Grøtting",
@@ -3873,7 +4249,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Johan Martin Syversen",
@@ -3893,7 +4271,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thorleif Tegler",
@@ -3913,7 +4293,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Egil Berg",
@@ -3933,7 +4315,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Inge Hoff",
@@ -3953,7 +4337,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 9,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Robert Larsen",
@@ -3973,7 +4359,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 3,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oddvar Andersen",
@@ -3993,7 +4381,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 4,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anne-Lise Gleditsch",
@@ -4013,7 +4403,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Per Arne Tollerud",
@@ -4033,7 +4425,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Myrås",
@@ -4053,7 +4447,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 220,
+      "medal": ""
     },
     {
       "shooter": "Stig B. Hansen",
@@ -4063,7 +4459,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bella Lunde",
@@ -4073,7 +4471,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Geir Åge Kaspersen",
@@ -4083,7 +4483,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Turid Lien",
@@ -4093,7 +4495,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Daniel Henriksen",
@@ -4103,7 +4507,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 6,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Sondre Nervold",
@@ -4113,7 +4519,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 14,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 84,
+      "medal": ""
     },
     {
       "shooter": "Sondre Nervold",
@@ -4133,7 +4541,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 2,
-      "eventId": "254699"
+      "eventId": "254699",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Ronja Hammervold",
@@ -4143,7 +4553,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 370,
+      "medal": ""
     },
     {
       "shooter": "Ronja Hammervold",
@@ -4163,7 +4575,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 10,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 240,
+      "medal": ""
     },
     {
       "shooter": "Rune Lysgård Fagerheim",
@@ -4183,7 +4597,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 76,
+      "medal": ""
     },
     {
       "shooter": "Edvin Aamot",
@@ -4203,7 +4619,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 145,
+      "medal": ""
     },
     {
       "shooter": "Lars Aleksander Haugan",
@@ -4223,7 +4641,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 67,
+      "medal": ""
     },
     {
       "shooter": "Kai-Aleksander Kristiansen",
@@ -4243,7 +4663,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 103,
+      "medal": ""
     },
     {
       "shooter": "Ingeborg Rosøy",
@@ -4263,7 +4685,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 102,
+      "medal": ""
     },
     {
       "shooter": "Benedicte Guttorm",
@@ -4283,7 +4707,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 12,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ida Haugstad Stake",
@@ -4303,7 +4729,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 130,
+      "medal": ""
     },
     {
       "shooter": "Tore Egil Halse",
@@ -4323,7 +4751,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Guro Øie Bævre",
@@ -4343,7 +4773,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 67,
+      "medal": ""
     },
     {
       "shooter": "Odd M Tyrhaug",
@@ -4363,7 +4795,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Birger Meistad",
@@ -4383,7 +4817,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kåre Grønning",
@@ -4403,7 +4839,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 241,
+      "medal": ""
     },
     {
       "shooter": "Liv-Monica Wie Jensen",
@@ -4423,7 +4861,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 186,
+      "medal": ""
     },
     {
       "shooter": "Eivind Vågø",
@@ -4443,7 +4883,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristin Kanestrøm",
@@ -4463,7 +4905,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 3,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Bård Erik Aasan",
@@ -4483,7 +4927,9 @@
       "exercise": "main",
       "score": 226,
       "inner": 4,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eirik Gjeldnes",
@@ -4503,7 +4949,9 @@
       "exercise": "main",
       "score": 222,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Tor Arne Garberg",
@@ -4523,7 +4971,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Odd-Einar Rønningsgrind",
@@ -4543,7 +4993,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 157,
+      "medal": ""
     },
     {
       "shooter": "Wenche Stensheim",
@@ -4563,7 +5015,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 293,
+      "medal": ""
     },
     {
       "shooter": "Mari Haugstad Stake",
@@ -4583,7 +5037,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 129,
+      "medal": ""
     },
     {
       "shooter": "Lillian Sandvik",
@@ -4603,7 +5059,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 150,
+      "medal": ""
     },
     {
       "shooter": "Geir Stensheim",
@@ -4623,7 +5081,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 2,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 171,
+      "medal": ""
     },
     {
       "shooter": "Svein Harald Antonsen",
@@ -4643,7 +5103,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Sandvik",
@@ -4663,7 +5125,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Reidun Synnøve Stølen",
@@ -4683,7 +5147,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 4,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ole Kristian K Hattmyr",
@@ -4703,7 +5169,9 @@
       "exercise": "main",
       "score": 226,
       "inner": 0,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Norun Gjeldnes",
@@ -4723,7 +5191,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 120,
+      "medal": ""
     },
     {
       "shooter": "Siw Anita Fossbakk",
@@ -4743,7 +5213,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Are Åmot",
@@ -4763,7 +5235,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 240,
+      "medal": ""
     },
     {
       "shooter": "Asbjørn Sletten Stølen",
@@ -4783,7 +5257,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 168,
+      "medal": ""
     },
     {
       "shooter": "Roy Halseth",
@@ -4803,7 +5279,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 10,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 125,
+      "medal": ""
     },
     {
       "shooter": "Egil Magne Hammervold",
@@ -4823,7 +5301,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 214,
+      "medal": ""
     },
     {
       "shooter": "Trond Oldertrøen",
@@ -4843,7 +5323,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 200,
+      "medal": ""
     },
     {
       "shooter": "Torkil Fenstad",
@@ -4863,7 +5345,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 117,
+      "medal": ""
     },
     {
       "shooter": "Bjørnulf Røli",
@@ -4883,7 +5367,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Roar Aune",
@@ -4903,7 +5389,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Knut Bakken",
@@ -4923,7 +5411,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oddbjørn Bolme",
@@ -4943,7 +5433,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 2,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Isak Laugen",
@@ -4963,7 +5455,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 136,
+      "medal": ""
     },
     {
       "shooter": "Harry Fagerheim",
@@ -4983,7 +5477,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arnfinn Berdal",
@@ -5003,7 +5499,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 18,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 287,
+      "medal": ""
     },
     {
       "shooter": "May Hamnes",
@@ -5023,7 +5521,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 18,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 256,
+      "medal": ""
     },
     {
       "shooter": "Kurt Otnes",
@@ -5043,7 +5543,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 14,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 141,
+      "medal": ""
     },
     {
       "shooter": "Asgeir Jønland",
@@ -5063,7 +5565,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 11,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Erling Kanestrøm",
@@ -5083,7 +5587,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 116,
+      "medal": ""
     },
     {
       "shooter": "Øystein Antonsen",
@@ -5103,7 +5609,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 12,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørn Haugen",
@@ -5123,7 +5631,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hallgeir Meland",
@@ -5143,7 +5653,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 4,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Michal Edvin Solberg",
@@ -5163,7 +5675,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Vilde Malm Vågø",
@@ -5183,7 +5697,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 156,
+      "medal": ""
     },
     {
       "shooter": "Tarjei Oddlien",
@@ -5203,7 +5719,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 72,
+      "medal": ""
     },
     {
       "shooter": "Varg Andre Tyrhaug",
@@ -5223,7 +5741,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Emre Mathias Lohn",
@@ -5243,7 +5763,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Alexander Weisholz",
@@ -5263,7 +5785,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 72,
+      "medal": ""
     },
     {
       "shooter": "Marie Håpnes",
@@ -5283,7 +5807,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 187,
+      "medal": ""
     },
     {
       "shooter": "Mie Malm Vågø",
@@ -5303,7 +5829,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 11,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 110,
+      "medal": ""
     },
     {
       "shooter": "Helene Selmer Nergaard",
@@ -5323,7 +5851,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 84,
+      "medal": ""
     },
     {
       "shooter": "Mali Vikan Tyrhaug",
@@ -5343,7 +5873,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Andreas Steien Nielsen",
@@ -5363,7 +5895,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 39,
+      "medal": ""
     },
     {
       "shooter": "Ida Braa Almås",
@@ -5383,7 +5917,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 4,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lars Christian Garberg",
@@ -5403,7 +5939,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ann Helen Aasan",
@@ -5423,7 +5961,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 4,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 120,
+      "medal": ""
     },
     {
       "shooter": "Helle Hammerås",
@@ -5443,7 +5983,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 3,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vilde Sjømo Åmot",
@@ -5463,7 +6005,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 258,
+      "medal": ""
     },
     {
       "shooter": "Fridtjof Dypveit",
@@ -5483,7 +6027,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 10,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 271,
+      "medal": ""
     },
     {
       "shooter": "Bjarne Breivold",
@@ -5503,7 +6049,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 103,
+      "medal": ""
     },
     {
       "shooter": "Jostein W. Hoseth",
@@ -5523,7 +6071,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 218,
+      "medal": ""
     },
     {
       "shooter": "Bjarne By",
@@ -5543,7 +6093,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Kai Eskelund",
@@ -5563,7 +6115,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Hans Fostervoll",
@@ -5583,7 +6137,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Niklaus Haugrønning",
@@ -5603,7 +6159,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 1,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Åsmund Skårild",
@@ -5623,7 +6181,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 2,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olav Solheim",
@@ -5643,7 +6203,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 5,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Helge Bævre",
@@ -5663,7 +6225,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 21,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 292,
+      "medal": ""
     },
     {
       "shooter": "John-Arthur Skogås",
@@ -5683,7 +6247,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Ola Johan Landrø",
@@ -5703,7 +6269,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 98,
+      "medal": ""
     },
     {
       "shooter": "Ragnar Landrø",
@@ -5723,7 +6291,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Trond Selmer Nergaard",
@@ -5743,7 +6313,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tore Kristiansen",
@@ -5763,7 +6335,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jonas R. Landrø",
@@ -5783,7 +6357,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 11,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 120,
+      "medal": ""
     },
     {
       "shooter": "Didrik Engli",
@@ -5793,7 +6369,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262150"
+      "eventId": "262150",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Harry Mikkelsen",
@@ -5803,7 +6381,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 4,
-      "eventId": "262691"
+      "eventId": "262691",
+      "prize": 30,
+      "medal": ""
     },
     {
       "shooter": "Tor Harry Mikkelsen",
@@ -5823,7 +6403,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 4,
-      "eventId": "262691"
+      "eventId": "262691",
+      "prize": 30,
+      "medal": ""
     },
     {
       "shooter": "Terje Isaksen",
@@ -5843,7 +6425,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "262691"
+      "eventId": "262691",
+      "prize": 30,
+      "medal": ""
     },
     {
       "shooter": "Kristin Isaksen",
@@ -5863,7 +6447,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "262691"
+      "eventId": "262691",
+      "prize": 30,
+      "medal": ""
     },
     {
       "shooter": "Bjørnar Kyrre Leistad",
@@ -5883,7 +6469,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 363,
+      "medal": "Medalje"
     },
     {
       "shooter": "Kim-André Aannestad Lund",
@@ -5903,7 +6491,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 282,
+      "medal": ""
     },
     {
       "shooter": "Erlend Aas",
@@ -5923,7 +6513,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 281,
+      "medal": ""
     },
     {
       "shooter": "Lars Aleksander Haugan",
@@ -5943,7 +6535,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 157,
+      "medal": ""
     },
     {
       "shooter": "Odd M Tyrhaug",
@@ -5963,7 +6557,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 231,
+      "medal": ""
     },
     {
       "shooter": "Endre Hagelund",
@@ -5983,7 +6579,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 225,
+      "medal": ""
     },
     {
       "shooter": "Tora Skiri",
@@ -6003,7 +6601,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 121,
+      "medal": ""
     },
     {
       "shooter": "Ingeborg Rosøy",
@@ -6023,7 +6623,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 165,
+      "medal": ""
     },
     {
       "shooter": "Kai-Aleksander Kristiansen",
@@ -6043,7 +6645,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 126,
+      "medal": ""
     },
     {
       "shooter": "John Olav Ågotnes",
@@ -6063,7 +6667,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 94,
+      "medal": ""
     },
     {
       "shooter": "Benedicte Guttorm",
@@ -6083,7 +6689,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tore Veie",
@@ -6103,7 +6711,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 270,
+      "medal": ""
     },
     {
       "shooter": "Tobias Raaen",
@@ -6123,7 +6733,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Edvin Aamot",
@@ -6143,7 +6755,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Terje Nisja",
@@ -6163,7 +6777,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rune Lysgård Fagerheim",
@@ -6183,7 +6799,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Runar Tobiassen",
@@ -6203,7 +6821,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 85,
+      "medal": ""
     },
     {
       "shooter": "Ida Haugstad Stake",
@@ -6223,7 +6843,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 11,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ann Iren Rønningsgrind",
@@ -6243,7 +6865,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tore Egil Halse",
@@ -6263,7 +6887,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ingrid Marie Håkenåsen",
@@ -6283,7 +6909,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Trine Lise Haugan",
@@ -6303,7 +6931,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kåre Grønning",
@@ -6323,7 +6953,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Nicolay André Døhl",
@@ -6343,7 +6975,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Birger Meistad",
@@ -6363,7 +6997,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 241,
+      "medal": ""
     },
     {
       "shooter": "Stian Mosand Hanssen",
@@ -6383,7 +7019,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 202,
+      "medal": ""
     },
     {
       "shooter": "Hågen Vedul",
@@ -6403,7 +7041,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 174,
+      "medal": ""
     },
     {
       "shooter": "Kristin Kanestrøm",
@@ -6423,7 +7063,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 149,
+      "medal": ""
     },
     {
       "shooter": "Liv-Monica Wie Jensen",
@@ -6443,7 +7085,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Odin Røstum Stabell",
@@ -6463,7 +7107,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Eivind Vågø",
@@ -6483,7 +7129,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 88,
+      "medal": ""
     },
     {
       "shooter": "Roy Vidar Svensli",
@@ -6503,7 +7151,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bernt Noodt",
@@ -6523,7 +7173,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 1,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Roar Saksvik",
@@ -6543,7 +7195,9 @@
       "exercise": "main",
       "score": 223,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eirik Gjeldnes",
@@ -6563,7 +7217,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 190,
+      "medal": ""
     },
     {
       "shooter": "Svein J. Wik",
@@ -6583,7 +7239,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 210,
+      "medal": ""
     },
     {
       "shooter": "Julian Årskog Vikhagen",
@@ -6603,7 +7261,9 @@
       "exercise": "main",
       "score": 224,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Arne Garberg",
@@ -6623,7 +7283,9 @@
       "exercise": "main",
       "score": 222,
       "inner": 1,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thomas Tangstad",
@@ -6643,7 +7305,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 285,
+      "medal": "Medalje"
     },
     {
       "shooter": "Mari Haugstad Stake",
@@ -6663,7 +7327,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Ole Kristian K Hattmyr",
@@ -6683,7 +7349,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 291,
+      "medal": ""
     },
     {
       "shooter": "Geir Stensheim",
@@ -6703,7 +7371,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 182,
+      "medal": ""
     },
     {
       "shooter": "Nina Seline Raaen",
@@ -6723,7 +7393,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 188,
+      "medal": ""
     },
     {
       "shooter": "Reidun Synnøve Stølen",
@@ -6743,7 +7415,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 99,
+      "medal": ""
     },
     {
       "shooter": "Leif Sverre Hanssen",
@@ -6763,7 +7437,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 210,
+      "medal": ""
     },
     {
       "shooter": "Odd-Einar Rønningsgrind",
@@ -6783,7 +7459,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 75,
+      "medal": ""
     },
     {
       "shooter": "Nils Jøran Stenberg",
@@ -6803,7 +7481,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 142,
+      "medal": ""
     },
     {
       "shooter": "Wenche Stensheim",
@@ -6823,7 +7503,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Espen Amdahl",
@@ -6843,7 +7525,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lillian Sandvik",
@@ -6863,7 +7547,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Geir Edvardsen",
@@ -6883,7 +7569,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Norun Gjeldnes",
@@ -6903,7 +7591,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 1,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Sander Eithun",
@@ -6923,7 +7613,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kenneth Overvoll",
@@ -6943,7 +7635,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Krister Stav",
@@ -6963,7 +7657,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 109,
+      "medal": "Medalje"
     },
     {
       "shooter": "Siw Anita Fossbakk",
@@ -6983,7 +7679,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Ole Kristian Hoel",
@@ -7003,7 +7701,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 127,
+      "medal": ""
     },
     {
       "shooter": "Sissel Krabseth",
@@ -7023,7 +7723,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 1,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hans Joar Skamfer",
@@ -7043,7 +7745,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 191,
+      "medal": ""
     },
     {
       "shooter": "Stine Sjøvold",
@@ -7063,7 +7767,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 410,
+      "medal": "Medalje"
     },
     {
       "shooter": "Bente Sverkmo",
@@ -7083,7 +7789,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 289,
+      "medal": ""
     },
     {
       "shooter": "Knut Bakken",
@@ -7103,7 +7811,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 196,
+      "medal": ""
     },
     {
       "shooter": "Bjørnulf Røli",
@@ -7123,7 +7833,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 134,
+      "medal": ""
     },
     {
       "shooter": "Harry Fagerheim",
@@ -7143,7 +7855,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 79,
+      "medal": ""
     },
     {
       "shooter": "Roy Halseth",
@@ -7163,7 +7877,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Dagfinn Aune",
@@ -7183,7 +7899,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 134,
+      "medal": ""
     },
     {
       "shooter": "Torkil Berg",
@@ -7203,7 +7921,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 79,
+      "medal": ""
     },
     {
       "shooter": "Roar Aune",
@@ -7223,7 +7943,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 171,
+      "medal": ""
     },
     {
       "shooter": "Arnfinn Berdal",
@@ -7243,7 +7965,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 116,
+      "medal": ""
     },
     {
       "shooter": "Hallstein Raaen",
@@ -7263,7 +7987,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 208,
+      "medal": ""
     },
     {
       "shooter": "Oddbjørn Bolme",
@@ -7283,7 +8009,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Trond Oldertrøen",
@@ -7303,7 +8031,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ivar Skjelstad",
@@ -7323,7 +8053,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Pål Rønningsgrind",
@@ -7343,7 +8075,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Isak Laugen",
@@ -7363,7 +8097,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 79,
+      "medal": ""
     },
     {
       "shooter": "Asbjørn Sletten Stølen",
@@ -7383,7 +8119,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jarle Harkestad",
@@ -7403,7 +8141,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Dag Hesby",
@@ -7423,7 +8163,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Karin Wie",
@@ -7443,7 +8185,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Morten Egil Olsen",
@@ -7463,7 +8207,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 319,
+      "medal": "Medalje"
     },
     {
       "shooter": "Kurt Otnes",
@@ -7483,7 +8229,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 15,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 246,
+      "medal": ""
     },
     {
       "shooter": "May Hamnes",
@@ -7503,7 +8251,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 217,
+      "medal": ""
     },
     {
       "shooter": "Asgeir Jønland",
@@ -7523,7 +8273,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 14,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Øystein Antonsen",
@@ -7543,7 +8295,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 103,
+      "medal": ""
     },
     {
       "shooter": "Jan-Tore Øwre",
@@ -7563,7 +8317,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørn Haugen",
@@ -7583,7 +8339,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Erling Kanestrøm",
@@ -7603,7 +8361,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 14,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 115,
+      "medal": ""
     },
     {
       "shooter": "Stig Oddbjørn Aas",
@@ -7623,7 +8383,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hans Rønningsgrind",
@@ -7643,7 +8405,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Michal Edvin Solberg",
@@ -7663,7 +8427,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 195,
+      "medal": "Medalje"
     },
     {
       "shooter": "Vilde Malm Vågø",
@@ -7683,7 +8449,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 105,
+      "medal": ""
     },
     {
       "shooter": "Irja Ingebrigtsen Wold",
@@ -7703,7 +8471,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Mathea Flatvoll Svensli",
@@ -7723,7 +8493,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Leander Rismark",
@@ -7743,7 +8515,9 @@
       "exercise": "main",
       "score": 214,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hanne Sofie Østvik",
@@ -7763,7 +8537,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 191,
+      "medal": "Medalje"
     },
     {
       "shooter": "Varg Andre Tyrhaug",
@@ -7783,7 +8559,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 165,
+      "medal": ""
     },
     {
       "shooter": "Tarjei Oddlien",
@@ -7803,7 +8581,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 175,
+      "medal": ""
     },
     {
       "shooter": "Harley Amdahl",
@@ -7823,7 +8603,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Ola Magnus Stenberg",
@@ -7843,7 +8625,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 149,
+      "medal": ""
     },
     {
       "shooter": "Emre Mathias Lohn",
@@ -7863,7 +8647,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 40,
+      "medal": ""
     },
     {
       "shooter": "Leonora Flatvoll Svensli",
@@ -7883,7 +8669,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Stian Østvik",
@@ -7903,7 +8691,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Heine Aleksander Veie",
@@ -7923,7 +8713,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Alexander Weisholz",
@@ -7943,7 +8735,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anna Bjerkaas Kamsvåg",
@@ -7963,7 +8757,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Silje Stav",
@@ -7983,7 +8779,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Mathias Sjøvold",
@@ -8003,7 +8801,9 @@
       "exercise": "main",
       "score": 202,
       "inner": 4,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Mathias Oldertrøen Gilde",
@@ -8023,7 +8823,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 14,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 159,
+      "medal": "Medalje"
     },
     {
       "shooter": "Andrea Vedul",
@@ -8043,7 +8845,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 16,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 193,
+      "medal": ""
     },
     {
       "shooter": "Mie Malm Vågø",
@@ -8063,7 +8867,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 11,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 122,
+      "medal": ""
     },
     {
       "shooter": "Mali Vikan Tyrhaug",
@@ -8083,7 +8889,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 59,
+      "medal": ""
     },
     {
       "shooter": "Sivert Herrem",
@@ -8103,7 +8911,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 59,
+      "medal": ""
     },
     {
       "shooter": "Helene Selmer Nergaard",
@@ -8123,7 +8933,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 11,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 135,
+      "medal": ""
     },
     {
       "shooter": "Sofie Alvilde Jørgensen Solli",
@@ -8143,7 +8955,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 53,
+      "medal": ""
     },
     {
       "shooter": "Andreas Steien Nielsen",
@@ -8163,7 +8977,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olav Skamfer",
@@ -8183,7 +8999,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olai Stavsøien",
@@ -8203,7 +9021,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lars Christian Garberg",
@@ -8223,7 +9043,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristine Hoel",
@@ -8243,7 +9065,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lukas Leinslie-Walsøe",
@@ -8263,7 +9087,9 @@
       "exercise": "main",
       "score": 209,
       "inner": 0,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kaja Tessem Størseth",
@@ -8283,7 +9109,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 247,
+      "medal": "Medalje"
     },
     {
       "shooter": "Arnfinn Kamsvåg",
@@ -8303,7 +9131,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 291,
+      "medal": ""
     },
     {
       "shooter": "Hans Fostervoll",
@@ -8323,7 +9153,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 215,
+      "medal": ""
     },
     {
       "shooter": "Fridtjof Dypveit",
@@ -8343,7 +9175,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjarne By",
@@ -8363,7 +9197,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Idar Moseng",
@@ -8383,7 +9219,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Bjarne Breivold",
@@ -8403,7 +9241,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 11,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 111,
+      "medal": ""
     },
     {
       "shooter": "Kai Eskelund",
@@ -8423,7 +9263,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 106,
+      "medal": ""
     },
     {
       "shooter": "Jostein W. Hoseth",
@@ -8443,7 +9285,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Gudmund Koran",
@@ -8463,7 +9307,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Torbjørn Sætertrø",
@@ -8483,7 +9329,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Niklaus Haugrønning",
@@ -8503,7 +9351,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Gunnar G. Fornes",
@@ -8523,7 +9373,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 2,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olav Solheim",
@@ -8543,7 +9395,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 24,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 346,
+      "medal": "Medalje"
     },
     {
       "shooter": "John-Arthur Skogås",
@@ -8563,7 +9417,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 198,
+      "medal": ""
     },
     {
       "shooter": "Paal Nordland",
@@ -8583,7 +9439,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 160,
+      "medal": ""
     },
     {
       "shooter": "Ola Johan Landrø",
@@ -8603,7 +9461,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 69,
+      "medal": ""
     },
     {
       "shooter": "Trond Selmer Nergaard",
@@ -8623,7 +9483,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ragnar Landrø",
@@ -8643,7 +9505,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 9,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 160,
+      "medal": ""
     },
     {
       "shooter": "Morten Island",
@@ -8663,7 +9527,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jan Roar Mosand  Hanssen",
@@ -8683,7 +9549,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 69,
+      "medal": ""
     },
     {
       "shooter": "Ketil Sunde",
@@ -8703,7 +9571,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 13,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 98,
+      "medal": ""
     },
     {
       "shooter": "Theodor Sunde",
@@ -8723,7 +9593,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tore Kristiansen",
@@ -8743,7 +9615,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jonas R. Landrø",
@@ -8763,7 +9637,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 152,
+      "medal": ""
     },
     {
       "shooter": "Heidi Lysgård Fagerheim",
@@ -8773,7 +9649,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 88,
+      "medal": ""
     },
     {
       "shooter": "Didrik Engli",
@@ -8783,7 +9661,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bor Andrej Rudolf",
@@ -8793,7 +9673,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 3,
-      "eventId": "262149"
+      "eventId": "262149",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ivar Eira",
@@ -8803,7 +9685,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 7,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ivar Eira",
@@ -8823,7 +9707,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 4,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Idar Helmer Pedersen",
@@ -8843,7 +9729,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 7,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tom Vidar M. Olsen",
@@ -8863,7 +9751,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Britt Iren Heggem",
@@ -8883,7 +9773,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 6,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jorunn Mjåland",
@@ -8903,7 +9795,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 4,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Svein Tore Solberg",
@@ -8923,7 +9817,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Yehor Balenko",
@@ -8933,7 +9829,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 3,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Aine Z. Olsen",
@@ -8943,7 +9841,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 3,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Aine Z. Olsen",
@@ -8963,7 +9863,9 @@
       "exercise": "main",
       "score": 212,
       "inner": 1,
-      "eventId": "262364"
+      "eventId": "262364",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Irvin Z. Olsen",
@@ -8983,7 +9885,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 6,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Sander Nesbø Sælensminde",
@@ -9003,7 +9907,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kaja Helene Remmen",
@@ -9023,7 +9929,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 3,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Inge Eriksen",
@@ -9043,7 +9951,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 4,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Stig Andre Lilleheil",
@@ -9063,7 +9973,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 6,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lars Reme",
@@ -9083,7 +9995,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Geir Inge Nedrebø",
@@ -9103,7 +10017,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 13,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Magne Strømme",
@@ -9123,7 +10039,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 6,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eivind Bøe",
@@ -9143,7 +10061,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 10,
-      "eventId": "262698"
+      "eventId": "262698",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Yngve Johannessen",
@@ -9163,7 +10083,9 @@
       "exercise": "main",
       "score": 238,
       "inner": null,
-      "eventId": "262784"
+      "eventId": "262784",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kate Santaya Sornphet Hansen",
@@ -9183,7 +10105,9 @@
       "exercise": "main",
       "score": 233,
       "inner": null,
-      "eventId": "262784"
+      "eventId": "262784",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Nicolai  Jensen Tveit",
@@ -9203,7 +10127,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 259,
+      "medal": ""
     },
     {
       "shooter": "Isak Frøysadal Hauge",
@@ -9223,7 +10149,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 11,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 216,
+      "medal": ""
     },
     {
       "shooter": "Roger Nesheim",
@@ -9243,7 +10171,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 115,
+      "medal": ""
     },
     {
       "shooter": "Trond Petter Lystad",
@@ -9263,7 +10193,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 129,
+      "medal": ""
     },
     {
       "shooter": "Tom Olav Moldskred",
@@ -9283,7 +10215,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Marthe Heggem Eira",
@@ -9303,7 +10237,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Finn Atle Oldeide",
@@ -9323,7 +10259,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anita Lystad",
@@ -9343,7 +10281,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Monica Sæterøy Høybakk",
@@ -9363,7 +10303,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Asbjørn Myklebust",
@@ -9383,7 +10325,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 210,
+      "medal": ""
     },
     {
       "shooter": "Nils Holme",
@@ -9403,7 +10347,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 287,
+      "medal": ""
     },
     {
       "shooter": "Andreas Riksheim Oldeide",
@@ -9423,7 +10369,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 268,
+      "medal": ""
     },
     {
       "shooter": "Daniel Matias Mjellem",
@@ -9443,7 +10391,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 115,
+      "medal": ""
     },
     {
       "shooter": "Eline Vatne Wego",
@@ -9463,7 +10413,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ask Aarsæther",
@@ -9483,7 +10435,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 76,
+      "medal": ""
     },
     {
       "shooter": "Ådne Viddal Krogsæter",
@@ -9503,7 +10457,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Torill Lystad",
@@ -9523,7 +10479,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Per Harald Homberset",
@@ -9543,7 +10501,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Håkon Bekvik",
@@ -9563,7 +10523,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristian Lotsberg",
@@ -9583,7 +10545,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Asle Homberset",
@@ -9603,7 +10567,9 @@
       "exercise": "main",
       "score": 217,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ole Kristian Aasen",
@@ -9623,7 +10589,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 213,
+      "medal": ""
     },
     {
       "shooter": "Kjellaug Beate Stokke",
@@ -9643,7 +10611,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 42,
+      "medal": ""
     },
     {
       "shooter": "Kenneth Magne Sætre",
@@ -9663,7 +10633,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 64,
+      "medal": ""
     },
     {
       "shooter": "Emily Victoria Bigset",
@@ -9683,7 +10655,9 @@
       "exercise": "main",
       "score": 223,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Erlend Overaa",
@@ -9703,7 +10677,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 256,
+      "medal": ""
     },
     {
       "shooter": "Lina Riksheim",
@@ -9723,7 +10699,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 96,
+      "medal": ""
     },
     {
       "shooter": "Andor Bjørke",
@@ -9743,7 +10721,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Laurits Larsen",
@@ -9763,7 +10743,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jostein Nykrem",
@@ -9783,7 +10765,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Viljar Riksheim",
@@ -9803,7 +10787,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 0,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Peder Olaf Dimmen",
@@ -9823,7 +10809,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 213,
+      "medal": ""
     },
     {
       "shooter": "Stein-Arne Reknes",
@@ -9843,7 +10831,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Annelin Wangen",
@@ -9863,7 +10853,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 106,
+      "medal": ""
     },
     {
       "shooter": "Monja Arnesen",
@@ -9883,7 +10875,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Knut Ove Rygg",
@@ -9903,7 +10897,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 14,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 234,
+      "medal": ""
     },
     {
       "shooter": "Egil Magne Hammervold",
@@ -9923,7 +10919,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 213,
+      "medal": ""
     },
     {
       "shooter": "Arve Halsteinslid",
@@ -9943,7 +10941,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 14,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Thorstein Åmodt",
@@ -9963,7 +10963,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kjell Oddvar Frøysa",
@@ -9983,7 +10985,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arnstein Homberset",
@@ -10003,7 +11007,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 64,
+      "medal": ""
     },
     {
       "shooter": "Vegard Bakken",
@@ -10023,7 +11029,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Atle Lotsberg",
@@ -10043,7 +11051,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Leon Sindre Lillehamre",
@@ -10063,7 +11073,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 15,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 216,
+      "medal": ""
     },
     {
       "shooter": "Trond Jøingsli",
@@ -10083,7 +11095,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 11,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rolf Hatlelid",
@@ -10103,7 +11117,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 14,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 96,
+      "medal": ""
     },
     {
       "shooter": "Håvard Storbråten",
@@ -10123,7 +11139,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 9,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 48,
+      "medal": ""
     },
     {
       "shooter": "Andreas Solvik",
@@ -10143,7 +11161,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 16,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 144,
+      "medal": ""
     },
     {
       "shooter": "Magne Aarskog",
@@ -10163,7 +11183,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 72,
+      "medal": ""
     },
     {
       "shooter": "Einar Rodt",
@@ -10183,7 +11205,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 144,
+      "medal": ""
     },
     {
       "shooter": "Kjell Arne Jøingsli",
@@ -10203,7 +11227,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Harald Søvdsnes",
@@ -10223,7 +11249,9 @@
       "exercise": "main",
       "score": 218,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Gisle Myklebust Hestås",
@@ -10243,7 +11271,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Georg Larsen",
@@ -10263,7 +11293,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 146,
+      "medal": ""
     },
     {
       "shooter": "Joakim Beinnes Førde",
@@ -10283,7 +11315,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Jonas Nykrem",
@@ -10303,7 +11337,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 40,
+      "medal": ""
     },
     {
       "shooter": "Adrian Ytreberg",
@@ -10323,7 +11359,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 53,
+      "medal": ""
     },
     {
       "shooter": "Sina Helen Frøysa",
@@ -10343,7 +11381,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oline Sæterøy Høybakk",
@@ -10363,7 +11403,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Sander Lund",
@@ -10383,7 +11425,9 @@
       "exercise": "main",
       "score": 210,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jørund Vatne Eriksen",
@@ -10403,7 +11447,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 112,
+      "medal": ""
     },
     {
       "shooter": "Mary-Emilie Pettersen Reknes",
@@ -10423,7 +11469,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 119,
+      "medal": ""
     },
     {
       "shooter": "Markus Bjørke",
@@ -10443,7 +11491,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 42,
+      "medal": ""
     },
     {
       "shooter": "Kai Adam Røyrhus",
@@ -10463,7 +11513,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 42,
+      "medal": ""
     },
     {
       "shooter": "Simon E. Nesheim Aardalsbakke",
@@ -10483,7 +11535,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 35,
+      "medal": ""
     },
     {
       "shooter": "Mikal Fjellkårstad Rygg",
@@ -10503,7 +11557,9 @@
       "exercise": "main",
       "score": 228,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Cathrine Godø Wolsdal",
@@ -10523,7 +11579,9 @@
       "exercise": "main",
       "score": 220,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arve Helset Aarflot",
@@ -10543,7 +11601,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 119,
+      "medal": ""
     },
     {
       "shooter": "Sander Wangen Hjorthaug",
@@ -10563,7 +11623,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 126,
+      "medal": ""
     },
     {
       "shooter": "Sarah R. Nesheim Aardalsbakke",
@@ -10583,7 +11645,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 49,
+      "medal": ""
     },
     {
       "shooter": "Martine Melvoll Muldsvor",
@@ -10603,7 +11667,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 42,
+      "medal": ""
     },
     {
       "shooter": "Eir Liaskar",
@@ -10623,7 +11689,9 @@
       "exercise": "main",
       "score": 230,
       "inner": 3,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 14,
+      "medal": ""
     },
     {
       "shooter": "Ingrid Elise Svor",
@@ -10643,7 +11711,9 @@
       "exercise": "main",
       "score": 220,
       "inner": 0,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Mikael Nielsen Espelund",
@@ -10663,7 +11733,9 @@
       "exercise": "main",
       "score": 220,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Julia Elise Sætre",
@@ -10683,7 +11755,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 130,
+      "medal": ""
     },
     {
       "shooter": "Sebastian Milovic",
@@ -10703,7 +11777,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 109,
+      "medal": ""
     },
     {
       "shooter": "Hogne Tobias Sveen",
@@ -10723,7 +11799,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Isak Clausen",
@@ -10743,7 +11821,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Magnus Bøe Muldsvor",
@@ -10763,7 +11843,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Adrian Wangen Mork",
@@ -10783,7 +11865,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 36,
+      "medal": ""
     },
     {
       "shooter": "Abel-Elias Pettersen Reknes",
@@ -10803,7 +11887,9 @@
       "exercise": "main",
       "score": 220,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Matheo Muldsvor",
@@ -10823,7 +11909,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 14,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 148,
+      "medal": ""
     },
     {
       "shooter": "Raymond Bigset",
@@ -10833,7 +11921,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 9,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 152,
+      "medal": ""
     },
     {
       "shooter": "Kjell Sveinung Røyrhus",
@@ -10843,7 +11933,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 120,
+      "medal": ""
     },
     {
       "shooter": "Susann Osnes",
@@ -10853,7 +11945,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 81,
+      "medal": ""
     },
     {
       "shooter": "Nikolai Lund",
@@ -10863,7 +11957,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 71,
+      "medal": ""
     },
     {
       "shooter": "Andreas Reinhardt Mork",
@@ -10873,7 +11969,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 67,
+      "medal": ""
     },
     {
       "shooter": "Oda Kalvatsvik Bolsø",
@@ -10883,7 +11981,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 53,
+      "medal": ""
     },
     {
       "shooter": "Roy-Christian Wego",
@@ -10893,7 +11993,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 21,
+      "medal": ""
     },
     {
       "shooter": "Reimonda Baranauskiene",
@@ -10903,7 +12005,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 4,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kaja Kalvatsvik Bolsø",
@@ -10913,7 +12017,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 53,
+      "medal": ""
     },
     {
       "shooter": "Samuel Bigset",
@@ -10923,7 +12029,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 17,
+      "medal": ""
     },
     {
       "shooter": "Tanja Nilsen",
@@ -10933,7 +12041,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Muldsvor",
@@ -10943,7 +12053,9 @@
       "exercise": "main",
       "score": 233,
       "inner": 0,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 10,
+      "medal": ""
     },
     {
       "shooter": "Hildegunn Håvoll",
@@ -10953,7 +12065,9 @@
       "exercise": "main",
       "score": 228,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rudy de Jager",
@@ -10963,7 +12077,9 @@
       "exercise": "main",
       "score": 220,
       "inner": 1,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jacoba Cornelia Burger",
@@ -10973,7 +12089,9 @@
       "exercise": "main",
       "score": 210,
       "inner": 0,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Lars Slyngstad",
@@ -10983,7 +12101,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 17,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 202,
+      "medal": ""
     },
     {
       "shooter": "Lars Slyngstad",
@@ -11003,7 +12123,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 14,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 101,
+      "medal": ""
     },
     {
       "shooter": "Alf-Henrik Håker",
@@ -11023,7 +12145,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 170,
+      "medal": ""
     },
     {
       "shooter": "Magne Skårbø",
@@ -11043,7 +12167,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 9,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 192,
+      "medal": ""
     },
     {
       "shooter": "Per Ulvestad",
@@ -11063,7 +12189,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 10,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 80,
+      "medal": ""
     },
     {
       "shooter": "Kristen Lotsberg",
@@ -11083,7 +12211,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 26,
+      "medal": ""
     },
     {
       "shooter": "Knut Riise",
@@ -11103,7 +12233,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 26,
+      "medal": ""
     },
     {
       "shooter": "Anton Jon Aarskog",
@@ -11123,7 +12255,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arnstein Ose",
@@ -11143,7 +12277,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Karstein Velle",
@@ -11163,7 +12299,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Knut Lillestøl",
@@ -11183,7 +12321,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 7,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 160,
+      "medal": ""
     },
     {
       "shooter": "Rasmus André Svor",
@@ -11203,7 +12343,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kim Erik Mek",
@@ -11223,7 +12365,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 2,
-      "eventId": "261943"
+      "eventId": "261943",
+      "prize": 50,
+      "medal": ""
     },
     {
       "shooter": "Klara Taugl",
@@ -11233,7 +12377,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 309,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Klara Taugl",
@@ -11253,7 +12399,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 16,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 206,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Christian Køhl",
@@ -11273,7 +12421,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 161,
+      "medal": ""
     },
     {
       "shooter": "Idar Leknes",
@@ -11293,7 +12443,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 111,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Oda Andreassen Berg",
@@ -11313,7 +12465,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 93,
+      "medal": ""
     },
     {
       "shooter": "Gaute Grøterud",
@@ -11333,7 +12487,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 75,
+      "medal": ""
     },
     {
       "shooter": "Lars Myrstuen",
@@ -11353,7 +12509,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 118,
+      "medal": ""
     },
     {
       "shooter": "Emil Johansen Nygårdseter",
@@ -11373,7 +12531,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 11,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oda Flikkerud",
@@ -11393,7 +12553,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anders Haugen",
@@ -11413,7 +12575,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Arne Erik Nilsen",
@@ -11433,7 +12597,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thorbjørn Samland",
@@ -11453,7 +12619,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "John Arild Knapp",
@@ -11473,7 +12641,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 11,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Henrik Embretsen",
@@ -11493,7 +12663,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kjell Ivar Løvbrøtte",
@@ -11513,7 +12685,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Odd Ivar Pedersen Lang-Ree",
@@ -11533,7 +12707,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 67,
+      "medal": ""
     },
     {
       "shooter": "Sofia Fallås",
@@ -11553,7 +12729,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 206,
+      "medal": ""
     },
     {
       "shooter": "Ben Magne Stokland",
@@ -11573,7 +12751,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 194,
+      "medal": ""
     },
     {
       "shooter": "Christian Sletengen",
@@ -11593,7 +12773,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 4,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 125,
+      "medal": ""
     },
     {
       "shooter": "Øyvind Taugl",
@@ -11613,7 +12795,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Karl Henri Halvorsrud Gotland",
@@ -11633,7 +12817,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Torkel Strøm",
@@ -11653,7 +12839,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 2,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Erlend Sørlie Hoel",
@@ -11673,7 +12861,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jens Erik Kleven Sveum",
@@ -11693,7 +12883,9 @@
       "exercise": "main",
       "score": 228,
       "inner": 4,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 89,
+      "medal": ""
     },
     {
       "shooter": "Espen Foseid Aakre",
@@ -11713,7 +12905,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 96,
+      "medal": ""
     },
     {
       "shooter": "Carina Berg Emilsen",
@@ -11733,7 +12927,9 @@
       "exercise": "main",
       "score": 227,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 115,
+      "medal": ""
     },
     {
       "shooter": "Jan Cato Berg Emilsen",
@@ -11753,7 +12949,9 @@
       "exercise": "main",
       "score": 224,
       "inner": 2,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Stig Foseid Aakre",
@@ -11773,7 +12971,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 224,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Svein Erik Larsson",
@@ -11793,7 +12993,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 6,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 128,
+      "medal": ""
     },
     {
       "shooter": "Jim Gunnar Dammen",
@@ -11813,7 +13015,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 98,
+      "medal": ""
     },
     {
       "shooter": "Jan Marius Nygård Hagen",
@@ -11833,7 +13037,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørn Sigurd Gjermshus",
@@ -11853,7 +13059,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørn Are Hansen",
@@ -11873,7 +13081,9 @@
       "exercise": "main",
       "score": 234,
       "inner": 3,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Margit Hagen",
@@ -11893,7 +13103,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 205,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Nina Christine Tangen",
@@ -11913,7 +13125,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 12,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Jan Ivar Berntsen",
@@ -11933,7 +13147,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Tommy Fossum",
@@ -11953,7 +13169,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Noa Nordby",
@@ -11973,7 +13191,9 @@
       "exercise": "main",
       "score": 139,
       "inner": 1,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tommy Klokkerud",
@@ -11993,7 +13213,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 16,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 204,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Dag Lien",
@@ -12013,7 +13235,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 176,
+      "medal": ""
     },
     {
       "shooter": "Pål Kristian Kværneng",
@@ -12033,7 +13257,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 65,
+      "medal": ""
     },
     {
       "shooter": "Hans Gunnar Lien",
@@ -12053,7 +13279,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 65,
+      "medal": ""
     },
     {
       "shooter": "May-Britt Radford",
@@ -12073,7 +13301,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 12,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 90,
+      "medal": ""
     },
     {
       "shooter": "Per Egil Storsveen",
@@ -12093,7 +13323,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Rune Flikkerud",
@@ -12113,7 +13345,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jo Ivar Løvseth",
@@ -12133,7 +13367,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Øivind Dramstad",
@@ -12153,7 +13389,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 22,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 244,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Kjell Ivar Brustad",
@@ -12173,7 +13411,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 17,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 160,
+      "medal": ""
     },
     {
       "shooter": "Rune Solberg",
@@ -12193,7 +13433,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 188,
+      "medal": ""
     },
     {
       "shooter": "Egil Nystuen",
@@ -12213,7 +13455,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 19,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 73,
+      "medal": ""
     },
     {
       "shooter": "Heikki Holt",
@@ -12233,7 +13477,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 12,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Yngve Sannvoll",
@@ -12253,7 +13499,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 16,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 96,
+      "medal": ""
     },
     {
       "shooter": "Per Kristian Lønhøiden",
@@ -12273,7 +13521,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 14,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 64,
+      "medal": ""
     },
     {
       "shooter": "Håvard Nyhus",
@@ -12293,7 +13543,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jon Lundsbakken",
@@ -12313,7 +13565,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Atle Dammen",
@@ -12333,7 +13587,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kurt Birger Vatle",
@@ -12353,7 +13609,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Hallgeir Huse",
@@ -12373,7 +13631,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 17,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 50,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Mathilde Sletengen",
@@ -12393,7 +13653,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 50,
+      "medal": ""
     },
     {
       "shooter": "Mathea Berge Holen",
@@ -12413,7 +13675,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 15,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 115,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Elle Andresen",
@@ -12433,7 +13697,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 17,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 129,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Mina Torgersen Stafseng",
@@ -12453,7 +13719,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 15,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 41,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Live Flaat Haugen",
@@ -12473,7 +13741,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 16,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 51,
+      "medal": ""
     },
     {
       "shooter": "Thelma Rudrud",
@@ -12493,7 +13763,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 15,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Emelie Thorsteinsen",
@@ -12513,7 +13785,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Eivind Hansen",
@@ -12533,7 +13807,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Liv Johanne Øvergård Evensen",
@@ -12553,7 +13829,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 64,
+      "medal": ""
     },
     {
       "shooter": "Marit Kristensveen",
@@ -12573,7 +13851,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 22,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 137,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Silje Egeberg Holt",
@@ -12593,7 +13873,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 112,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Madeleine Brenden Olsen",
@@ -12613,7 +13895,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Andrine Gjørlihagen",
@@ -12633,7 +13917,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 17,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Martine Kommisrud",
@@ -12653,7 +13939,9 @@
       "exercise": "main",
       "score": 224,
       "inner": 3,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Theo Mellum",
@@ -12673,7 +13961,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 20,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 164,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Markus Aamodt-Amundsen",
@@ -12693,7 +13983,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 19,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 135,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Alicia Broen",
@@ -12713,7 +14005,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 101,
+      "medal": "Bronse medalje"
     },
     {
       "shooter": "Kaja Gjørlihagen",
@@ -12733,7 +14027,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Anine Fjeldberg Ranheim",
@@ -12753,7 +14049,9 @@
       "exercise": "main",
       "score": 243,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Mille Elida Leirvåg Nilsen",
@@ -12773,7 +14071,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Julie Egeberg Holt",
@@ -12793,7 +14093,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jens Berge Holen",
@@ -12813,7 +14115,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Øivind Brenden Olsen",
@@ -12833,7 +14137,9 @@
       "exercise": "main",
       "score": 145,
       "inner": 4,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 100,
+      "medal": ""
     },
     {
       "shooter": "Lars Lindboe",
@@ -12843,7 +14149,9 @@
       "exercise": "main",
       "score": 141,
       "inner": 2,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Knut Nordnes",
@@ -12853,7 +14161,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 11,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 191,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Knut Nordnes",
@@ -12873,7 +14183,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 20,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 81,
+      "medal": ""
     },
     {
       "shooter": "Erik Skaug",
@@ -12893,7 +14205,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 13,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 111,
+      "medal": ""
     },
     {
       "shooter": "Kåre Lunderbye",
@@ -12913,7 +14227,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 16,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 214,
+      "medal": ""
     },
     {
       "shooter": "Magnar Konningrud",
@@ -12933,7 +14249,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 71,
+      "medal": ""
     },
     {
       "shooter": "Odd Arne Køhl",
@@ -12953,7 +14271,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 14,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Gunnar Pedersen",
@@ -12973,7 +14293,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 11,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 69,
+      "medal": ""
     },
     {
       "shooter": "Magne Ivar Mellem",
@@ -12993,7 +14315,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Johnny Eriksen",
@@ -13013,7 +14337,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 22,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 178,
+      "medal": ""
     },
     {
       "shooter": "Bjørn-Ove Aakre",
@@ -13033,7 +14359,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 8,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Arne Molberg",
@@ -13053,7 +14381,9 @@
       "exercise": "main",
       "score": 249,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 60,
+      "medal": ""
     },
     {
       "shooter": "Per Olav Faldbakken",
@@ -13073,7 +14403,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 10,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Oddvar Bjerktun",
@@ -13093,7 +14425,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 6,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Wiggo Melbye",
@@ -13113,7 +14447,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 14,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 50,
+      "medal": ""
     },
     {
       "shooter": "Morten Broen",
@@ -13123,7 +14459,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 19,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 130,
+      "medal": ""
     },
     {
       "shooter": "Turid Lien",
@@ -13133,7 +14471,9 @@
       "exercise": "main",
       "score": 238,
       "inner": 3,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 70,
+      "medal": ""
     },
     {
       "shooter": "Anita Vangli",
@@ -13143,7 +14483,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 3,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Nina Nyhammer Hansen",
@@ -13153,7 +14495,9 @@
       "exercise": "main",
       "score": 192,
       "inner": 1,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Karl Martin H Husebæk",
@@ -13163,7 +14507,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 9,
-      "eventId": "253975"
+      "eventId": "253975",
+      "prize": 75,
+      "medal": "Sølv medalje"
     },
     {
       "shooter": "Karl Martin H Husebæk",
@@ -13183,7 +14529,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 12,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Johan Auestad",
@@ -13203,7 +14551,9 @@
       "exercise": "main",
       "score": 248,
       "inner": 7,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Sigbjørn Undheim",
@@ -13223,7 +14573,9 @@
       "exercise": "main",
       "score": 250,
       "inner": 13,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Roy Oftedal",
@@ -13243,7 +14595,9 @@
       "exercise": "main",
       "score": 225,
       "inner": 3,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Eimund Fuglestad",
@@ -13263,7 +14617,9 @@
       "exercise": "main",
       "score": 229,
       "inner": 0,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Egil Brathetland",
@@ -13283,7 +14639,9 @@
       "exercise": "main",
       "score": 231,
       "inner": 2,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Magne Westerheim",
@@ -13303,7 +14661,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 1,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Edvard Reve",
@@ -13323,7 +14683,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 6,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Einar Aniksdal",
@@ -13343,7 +14705,9 @@
       "exercise": "main",
       "score": 242,
       "inner": 6,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jostein Myklebust",
@@ -13363,7 +14727,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 7,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Nils Seldal",
@@ -13383,7 +14749,9 @@
       "exercise": "main",
       "score": 244,
       "inner": 8,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Øyvind Larsen",
@@ -13403,7 +14771,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 8,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Svein Kå. Søyland",
@@ -13423,7 +14793,9 @@
       "exercise": "main",
       "score": 245,
       "inner": 6,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Odd Sigmund Oftedal",
@@ -13443,7 +14815,9 @@
       "exercise": "main",
       "score": 246,
       "inner": 10,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Paul Vaule",
@@ -13463,7 +14837,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 11,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Jarle Idland",
@@ -13483,7 +14859,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 8,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Johan Holen",
@@ -13503,7 +14881,9 @@
       "exercise": "main",
       "score": 247,
       "inner": 7,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Ivar Ueland",
@@ -13523,7 +14903,9 @@
       "exercise": "main",
       "score": 218,
       "inner": 2,
-      "eventId": "262795"
+      "eventId": "262795",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Audun Rosland",
@@ -13543,7 +14925,9 @@
       "exercise": "main",
       "score": 240,
       "inner": 7,
-      "eventId": "262474"
+      "eventId": "262474",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Viktoria Haga Øvrevik",
@@ -13563,7 +14947,9 @@
       "exercise": "main",
       "score": 239,
       "inner": 5,
-      "eventId": "262474"
+      "eventId": "262474",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Olav Måge",
@@ -13583,7 +14969,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 5,
-      "eventId": "262474"
+      "eventId": "262474",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Camilla Sirekrok",
@@ -13603,7 +14991,9 @@
       "exercise": "main",
       "score": 236,
       "inner": 2,
-      "eventId": "262474"
+      "eventId": "262474",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjarte Kvame Øvrevik",
@@ -13623,7 +15013,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 9,
-      "eventId": "262690"
+      "eventId": "262690",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Vidar Olsen",
@@ -13643,7 +15035,9 @@
       "exercise": "main",
       "score": 235,
       "inner": 1,
-      "eventId": "262690"
+      "eventId": "262690",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Tor Harry Mikkelsen",
@@ -13663,7 +15057,9 @@
       "exercise": "main",
       "score": 232,
       "inner": 2,
-      "eventId": "262690"
+      "eventId": "262690",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Thea Eide Olsen",
@@ -13683,7 +15079,9 @@
       "exercise": "main",
       "score": 241,
       "inner": 8,
-      "eventId": "262690"
+      "eventId": "262690",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Kristin Isaksen",
@@ -13703,7 +15101,9 @@
       "exercise": "main",
       "score": 237,
       "inner": 3,
-      "eventId": "262690"
+      "eventId": "262690",
+      "prize": 0,
+      "medal": ""
     },
     {
       "shooter": "Bjørnar Kyrre Leistad",

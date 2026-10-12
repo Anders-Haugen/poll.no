@@ -26,6 +26,23 @@ class ResultTests(unittest.TestCase):
         main = next(record for record in records if record["shooter"] == "Jim R Aronsen" and record["exercise"] == "main")
         self.assertEqual((main["score"], main["inner"], main["class"]), (241, 7, "4"))
 
+    def test_parses_prize_and_medal(self):
+        page = BeautifulSoup("""
+            <table>
+              <tr><th>Skytter</th><th>Klasse</th><th>Skytterlag</th><th>Hoved (pl.)</th>
+                  <th>Finale (pl.)</th><th>Medalje</th><th>Premie</th></tr>
+              <tr><td>Anders Haugen</td><td>5</td><td>Lom og Skjåk</td><td>248 (2)</td>
+                  <td>347 (2)</td><td>Sølv medalje</td><td>259 [+]</td></tr>
+            </table>
+        """, "html.parser")
+        records = parse_results(page, {"id": "1", "name": "Høststevnet"})
+        self.assertEqual(len(records), 2)
+        main = next(record for record in records if record["exercise"] == "main")
+        final = next(record for record in records if record["exercise"] == "final")
+        self.assertEqual((main["prize"], main["medal"]), (259, "Sølv medalje"))
+        self.assertNotIn("prize", final)
+        self.assertNotIn("medal", final)
+
 
 if __name__ == "__main__":
     unittest.main()

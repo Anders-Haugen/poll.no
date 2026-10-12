@@ -121,18 +121,26 @@ def parse_results(page, event):
                             inner[exercise] = int(match[1])
         team_anchor = values["Skytterlag"].find("a", href=True)
         team_id = parse_qs(urlsplit(team_anchor["href"]).query).get("openTeam", [""])[0] if team_anchor else ""
+        prize_cell = values.get("Premie")
+        prize_match = re.match(r"\s*(\d[\d\s.]*)", prize_cell.get_text(" ", strip=True)) if prize_cell else None
+        prize = int(re.sub(r"\D", "", prize_match[1])) if prize_match else 0
+        medal_cell = values.get("Medalje")
+        medal = medal_cell.get_text(" ", strip=True) if medal_cell else ""
         for exercise, heading in (("main", "Hoved (pl.)"), ("final", "Finale (pl.)")):
             cell = values.get(heading)
             score = re.match(r"\d+", cell.get_text(strip=True)) if cell else None
             if score and int(score[0]) > 0:
-                records.append({
+                record = {
                     "shooter": values["Skytter"].get_text(" ", strip=True),
                     "club": values["Skytterlag"].get_text(" ", strip=True),
                     "clubId": team_id,
                     "class": values["Klasse"].get_text(strip=True),
                     "exercise": exercise, "score": int(score[0]),
                     "inner": inner.get(exercise), "eventId": event["id"],
-                })
+                }
+                if exercise == "main":
+                    record.update({"prize": prize, "medal": medal})
+                records.append(record)
     return records
 
 

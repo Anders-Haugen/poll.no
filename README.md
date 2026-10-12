@@ -74,7 +74,15 @@ Namnendring eller byte av lag kan derfor gi fleire oppforingar.
 Tellande stevner kan utvidast i lista for aa vise kvart enkelt resultat.
 Til-dato er som standard dagens dato i norsk tid, avgrensa til sesongen.
 
-Framsida og toppmenyane viser Framsida, Norgestoppen2, 350-sida og Memes.
+`norgestoppen_cash.html` viser sesongsummer for premiering frå dei same
+innandørsstevna. Vel mellom samla premiebeløp, medaljar totalt og gylte
+medaljar. Premiesummen og medaljeteksten blir henta frå DFS-resultatlista.
+Kvar skytter blir rekna éin gong per stevne, sjølv om resultatfila har både
+hovud- og finalepost. DFS-lista gir ikkje skytter-ID, så identiteten er namn
+og skytterlag; namn- eller lagsbyte kan derfor gi fleire oppføringar.
+
+Framsida og toppmenyane viser Framsida, Norgestoppen2, Norgestoppen Cash,
+350-sida og Memes.
 Arbeidsprosjekta er framleis tilgjengelege via direkte URL; skjulte lenkjer
 er ikkje tilgangskontroll.
 
