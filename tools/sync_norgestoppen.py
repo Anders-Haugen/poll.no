@@ -1,0 +1,182 @@
+import argparse
+import json
+import re
+from datetime import date, datetime, timezone
+from pathlib import Path
+from urllib.parse import parse_qs, urlencode, urljoin, urlsplit
+
+import requests
+from bs4 import BeautifulSoup
+
+
+BASE_URL = "https://mittdfs.no"
+RESULTS_URL = BASE_URL + "/hovedside/aktuelt-na/resultater/"
+START = date(2026, 10, 1)
+END = date(2027, 10, 1)
+OUTPUT = Path(__file__).resolve().parents[1] / "data" / "norgestoppen2.json"
+
+
+def get_page(session, url):
+    response = session.get(url, timeout=60)
+    response.raise_for_status()
+    return BeautifulSoup(response.content, "html.parser")
+
+
+def submit_form(session, url, page, overrides):
+    fields = {}
+    for field in page.select("input[name], select[name]"):
+        if field.get("type") in {"submit", "button", "radio", "checkbox"}:
+            continue
+        selected = field.select_one("option[selected]") or field.select_one("option")
+        fields[field["name"]] = selected.get("value", "") if selected else field.get("value", "")
+    fields.update(overrides)
+    response = session.post(url, data=fields, timeout=120)
+    response.raise_for_status()
+    return BeautifulSoup(response.content, "html.parser")
+
+
+def result_events(page):
+    events = {}
+    for row in page.select("table tr"):
+        cells = row.find_all("td", recursive=False)
+        if len(cells) != 7 or cells[4].get_text(strip=True) not in {"Inne", "Inne - ikke kl.sett"}:
+            continue
+        event_date = datetime.strptime(cells[1].get_text(strip=True), "%d.%m.%y").date()
+        anchor = cells[2].find("a", href=True)
+        if anchor and START <= event_date <= END:
+            event_id = parse_qs(urlsplit(anchor["href"]).query)["eventId"][0]
+            events[event_id] = {
+                "id": event_id,
+                "name": anchor.get_text(strip=True),
+                "date": event_date.isoformat(),
+                "type": cells[4].get_text(strip=True),
+                "url": urljoin(BASE_URL, anchor["href"]),
+            }
+    return list(events.values())
+
+
+def fetch_events(session):
+    initial = get_page(session, RESULTS_URL)
+    years = {option["value"] for option in initial.select("select[name$='uxddlYear'] option")}
+    if not years:
+        raise ValueError("DFS year filter was not found; refusing to publish an empty dataset")
+    events = {}
+    for year in range(START.year, min(END.year, date.today().year) + 1):
+        if str(year) not in years:
+            raise ValueError(f"DFS does not offer results for {year}")
+        for event_type in ("INNE", "INIK"):
+            url = RESULTS_URL + "?" + urlencode({
+                "search": "True", "registered": "", "type": event_type,
+                "region": "", "year": year, "includeLocal": "True", "querystring": "",
+            })
+            page = get_page(session, url)
+            seen_pages = set()
+            while True:
+                fingerprint = str(page.select("table"))
+                if fingerprint in seen_pages:
+                    raise ValueError("DFS pagination repeated a page")
+                seen_pages.add(fingerprint)
+                if not page.select_one("select[name$='uxddlYear']"):
+                    raise ValueError("DFS result overview was not found")
+                for event in result_events(page):
+                    events[event["id"]] = event
+                next_link = next((anchor for anchor in page.select("a[href]")
+                                  if anchor.get_text(strip=True) == "Neste"), None)
+                if next_link is None:
+                    break
+                postback = re.search(r"__doPostBack\('([^']*)','([^']*)'\)", next_link["href"])
+                if not postback:
+                    raise ValueError("Unrecognized DFS pagination")
+                page = submit_form(session, url, page, {
+                    "__EVENTTARGET": postback[1], "__EVENTARGUMENT": postback[2],
+                    "ctl00$FullRegion$uxListView$uxIncludeLocalEvents": "on",
+                })
+    return list(events.values())
+
+
+def parse_results(page, event):
+    records = []
+    table = next((table for table in page.select("table")
+                  if "Skytter" in [cell.get_text(strip=True) for cell in table.select("tr:first-child > th")]), None)
+    if table is None:
+        raise ValueError(f"Missing result table for {event['name']}")
+    rows = table.find_all("tr", recursive=False)
+    if not rows:
+        rows = table.select(":scope > tbody > tr")
+    headings = [cell.get_text(" ", strip=True) for cell in rows[0].find_all("th", recursive=False)]
+    for row in rows[1:]:
+        cells = row.find_all("td", recursive=False)
+        if len(cells) != len(headings):
+            continue
+        values = dict(zip(headings, cells))
+        details = row.find_next_sibling("tr")
+        inner = {}
+        if details and "expandedInfo" in details.get("class", []):
+            for detail in details.select("table tr"):
+                text = detail.get_text(" ", strip=True)
+                match = re.search(r"inner:\s*(\d+)", text)
+                if match:
+                    for exercise, label in (("main", "25 skudd"), ("final", "35 skudd")):
+                        if label in text:
+                            inner[exercise] = int(match[1])
+        team_anchor = values["Skytterlag"].find("a", href=True)
+        team_id = parse_qs(urlsplit(team_anchor["href"]).query).get("openTeam", [""])[0] if team_anchor else ""
+        for exercise, heading in (("main", "Hoved (pl.)"), ("final", "Finale (pl.)")):
+            cell = values.get(heading)
+            score = re.match(r"\d+", cell.get_text(strip=True)) if cell else None
+            if score and int(score[0]) > 0:
+                records.append({
+                    "shooter": values["Skytter"].get_text(" ", strip=True),
+                    "club": values["Skytterlag"].get_text(" ", strip=True),
+                    "clubId": team_id,
+                    "class": values["Klasse"].get_text(strip=True),
+                    "exercise": exercise, "score": int(score[0]),
+                    "inner": inner.get(exercise), "eventId": event["id"],
+                })
+    return records
+
+
+def fetch_results(session, event):
+    page = get_page(session, event["url"])
+    class_links = {}
+    for anchor in page.select("a[href]"):
+        query = parse_qs(urlsplit(anchor["href"]).query)
+        classes = query.get("class", [""])[0]
+        if query.get("eventId") == [event["id"]] and classes and "," not in classes and "sortby" not in query:
+            class_links[classes] = urljoin(BASE_URL, anchor["href"])
+    if not class_links:
+        raise ValueError(f"Missing class links for {event['name']}")
+    records = []
+    for url in class_links.values():
+        records.extend(parse_results(get_page(session, url), event))
+    return records
+
+
+def sync(limit=None):
+    with requests.Session() as session:
+        session.headers["User-Agent"] = "poll.no Norgestoppen2 result index (non-commercial)"
+        events = fetch_events(session)
+        if limit is not None:
+            events = events[:limit]
+        records = []
+        for index, event in enumerate(events, 1):
+            print(f"{index}/{len(events)}: {event['date']} {event['name']}", flush=True)
+            records.extend(fetch_results(session, event))
+    payload = {
+        "start": START.isoformat(), "end": END.isoformat(),
+        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "source": RESULTS_URL, "complete": limit is None,
+        "events": events, "results": records,
+    }
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    temporary = OUTPUT.with_suffix(".tmp")
+    temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(OUTPUT)
+    print(f"Published {len(records)} results from {len(events)} events")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--limit", type=int)
+    args = parser.parse_args()
+    sync(args.limit)
