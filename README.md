@@ -74,7 +74,7 @@ Namnendring eller byte av lag kan derfor gi fleire oppforingar.
 Tellande stevner kan utvidast i lista for aa vise kvart enkelt resultat.
 Til-dato er som standard dagens dato i norsk tid, avgrensa til sesongen.
 
-Framsida og toppmenyane viser berre Framsida, 350-sida og Memes.
+Framsida og toppmenyane viser Framsida, Norgestoppen2, 350-sida og Memes.
 Arbeidsprosjekta er framleis tilgjengelege via direkte URL; skjulte lenkjer
 er ikkje tilgangskontroll.
 
