@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Norgestoppen Cash | Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="norgestoppen2.css" />
+  <link rel="stylesheet" href="norgestoppen_cash.css" />
+  <script src="norgestoppen_cash.js" defer></script>
+</head>
+<body class="norgestoppen-page norgestoppen-cash-page">
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen &middot; diverse innan DFS-skyting</p>
+  </header>
+  <nav aria-label="Hovudmeny">
+    <a href="index.html">Framsida</a>
+    <a href="norgestoppen2.html">Norgestoppen2</a>
+    <a href="norgestoppen_cash.html" class="aktiv" aria-current="page">Norgestoppen Cash</a>
+    <a href="hardetvorteskote350påls.html">350 i klasse 3-5?</a>
+    <a href="memes.html">Memes</a>
+  </nav>
+  <main class="norgestoppen">
+    <div class="resultat-heading">
+      <div>
+        <h2>Norgestoppen Cash</h2>
+        <p>Innandørs premiering frå DFS-arkivet</p>
+      </div>
+      <button id="refresh" type="button">Hent oppdatert liste</button>
+    </div>
+    <form id="filters" class="resultat-filter">
+      <label>Liste
+        <select id="mode">
+          <option value="money">Premiepengar</option>
+          <option value="medals">Medaljar totalt</option>
+          <option value="gold">Gylte medaljar</option>
+        </select>
+      </label>
+      <label>Klasse
+        <select id="class"><option value="3,4,5">3&ndash;5</option><option value="3,4,5,EJ">3&ndash;5 + EJ</option><option value="">Alle klassar</option></select>
+      </label>
+      <label>Skytterlag
+        <select id="club"><option value="">Alle skytterlag</option></select>
+      </label>
+      <label>Frå dato
+        <input id="from" type="date" value="2026-10-01" min="2007-01-01" required />
+      </label>
+      <label>Til dato
+        <input id="to" type="date" min="2007-01-01" required />
+      </label>
+      <label class="search-filter">Skyttar, lag eller stevne
+        <input id="search" type="search" placeholder="Søk" autocomplete="off" />
+      </label>
+      <label>Vis
+        <select id="limit"><option value="100">Topp 100</option><option value="50">Topp 50</option><option value="0">Alle</option></select>
+      </label>
+    </form>
+    <div class="resultat-meta">
+      <p id="status" role="status" aria-live="polite">Hentar premiering frå DFS-arkivet...</p>
+      <p id="updated"></p>
+    </div>
+    <div class="resultat-scroll" tabindex="0" role="region" aria-label="Rangert premie- og medaljeliste">
+      <table class="resultat-tabell">
+        <caption class="sr-only">Norgestoppen Cash: innandørs premiering og medaljar</caption>
+        <thead><tr><th scope="col">Plass</th><th scope="col">Skyttar</th><th scope="col">Klasse</th><th scope="col">Skytterlag</th><th scope="col">Stevne</th><th scope="col" id="total-heading">Sum</th></tr></thead>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+    <p id="empty" class="resultat-empty" hidden>Ingen premier eller medaljar passar til filteret.</p>
+    <p class="resultat-source">Kjelde: <a href="https://mittdfs.no/hovedside/aktuelt-na/resultater/" target="_blank" rel="noopener noreferrer">DFS sine publiserte resultat</a> &middot; Uoffisiell oversikt</p>
+    <noscript>JavaScript må vere aktivert for å vise resultatlista.</noscript>
+  </main>
+  <footer>&copy; 2026 Anders Haugen &middot; Pøll.no</footer>
+</body>
+</html>

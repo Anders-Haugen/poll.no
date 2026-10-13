@@ -48,8 +48,6 @@ if (typeof document !== "undefined") {
     timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit",
   }).formatToParts(new Date()).map(part => [part.type, part.value]));
   const today = `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
-  controls.to.value = today < controls.to.min ? controls.to.min : today > controls.to.max ? controls.to.max : today;
-  controls.to.defaultValue = controls.to.value;
   let data;
 
   function addCell(row, text) {
@@ -79,7 +77,7 @@ if (typeof document !== "undefined") {
     if (!data) return;
     controls.to.setCustomValidity(controls.to.value < controls.from.value ? "Til-dato må vere etter frå-dato." : "");
     if (!document.getElementById("filters").checkValidity()) {
-      status.textContent = "Vel eit gyldig datointervall innanfor sesongen.";
+      status.textContent = "Vel eit gyldig datointervall innanfor arkivet.";
       status.className = "error";
       tbody.replaceChildren();
       document.getElementById("empty").hidden = true;
@@ -113,7 +111,9 @@ if (typeof document !== "undefined") {
     document.getElementById("score-heading").textContent = "Sum";
     document.getElementById("empty").hidden = rows.length > 0;
     status.className = "";
-    status.textContent = `${rows.length} skyttarar · ${data.events.length} innandørsstevne${data.complete ? "" : " · Ufullstendig datagrunnlag"}`;
+    const eventIds = new Set(data.events.filter(event => event.date >= filters.from && event.date <= filters.to).map(event => event.id));
+    const resultEventIds = new Set(data.results.filter(result => result.exercise === filters.exercise && eventIds.has(result.eventId)).map(result => result.eventId));
+    status.textContent = `${rows.length} skyttarar · ${resultEventIds.size}/${eventIds.size} stevne med resultat${data.complete ? "" : " · Ufullstendig arkiv"}`;
   }
 
   async function load() {
@@ -121,11 +121,24 @@ if (typeof document !== "undefined") {
     status.textContent = "Hentar resultat frå DFS...";
     status.className = "";
     try {
-      const response = await fetch("data/norgestoppen2.json", { cache: "no-store" });
+      let response = await fetch("data/norgestoppen_archive.json", { cache: "no-store" });
+      const archiveAvailable = response.ok;
+      if (!archiveAvailable) response = await fetch("data/norgestoppen2.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const loaded = await response.json();
-      if (!Array.isArray(loaded.events) || !Array.isArray(loaded.results) || loaded.start !== "2026-10-01" || loaded.end !== "2027-10-01") throw new Error("Ugyldig sesongdata.");
+      if (!Array.isArray(loaded.events) || !Array.isArray(loaded.results) || !loaded.start || !loaded.end) throw new Error("Ugyldig arkivdata.");
+      if (!archiveAvailable) loaded.complete = false;
       data = loaded;
+      const archiveEnd = loaded.end < today ? loaded.end : today;
+      const previousFrom = controls.from.value;
+      const previousTo = controls.to.value;
+      controls.from.min = loaded.start;
+      controls.from.max = archiveEnd;
+      controls.to.min = loaded.start;
+      controls.to.max = archiveEnd;
+      controls.from.value = previousFrom && previousFrom >= loaded.start && previousFrom <= archiveEnd
+        ? previousFrom : ("2026-10-01" >= loaded.start ? "2026-10-01" : loaded.start);
+      controls.to.value = previousTo && previousTo >= loaded.start && previousTo <= archiveEnd ? previousTo : archiveEnd;
       const previousClass = controls.class.value;
       const previousClub = controls.club.value;
       while (controls.class.options.length > 3) controls.class.remove(3);
@@ -140,7 +153,7 @@ if (typeof document !== "undefined") {
       render();
     } catch (error) {
       status.className = "error";
-      status.textContent = data ? "Kunne ikkje hente ny liste. Viser sist innlasta resultat." : "Kunne ikkje hente resultatlista. Prøv igjen seinare.";
+      status.textContent = data ? "Kunne ikkje hente nytt arkiv. Viser sist innlasta resultat." : "Kunne ikkje hente arkivet. Prøv igjen seinare.";
       console.error(error);
     } finally {
       refresh.disabled = false;
