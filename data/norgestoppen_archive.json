@@ -1,7 +1,7 @@
 {
   "start": "2026-10-01",
-  "end": "2026-10-15",
-  "updatedAt": "2026-10-15T10:02:04.385454+00:00",
+  "end": "2026-10-16",
+  "updatedAt": "2026-10-16T09:55:35.408271+00:00",
   "source": "https://mittdfs.no/hovedside/aktuelt-na/resultater/",
   "complete": true,
   "events": [
@@ -179,6 +179,34 @@
       "date": "2026-10-14",
       "type": "Inne",
       "url": "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&registered=&type=INNE&region=&year=2026&includeLocal=True&querystring=&eventId=252412"
+    },
+    {
+      "id": "262439",
+      "name": "Premieskyting m/FIVE",
+      "date": "2026-10-15",
+      "type": "Inne",
+      "url": "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&registered=&type=INNE&region=&year=2026&includeLocal=True&querystring=&eventId=262439"
+    },
+    {
+      "id": "262693",
+      "name": "Premieskyting",
+      "date": "2026-10-15",
+      "type": "Inne",
+      "url": "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&registered=&type=INNE&region=&year=2026&includeLocal=True&querystring=&eventId=262693"
+    },
+    {
+      "id": "262257",
+      "name": "15m stevne",
+      "date": "2026-10-15",
+      "type": "Inne",
+      "url": "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&registered=&type=INNE&region=&year=2026&includeLocal=True&querystring=&eventId=262257"
+    },
+    {
+      "id": "262437",
+      "name": "Rakvågstevnet 15m",
+      "date": "2026-10-15",
+      "type": "Inne",
+      "url": "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&registered=&type=INNE&region=&year=2026&includeLocal=True&querystring=&eventId=262437"
     }
   ],
   "results": [
@@ -5483,7 +5511,7 @@
       "score": 249,
       "inner": 12,
       "eventId": "254699",
-      "prize": 314,
+      "prize": 261,
       "medal": "Gylt medalje"
     },
     {
@@ -5505,7 +5533,7 @@
       "score": 248,
       "inner": 6,
       "eventId": "254699",
-      "prize": 259,
+      "prize": 213,
       "medal": "Sølv medalje"
     },
     {
@@ -5549,7 +5577,7 @@
       "score": 245,
       "inner": 11,
       "eventId": "254699",
-      "prize": 159,
+      "prize": 106,
       "medal": ""
     },
     {
@@ -5571,7 +5599,7 @@
       "score": 245,
       "inner": 9,
       "eventId": "254699",
-      "prize": 91,
+      "prize": 60,
       "medal": "Bronse medalje"
     },
     {
@@ -5659,7 +5687,7 @@
       "score": 244,
       "inner": 7,
       "eventId": "254699",
-      "prize": 110,
+      "prize": 73,
       "medal": ""
     },
     {
@@ -5703,7 +5731,7 @@
       "score": 244,
       "inner": 5,
       "eventId": "254699",
-      "prize": 130,
+      "prize": 86,
       "medal": ""
     },
     {
@@ -5725,7 +5753,7 @@
       "score": 244,
       "inner": 5,
       "eventId": "254699",
-      "prize": 91,
+      "prize": 60,
       "medal": ""
     },
     {
@@ -5769,7 +5797,7 @@
       "score": 243,
       "inner": 11,
       "eventId": "254699",
-      "prize": 71,
+      "prize": 47,
       "medal": ""
     },
     {
@@ -5879,7 +5907,7 @@
       "score": 241,
       "inner": 8,
       "eventId": "254699",
-      "prize": 100,
+      "prize": 67,
       "medal": ""
     },
     {
@@ -6033,7 +6061,7 @@
       "score": 244,
       "inner": 8,
       "eventId": "254699",
-      "prize": 357,
+      "prize": 300,
       "medal": ""
     },
     {
@@ -6055,7 +6083,7 @@
       "score": 237,
       "inner": 9,
       "eventId": "254699",
-      "prize": 171,
+      "prize": 141,
       "medal": ""
     },
     {
@@ -6077,7 +6105,7 @@
       "score": 237,
       "inner": 6,
       "eventId": "254699",
-      "prize": 124,
+      "prize": 83,
       "medal": ""
     },
     {
@@ -6121,7 +6149,7 @@
       "score": 236,
       "inner": 4,
       "eventId": "254699",
-      "prize": 77,
+      "prize": 51,
       "medal": ""
     },
     {
@@ -6275,7 +6303,7 @@
       "score": 235,
       "inner": 3,
       "eventId": "254699",
-      "prize": 252,
+      "prize": 219,
       "medal": ""
     },
     {
@@ -6319,7 +6347,7 @@
       "score": 230,
       "inner": 7,
       "eventId": "254699",
-      "prize": 154,
+      "prize": 103,
       "medal": ""
     },
     {
@@ -6407,8 +6435,8 @@
       "score": 246,
       "inner": 6,
       "eventId": "254699",
-      "prize": 201,
-      "medal": "Sølv medalje"
+      "prize": 134,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Magnus Madsen",
@@ -6429,7 +6457,7 @@
       "score": 243,
       "inner": 8,
       "eventId": "254699",
-      "prize": 183,
+      "prize": 152,
       "medal": ""
     },
     {
@@ -6473,7 +6501,7 @@
       "score": 244,
       "inner": 13,
       "eventId": "254699",
-      "prize": 234,
+      "prize": 189,
       "medal": ""
     },
     {
@@ -6495,7 +6523,7 @@
       "score": 243,
       "inner": 7,
       "eventId": "254699",
-      "prize": 158,
+      "prize": 131,
       "medal": ""
     },
     {
@@ -6517,7 +6545,7 @@
       "score": 241,
       "inner": 5,
       "eventId": "254699",
-      "prize": 81,
+      "prize": 54,
       "medal": ""
     },
     {
@@ -6649,7 +6677,7 @@
       "score": 240,
       "inner": 5,
       "eventId": "254699",
-      "prize": 81,
+      "prize": 54,
       "medal": ""
     },
     {
@@ -6759,8 +6787,8 @@
       "score": 245,
       "inner": 8,
       "eventId": "254699",
-      "prize": 224,
-      "medal": "Sølv medalje"
+      "prize": 187,
+      "medal": "Gylt medalje"
     },
     {
       "shooter": "Markus Steinwagner",
@@ -6803,7 +6831,7 @@
       "score": 239,
       "inner": 8,
       "eventId": "254699",
-      "prize": 147,
+      "prize": 98,
       "medal": ""
     },
     {
@@ -6825,7 +6853,7 @@
       "score": 242,
       "inner": 5,
       "eventId": "254699",
-      "prize": 77,
+      "prize": 51,
       "medal": ""
     },
     {
@@ -6935,7 +6963,7 @@
       "score": 249,
       "inner": 13,
       "eventId": "254699",
-      "prize": 260,
+      "prize": 230,
       "medal": "Gylt medalje"
     },
     {
@@ -6957,7 +6985,7 @@
       "score": 248,
       "inner": 12,
       "eventId": "254699",
-      "prize": 230,
+      "prize": 195,
       "medal": ""
     },
     {
@@ -6979,7 +7007,7 @@
       "score": 248,
       "inner": 11,
       "eventId": "254699",
-      "prize": 210,
+      "prize": 171,
       "medal": ""
     },
     {
@@ -7001,7 +7029,7 @@
       "score": 248,
       "inner": 11,
       "eventId": "254699",
-      "prize": 166,
+      "prize": 111,
       "medal": ""
     },
     {
@@ -7023,7 +7051,7 @@
       "score": 247,
       "inner": 13,
       "eventId": "254699",
-      "prize": 116,
+      "prize": 77,
       "medal": ""
     },
     {
@@ -7111,7 +7139,7 @@
       "score": 245,
       "inner": 7,
       "eventId": "254699",
-      "prize": 79,
+      "prize": 53,
       "medal": ""
     },
     {
@@ -7287,7 +7315,7 @@
       "score": 250,
       "inner": 17,
       "eventId": "254699",
-      "prize": 285,
+      "prize": 250,
       "medal": "Gylt medalje"
     },
     {
@@ -7309,7 +7337,7 @@
       "score": 250,
       "inner": 13,
       "eventId": "254699",
-      "prize": 228,
+      "prize": 193,
       "medal": ""
     },
     {
@@ -7331,7 +7359,7 @@
       "score": 249,
       "inner": 13,
       "eventId": "254699",
-      "prize": 182,
+      "prize": 147,
       "medal": ""
     },
     {
@@ -7353,7 +7381,7 @@
       "score": 250,
       "inner": 10,
       "eventId": "254699",
-      "prize": 216,
+      "prize": 181,
       "medal": ""
     },
     {
@@ -7397,7 +7425,7 @@
       "score": 249,
       "inner": 19,
       "eventId": "254699",
-      "prize": 275,
+      "prize": 211,
       "medal": ""
     },
     {
@@ -7419,7 +7447,7 @@
       "score": 248,
       "inner": 13,
       "eventId": "254699",
-      "prize": 138,
+      "prize": 92,
       "medal": ""
     },
     {
@@ -7441,7 +7469,7 @@
       "score": 248,
       "inner": 12,
       "eventId": "254699",
-      "prize": 90,
+      "prize": 60,
       "medal": ""
     },
     {
@@ -7727,7 +7755,7 @@
       "score": 247,
       "inner": 11,
       "eventId": "254699",
-      "prize": 84,
+      "prize": 70,
       "medal": ""
     },
     {
@@ -7749,7 +7777,7 @@
       "score": 243,
       "inner": 10,
       "eventId": "254699",
-      "prize": 159,
+      "prize": 130,
       "medal": "Gylt medalje"
     },
     {
@@ -7771,7 +7799,7 @@
       "score": 239,
       "inner": 8,
       "eventId": "254699",
-      "prize": 111,
+      "prize": 90,
       "medal": ""
     },
     {
@@ -7793,7 +7821,7 @@
       "score": 238,
       "inner": 6,
       "eventId": "254699",
-      "prize": 95,
+      "prize": 81,
       "medal": ""
     },
     {
@@ -7837,7 +7865,7 @@
       "score": 235,
       "inner": 4,
       "eventId": "254699",
-      "prize": 84,
+      "prize": 68,
       "medal": ""
     },
     {
@@ -7947,7 +7975,7 @@
       "score": 249,
       "inner": 12,
       "eventId": "254699",
-      "prize": 141,
+      "prize": 114,
       "medal": "Gylt medalje"
     },
     {
@@ -7969,7 +7997,7 @@
       "score": 247,
       "inner": 13,
       "eventId": "254699",
-      "prize": 118,
+      "prize": 100,
       "medal": "Sølv medalje"
     },
     {
@@ -7991,7 +8019,7 @@
       "score": 248,
       "inner": 13,
       "eventId": "254699",
-      "prize": 135,
+      "prize": 113,
       "medal": "Bronse medalje"
     },
     {
@@ -8013,7 +8041,7 @@
       "score": 247,
       "inner": 6,
       "eventId": "254699",
-      "prize": 113,
+      "prize": 101,
       "medal": ""
     },
     {
@@ -8035,7 +8063,7 @@
       "score": 247,
       "inner": 9,
       "eventId": "254699",
-      "prize": 113,
+      "prize": 93,
       "medal": ""
     },
     {
@@ -8079,7 +8107,7 @@
       "score": 246,
       "inner": 9,
       "eventId": "254699",
-      "prize": 104,
+      "prize": 84,
       "medal": ""
     },
     {
@@ -8101,7 +8129,7 @@
       "score": 246,
       "inner": 7,
       "eventId": "254699",
-      "prize": 98,
+      "prize": 78,
       "medal": ""
     },
     {
@@ -8123,7 +8151,7 @@
       "score": 244,
       "inner": 2,
       "eventId": "254699",
-      "prize": 36,
+      "prize": 24,
       "medal": ""
     },
     {
@@ -8167,7 +8195,7 @@
       "score": 243,
       "inner": 10,
       "eventId": "254699",
-      "prize": 41,
+      "prize": 28,
       "medal": ""
     },
     {
@@ -8211,7 +8239,7 @@
       "score": 241,
       "inner": 5,
       "eventId": "254699",
-      "prize": 50,
+      "prize": 33,
       "medal": ""
     },
     {
@@ -8255,7 +8283,7 @@
       "score": 242,
       "inner": 7,
       "eventId": "254699",
-      "prize": 47,
+      "prize": 31,
       "medal": ""
     },
     {
@@ -8321,7 +8349,7 @@
       "score": 241,
       "inner": 1,
       "eventId": "254699",
-      "prize": 39,
+      "prize": 26,
       "medal": ""
     },
     {
@@ -8409,7 +8437,7 @@
       "score": 249,
       "inner": 16,
       "eventId": "254699",
-      "prize": 163,
+      "prize": 138,
       "medal": "Gylt medalje"
     },
     {
@@ -8431,7 +8459,7 @@
       "score": 248,
       "inner": 7,
       "eventId": "254699",
-      "prize": 154,
+      "prize": 124,
       "medal": "Sølv medalje"
     },
     {
@@ -8453,7 +8481,7 @@
       "score": 247,
       "inner": 13,
       "eventId": "254699",
-      "prize": 128,
+      "prize": 111,
       "medal": "Bronse medalje"
     },
     {
@@ -8475,7 +8503,7 @@
       "score": 247,
       "inner": 6,
       "eventId": "254699",
-      "prize": 126,
+      "prize": 107,
       "medal": ""
     },
     {
@@ -8497,7 +8525,7 @@
       "score": 242,
       "inner": 8,
       "eventId": "254699",
-      "prize": 85,
+      "prize": 70,
       "medal": ""
     },
     {
@@ -8519,7 +8547,7 @@
       "score": 244,
       "inner": 9,
       "eventId": "254699",
-      "prize": 102,
+      "prize": 86,
       "medal": ""
     },
     {
@@ -8541,7 +8569,7 @@
       "score": 241,
       "inner": 5,
       "eventId": "254699",
-      "prize": 64,
+      "prize": 42,
       "medal": ""
     },
     {
@@ -8695,7 +8723,7 @@
       "score": 233,
       "inner": 4,
       "eventId": "254699",
-      "prize": 47,
+      "prize": 31,
       "medal": ""
     },
     {
@@ -8761,7 +8789,7 @@
       "score": 246,
       "inner": 13,
       "eventId": "254699",
-      "prize": 138,
+      "prize": 112,
       "medal": "Gylt medalje"
     },
     {
@@ -8783,7 +8811,7 @@
       "score": 246,
       "inner": 7,
       "eventId": "254699",
-      "prize": 111,
+      "prize": 96,
       "medal": "Sølv medalje"
     },
     {
@@ -8827,7 +8855,7 @@
       "score": 239,
       "inner": 5,
       "eventId": "254699",
-      "prize": 88,
+      "prize": 71,
       "medal": ""
     },
     {
@@ -8849,7 +8877,7 @@
       "score": 238,
       "inner": 7,
       "eventId": "254699",
-      "prize": 65,
+      "prize": 43,
       "medal": ""
     },
     {
@@ -8937,7 +8965,7 @@
       "score": 250,
       "inner": 14,
       "eventId": "254699",
-      "prize": 275,
+      "prize": 227,
       "medal": "Gylt medalje"
     },
     {
@@ -8959,7 +8987,7 @@
       "score": 249,
       "inner": 12,
       "eventId": "254699",
-      "prize": 191,
+      "prize": 163,
       "medal": ""
     },
     {
@@ -8981,7 +9009,7 @@
       "score": 249,
       "inner": 7,
       "eventId": "254699",
-      "prize": 85,
+      "prize": 57,
       "medal": ""
     },
     {
@@ -9003,7 +9031,7 @@
       "score": 249,
       "inner": 17,
       "eventId": "254699",
-      "prize": 280,
+      "prize": 218,
       "medal": ""
     },
     {
@@ -9025,7 +9053,7 @@
       "score": 248,
       "inner": 11,
       "eventId": "254699",
-      "prize": 100,
+      "prize": 66,
       "medal": ""
     },
     {
@@ -9069,7 +9097,7 @@
       "score": 250,
       "inner": 15,
       "eventId": "254699",
-      "prize": 285,
+      "prize": 247,
       "medal": ""
     },
     {
@@ -9311,7 +9339,7 @@
       "score": 249,
       "inner": 12,
       "eventId": "254699",
-      "prize": 220,
+      "prize": 183,
       "medal": ""
     },
     {
@@ -9347,7 +9375,7 @@
       "score": 244,
       "inner": 8,
       "eventId": "254699",
-      "prize": 70,
+      "prize": 47,
       "medal": ""
     },
     {
@@ -9383,7 +9411,7 @@
       "score": 244,
       "inner": 14,
       "eventId": "254699",
-      "prize": 84,
+      "prize": 70,
       "medal": ""
     },
     {
@@ -9405,7 +9433,7 @@
       "score": 238,
       "inner": 2,
       "eventId": "254699",
-      "prize": 60,
+      "prize": 50,
       "medal": ""
     },
     {
@@ -25283,6 +25311,2554 @@
       "score": 335,
       "inner": 10,
       "eventId": "262149"
+    },
+    {
+      "shooter": "Fred-Gaute Aarsandøy",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "5",
+      "exercise": "main",
+      "score": 242,
+      "inner": 9,
+      "eventId": "262439",
+      "prize": 100,
+      "medal": ""
+    },
+    {
+      "shooter": "Fred-Gaute Aarsandøy",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "5",
+      "exercise": "final",
+      "score": 339,
+      "inner": 10,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Thomas Bakøy Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "5",
+      "exercise": "main",
+      "score": 236,
+      "inner": 3,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Thomas Bakøy Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "5",
+      "exercise": "final",
+      "score": 236,
+      "inner": 3,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Trond Vårum",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "4",
+      "exercise": "main",
+      "score": 237,
+      "inner": 8,
+      "eventId": "262439",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Trond Vårum",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "4",
+      "exercise": "final",
+      "score": 336,
+      "inner": 11,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Kai Dahle-Høe",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "2",
+      "exercise": "main",
+      "score": 236,
+      "inner": 6,
+      "eventId": "262439",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Kai Dahle-Høe",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "2",
+      "exercise": "final",
+      "score": 334,
+      "inner": 10,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Jonny Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V55",
+      "exercise": "main",
+      "score": 246,
+      "inner": 10,
+      "eventId": "262439",
+      "prize": 100,
+      "medal": ""
+    },
+    {
+      "shooter": "Jonny Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V55",
+      "exercise": "final",
+      "score": 342,
+      "inner": 13,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Roar Alseth",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V55",
+      "exercise": "main",
+      "score": 241,
+      "inner": 4,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Roar Alseth",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V55",
+      "exercise": "final",
+      "score": 338,
+      "inner": 7,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Gunnar Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V65",
+      "exercise": "main",
+      "score": 245,
+      "inner": 10,
+      "eventId": "262439",
+      "prize": 100,
+      "medal": ""
+    },
+    {
+      "shooter": "Gunnar Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V65",
+      "exercise": "final",
+      "score": 343,
+      "inner": 17,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Roald Bratseth",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V65",
+      "exercise": "main",
+      "score": 237,
+      "inner": 3,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Roald Bratseth",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V65",
+      "exercise": "final",
+      "score": 334,
+      "inner": 7,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Heine Aleksander Veie",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 243,
+      "inner": 8,
+      "eventId": "262439",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Heine Aleksander Veie",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 342,
+      "inner": 14,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Hanna Sandvold Overland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 241,
+      "inner": 6,
+      "eventId": "262439",
+      "prize": 37,
+      "medal": ""
+    },
+    {
+      "shooter": "Hanna Sandvold Overland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 339,
+      "inner": 10,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Andrea Dahle-Husby",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 239,
+      "inner": 10,
+      "eventId": "262439",
+      "prize": 28,
+      "medal": ""
+    },
+    {
+      "shooter": "Andrea Dahle-Husby",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 338,
+      "inner": 17,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Elena Garmo Vårum",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 235,
+      "inner": 7,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Elena Garmo Vårum",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 334,
+      "inner": 8,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Marthe Kristine Kvitland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 236,
+      "inner": 3,
+      "eventId": "262439",
+      "prize": 8,
+      "medal": ""
+    },
+    {
+      "shooter": "Marthe Kristine Kvitland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 332,
+      "inner": 5,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Ola Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 242,
+      "inner": 4,
+      "eventId": "262439",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Ola Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 341,
+      "inner": 11,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Andreas Kvitland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 239,
+      "inner": 4,
+      "eventId": "262439",
+      "prize": 20,
+      "medal": ""
+    },
+    {
+      "shooter": "Andreas Kvitland",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 333,
+      "inner": 4,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Åsta Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "main",
+      "score": 245,
+      "inner": 7,
+      "eventId": "262439",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Åsta Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "final",
+      "score": 343,
+      "inner": 12,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Magnus Garmo Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "main",
+      "score": 140,
+      "inner": 1,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Magnus Garmo Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "final",
+      "score": 212,
+      "inner": 2,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Rolf Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "main",
+      "score": 245,
+      "inner": 8,
+      "eventId": "262439",
+      "prize": 133,
+      "medal": ""
+    },
+    {
+      "shooter": "Rolf Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "final",
+      "score": 342,
+      "inner": 9,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Knut Bjerve",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "main",
+      "score": 239,
+      "inner": 3,
+      "eventId": "262439",
+      "prize": 66,
+      "medal": ""
+    },
+    {
+      "shooter": "Knut Bjerve",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "final",
+      "score": 336,
+      "inner": 6,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Arne Forfod",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "main",
+      "score": 238,
+      "inner": 2,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Arne Forfod",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "final",
+      "score": 335,
+      "inner": 3,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Tor Martin Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "main",
+      "score": 234,
+      "inner": 1,
+      "eventId": "262439",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Tor Martin Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "V75",
+      "exercise": "final",
+      "score": 330,
+      "inner": 3,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Ove Johan Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "main",
+      "score": 249,
+      "inner": 17,
+      "eventId": "262439",
+      "prize": 80,
+      "medal": ""
+    },
+    {
+      "shooter": "Ove Johan Dyrendahl",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "final",
+      "score": 348,
+      "inner": 20,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Ketil Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "main",
+      "score": 249,
+      "inner": 10,
+      "eventId": "262439",
+      "prize": 26,
+      "medal": ""
+    },
+    {
+      "shooter": "Ketil Sunde",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "final",
+      "score": 348,
+      "inner": 12,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Lage Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "main",
+      "score": 249,
+      "inner": 7,
+      "eventId": "262439",
+      "prize": 40,
+      "medal": ""
+    },
+    {
+      "shooter": "Lage Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "final",
+      "score": 348,
+      "inner": 11,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Renathe Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "main",
+      "score": 248,
+      "inner": 4,
+      "eventId": "262439",
+      "prize": 13,
+      "medal": ""
+    },
+    {
+      "shooter": "Renathe Denstad",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "Kikkertklassen",
+      "exercise": "final",
+      "score": 345,
+      "inner": 8,
+      "eventId": "262439"
+    },
+    {
+      "shooter": "Torgeir Berge",
+      "club": "Rissa",
+      "clubId": "10156",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 243,
+      "inner": 6,
+      "eventId": "262439",
+      "prize": 25,
+      "medal": ""
+    },
+    {
+      "shooter": "Tor Harry Mikkelsen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "5",
+      "exercise": "main",
+      "score": 241,
+      "inner": 3,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Tor Harry Mikkelsen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "5",
+      "exercise": "final",
+      "score": 339,
+      "inner": 7,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Terje Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "4",
+      "exercise": "main",
+      "score": 233,
+      "inner": 8,
+      "eventId": "262693",
+      "prize": 60,
+      "medal": ""
+    },
+    {
+      "shooter": "Terje Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "4",
+      "exercise": "final",
+      "score": 332,
+      "inner": 15,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Vidar Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "4",
+      "exercise": "main",
+      "score": 229,
+      "inner": 2,
+      "eventId": "262693",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Vidar Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "4",
+      "exercise": "final",
+      "score": 328,
+      "inner": 7,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Gørill Føleide",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "1",
+      "exercise": "main",
+      "score": 247,
+      "inner": 11,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Gørill Føleide",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "1",
+      "exercise": "final",
+      "score": 346,
+      "inner": 14,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Arnulf Losvar",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V55",
+      "exercise": "main",
+      "score": 245,
+      "inner": 3,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Arnulf Losvar",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V55",
+      "exercise": "final",
+      "score": 341,
+      "inner": 6,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Thea Eide Olsen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "main",
+      "score": 232,
+      "inner": 2,
+      "eventId": "262693",
+      "prize": 36,
+      "medal": ""
+    },
+    {
+      "shooter": "Thea Eide Olsen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "final",
+      "score": 329,
+      "inner": 6,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Margrethe Kaasen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 230,
+      "inner": 1,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Margrethe Kaasen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 321,
+      "inner": 1,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Jenny Helene Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 248,
+      "inner": 8,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Jenny Helene Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 347,
+      "inner": 12,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Kristin Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "main",
+      "score": 241,
+      "inner": 2,
+      "eventId": "262693",
+      "prize": 30,
+      "medal": ""
+    },
+    {
+      "shooter": "Kristin Isaksen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "final",
+      "score": 339,
+      "inner": 4,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Leif Olaf Simensen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V75",
+      "exercise": "main",
+      "score": 236,
+      "inner": 2,
+      "eventId": "262693",
+      "prize": 60,
+      "medal": ""
+    },
+    {
+      "shooter": "Leif Olaf Simensen",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V75",
+      "exercise": "final",
+      "score": 330,
+      "inner": 3,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Bjørnar Kyrre Leistad",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V75",
+      "exercise": "main",
+      "score": 225,
+      "inner": 3,
+      "eventId": "262693",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Bjørnar Kyrre Leistad",
+      "club": "Alta",
+      "clubId": "10846",
+      "class": "V75",
+      "exercise": "final",
+      "score": 225,
+      "inner": 3,
+      "eventId": "262693"
+    },
+    {
+      "shooter": "Marius Rinde",
+      "club": "Riflen/Skoger",
+      "clubId": "10131",
+      "class": "5",
+      "exercise": "main",
+      "score": 249,
+      "inner": 15,
+      "eventId": "262257",
+      "prize": 334,
+      "medal": ""
+    },
+    {
+      "shooter": "Marius Rinde",
+      "club": "Riflen/Skoger",
+      "clubId": "10131",
+      "class": "5",
+      "exercise": "final",
+      "score": 349,
+      "inner": 19,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Anders Haugen",
+      "club": "Lom og Skjåk",
+      "clubId": "10218",
+      "class": "5",
+      "exercise": "main",
+      "score": 244,
+      "inner": 7,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Anders Haugen",
+      "club": "Lom og Skjåk",
+      "clubId": "10218",
+      "class": "5",
+      "exercise": "final",
+      "score": 344,
+      "inner": 11,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Lars Myrstuen",
+      "club": "Rælingen",
+      "clubId": "10095",
+      "class": "5",
+      "exercise": "main",
+      "score": 243,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 126,
+      "medal": ""
+    },
+    {
+      "shooter": "Lars Myrstuen",
+      "club": "Rælingen",
+      "clubId": "10095",
+      "class": "5",
+      "exercise": "final",
+      "score": 342,
+      "inner": 11,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Gunhild Helstad",
+      "club": "Gjøvik og Brusveen",
+      "clubId": "10476",
+      "class": "5",
+      "exercise": "main",
+      "score": 242,
+      "inner": 9,
+      "eventId": "262257",
+      "prize": 80,
+      "medal": ""
+    },
+    {
+      "shooter": "Gunhild Helstad",
+      "club": "Gjøvik og Brusveen",
+      "clubId": "10476",
+      "class": "5",
+      "exercise": "final",
+      "score": 339,
+      "inner": 12,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Bjørn Einar Andersen",
+      "club": "Nordre Land",
+      "clubId": "10479",
+      "class": "5",
+      "exercise": "main",
+      "score": 240,
+      "inner": 10,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Bjørn Einar Andersen",
+      "club": "Nordre Land",
+      "clubId": "10479",
+      "class": "5",
+      "exercise": "final",
+      "score": 339,
+      "inner": 15,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Kjell Ivar Løvbrøtte",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "5",
+      "exercise": "main",
+      "score": 240,
+      "inner": 9,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Kjell Ivar Løvbrøtte",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "5",
+      "exercise": "final",
+      "score": 340,
+      "inner": 9,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jan Martin Heggelund",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "4",
+      "exercise": "main",
+      "score": 242,
+      "inner": 6,
+      "eventId": "262257",
+      "prize": 108,
+      "medal": ""
+    },
+    {
+      "shooter": "Jan Martin Heggelund",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "4",
+      "exercise": "final",
+      "score": 340,
+      "inner": 6,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Mathilde Haslie Heggelund",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "4",
+      "exercise": "main",
+      "score": 242,
+      "inner": 6,
+      "eventId": "262257",
+      "prize": 162,
+      "medal": ""
+    },
+    {
+      "shooter": "Mathilde Haslie Heggelund",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "4",
+      "exercise": "final",
+      "score": 340,
+      "inner": 9,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Anne Beate Engebretsen",
+      "club": "Øvre Rendal",
+      "clubId": "10446",
+      "class": "4",
+      "exercise": "main",
+      "score": 230,
+      "inner": 4,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Anne Beate Engebretsen",
+      "club": "Øvre Rendal",
+      "clubId": "10446",
+      "class": "4",
+      "exercise": "final",
+      "score": 327,
+      "inner": 5,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Carina Berg Emilsen",
+      "club": "Tangen",
+      "clubId": "10267",
+      "class": "3",
+      "exercise": "main",
+      "score": 227,
+      "inner": 3,
+      "eventId": "262257",
+      "prize": 270,
+      "medal": ""
+    },
+    {
+      "shooter": "Carina Berg Emilsen",
+      "club": "Tangen",
+      "clubId": "10267",
+      "class": "3",
+      "exercise": "final",
+      "score": 325,
+      "inner": 7,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jan Cato Berg Emilsen",
+      "club": "Tangen",
+      "clubId": "10267",
+      "class": "3",
+      "exercise": "main",
+      "score": 225,
+      "inner": 6,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jan Cato Berg Emilsen",
+      "club": "Tangen",
+      "clubId": "10267",
+      "class": "3",
+      "exercise": "final",
+      "score": 318,
+      "inner": 7,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Trond Erling Andersen",
+      "club": "Nordre Land",
+      "clubId": "10479",
+      "class": "3",
+      "exercise": "main",
+      "score": 220,
+      "inner": 2,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Trond Erling Andersen",
+      "club": "Nordre Land",
+      "clubId": "10479",
+      "class": "3",
+      "exercise": "final",
+      "score": 308,
+      "inner": 2,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Ådne Hulleberg",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "main",
+      "score": 244,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 270,
+      "medal": ""
+    },
+    {
+      "shooter": "Ådne Hulleberg",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "final",
+      "score": 341,
+      "inner": 11,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Oskar Skaugen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "main",
+      "score": 242,
+      "inner": 4,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Oskar Skaugen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "final",
+      "score": 338,
+      "inner": 8,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Geir Andreassen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "main",
+      "score": 233,
+      "inner": 4,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Geir Andreassen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "2",
+      "exercise": "final",
+      "score": 233,
+      "inner": 4,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Gisle Eritsvær",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "1",
+      "exercise": "main",
+      "score": 248,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 270,
+      "medal": ""
+    },
+    {
+      "shooter": "Gisle Eritsvær",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "1",
+      "exercise": "final",
+      "score": 345,
+      "inner": 12,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Rune Harry Johansen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "1",
+      "exercise": "main",
+      "score": 244,
+      "inner": 7,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Rune Harry Johansen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "1",
+      "exercise": "final",
+      "score": 342,
+      "inner": 11,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Tor Arne Wiik",
+      "club": "Viken (opland)",
+      "clubId": "10488",
+      "class": "1",
+      "exercise": "main",
+      "score": 247,
+      "inner": 6,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Tor Arne Wiik",
+      "club": "Viken (opland)",
+      "clubId": "10488",
+      "class": "1",
+      "exercise": "final",
+      "score": 341,
+      "inner": 9,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Per Egil Storsveen",
+      "club": "Løiten",
+      "clubId": "10264",
+      "class": "V55",
+      "exercise": "main",
+      "score": 249,
+      "inner": 11,
+      "eventId": "262257",
+      "prize": 90,
+      "medal": ""
+    },
+    {
+      "shooter": "Per Egil Storsveen",
+      "club": "Løiten",
+      "clubId": "10264",
+      "class": "V55",
+      "exercise": "final",
+      "score": 348,
+      "inner": 15,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Knut Steinar Bråten",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "main",
+      "score": 249,
+      "inner": 10,
+      "eventId": "262257",
+      "prize": 189,
+      "medal": ""
+    },
+    {
+      "shooter": "Knut Steinar Bråten",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "final",
+      "score": 349,
+      "inner": 17,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Ove Johansen",
+      "club": "Gjøvik og Brusveen",
+      "clubId": "10476",
+      "class": "V65",
+      "exercise": "main",
+      "score": 250,
+      "inner": 12,
+      "eventId": "262257",
+      "prize": 277,
+      "medal": ""
+    },
+    {
+      "shooter": "Ove Johansen",
+      "club": "Gjøvik og Brusveen",
+      "clubId": "10476",
+      "class": "V65",
+      "exercise": "final",
+      "score": 349,
+      "inner": 15,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jan Amundsen",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "V65",
+      "exercise": "main",
+      "score": 249,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 72,
+      "medal": ""
+    },
+    {
+      "shooter": "Jan Amundsen",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "V65",
+      "exercise": "final",
+      "score": 348,
+      "inner": 9,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Terje Holm",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "main",
+      "score": 248,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 92,
+      "medal": ""
+    },
+    {
+      "shooter": "Terje Holm",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "final",
+      "score": 346,
+      "inner": 10,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jon Nerødegård",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V65",
+      "exercise": "main",
+      "score": 246,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jon Nerødegård",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V65",
+      "exercise": "final",
+      "score": 342,
+      "inner": 10,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jan Olav Sagbakken",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "main",
+      "score": 243,
+      "inner": 6,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jan Olav Sagbakken",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "V65",
+      "exercise": "final",
+      "score": 341,
+      "inner": 10,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Jan Erik Haug",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "V65",
+      "exercise": "main",
+      "score": 244,
+      "inner": 7,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jan Erik Haug",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "V65",
+      "exercise": "final",
+      "score": 244,
+      "inner": 7,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Damian Grantsaan-Eling",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "main",
+      "score": 227,
+      "inner": 1,
+      "eventId": "262257",
+      "prize": 72,
+      "medal": ""
+    },
+    {
+      "shooter": "Damian Grantsaan-Eling",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "final",
+      "score": 324,
+      "inner": 3,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Synne Tidemansen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "main",
+      "score": 221,
+      "inner": 1,
+      "eventId": "262257",
+      "prize": 48,
+      "medal": ""
+    },
+    {
+      "shooter": "Synne Tidemansen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Eldre Junior 18-19 år",
+      "exercise": "final",
+      "score": 317,
+      "inner": 2,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Marit Kristensveen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 247,
+      "inner": 9,
+      "eventId": "262257",
+      "prize": 120,
+      "medal": ""
+    },
+    {
+      "shooter": "Marit Kristensveen",
+      "club": "Åsheim",
+      "clubId": "10269",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 347,
+      "inner": 15,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Tiril Karine Åmodt Eritsvær",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 229,
+      "inner": 0,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Tiril Karine Åmodt Eritsvær",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 326,
+      "inner": 1,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Julian Bratbergsengen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 237,
+      "inner": 3,
+      "eventId": "262257",
+      "prize": 48,
+      "medal": ""
+    },
+    {
+      "shooter": "Julian Bratbergsengen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 336,
+      "inner": 3,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Tuva Svarverud Johansen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 235,
+      "inner": 5,
+      "eventId": "262257",
+      "prize": 72,
+      "medal": ""
+    },
+    {
+      "shooter": "Tuva Svarverud Johansen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 326,
+      "inner": 5,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Markus Aamodt-Amundsen",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "main",
+      "score": 248,
+      "inner": 14,
+      "eventId": "262257",
+      "prize": 120,
+      "medal": ""
+    },
+    {
+      "shooter": "Markus Aamodt-Amundsen",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "final",
+      "score": 347,
+      "inner": 20,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Hallbjørn Kvam",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "main",
+      "score": 228,
+      "inner": 1,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Hallbjørn Kvam",
+      "club": "Øyer/Dølen",
+      "clubId": "10222",
+      "class": "Rekrutt 11-13 år",
+      "exercise": "final",
+      "score": 228,
+      "inner": 1,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Odd Kolsrud",
+      "club": "Begnadalen",
+      "clubId": "10791",
+      "class": "V75",
+      "exercise": "main",
+      "score": 250,
+      "inner": 15,
+      "eventId": "262257",
+      "prize": 248,
+      "medal": ""
+    },
+    {
+      "shooter": "Odd Kolsrud",
+      "club": "Begnadalen",
+      "clubId": "10791",
+      "class": "V75",
+      "exercise": "final",
+      "score": 350,
+      "inner": 18,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Harald Løkra",
+      "club": "Fåberg",
+      "clubId": "10206",
+      "class": "V75",
+      "exercise": "main",
+      "score": 249,
+      "inner": 14,
+      "eventId": "262257",
+      "prize": 237,
+      "medal": ""
+    },
+    {
+      "shooter": "Harald Løkra",
+      "club": "Fåberg",
+      "clubId": "10206",
+      "class": "V75",
+      "exercise": "final",
+      "score": 349,
+      "inner": 18,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Johannes Rundhaug",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V75",
+      "exercise": "main",
+      "score": 249,
+      "inner": 12,
+      "eventId": "262257",
+      "prize": 175,
+      "medal": ""
+    },
+    {
+      "shooter": "Johannes Rundhaug",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V75",
+      "exercise": "final",
+      "score": 349,
+      "inner": 15,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Ole Jan Engeli",
+      "club": "Vestre Toten",
+      "clubId": "10487",
+      "class": "V75",
+      "exercise": "main",
+      "score": 246,
+      "inner": 9,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Ole Jan Engeli",
+      "club": "Vestre Toten",
+      "clubId": "10487",
+      "class": "V75",
+      "exercise": "final",
+      "score": 344,
+      "inner": 12,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Ole Bergene",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V75",
+      "exercise": "main",
+      "score": 244,
+      "inner": 5,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Ole Bergene",
+      "club": "Etnedal",
+      "clubId": "10793",
+      "class": "V75",
+      "exercise": "final",
+      "score": 343,
+      "inner": 9,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Svein Arne Linnerud",
+      "club": "Brumunddal og Nes",
+      "clubId": "10261",
+      "class": "V75",
+      "exercise": "main",
+      "score": 242,
+      "inner": 5,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Svein Arne Linnerud",
+      "club": "Brumunddal og Nes",
+      "clubId": "10261",
+      "class": "V75",
+      "exercise": "final",
+      "score": 340,
+      "inner": 11,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Magnar Konningrud",
+      "club": "Brumunddal og Nes",
+      "clubId": "10261",
+      "class": "V75",
+      "exercise": "main",
+      "score": 244,
+      "inner": 13,
+      "eventId": "262257",
+      "prize": 62,
+      "medal": ""
+    },
+    {
+      "shooter": "Magnar Konningrud",
+      "club": "Brumunddal og Nes",
+      "clubId": "10261",
+      "class": "V75",
+      "exercise": "final",
+      "score": 339,
+      "inner": 13,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Per Olav Faldbakken",
+      "club": "Stange og Romedal",
+      "clubId": "10265",
+      "class": "V75",
+      "exercise": "main",
+      "score": 246,
+      "inner": 5,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Per Olav Faldbakken",
+      "club": "Stange og Romedal",
+      "clubId": "10265",
+      "class": "V75",
+      "exercise": "final",
+      "score": 246,
+      "inner": 5,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Knut Nordnes",
+      "club": "Nordskogbygda",
+      "clubId": "10904",
+      "class": "V75",
+      "exercise": "main",
+      "score": 245,
+      "inner": 8,
+      "eventId": "262257",
+      "prize": 87,
+      "medal": ""
+    },
+    {
+      "shooter": "Knut Nordnes",
+      "club": "Nordskogbygda",
+      "clubId": "10904",
+      "class": "V75",
+      "exercise": "final",
+      "score": 245,
+      "inner": 8,
+      "eventId": "262257"
+    },
+    {
+      "shooter": "Stig Endeberg",
+      "club": "Sigdal",
+      "clubId": "10514",
+      "class": "skytter2",
+      "exercise": "main",
+      "score": 242,
+      "inner": 5,
+      "eventId": "262257",
+      "prize": 60,
+      "medal": ""
+    },
+    {
+      "shooter": "Tore Bratbergsengen",
+      "club": "Lismarken",
+      "clubId": "10263",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 243,
+      "inner": 7,
+      "eventId": "262257",
+      "prize": 145,
+      "medal": ""
+    },
+    {
+      "shooter": "Ole-Christian Pettersen",
+      "club": "Søndre Land",
+      "clubId": "10483",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 240,
+      "inner": 7,
+      "eventId": "262257",
+      "prize": 37,
+      "medal": ""
+    },
+    {
+      "shooter": "Turid Lien",
+      "club": "Løiten",
+      "clubId": "10264",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 238,
+      "inner": 4,
+      "eventId": "262257",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Alf Bjørseth",
+      "club": "Viken (opland)",
+      "clubId": "10488",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 237,
+      "inner": 4,
+      "eventId": "262257",
+      "prize": 58,
+      "medal": ""
+    },
+    {
+      "shooter": "Brage Skiri",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "5",
+      "exercise": "main",
+      "score": 245,
+      "inner": 11,
+      "eventId": "262437",
+      "prize": 280,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Brage Skiri",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "5",
+      "exercise": "final",
+      "score": 344,
+      "inner": 13,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Lars Myrset",
+      "club": "Eidsvåg og Eidsøra",
+      "clubId": "10555",
+      "class": "5",
+      "exercise": "main",
+      "score": 244,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 149,
+      "medal": ""
+    },
+    {
+      "shooter": "Lars Myrset",
+      "club": "Eidsvåg og Eidsøra",
+      "clubId": "10555",
+      "class": "5",
+      "exercise": "final",
+      "score": 343,
+      "inner": 10,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Tom Olav Moldskred",
+      "club": "Aalesund",
+      "clubId": "10709",
+      "class": "5",
+      "exercise": "main",
+      "score": 240,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Tom Olav Moldskred",
+      "club": "Aalesund",
+      "clubId": "10709",
+      "class": "5",
+      "exercise": "final",
+      "score": 339,
+      "inner": 10,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Nathalie Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "5",
+      "exercise": "main",
+      "score": 239,
+      "inner": 7,
+      "eventId": "262437",
+      "prize": 56,
+      "medal": ""
+    },
+    {
+      "shooter": "Nathalie Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "5",
+      "exercise": "final",
+      "score": 336,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Helge Roar Åndal",
+      "club": "Malmefjorden",
+      "clubId": "10567",
+      "class": "5",
+      "exercise": "main",
+      "score": 239,
+      "inner": 4,
+      "eventId": "262437",
+      "prize": 74,
+      "medal": ""
+    },
+    {
+      "shooter": "Helge Roar Åndal",
+      "club": "Malmefjorden",
+      "clubId": "10567",
+      "class": "5",
+      "exercise": "final",
+      "score": 337,
+      "inner": 10,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Marthe Heggem Eira",
+      "club": "Aalesund",
+      "clubId": "10709",
+      "class": "5",
+      "exercise": "main",
+      "score": 238,
+      "inner": 3,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Marthe Heggem Eira",
+      "club": "Aalesund",
+      "clubId": "10709",
+      "class": "5",
+      "exercise": "final",
+      "score": 337,
+      "inner": 8,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Jørn Ole Skiri",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "5",
+      "exercise": "main",
+      "score": 237,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jørn Ole Skiri",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "5",
+      "exercise": "final",
+      "score": 337,
+      "inner": 8,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Helene Strand",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "4",
+      "exercise": "main",
+      "score": 241,
+      "inner": 4,
+      "eventId": "262437",
+      "prize": 96,
+      "medal": ""
+    },
+    {
+      "shooter": "Helene Strand",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "4",
+      "exercise": "final",
+      "score": 332,
+      "inner": 5,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Roy Vidar Svensli",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "4",
+      "exercise": "main",
+      "score": 240,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 144,
+      "medal": ""
+    },
+    {
+      "shooter": "Roy Vidar Svensli",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "4",
+      "exercise": "final",
+      "score": 340,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Kurt Arve Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "4",
+      "exercise": "main",
+      "score": 239,
+      "inner": 2,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Kurt Arve Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "4",
+      "exercise": "final",
+      "score": 335,
+      "inner": 5,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Malene Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "2",
+      "exercise": "main",
+      "score": 242,
+      "inner": 6,
+      "eventId": "262437",
+      "prize": 96,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Malene Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "2",
+      "exercise": "final",
+      "score": 340,
+      "inner": 8,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Linnea Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "2",
+      "exercise": "main",
+      "score": 239,
+      "inner": 8,
+      "eventId": "262437",
+      "prize": 144,
+      "medal": ""
+    },
+    {
+      "shooter": "Linnea Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "2",
+      "exercise": "final",
+      "score": 337,
+      "inner": 15,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Ingvar Iversen Storvik",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "2",
+      "exercise": "main",
+      "score": 238,
+      "inner": 7,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Ingvar Iversen Storvik",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "2",
+      "exercise": "final",
+      "score": 331,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Egil Magne Hammervold",
+      "club": "Eidsvåg og Eidsøra",
+      "clubId": "10555",
+      "class": "V55",
+      "exercise": "main",
+      "score": 249,
+      "inner": 12,
+      "eventId": "262437",
+      "prize": 64,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Egil Magne Hammervold",
+      "club": "Eidsvåg og Eidsøra",
+      "clubId": "10555",
+      "class": "V55",
+      "exercise": "final",
+      "score": 349,
+      "inner": 14,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Bo Nielsen",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "V55",
+      "exercise": "main",
+      "score": 247,
+      "inner": 7,
+      "eventId": "262437",
+      "prize": 96,
+      "medal": ""
+    },
+    {
+      "shooter": "Bo Nielsen",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "V55",
+      "exercise": "final",
+      "score": 345,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Hans Nygård",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "V65",
+      "exercise": "main",
+      "score": 249,
+      "inner": 10,
+      "eventId": "262437",
+      "prize": 96,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Hans Nygård",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "V65",
+      "exercise": "final",
+      "score": 349,
+      "inner": 14,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Einar Rodt",
+      "club": "Engesetdal/Skodje",
+      "clubId": "10697",
+      "class": "V65",
+      "exercise": "main",
+      "score": 248,
+      "inner": 12,
+      "eventId": "262437",
+      "prize": 64,
+      "medal": ""
+    },
+    {
+      "shooter": "Einar Rodt",
+      "club": "Engesetdal/Skodje",
+      "clubId": "10697",
+      "class": "V65",
+      "exercise": "final",
+      "score": 344,
+      "inner": 16,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Eline Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 245,
+      "inner": 9,
+      "eventId": "262437",
+      "prize": 100,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Eline Hoem",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 345,
+      "inner": 16,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Marte Gunnerød Tistel",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 247,
+      "inner": 9,
+      "eventId": "262437",
+      "prize": 60,
+      "medal": ""
+    },
+    {
+      "shooter": "Marte Gunnerød Tistel",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 345,
+      "inner": 14,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Leonora Flatvoll Svensli",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 245,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 90,
+      "medal": ""
+    },
+    {
+      "shooter": "Leonora Flatvoll Svensli",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 343,
+      "inner": 7,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Andreas Agnetli Tangen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 243,
+      "inner": 6,
+      "eventId": "262437",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Andreas Agnetli Tangen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 341,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Sofie Midthaug Aafløy",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 241,
+      "inner": 9,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Sofie Midthaug Aafløy",
+      "club": "Kleive",
+      "clubId": "10566",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 340,
+      "inner": 12,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Jonathan Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Junior 16-17 år",
+      "exercise": "main",
+      "score": 226,
+      "inner": 3,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Jonathan Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Junior 16-17 år",
+      "exercise": "final",
+      "score": 318,
+      "inner": 4,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Damian Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "main",
+      "score": 245,
+      "inner": 6,
+      "eventId": "262437",
+      "prize": 50,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Damian Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "Eldre rekrutt 14-15 år",
+      "exercise": "final",
+      "score": 343,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Lars Slyngstad",
+      "club": "Engesetdal/Skodje",
+      "clubId": "10697",
+      "class": "V75",
+      "exercise": "main",
+      "score": 247,
+      "inner": 8,
+      "eventId": "262437",
+      "prize": 128,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Lars Slyngstad",
+      "club": "Engesetdal/Skodje",
+      "clubId": "10697",
+      "class": "V75",
+      "exercise": "final",
+      "score": 347,
+      "inner": 13,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Reidar Ahdell",
+      "club": "Nesjestranda & Skaala",
+      "clubId": "10569",
+      "class": "V75",
+      "exercise": "main",
+      "score": 246,
+      "inner": 13,
+      "eventId": "262437",
+      "prize": 170,
+      "medal": ""
+    },
+    {
+      "shooter": "Reidar Ahdell",
+      "club": "Nesjestranda & Skaala",
+      "clubId": "10569",
+      "class": "V75",
+      "exercise": "final",
+      "score": 346,
+      "inner": 17,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Rolf Jarle Rakvåg",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "V75",
+      "exercise": "main",
+      "score": 247,
+      "inner": 8,
+      "eventId": "262437",
+      "prize": 85,
+      "medal": ""
+    },
+    {
+      "shooter": "Rolf Jarle Rakvåg",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "V75",
+      "exercise": "final",
+      "score": 346,
+      "inner": 13,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Alf-Henrik Håker",
+      "club": "Tresfjord",
+      "clubId": "10579",
+      "class": "V75",
+      "exercise": "main",
+      "score": 245,
+      "inner": 5,
+      "eventId": "262437",
+      "prize": 192,
+      "medal": ""
+    },
+    {
+      "shooter": "Alf-Henrik Håker",
+      "club": "Tresfjord",
+      "clubId": "10579",
+      "class": "V75",
+      "exercise": "final",
+      "score": 342,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Ola Krogstad",
+      "club": "Eide og Naas",
+      "clubId": "10400",
+      "class": "V75",
+      "exercise": "main",
+      "score": 243,
+      "inner": 8,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Ola Krogstad",
+      "club": "Eide og Naas",
+      "clubId": "10400",
+      "class": "V75",
+      "exercise": "final",
+      "score": 341,
+      "inner": 13,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Peder Amundsgård",
+      "club": "Nesjestranda & Skaala",
+      "clubId": "10569",
+      "class": "V75",
+      "exercise": "main",
+      "score": 246,
+      "inner": 8,
+      "eventId": "262437",
+      "prize": 64,
+      "medal": ""
+    },
+    {
+      "shooter": "Peder Amundsgård",
+      "club": "Nesjestranda & Skaala",
+      "clubId": "10569",
+      "class": "V75",
+      "exercise": "final",
+      "score": 340,
+      "inner": 9,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Kåre Harry Midthaug",
+      "club": "Ørskog",
+      "clubId": "10708",
+      "class": "V75",
+      "exercise": "main",
+      "score": 237,
+      "inner": 1,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Kåre Harry Midthaug",
+      "club": "Ørskog",
+      "clubId": "10708",
+      "class": "V75",
+      "exercise": "final",
+      "score": 332,
+      "inner": 2,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Steinar Dahle",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "V75",
+      "exercise": "main",
+      "score": 226,
+      "inner": 2,
+      "eventId": "262437",
+      "prize": 0,
+      "medal": ""
+    },
+    {
+      "shooter": "Steinar Dahle",
+      "club": "Rauma",
+      "clubId": "10572",
+      "class": "V75",
+      "exercise": "final",
+      "score": 226,
+      "inner": 2,
+      "eventId": "262437"
+    },
+    {
+      "shooter": "Cato Haugen",
+      "club": "Rakvåg",
+      "clubId": "10571",
+      "class": "skytter1",
+      "exercise": "main",
+      "score": 250,
+      "inner": 23,
+      "eventId": "262437",
+      "prize": 50,
+      "medal": ""
+    },
+    {
+      "shooter": "Lars Petter Kjerstad",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "Kikkertklassen",
+      "exercise": "main",
+      "score": 241,
+      "inner": 7,
+      "eventId": "262437",
+      "prize": 80,
+      "medal": "gylt"
+    },
+    {
+      "shooter": "Lars Petter Kjerstad",
+      "club": "Aureosen",
+      "clubId": "10553",
+      "class": "Kikkertklassen",
+      "exercise": "final",
+      "score": 334,
+      "inner": 7,
+      "eventId": "262437"
     }
   ]
 }
