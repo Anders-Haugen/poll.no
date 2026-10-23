@@ -40,7 +40,7 @@ def result_events(page, start=START, end=END):
     events = {}
     for row in page.select("table tr"):
         cells = row.find_all("td", recursive=False)
-        if len(cells) != 7 or cells[4].get_text(strip=True) not in {"Inne", "Inne - ikke kl.sett"}:
+        if len(cells) != 7 or cells[4].get_text(strip=True) != "Inne":
             continue
         event_date = datetime.strptime(cells[1].get_text(strip=True), "%d.%m.%y").date()
         anchor = cells[2].find("a", href=True)
@@ -65,10 +65,10 @@ def fetch_events(session, start=START, end=END):
     for year in range(start.year, min(end.year, date.today().year) + 1):
         if str(year) not in years:
             raise ValueError(f"DFS does not offer results for {year}")
-        for event_type in ("INNE", "INIK"):
+        for event_type in ("INNE",):
             url = RESULTS_URL + "?" + urlencode({
                 "search": "True", "registered": "", "type": event_type,
-                "region": "", "year": year, "includeLocal": "True", "querystring": "",
+                "region": "", "year": year, "includeLocal": "False", "querystring": "",
             })
             page = get_page(session, url)
             seen_pages = set()
@@ -90,7 +90,6 @@ def fetch_events(session, start=START, end=END):
                     raise ValueError("Unrecognized DFS pagination")
                 page = submit_form(session, url, page, {
                     "__EVENTTARGET": postback[1], "__EVENTARGUMENT": postback[2],
-                    "ctl00$FullRegion$uxListView$uxIncludeLocalEvents": "on",
                 })
     return list(events.values())
 
@@ -171,10 +170,13 @@ def write_payload(path, payload):
 def update_archive(events, records):
     if ARCHIVE_OUTPUT.exists():
         previous = json.loads(ARCHIVE_OUTPUT.read_text(encoding="utf-8"))
-        archived_events = {event["id"]: event for event in previous["events"]}
+        archived_events = {
+            event["id"]: event for event in previous["events"]
+            if event["type"] == "Inne" and not START.isoformat() <= event["date"] <= END.isoformat()
+        }
         archived_results = {
             (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"]): result
-            for result in previous["results"]
+            for result in previous["results"] if result["eventId"] in archived_events
         }
         complete = previous.get("complete", False)
         start = previous["start"]

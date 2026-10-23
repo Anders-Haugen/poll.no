@@ -6,7 +6,7 @@ function rankResults(data, filters) {
   const grouped = new Map();
   for (const result of data.results) {
     const event = events.get(result.eventId);
-    if (!event || !["Inne", "Inne - ikke kl.sett"].includes(event.type)) continue;
+    if (!event || event.type !== "Inne") continue;
     if (event.date < data.start || event.date > data.end || event.date < filters.from || event.date > filters.to) continue;
     if (result.exercise !== filters.exercise || (classes.length && !classes.includes(result.class))) continue;
     if (filters.club && result.club !== filters.club) continue;
@@ -111,7 +111,7 @@ if (typeof document !== "undefined") {
     document.getElementById("score-heading").textContent = "Sum";
     document.getElementById("empty").hidden = rows.length > 0;
     status.className = "";
-    const eventIds = new Set(data.events.filter(event => event.date >= filters.from && event.date <= filters.to).map(event => event.id));
+    const eventIds = new Set(data.events.filter(event => event.type === "Inne" && event.date >= filters.from && event.date <= filters.to).map(event => event.id));
     const resultEventIds = new Set(data.results.filter(result => result.exercise === filters.exercise && eventIds.has(result.eventId)).map(result => result.eventId));
     status.textContent = `${rows.length} skyttarar · ${resultEventIds.size}/${eventIds.size} stevne med resultat${data.complete ? "" : " · Ufullstendig arkiv"}`;
   }
