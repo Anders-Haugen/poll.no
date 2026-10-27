@@ -1,0 +1,50 @@
+.rinde-page header h1 { letter-spacing: 0; font-size: 2rem; }
+.rinde-page nav a { letter-spacing: 0; }
+.rinde-main { max-width: 1120px; }
+.rinde-main, .rinde-main * { letter-spacing: 0; }
+.rinde-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 2rem; }
+.rinde-kicker { color: #b94b2c; font-size: .72rem; font-weight: 900; text-transform: uppercase; }
+.rinde-heading h2 { font-size: 1.8rem; font-weight: 900; line-height: 1.15; }
+.rinde-year { color: #35654a; font-size: 1.2rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.race-section { border-top: 4px solid #35654a; }
+.race-caption { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1rem 0 .75rem; }
+.race-caption h3 { font-size: .88rem; font-weight: 900; text-transform: uppercase; }
+.race-caption p, .race-meta { color: #68756b; font-size: .74rem; }
+.race-headings, .race-row { display: grid; grid-template-columns: 2.5rem minmax(7rem, 13rem) minmax(6rem, 1fr) 4.6rem; gap: .55rem; align-items: center; }
+.race-headings { min-height: 2rem; padding: 0 .65rem; color: #68756b; font-size: .62rem; font-weight: 900; text-transform: uppercase; }
+.race-headings span:last-child { text-align: right; }
+.race-list { list-style: none; border-top: 1px solid #d7dfd8; }
+.race-row { min-height: 4.2rem; padding: .35rem .65rem; border-bottom: 1px solid #d7dfd8; background: #f5f7f3; }
+.race-row:nth-child(even) { background: #edf2eb; }
+.race-place { color: #68756b; font-size: .76rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.race-row:first-child .race-place { color: #b94b2c; }
+.race-shooter { min-width: 0; }
+.race-name { display: block; overflow: hidden; color: #202a23; font-size: .76rem; font-weight: 900; text-overflow: ellipsis; white-space: nowrap; }
+.race-club { display: block; overflow: hidden; color: #68756b; font-size: .63rem; text-overflow: ellipsis; white-space: nowrap; }
+.race-track { position: relative; height: 2.8rem; overflow: hidden; border-left: 2px solid #b94b2c; border-right: 5px solid #35654a; background-color: #dce8d8; background-image: repeating-linear-gradient(90deg, transparent 0, transparent 29px, rgb(255 255 255 / 54%) 30px, transparent 31px); }
+.race-track::after { position: absolute; top: 0; right: 0; bottom: 0; width: 7px; background: repeating-linear-gradient(0deg, #fff 0 5px, #202a23 5px 10px); content: ""; }
+.race-horse { position: absolute; z-index: 1; top: 50%; left: min(var(--distance, 3%), calc(100% - 1.3rem)); display: block; width: 2.6rem; font-size: 1.9rem; line-height: 1; text-align: center; transform: translate(-50%, -50%); }
+.race-row.is-racing .race-horse { animation: race-run 2.8s cubic-bezier(.15, .65, .25, 1) both; }
+.race-count { color: #202a23; font-size: .78rem; font-weight: 900; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.race-count small { display: block; color: #68756b; font-size: .58rem; font-weight: 400; }
+.race-message { padding: 2rem 1rem; color: #68756b; font-size: .82rem; text-align: center; }
+.race-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: .8rem 0; }
+.race-meta .error { color: #a32424; font-weight: 900; }
+.rinde-source { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #d7dfd8; color: #68756b; font-size: .72rem; }
+.rinde-source a { color: #35654a; text-underline-offset: 3px; }
+.rinde-main :focus-visible { outline: 3px solid #b94b2c; outline-offset: 3px; }
+@keyframes race-run { from { left: 3%; } to { left: min(var(--distance), calc(100% - 1.3rem)); } }
+@media (prefers-reduced-motion: reduce) { .race-row.is-racing .race-horse { animation: none; } }
+@media (max-width: 600px) {
+  .rinde-main { padding: 0 1rem; margin-top: 1.5rem; }
+  .rinde-heading { margin-bottom: 1.35rem; }
+  .race-headings, .race-row { grid-template-columns: 1.7rem minmax(5.2rem, 7rem) minmax(4rem, 1fr) 3.4rem; gap: .35rem; }
+  .race-headings { padding: 0 .3rem; font-size: .54rem; }
+  .race-row { min-height: 3.7rem; padding: .3rem; }
+  .race-track { height: 2.55rem; }
+  .race-horse { width: 2.2rem; font-size: 1.65rem; }
+  .race-name { font-size: .68rem; }
+  .race-club { font-size: .58rem; }
+  .race-count { font-size: .72rem; }
+  .race-caption { align-items: flex-start; flex-direction: column; gap: .1rem; }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rinde-tracker | Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="rinde-tracker.css" />
+  <script src="rinde-tracker.js" defer></script>
+</head>
+<body class="rinde-page">
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen &middot; diverse innan DFS-skyting</p>
+  </header>
+  <nav aria-label="Hovudmeny">
+    <a href="index.html">Framsida</a>
+  </nav>
+  <main class="rinde-main">
+    <div class="rinde-heading">
+      <div>
+        <p class="rinde-kicker">Årets deltaking</p>
+        <h2>Rinde-tracker</h2>
+      </div>
+      <p id="year-label" class="rinde-year"></p>
+    </div>
+    <section class="race-section" aria-labelledby="race-title">
+      <div class="race-caption">
+        <h3 id="race-title">Stevneløpet</h3>
+        <p id="coverage"></p>
+      </div>
+      <div class="race-headings" aria-hidden="true">
+        <span>Plass</span><span>Skyttar</span><span>Løp</span><span>Stevne</span>
+      </div>
+      <ol id="riders" class="race-list" aria-label="Topp 10 etter tal på stevner">
+        <li class="race-message">Hentar resultat frå DFS-arkivet...</li>
+      </ol>
+      <div class="race-meta">
+        <p id="status" role="status" aria-live="polite">Hentar resultat frå DFS-arkivet...</p>
+        <p id="updated"></p>
+      </div>
+    </section>
+    <p class="rinde-source">Teller unike stevner per skyttar i Norgestoppen-arkivet. <a href="https://mittdfs.no/hovedside/aktuelt-na/resultater/" target="_blank" rel="noopener noreferrer">Kjelde: DFS</a> &middot; Uoffisiell oversikt</p>
+    <noscript>JavaScript må vere aktivert for å vise Rinde-trackeren.</noscript>
+  </main>
+  <footer>&copy; 2026 Anders Haugen &middot; Pøll.no</footer>
+</body>
+</html>
