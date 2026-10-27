@@ -9,7 +9,7 @@ from urllib.parse import parse_qs, urlsplit
 import requests
 from bs4 import BeautifulSoup
 
-from sync_norgestoppen import fetch_events, fetch_results, get_page, parse_results, result_events, update_archive
+from sync_norgestoppen import fetch_events, fetch_results, fetch_tracker_events, get_page, parse_results, result_events, update_archive
 
 
 class ResultTests(unittest.TestCase):
@@ -24,6 +24,39 @@ class ResultTests(unittest.TestCase):
             rows.append(f'<tr><td></td><td>{event_date}</td><td><a href="?eventId={index}">Test</a></td><td>Lag</td><td>{event_type}</td><td>1</td><td></td></tr>')
         page = BeautifulSoup("<table>" + "".join(rows) + "</table>", "html.parser")
         self.assertEqual([event["id"] for event in result_events(page)], ["1", "2"])
+        self.assertEqual([event["id"] for event in result_events(page, event_type="INIK")], ["5"])
+
+    def test_internal_non_classifying_filter_survives_pagination(self):
+        initial = BeautifulSoup('<select name="uxddlYear"><option value="2026">2026</option></select>', "html.parser")
+        first = BeautifulSoup(str(initial) + '<table><tr><td></td><td>10.10.26</td><td><a href="?eventId=1">Test</a></td><td>Lag</td><td>Inne - ikke kl.sett</td><td>1</td><td></td></tr></table><a href="javascript:__doPostBack(\'pager\',\'next\')">Neste</a>', "html.parser")
+        second = BeautifulSoup(str(initial) + '<table><tr><td></td><td>11.10.26</td><td><a href="?eventId=2">Test</a></td><td>Lag</td><td>Inne - ikke kl.sett</td><td>1</td><td></td></tr></table>', "html.parser")
+        with patch("sync_norgestoppen.get_page", side_effect=[initial, first]) as get, patch("sync_norgestoppen.submit_form", return_value=second) as submit:
+            events = fetch_events(requests.Session(), date(2026, 10, 1), date(2026, 10, 31), "INIK", True)
+        self.assertEqual([event["id"] for event in events], ["1", "2"])
+        query = parse_qs(urlsplit(get.call_args.args[1]).query)
+        self.assertEqual(query["type"], ["INIK"])
+        self.assertEqual(query["includeLocal"], ["True"])
+        self.assertEqual(submit.call_args.args[3]["ctl00$FullRegion$uxListView$uxIncludeLocalEvents"], "on")
+
+    def test_tracker_event_flags_cover_internal_and_non_classifying_overlap(self):
+        official = [{"id": "official"}]
+        internal = {"id": "internal", "type": "Inne"}
+        non_classifying = {"id": "non-classifying", "type": "Inne - ikke kl.sett"}
+        internal_non_classifying = {"id": "internal-non-classifying", "type": "Inne - ikke kl.sett"}
+        with patch("sync_norgestoppen.fetch_events", side_effect=[
+            [*official, internal],
+            [non_classifying],
+            [non_classifying, internal_non_classifying],
+        ]):
+            events = fetch_tracker_events(requests.Session(), official)
+        self.assertEqual(
+            {event["id"]: (event["internal"], event["classifying"]) for event in events},
+            {
+                "internal": (True, True),
+                "non-classifying": (False, False),
+                "internal-non-classifying": (True, False),
+            },
+        )
 
     def test_fetch_excludes_internal_and_non_classifying_events_on_all_pages(self):
         initial = BeautifulSoup('<select name="uxddlYear"><option value="2026">2026</option></select>', "html.parser")
@@ -57,6 +90,20 @@ class ResultTests(unittest.TestCase):
             archive = json.loads((Path(directory) / "archive.json").read_text(encoding="utf-8"))
         self.assertEqual(archive["start"], "2026-10-01")
         self.assertTrue(archive["complete"])
+
+    def test_tracker_events_are_stored_separately_from_official_archive(self):
+        official = {"id": "official", "date": "2026-10-10", "type": "Inne", "name": "Official"}
+        optional = {"id": "optional", "date": "2026-10-10", "type": "Inne - ikke kl.sett", "name": "Internal", "internal": True, "classifying": False}
+        official_result = {"eventId": "official", "shooter": "Test", "clubId": "1", "class": "4", "exercise": "main"}
+        optional_result = {"eventId": "optional", "shooter": "Test", "clubId": "1", "class": "4", "exercise": "main"}
+        with TemporaryDirectory() as directory, patch("sync_norgestoppen.ARCHIVE_OUTPUT", Path(directory) / "archive.json"):
+            path = Path(directory) / "archive.json"
+            update_archive([official], [official_result], [optional], [optional_result])
+            archive = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual([event["id"] for event in archive["events"]], ["official"])
+        self.assertEqual([result["eventId"] for result in archive["results"]], ["official"])
+        self.assertEqual([event["id"] for event in archive["trackerEvents"]], ["optional"])
+        self.assertEqual([result["eventId"] for result in archive["trackerResults"]], ["optional"])
 
     def test_live_published_result(self):
         url = "https://mittdfs.no/hovedside/aktuelt-na/resultater/?search=True&type=INNE&year=2026&includeLocal=True&eventId=262774&class=4"

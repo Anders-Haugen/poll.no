@@ -36,11 +36,14 @@ def submit_form(session, url, page, overrides):
     return BeautifulSoup(response.content, "html.parser")
 
 
-def result_events(page, start=START, end=END):
+def result_events(page, start=START, end=END, event_type="INNE"):
+    expected_type = {"INNE": "Inne", "INIK": "Inne - ikke kl.sett"}.get(event_type)
+    if expected_type is None:
+        raise ValueError(f"Unsupported event type: {event_type}")
     events = {}
     for row in page.select("table tr"):
         cells = row.find_all("td", recursive=False)
-        if len(cells) != 7 or cells[4].get_text(strip=True) != "Inne":
+        if len(cells) != 7 or cells[4].get_text(strip=True) != expected_type:
             continue
         event_date = datetime.strptime(cells[1].get_text(strip=True), "%d.%m.%y").date()
         anchor = cells[2].find("a", href=True)
@@ -56,7 +59,7 @@ def result_events(page, start=START, end=END):
     return list(events.values())
 
 
-def fetch_events(session, start=START, end=END):
+def fetch_events(session, start=START, end=END, event_type="INNE", include_local=False):
     initial = get_page(session, RESULTS_URL)
     years = {option["value"] for option in initial.select("select[name$='uxddlYear'] option")}
     if not years:
@@ -65,33 +68,53 @@ def fetch_events(session, start=START, end=END):
     for year in range(start.year, min(end.year, date.today().year) + 1):
         if str(year) not in years:
             raise ValueError(f"DFS does not offer results for {year}")
-        for event_type in ("INNE",):
-            url = RESULTS_URL + "?" + urlencode({
-                "search": "True", "registered": "", "type": event_type,
-                "region": "", "year": year, "includeLocal": "False", "querystring": "",
-            })
-            page = get_page(session, url)
-            seen_pages = set()
-            while True:
-                fingerprint = str(page.select("table"))
-                if fingerprint in seen_pages:
-                    raise ValueError("DFS pagination repeated a page")
-                seen_pages.add(fingerprint)
-                if not page.select_one("select[name$='uxddlYear']"):
-                    raise ValueError("DFS result overview was not found")
-                for event in result_events(page, start, end):
-                    events[event["id"]] = event
-                next_link = next((anchor for anchor in page.select("a[href]")
-                                  if anchor.get_text(strip=True) == "Neste"), None)
-                if next_link is None:
-                    break
-                postback = re.search(r"__doPostBack\('([^']*)','([^']*)'\)", next_link["href"])
-                if not postback:
-                    raise ValueError("Unrecognized DFS pagination")
-                page = submit_form(session, url, page, {
-                    "__EVENTTARGET": postback[1], "__EVENTARGUMENT": postback[2],
-                })
+        url = RESULTS_URL + "?" + urlencode({
+            "search": "True", "registered": "", "type": event_type,
+            "region": "", "year": year, "includeLocal": str(include_local), "querystring": "",
+        })
+        page = get_page(session, url)
+        seen_pages = set()
+        while True:
+            fingerprint = str(page.select("table"))
+            if fingerprint in seen_pages:
+                raise ValueError("DFS pagination repeated a page")
+            seen_pages.add(fingerprint)
+            if not page.select_one("select[name$='uxddlYear']"):
+                raise ValueError("DFS result overview was not found")
+            for event in result_events(page, start, end, event_type):
+                events[event["id"]] = event
+            next_link = next((anchor for anchor in page.select("a[href]")
+                              if anchor.get_text(strip=True) == "Neste"), None)
+            if next_link is None:
+                break
+            postback = re.search(r"__doPostBack\('([^']*)','([^']*)'\)", next_link["href"])
+            if not postback:
+                raise ValueError("Unrecognized DFS pagination")
+            fields = {"__EVENTTARGET": postback[1], "__EVENTARGUMENT": postback[2]}
+            if include_local:
+                fields["ctl00$FullRegion$uxListView$uxIncludeLocalEvents"] = "on"
+            page = submit_form(session, url, page, fields)
     return list(events.values())
+
+
+def fetch_tracker_events(session, official_events, start=START, end=END):
+    official_ids = {event["id"] for event in official_events}
+    internal_events = fetch_events(session, start, end, include_local=True)
+    optional = [
+        {**event, "internal": True, "classifying": True}
+        for event in internal_events if event["id"] not in official_ids
+    ]
+
+    non_classifying = fetch_events(session, start, end, event_type="INIK")
+    non_classifying_ids = {event["id"] for event in non_classifying}
+    optional.extend({**event, "internal": False, "classifying": False} for event in non_classifying)
+
+    all_non_classifying = fetch_events(session, start, end, event_type="INIK", include_local=True)
+    optional.extend(
+        {**event, "internal": True, "classifying": False}
+        for event in all_non_classifying if event["id"] not in non_classifying_ids
+    )
+    return optional
 
 
 def parse_results(page, event):
@@ -167,7 +190,7 @@ def write_payload(path, payload):
     temporary.replace(path)
 
 
-def update_archive(events, records):
+def update_archive(events, records, tracker_events=(), tracker_records=()):
     if ARCHIVE_OUTPUT.exists():
         previous = json.loads(ARCHIVE_OUTPUT.read_text(encoding="utf-8"))
         archived_events = {
@@ -178,6 +201,15 @@ def update_archive(events, records):
             (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"]): result
             for result in previous["results"] if result["eventId"] in archived_events
         }
+        archived_tracker_events = {
+            event["id"]: event for event in previous.get("trackerEvents", [])
+            if not START.isoformat() <= event["date"] <= END.isoformat()
+        }
+        archived_tracker_results = {
+            (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"]): result
+            for result in previous.get("trackerResults", [])
+            if result["eventId"] in archived_tracker_events
+        }
         complete = previous.get("complete", False)
         start = previous["start"]
         if start == START.isoformat():
@@ -185,17 +217,28 @@ def update_archive(events, records):
     else:
         archived_events = {}
         archived_results = {}
+        archived_tracker_events = {}
+        archived_tracker_results = {}
         complete = True
         start = START.isoformat()
     archived_events.update({event["id"]: event for event in events})
     for result in records:
         key = (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"])
         archived_results[key] = result
+    archived_tracker_events.update({event["id"]: event for event in tracker_events})
+    tracker_event_ids = set(archived_tracker_events)
+    for result in tracker_records:
+        if result["eventId"] not in tracker_event_ids:
+            continue
+        key = (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"])
+        archived_tracker_results[key] = result
     payload = {
         "start": start, "end": date.today().isoformat(),
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "source": RESULTS_URL, "complete": complete,
         "events": list(archived_events.values()), "results": list(archived_results.values()),
+        "trackerEvents": list(archived_tracker_events.values()),
+        "trackerResults": list(archived_tracker_results.values()),
     }
     write_payload(ARCHIVE_OUTPUT, payload)
 
@@ -210,6 +253,11 @@ def sync(limit=None):
         for index, event in enumerate(events, 1):
             print(f"{index}/{len(events)}: {event['date']} {event['name']}", flush=True)
             records.extend(fetch_results(session, event))
+        tracker_events = fetch_tracker_events(session, events) if limit is None else []
+        tracker_records = []
+        for index, event in enumerate(tracker_events, 1):
+            print(f"Tillegg {index}/{len(tracker_events)}: {event['date']} {event['name']}", flush=True)
+            tracker_records.extend(fetch_results(session, event))
     season_events = [event for event in events if START.isoformat() <= event["date"] <= END.isoformat()]
     season_ids = {event["id"] for event in season_events}
     season_records = [record for record in records if record["eventId"] in season_ids]
@@ -221,8 +269,8 @@ def sync(limit=None):
     }
     write_payload(OUTPUT, payload)
     if limit is None:
-        update_archive(events, records)
-    print(f"Published {len(season_records)} season results from {len(season_events)} events")
+        update_archive(events, records, tracker_events, tracker_records)
+    print(f"Published {len(season_records)} season results from {len(season_events)} events and {len(tracker_events)} tracker-only events")
 
 
 if __name__ == "__main__":
