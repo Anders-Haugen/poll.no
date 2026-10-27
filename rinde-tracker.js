@@ -26,10 +26,14 @@ function rankRindeResults(data, year, filters) {
     shooters.get(identity).eventIds.add(event.id);
   }
 
-  return [...shooters.values()]
+  const ranked = [...shooters.values()]
     .map(shooter => ({ ...shooter, count: shooter.eventIds.size }))
-    .sort((first, second) => second.count - first.count || first.shooter.localeCompare(second.shooter, "nb"))
-    .slice(0, 10);
+    .sort((first, second) => second.count - first.count || first.shooter.localeCompare(second.shooter, "nb"));
+  ranked.forEach((rider, index) => {
+    const previous = ranked[index - 1];
+    rider.rank = previous && previous.count === rider.count ? previous.rank : index + 1;
+  });
+  return ranked.filter(rider => rider.rank <= 10);
 }
 
 if (typeof document !== "undefined") {
@@ -64,11 +68,11 @@ if (typeof document !== "undefined") {
       list.innerHTML = '<li class="race-message">Ingen skyttarar med stevner i arkivet for dette året.</li>';
     } else {
       const fragment = document.createDocumentFragment();
-      for (const [index, rider] of riders.entries()) {
+      for (const rider of riders) {
         const row = document.createElement("li");
         row.className = "race-row";
         const progress = 3 + (rider.count / maxCount) * 93;
-        row.innerHTML = `<span class="race-place">${index + 1}.</span><span class="race-shooter"><span class="race-name"></span><span class="race-club"></span></span><span class="race-track"><span class="race-bullet" style="--distance: ${progress}%" aria-hidden="true"><svg viewBox="0 0 54 18" focusable="false"><path d="M3 4Q3 2 6 2H31Q36 2 40 5L52 9 40 13Q36 16 31 16H6Q3 16 3 14Z" fill="#b96643" stroke="#572f24" stroke-width="1"/><path d="M6 4h23q5 0 8 3" fill="none" stroke="#f1b08a" stroke-width="1"/><path d="M6 14h25q4 0 7-2" fill="none" stroke="#79422e" stroke-width="1"/></svg></span></span><span class="race-count">${rider.count}<small>${rider.count === 1 ? "stevne" : "stevner"}</small></span>`;
+        row.innerHTML = `<span class="race-place">${rider.rank}.</span><span class="race-shooter"><span class="race-name"></span><span class="race-club"></span></span><span class="race-track"><span class="race-bullet" style="--distance: ${progress}%" aria-hidden="true"><svg viewBox="0 0 54 18" focusable="false"><path d="M3 4Q3 2 6 2H31Q36 2 40 5L52 9 40 13Q36 16 31 16H6Q3 16 3 14Z" fill="#b96643" stroke="#572f24" stroke-width="1"/><path d="M6 4h23q5 0 8 3" fill="none" stroke="#f1b08a" stroke-width="1"/><path d="M6 14h25q4 0 7-2" fill="none" stroke="#79422e" stroke-width="1"/></svg></span></span><span class="race-count">${rider.count}<small>${rider.count === 1 ? "stevne" : "stevner"}</small></span>`;
         row.querySelector(".race-name").textContent = rider.shooter;
         row.querySelector(".race-club").textContent = rider.club;
         fragment.append(row);
