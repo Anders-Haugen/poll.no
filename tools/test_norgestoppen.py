@@ -13,6 +13,22 @@ from sync_norgestoppen import fetch_events, fetch_results, fetch_tracker_events,
 
 
 class ResultTests(unittest.TestCase):
+    def test_session_retries_transient_errors_for_get_and_pagination_post(self):
+        import sync_norgestoppen
+        from urllib3.exceptions import ReadTimeoutError
+
+        with sync_norgestoppen.create_session() as session:
+            self.assertIn("poll.no", session.headers["User-Agent"])
+            retries = session.get_adapter("https://mittdfs.no").max_retries
+            for method in ("GET", "POST"):
+                self.assertIn(method, retries.allowed_methods)
+                self.assertTrue(retries.is_retry(method, 503))
+                remaining = retries.increment(method, "/", error=ReadTimeoutError(None, "/", "timed out"))
+                self.assertEqual(remaining.total, retries.total - 1)
+            self.assertFalse(retries.is_retry("GET", 404))
+            self.assertGreater(retries.total, 0)
+            self.assertLessEqual(retries.total, 3)
+
     def test_season_and_indoor_type(self):
         rows = []
         for index, (event_date, event_type) in enumerate([
@@ -81,6 +97,48 @@ class ResultTests(unittest.TestCase):
     def test_event_without_class_links_has_no_results(self):
         with patch("sync_norgestoppen.get_page", return_value=BeautifulSoup("<html></html>", "html.parser")):
             self.assertEqual(fetch_results(requests.Session(), {"id": "123", "name": "Test", "url": "https://mittdfs.no"}), [])
+
+    def test_fetch_selects_indoor_when_unknown_exercise_is_default(self):
+        event = {"id": "123", "name": "Test", "url": "https://mittdfs.no/?eventId=123"}
+        initial = BeautifulSoup('<a href="?eventId=123&class=5">Klasse 5</a>', "html.parser")
+        unknown = BeautifulSoup('<select name="details$uxddlExercises"><option selected value="None">Ukjent</option><option value="Innendors">Innend</option></select>', "html.parser")
+        indoor = BeautifulSoup('<table id="indoor"></table>', "html.parser")
+        with patch("sync_norgestoppen.get_page", side_effect=[initial, unknown]), patch(
+            "sync_norgestoppen.submit_form", return_value=indoor
+        ) as submit, patch("sync_norgestoppen.parse_results", return_value=[{"score": 250}]) as parse:
+            records = fetch_results(requests.Session(), event)
+        self.assertEqual(records, [{"score": 250}])
+        self.assertEqual(submit.call_args.args[3], {
+            "__EVENTTARGET": "details$uxddlExercises", "details$uxddlExercises": "Innendors",
+        })
+        self.assertIs(submit.call_args.args[2], unknown)
+        self.assertIs(parse.call_args.args[0], indoor)
+
+    def test_fetch_does_not_resubmit_selected_indoor_exercise(self):
+        event = {"id": "123", "name": "Test", "url": "https://mittdfs.no/?eventId=123"}
+        initial = BeautifulSoup('<a href="?eventId=123&class=5">Klasse 5</a>', "html.parser")
+        indoor = BeautifulSoup('<select name="details$uxddlExercises"><option selected value="Innendors">Innend</option></select>', "html.parser")
+        with patch("sync_norgestoppen.get_page", side_effect=[initial, indoor]), patch(
+            "sync_norgestoppen.submit_form"
+        ) as submit, patch("sync_norgestoppen.parse_results", return_value=[]):
+            self.assertEqual(fetch_results(requests.Session(), event), [])
+        submit.assert_not_called()
+
+    def test_missing_result_table_still_fails(self):
+        with self.assertRaisesRegex(ValueError, "Missing result table"):
+            parse_results(BeautifulSoup("<html>Unexpected response</html>", "html.parser"), {"name": "Test"})
+
+    def test_failed_sync_does_not_publish_partial_data(self):
+        import sync_norgestoppen
+
+        event = {"id": "123", "date": "2026-10-10", "name": "Test"}
+        with patch("sync_norgestoppen.fetch_events", return_value=[event]), patch(
+            "sync_norgestoppen.fetch_results", side_effect=requests.exceptions.Timeout("DFS timeout")
+        ), patch("sync_norgestoppen.write_payload") as write, patch("sync_norgestoppen.update_archive") as archive:
+            with self.assertRaises(requests.exceptions.Timeout):
+                sync_norgestoppen.sync()
+        write.assert_not_called()
+        archive.assert_not_called()
 
     def test_regular_sync_marks_archive_complete_from_current_season(self):
         event = {"id": "123", "date": "2026-10-01", "type": "Inne", "name": "Test"}

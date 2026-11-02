@@ -7,6 +7,8 @@ from urllib.parse import parse_qs, urlencode, urljoin, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 BASE_URL = "https://mittdfs.no"
@@ -15,6 +17,20 @@ START = date(2026, 10, 1)
 END = date(2027, 10, 1)
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "norgestoppen2.json"
 ARCHIVE_OUTPUT = Path(__file__).resolve().parents[1] / "data" / "norgestoppen_archive.json"
+
+
+def create_session():
+    session = requests.Session()
+    session.headers["User-Agent"] = "poll.no Norgestoppen2 result index (non-commercial)"
+    retries = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset({"GET", "POST"}),
+    )
+    for scheme in ("http://", "https://"):
+        session.mount(scheme, HTTPAdapter(max_retries=retries))
+    return session
 
 
 def get_page(session, url):
@@ -60,6 +76,7 @@ def result_events(page, start=START, end=END, event_type="INNE"):
 
 
 def fetch_events(session, start=START, end=END, event_type="INNE", include_local=False):
+    print(f"Henter stevneoversikt: {event_type}, interne={include_local}", flush=True)
     initial = get_page(session, RESULTS_URL)
     years = {option["value"] for option in initial.select("select[name$='uxddlYear'] option")}
     if not years:
@@ -179,7 +196,15 @@ def fetch_results(session, event):
         return []
     records = []
     for url in class_links.values():
-        records.extend(parse_results(get_page(session, url), event))
+        page = get_page(session, url)
+        exercise = page.select_one("select[name$='uxddlExercises']")
+        if exercise and exercise.select_one("option[value='Innendors']"):
+            selected = exercise.select_one("option[selected]") or exercise.select_one("option")
+            if selected is not None and selected.get("value") != "Innendors":
+                page = submit_form(session, url, page, {
+                    "__EVENTTARGET": exercise["name"], exercise["name"]: "Innendors",
+                })
+        records.extend(parse_results(page, event))
     return records
 
 
@@ -244,8 +269,7 @@ def update_archive(events, records, tracker_events=(), tracker_records=()):
 
 
 def sync(limit=None):
-    with requests.Session() as session:
-        session.headers["User-Agent"] = "poll.no Norgestoppen2 result index (non-commercial)"
+    with create_session() as session:
         events = fetch_events(session, START, END)
         if limit is not None:
             events = events[:limit]
