@@ -9,7 +9,7 @@ function rankResults(data, filters) {
     if (!event || event.type !== "Inne") continue;
     if (event.date < data.start || event.date > data.end || event.date < filters.from || event.date > filters.to) continue;
     if (result.exercise !== filters.exercise || (classes.length && !classes.includes(result.class))) continue;
-    if (filters.club && result.club !== filters.club) continue;
+    if ((filters.samlag && result.samlag !== filters.samlag) || (filters.club && result.club !== filters.club)) continue;
     const identity = `${result.shooter}\u0000${result.clubId || result.club}`;
     if (!grouped.has(identity)) grouped.set(identity, []);
     grouped.get(identity).push({ ...result, event });
@@ -39,7 +39,7 @@ function rankResults(data, filters) {
 }
 
 if (typeof document !== "undefined") {
-  const controls = Object.fromEntries(["exercise", "class", "club", "count", "from", "to", "search", "limit"].map(id => [id, document.getElementById(id)]));
+  const controls = Object.fromEntries(["exercise", "class", "club", "samlag", "count", "from", "to", "search", "limit"].map(id => [id, document.getElementById(id)]));
   const status = document.getElementById("status");
   const tbody = document.getElementById("results");
   const refresh = document.getElementById("refresh");
@@ -49,6 +49,22 @@ if (typeof document !== "undefined") {
   }).formatToParts(new Date()).map(part => [part.type, part.value]));
   const today = `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
   let data;
+
+  function readStoredSamlag() {
+    try {
+      return localStorage.getItem("norgestoppen2.samlag") || "";
+    } catch {
+      return "";
+    }
+  }
+
+  function storeSamlag(value) {
+    try {
+      localStorage.setItem("norgestoppen2.samlag", value);
+    } catch {
+      // Storage may be unavailable in private browsing contexts.
+    }
+  }
 
   function addCell(row, text) {
     const cell = row.insertCell();
@@ -141,6 +157,7 @@ if (typeof document !== "undefined") {
       controls.to.value = previousTo && previousTo >= loaded.start && previousTo <= archiveEnd ? previousTo : archiveEnd;
       const previousClass = controls.class.value;
       const previousClub = controls.club.value;
+      const previousSamlag = controls.samlag.value || readStoredSamlag();
       while (controls.class.options.length > 3) controls.class.remove(3);
       for (const value of [...new Set(data.results.map(result => result.class))].sort((first, second) => first.localeCompare(second, "nb", { numeric: true }))) {
         controls.class.add(new Option(value, value));
@@ -149,6 +166,12 @@ if (typeof document !== "undefined") {
       controls.club.replaceChildren(new Option("Alle skytterlag", ""));
       for (const club of [...new Set(data.results.map(result => result.club))].sort((first, second) => first.localeCompare(second, "nb"))) controls.club.add(new Option(club, club));
       controls.club.value = [...controls.club.options].some(option => option.value === previousClub) ? previousClub : "";
+      const samlagValues = [...new Set(data.results.map(result => result.samlag).filter(Boolean))].sort((first, second) => first.localeCompare(second, "nb"));
+      controls.samlag.replaceChildren(new Option("Alle skyttersamlag", ""));
+      for (const samlag of samlagValues) controls.samlag.add(new Option(samlag, samlag));
+      document.getElementById("samlag-filter").hidden = samlagValues.length === 0;
+      controls.samlag.value = samlagValues.includes(previousSamlag) ? previousSamlag : "";
+      storeSamlag(controls.samlag.value);
       document.getElementById("updated").textContent = `Oppdatert ${new Intl.DateTimeFormat("nb-NO", { dateStyle: "short", timeStyle: "short", timeZone: "Europe/Oslo" }).format(new Date(data.updatedAt))}`;
       render();
     } catch (error) {
@@ -163,5 +186,6 @@ if (typeof document !== "undefined") {
   document.getElementById("filters").addEventListener("submit", event => event.preventDefault());
   document.getElementById("filters").addEventListener("input", render);
   refresh.addEventListener("click", load);
+  controls.samlag.addEventListener("change", () => storeSamlag(controls.samlag.value));
   load();
 }

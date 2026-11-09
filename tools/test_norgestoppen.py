@@ -9,10 +9,45 @@ from urllib.parse import parse_qs, urlsplit
 import requests
 from bs4 import BeautifulSoup
 
-from sync_norgestoppen import fetch_events, fetch_results, fetch_tracker_events, get_page, parse_results, result_events, update_archive
+from sync_norgestoppen import apply_samlag, fetch_events, fetch_results, fetch_tracker_events, get_page, parse_results, parse_samlag_clubs, refresh_samlag, result_events, update_archive
 
 
 class ResultTests(unittest.TestCase):
+    def test_samlag_directory_maps_official_club_numbers(self):
+        page = BeautifulSoup("""
+            <h1>Akershus Skyttersamlag</h1>
+            <table><tr><th>Nummer</th><th>Skytterlag</th><th>Leder</th></tr>
+            <tr><td>10077</td><td>Blaker</td><td>Navn</td></tr>
+            <tr><td>10078</td><td>Eidsvoll Verk</td><td>Navn</td></tr></table>
+        """, "html.parser")
+        self.assertEqual(parse_samlag_clubs(page), {"10077": "Akershus", "10078": "Akershus"})
+
+    def test_samlag_is_added_to_results_by_club_id(self):
+        records = [{"clubId": "10077"}, {"clubId": "unknown", "samlag": "Old value"}]
+        apply_samlag(records, {"10077": "Akershus"})
+        self.assertEqual(records, [{"clubId": "10077", "samlag": "Akershus"}, {"clubId": "unknown"}])
+
+    def test_refresh_samlag_updates_existing_payloads(self):
+        import sync_norgestoppen
+
+        with TemporaryDirectory() as directory:
+            current = Path(directory) / "current.json"
+            archive = Path(directory) / "archive.json"
+            for path in (current, archive):
+                path.write_text(json.dumps({
+                    "results": [{"clubId": "10077"}],
+                    "trackerResults": [{"clubId": "10078"}],
+                }), encoding="utf-8")
+            with patch("sync_norgestoppen.OUTPUT", current), patch(
+                "sync_norgestoppen.ARCHIVE_OUTPUT", archive
+            ), patch("sync_norgestoppen.fetch_samlag_clubs", return_value={
+                "10077": "Akershus", "10078": "Opland",
+            }):
+                refresh_samlag()
+            payload = json.loads(archive.read_text(encoding="utf-8"))
+        self.assertEqual(payload["results"][0]["samlag"], "Akershus")
+        self.assertEqual(payload["trackerResults"][0]["samlag"], "Opland")
+
     def test_session_retries_transient_errors_for_get_and_pagination_post(self):
         import sync_norgestoppen
         from urllib3.exceptions import ReadTimeoutError

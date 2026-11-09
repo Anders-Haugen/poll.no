@@ -39,6 +39,60 @@ def get_page(session, url):
     return BeautifulSoup(response.content, "html.parser")
 
 
+def parse_samlag_clubs(page):
+    heading = page.find(lambda tag: tag.name in {"h1", "h2"} and "Skyttersamlag" in tag.get_text(" ", strip=True))
+    if heading is None:
+        return {}
+    samlag = re.sub(r"\s+Skyttersamlag$", "", heading.get_text(" ", strip=True), flags=re.IGNORECASE)
+    for table in page.select("table"):
+        rows = table.find_all("tr")
+        header = next((row for row in rows if row.find_all("th", recursive=False)), None)
+        if header is None:
+            continue
+        headings = [cell.get_text(" ", strip=True).casefold() for cell in header.find_all("th", recursive=False)]
+        if "nummer" not in headings or "skytterlag" not in headings:
+            continue
+        number_index = headings.index("nummer")
+        club_index = headings.index("skytterlag")
+        clubs = {}
+        for row in rows[rows.index(header) + 1:]:
+            cells = row.find_all("td", recursive=False)
+            if len(cells) <= max(number_index, club_index):
+                continue
+            club_id = cells[number_index].get_text(" ", strip=True)
+            if club_id:
+                clubs[club_id] = samlag
+        return clubs
+    return {}
+
+
+def fetch_samlag_clubs(session):
+    page = get_page(session, BASE_URL + "/hovedside/")
+    samlag_urls = set()
+    for anchor in page.select("a[href]"):
+        path = urlsplit(urljoin(BASE_URL, anchor["href"])).path.rstrip("/")
+        prefix = "/hovedside/Skytterlagssider/"
+        if path.startswith(prefix) and len(path[len(prefix):].split("/")) == 2:
+            samlag_urls.add(urljoin(BASE_URL, path + "/"))
+    if not samlag_urls:
+        raise ValueError("DFS skyttersamlag directory was not found")
+    clubs = {}
+    for url in sorted(samlag_urls):
+        clubs.update(parse_samlag_clubs(get_page(session, url)))
+    if not clubs:
+        raise ValueError("DFS skyttersamlag pages contained no club directory")
+    return clubs
+
+
+def apply_samlag(records, samlag_by_club):
+    for record in records:
+        samlag = samlag_by_club.get(record.get("clubId", ""))
+        if samlag:
+            record["samlag"] = samlag
+        else:
+            record.pop("samlag", None)
+
+
 def submit_form(session, url, page, overrides):
     fields = {}
     for field in page.select("input[name], select[name]"):
@@ -215,7 +269,7 @@ def write_payload(path, payload):
     temporary.replace(path)
 
 
-def update_archive(events, records, tracker_events=(), tracker_records=()):
+def update_archive(events, records, tracker_events=(), tracker_records=(), samlag_by_club=None):
     if ARCHIVE_OUTPUT.exists():
         previous = json.loads(ARCHIVE_OUTPUT.read_text(encoding="utf-8"))
         archived_events = {
@@ -257,6 +311,9 @@ def update_archive(events, records, tracker_events=(), tracker_records=()):
             continue
         key = (result["eventId"], result["shooter"], result["clubId"], result["class"], result["exercise"])
         archived_tracker_results[key] = result
+    if samlag_by_club is not None:
+        apply_samlag(archived_results.values(), samlag_by_club)
+        apply_samlag(archived_tracker_results.values(), samlag_by_club)
     payload = {
         "start": start, "end": date.today().isoformat(),
         "updatedAt": datetime.now(timezone.utc).isoformat(),
@@ -266,6 +323,19 @@ def update_archive(events, records, tracker_events=(), tracker_records=()):
         "trackerResults": list(archived_tracker_results.values()),
     }
     write_payload(ARCHIVE_OUTPUT, payload)
+
+
+def refresh_samlag():
+    with create_session() as session:
+        samlag_by_club = fetch_samlag_clubs(session)
+    for path in (OUTPUT, ARCHIVE_OUTPUT):
+        if not path.exists():
+            continue
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        apply_samlag(payload.get("results", []), samlag_by_club)
+        apply_samlag(payload.get("trackerResults", []), samlag_by_club)
+        payload["updatedAt"] = datetime.now(timezone.utc).isoformat()
+        write_payload(path, payload)
 
 
 def sync(limit=None):
@@ -282,6 +352,9 @@ def sync(limit=None):
         for index, event in enumerate(tracker_events, 1):
             print(f"Tillegg {index}/{len(tracker_events)}: {event['date']} {event['name']}", flush=True)
             tracker_records.extend(fetch_results(session, event))
+        samlag_by_club = fetch_samlag_clubs(session)
+    apply_samlag(records, samlag_by_club)
+    apply_samlag(tracker_records, samlag_by_club)
     season_events = [event for event in events if START.isoformat() <= event["date"] <= END.isoformat()]
     season_ids = {event["id"] for event in season_events}
     season_records = [record for record in records if record["eventId"] in season_ids]
@@ -293,12 +366,16 @@ def sync(limit=None):
     }
     write_payload(OUTPUT, payload)
     if limit is None:
-        update_archive(events, records, tracker_events, tracker_records)
+        update_archive(events, records, tracker_events, tracker_records, samlag_by_club)
     print(f"Published {len(season_records)} season results from {len(season_events)} events and {len(tracker_events)} tracker-only events")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--refresh-samlag", action="store_true")
     args = parser.parse_args()
-    sync(args.limit)
+    if args.refresh_samlag:
+        refresh_samlag()
+    else:
+        sync(args.limit)
