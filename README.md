@@ -74,7 +74,17 @@ Namnendring eller byte av lag kan derfor gi fleire oppforingar.
 Tellande stevner kan utvidast i lista for aa vise kvart enkelt resultat.
 Til-dato er som standard dagens dato i norsk tid, avgrensa til sesongen.
 
-Framsida og toppmenyane viser Framsida, Norgestoppen2, 350-sida og Memes.
+## 1 mot 1
+
+`1vs1.html` samanliknar to skyttarar på felles innandørsstevner i
+`data/norgestoppen_archive.json`. Sida viser duellstatistikk for 35 skot,
+25 skot, 15-skotserie og 10-skotserie. Eit stevne tel ein gong per øving;
+høgast poengsum vinn, og for 25- og 35-skot tel innertreff ved like poeng.
+Namn og skytterlag blir brukte som identitet. Arkivet inneheld ikkje
+DFS-skytter-ID, så sida viser initialar i avatarane og lenkjer til
+Results-søket i staden for å risikere feil profilbilete.
+
+Framsida og toppmenyane viser Framsida, Norgestoppen2, 1 mot 1, 350-sida og Memes.
 Arbeidsprosjekta er framleis tilgjengelege via direkte URL; skjulte lenkjer
 er ikkje tilgangskontroll.
 

@@ -163,6 +163,20 @@ class ResultTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing result table"):
             parse_results(BeautifulSoup("<html>Unexpected response</html>", "html.parser"), {"name": "Test"})
 
+    def test_parse_results_keeps_15_and_10_shot_series(self):
+        page = BeautifulSoup("""
+            <table>
+                <tr><th>Skytter</th><th>Skytterlag</th><th>Klasse</th><th>15</th><th>10</th><th>Hoved (pl.)</th><th>Omg</th><th>Finale (pl.)</th></tr>
+                <tr><td>Testskyttar</td><td>Testlag</td><td>5</td><td>150</td><td>100</td><td>250 (1)</td><td>100</td><td>350 (1)</td></tr>
+                <tr class="expandedInfo"><td><table><tr><td>25 skudd 250 inner: 11</td></tr><tr><td>35 skudd 350 inner: 20</td></tr></table></td></tr>
+            </table>
+        """, "html.parser")
+        records = parse_results(page, {"id": "123", "name": "Test"})
+        main = next(record for record in records if record["exercise"] == "main")
+        final = next(record for record in records if record["exercise"] == "final")
+        self.assertEqual((main["score"], main["series15"], main["series10"]), (250, 150, 100))
+        self.assertEqual((final["score"], final["inner"]), (350, 20))
+
     def test_failed_sync_does_not_publish_partial_data(self):
         import sync_norgestoppen
 
@@ -205,6 +219,8 @@ class ResultTests(unittest.TestCase):
         self.assertEqual(len(records), 4)
         main = next(record for record in records if record["shooter"] == "Jim R Aronsen" and record["exercise"] == "main")
         self.assertEqual((main["score"], main["inner"], main["class"]), (241, 7, "4"))
+        self.assertGreater(main["series15"], 0)
+        self.assertGreater(main["series10"], 0)
 
     def test_archive_removes_excluded_events_and_their_results(self):
         events = [

@@ -233,6 +233,11 @@ def parse_results(page, event):
                     "inner": inner.get(exercise), "eventId": event["id"],
                 }
                 if exercise == "main":
+                    for field, heading in (("series15", "15"), ("series10", "10")):
+                        series_cell = values.get(heading)
+                        series_score = re.match(r"\d+", series_cell.get_text(strip=True)) if series_cell else None
+                        if series_score:
+                            record[field] = int(series_score[0])
                     record.update({"prize": prize, "medal": medal})
                 records.append(record)
     return records

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1 mot 1 | Pøll.no</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="1vs1.css" />
+  <script src="1vs1.js" defer></script>
+</head>
+<body class="duell-page">
+  <header>
+    <h1>Pøll.no</h1>
+    <p>Anders Haugen &middot; diverse innan DFS-skyting</p>
+  </header>
+  <nav aria-label="Hovudmeny">
+    <a href="index.html">Framsida</a>
+    <a href="norgestoppen2.html">Norgestoppen2</a>
+    <a href="1vs1.html" class="aktiv" aria-current="page">1 mot 1</a>
+    <a href="hardetvorteskote350påls.html">350 i klasse 3-5?</a>
+    <a href="memes.html">Memes</a>
+  </nav>
+  <main class="duell-main">
+    <div class="duell-heading">
+      <div>
+        <p class="duell-kicker">Kven har vore best?</p>
+        <h2>1 mot 1</h2>
+        <p>Finn to skyttarar og samanlikn resultata.</p>
+      </div>
+    </div>
+    <form id="duell-form" class="duell-form">
+      <label for="first-shooter">Første skyttar
+        <input id="first-shooter" type="search" list="shooters" placeholder="Søk etter namn eller lag" autocomplete="off" required />
+      </label>
+      <span class="duell-vs" aria-hidden="true">VS</span>
+      <label for="second-shooter">Andre skyttar
+        <input id="second-shooter" type="search" list="shooters" placeholder="Søk etter namn eller lag" autocomplete="off" required />
+      </label>
+      <datalist id="shooters"></datalist>
+      <button id="compare" type="submit" disabled>Samanlikn</button>
+    </form>
+    <div class="duell-meta">
+      <p id="status" role="status" aria-live="polite">Hentar resultat frå DFS-arkivet...</p>
+      <p id="updated"></p>
+    </div>
+    <section id="comparison" class="comparison" aria-labelledby="comparison-title" hidden>
+      <h3 id="comparison-title" class="sr-only">Samanlikning</h3>
+      <div class="duell-scoreboard">
+        <article class="shooter-card" id="first-card"></article>
+        <div class="scoreboard-vs" aria-hidden="true">VS</div>
+        <article class="shooter-card" id="second-card"></article>
+      </div>
+      <p class="duell-tiebreak">Høgast poengsum vinn. Ved like poeng i 25- og 35-skot tel innertreff; like seriar blir uavgjort.</p>
+      <div id="series-results" class="series-results" aria-label="Duellresultat etter øving"></div>
+      <p id="no-shared-events" class="duell-empty" hidden>Ingen felles stevner med registrerte resultat for desse skyttarane.</p>
+    </section>
+    <p class="duell-source">
+      Arkivet omfattar publiserte innandørsresultat frå <span id="coverage">DFS-arkivet</span>.
+      Stevner utan innsendte resultat er ikkje med. Arkivet manglar DFS-ID, så avatarane viser initialar i staden for personbilete.
+      <a href="https://lsres.no/search/" target="_blank" rel="noopener noreferrer">Søk etter skyttarar i Results</a>.
+      Kjelde: <a href="https://mittdfs.no/hovedside/aktuelt-na/resultater/" target="_blank" rel="noopener noreferrer">DFS</a> &middot; Uoffisiell samanlikning.
+    </p>
+    <noscript>JavaScript må vere aktivert for å samanlikne resultat.</noscript>
+  </main>
+  <footer>&copy; 2026 Anders Haugen &middot; Pøll.no</footer>
+</body>
+</html>
