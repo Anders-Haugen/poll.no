@@ -80,9 +80,26 @@ Til-dato er som standard dagens dato i norsk tid, avgrensa til sesongen.
 `data/norgestoppen_archive.json`. Sida viser duellstatistikk for 35 skot,
 25 skot, 15-skotserie og 10-skotserie. Eit stevne tel ein gong per øving;
 høgast poengsum vinn, og for 25- og 35-skot tel innertreff ved like poeng.
-Namn og skytterlag blir brukte som identitet. Arkivet inneheld ikkje
-DFS-skytter-ID, så sida viser initialar i avatarane og lenkjer til
-Results-søket i staden for å risikere feil profilbilete.
+Namn og skytterlag blir brukte som identitet. `data/shooter_profiles.json`
+koplar namn og lag til offentlege skytter-ID-ar frå Sørlandskula 2024–2026
+og manuelt stadfesta Results-profilar. Berre eintydige treff på både namn
+og lag blir kopla; avsluttande «Skytterlag» og ulik bokstavstorleik blir
+ignorerte. Historiske lagsbyte og namnendringar blir ikkje gjetta.
+ID-en blir vist under namnet, og bileta blir lasta direkte frå
+`https://skytterbilder.no/bilder/<skytter-id>.jpg`, med DFS som fotokjelde.
+Manglande ID eller bilete gir initialar og ei forklaring. Samanlikninga
+fungerer også dersom profilregisteret ikkje kan lastast.
+
+Oppdater profilregisteret med `python tools/sync_shooter_profiles.py`.
+Scriptet hentar dei tre offentlege «Vis alle deltakere»-listene utan
+innlogging og bevarer eksisterande koplingar, inkludert manuelt stadfesta
+oppføringar med kjelde-URL. Feil under innhenting bevarer eksisterande fil.
+Motstridande ID-ar blir bevarte som tvitydige og ikkje kopla på sida.
+Dette dekkjer ikkje alle skyttarar i DFS-arkivet. Ingen bilete blir kopierte
+til repoet, og ingen Results-token blir brukte.
+
+Test profilinnhenting med `python tools/test_shooter_profiles.py` og
+namn-/lagkopling med `node --test tools/test_1vs1.cjs`.
 
 Framsida og toppmenyane viser Framsida, Norgestoppen2, 1 mot 1, 350-sida og Memes.
 Arbeidsprosjekta er framleis tilgjengelege via direkte URL; skjulte lenkjer

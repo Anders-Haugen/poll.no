@@ -18,7 +18,9 @@
 .duell-meta .error { color: #a32424; font-weight: 900; }
 .duell-scoreboard { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1rem; margin: 2rem 0 2.5rem; }
 .shooter-card { display: flex; flex-direction: column; align-items: center; min-width: 0; text-align: center; }
-.duell-avatar { display: grid; width: clamp(150px, 22vw, 250px); aspect-ratio: 1; place-items: center; border: 8px solid #e5eee9; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #4d9679, #156548 68%, #0c4934); box-shadow: 0 12px 30px #173a2c24; color: #fff; font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 900; }
+.duell-avatar { display: grid; width: clamp(150px, 22vw, 250px); aspect-ratio: 1; place-items: center; overflow: hidden; border: 8px solid #e5eee9; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #4d9679, #156548 68%, #0c4934); box-shadow: 0 12px 30px #173a2c24; color: #fff; font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 900; }
+.duell-avatar img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+.shooter-id { color: #666; font-size: .68rem; }
 #second-card .duell-avatar { border-color: #f5e8df; background: radial-gradient(circle at 32% 28%, #dc976f, #c76224 68%, #95431e); }
 .shooter-name { display: block; margin-top: .8rem; overflow-wrap: anywhere; font-size: 1.15rem; font-weight: 900; }
 .shooter-club { display: block; color: #666; font-size: .78rem; }

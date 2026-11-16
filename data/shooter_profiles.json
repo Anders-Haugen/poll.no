@@ -1,0 +1,3821 @@
+{
+  "updatedAt": "2026-11-16T12:56:04.519816+00:00",
+  "profiles": [
+    {
+      "shooter": "Adrian Aabel",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3160017",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Adrian Christoffer Pedersen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3363058",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Adrian H. Tømmermo",
+      "club": "Notodden Skytterlag",
+      "shooterId": "3064664",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aksel Løge",
+      "club": "Holum Skytterlag",
+      "shooterId": "3557105",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aksel Pedersen Skoie",
+      "club": "Holum Skytterlag",
+      "shooterId": "2671600",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Alan Jin Rolfsrud",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "2397594",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Albert Mørch Lislien",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "2659944",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Albert Sudmann",
+      "club": "Time Skytterlag",
+      "shooterId": "336529",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aleksander Kvam Krågeland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3477494",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aleksander Taanevig",
+      "club": "Mandal Skytterlag",
+      "shooterId": "1553965",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aleksander Teisrud",
+      "club": "Søgne Skytterlag",
+      "shooterId": "628339",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aleksander Teisrud",
+      "club": "Ullensaker Skytterlag",
+      "shooterId": "628339",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Alexander Tveite Høiland",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3154507",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Alf Olav Skeivoll",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284215",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Alfred Fasseland Wathne",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3486099",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Amalie Rø",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "2888949",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Amalie Sagemoen",
+      "club": "Ugland Skytterlag",
+      "shooterId": "2331122",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Amalie Strandberg-Solås",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3259199",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Asbjørnsen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "570010",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Edvin Gusdal",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211292",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Haugen",
+      "club": "Lom og Skjåk",
+      "shooterId": "2051340",
+      "source": "https://lsres.no/shooter/2051340"
+    },
+    {
+      "shooter": "Anders Metveit",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211342",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Walde Mikkelson",
+      "club": "Stord Skytterlag",
+      "shooterId": "1336577",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Warlo Totland",
+      "club": "Jondal Skyttarlag",
+      "shooterId": "1010594",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anders Warlo Totland",
+      "club": "Jondalen Skytterlag",
+      "shooterId": "1010594",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Andreas Finnestad Lund",
+      "club": "Søgne Skytterlag",
+      "shooterId": "629212",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Andreas Norum",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "2659340",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Andreas  Solhaug Moi",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3568334",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Andrine Gudbrandsen Lee",
+      "club": "Holum Skytterlag",
+      "shooterId": "2563351",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anine Oksum",
+      "club": "Øvrebø Skytterlag",
+      "shooterId": "3010543",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anita Bakkane",
+      "club": "Stord Skytterlag",
+      "shooterId": "2465797",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anna Mørch Lislien",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "834234",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anne Cathrine Wehus",
+      "club": "Holum Skytterlag",
+      "shooterId": "2801512",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anne Maren G. Homme",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2737427",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anne Margrethe Kyllingstad",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "317818",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anne Marie Knibe",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2308641",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Anni Bjerva",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3147436",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Are Sundstøyl Tveit",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3121316",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arild Einar Steinsnes",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "933952",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arild Gunnar Rasmussen",
+      "club": "Holum Skytterlag",
+      "shooterId": "971713",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arild Valand",
+      "club": "Mandal Skytterlag",
+      "shooterId": "924985",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Herfoss",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404830",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Hægestøyl",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "1684976",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Mathisen",
+      "club": "Jondalen Skytterlag",
+      "shooterId": "765552",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Palerud",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404095",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Rolfsrud",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "831073",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Skuland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2338846",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arne Åsan",
+      "club": "Fana Skyttarlag",
+      "shooterId": "172809",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arnfinn Bakkevoll",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627521",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arnt Ingve Svela",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326180",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arve Øystein Naas",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "405266",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arvid Ramsland",
+      "club": "Heddeland og Breland Skytterlag",
+      "shooterId": "1170075",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arvid T. Ramsland",
+      "club": "Heddeland og Breland Skytterlag",
+      "shooterId": "1170075",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Arvid Tveito",
+      "club": "Lunde Skytterlag",
+      "shooterId": "1077403",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Asbjørn Mathisen",
+      "club": "Jondalen Skytterlag",
+      "shooterId": "765560",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Astrid Hagelund",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326362",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Astrid Sætre",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3124419",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Aud Inger Tørnes Naas",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2084655",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Audun Rossevatn",
+      "club": "Øvre Eiken Skytterlag",
+      "shooterId": "723361",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Axel Burton",
+      "club": "Evje og Hornnes Skytterlag",
+      "shooterId": "3482353",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Baste Sudmann",
+      "club": "Time Skytterlag",
+      "shooterId": "331793",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Benjamin Langenes Nyhaven",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627745",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Benjamin Røiseland",
+      "club": "Holum Skytterlag",
+      "shooterId": "3493848",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Benjamin Sand",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3314127",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bente Marie Fardal",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "376426",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Berly Halvorsen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3367539",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bernt Einar Moland",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404202",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bernt-Olav Tømmermo",
+      "club": "Notodden Skytterlag",
+      "shooterId": "2523843",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bettina Auglend",
+      "club": "Time Skytterlag",
+      "shooterId": "2494359",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjarne Birketvedt",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "379123",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjarne Melkevik",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2647394",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjarne Sigurd Ramsjø",
+      "club": "Svinndal Skytterlag",
+      "shooterId": "1631183",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjarte Kvame Øvrevik",
+      "club": "Gann Skytterlag",
+      "shooterId": "794669",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjarte Kvame Øvrevik",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "794669",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjørn Bjellerås",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "2296812",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjørn Mølland",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1283977",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjørn Sigurd Haga",
+      "club": "Iveland Skytterlag",
+      "shooterId": "3083185",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bjørn-Egil Ørting",
+      "club": "Notodden Skytterlag",
+      "shooterId": "3257771",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Brage Vorland",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3052206",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Brigt Johan Kvam",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3170842",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Britt Randi Stokkevåg",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2040657",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Bård Skeie",
+      "club": "Notodden Skytterlag",
+      "shooterId": "2897296",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Camilla S. Rødland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326305",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Camilla Sirekrok",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2757417",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Camilla Utne",
+      "club": "Stord Skytterlag",
+      "shooterId": "3245503",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Carmen Svendsen Kvidbergskår",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3361532",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Caroline Finnestad Lund",
+      "club": "Søgne Skytterlag",
+      "shooterId": "1410794",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Cato Andersen",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3398930",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Charlotte Skallerud Brekke",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3388469",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Christian Stølan Herfoss",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2077071",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Christina Haga Øvrevik",
+      "club": "Gann Skytterlag",
+      "shooterId": "2916591",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Dag Lien",
+      "club": "Løiten Skytterlag",
+      "shooterId": "998476",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Dagfinn Eng",
+      "club": "Stord Skytterlag",
+      "shooterId": "3428877",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Dagfinn Olsen",
+      "club": "Froland Skytterlag",
+      "shooterId": "1637099",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Dagfinn Vemmelvik",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284959",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Daniel Nisja Sørli",
+      "club": "Sunndal Skytterlag",
+      "shooterId": "487496",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Daniel Urbonas",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3135852",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "David Grande",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "568345",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ea Møll",
+      "club": "Holum Skytterlag",
+      "shooterId": "3567799",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Egil Berg",
+      "club": "Råde Skytterlag",
+      "shooterId": "3381134",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Egil Time",
+      "club": "Time Skytterlag",
+      "shooterId": "332031",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Einar Aniksdal",
+      "club": "Hå Skytterlag",
+      "shooterId": "1323039",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Einar Johansen",
+      "club": "Time Skytterlag",
+      "shooterId": "334375",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Einar Sivertsen",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3080470",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Einar Tunheim",
+      "club": "Hå Skytterlag",
+      "shooterId": "1323534",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eirik Skogland Nedland",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "1739234",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eirik Sørdal-Ravndal",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3350816",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eivind Larsen",
+      "club": "Stord Skytterlag",
+      "shooterId": "342477",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eivind Lien",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "1683028",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elin Mikkelsplass",
+      "club": "Nes og Bromma Skytterlag",
+      "shooterId": "1010172",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elin Mikkelsplass",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "3533049",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elina Møll",
+      "club": "Holum Skytterlag",
+      "shooterId": "3019361",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elina Møll",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3019361",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eline Espegren Heia",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3405297",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elise Evensen Austad",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2825834",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elise H. Birkeland",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "2347102",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Elise Kristine Askildsen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3494176",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ella Møll",
+      "club": "Holum Skytterlag",
+      "shooterId": "3182912",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emil Bergstrøm",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3256385",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emil Håland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "3260791",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emil Langenes Nyhaven",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2256717",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emil Pleym Iversen",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2908473",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emilian Breistein",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3486511",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emilian Grøtberg",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3462447",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emilie Konstanse Vanebo-Høyland",
+      "club": "Mykland Skytterlag",
+      "shooterId": "2763977",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emily Holta-Konradsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3507886",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emma Anine Vemmelvik-Holmen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3361623",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Emma Frydenlund Svenningsen",
+      "club": "Tangen Skytterlag",
+      "shooterId": "3020476",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Enok Aleksander Kvam",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3233707",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erik Fylkesnes",
+      "club": "Bremnes Skytterlag",
+      "shooterId": "3284445",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erik Stangeland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3188539",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erlend Sørlie Hoel",
+      "club": "Urskog Skytterlag",
+      "shooterId": "2174076",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erling Grøterud",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "830299",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erling jr Lien",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "1683077",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Erling Slettedal",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3000569",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ernst Aleksander Andersen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3051901",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ernst Aleksander Andersen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3051901",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ernst Steffen Andersen",
+      "club": "Holum Skytterlag",
+      "shooterId": "2219822",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Eskil Øksendal Torland",
+      "club": "Holum Skytterlag",
+      "shooterId": "3501772",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Espen Langfjord",
+      "club": "Mandal Skytterlag",
+      "shooterId": "2621894",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Espen Wathne",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3504438",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Espen Ødegård",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "2668150",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Even Fosse",
+      "club": "Evje og Hornnes Skytterlag",
+      "shooterId": "3289725",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Even Åsen Engen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2733897",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Even Øyjord Rødne",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2152122",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Finn Erik Loftsgarden",
+      "club": "Mælum Skytterlag",
+      "shooterId": "3175007",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Finn Tore Homme",
+      "club": "Iveland Skytterlag",
+      "shooterId": "1189000",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Fred Erik Berge",
+      "club": "Laudal Skytterlag",
+      "shooterId": "1606011",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Fredrik Haddeland Mykletun",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3505682",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Fredrik Soot-Tessem",
+      "club": "Urskog Skytterlag",
+      "shooterId": "2926475",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Frode Kloster",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "1660919",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Frøya Reiten Otterkjær",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3367026",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Gardian Pedersen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3037280",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Arne Bjørnsen",
+      "club": "Siljan Skytterlag",
+      "shooterId": "2719151",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Asbjørnsen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "1915768",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Atle Metveit",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211334",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir B. Risnes",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "968677",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Lindheim",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404111",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Lindheim",
+      "club": "Klepp Skytterlag",
+      "shooterId": "404111",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Lislien",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "830398",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Lunde",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326206",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Geir Mikkelson",
+      "club": "Stord Skytterlag",
+      "shooterId": "1337856",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Gunn-Britt Larsen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "628347",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Gustav L Eng",
+      "club": "Stord Skytterlag",
+      "shooterId": "2165496",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Gøril Eidhammer",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "3127172",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Haakon Ludvik Byggstøyl",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "3364155",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Haakon Michaelsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3399748",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Halvar Austvoll",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326099",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Halvar Manneråk",
+      "club": "Holum Skytterlag",
+      "shooterId": "3559291",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Halvor Krogsgaard Helland",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3124377",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hanna Sætre",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2633998",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hannah Heskestad",
+      "club": "Imenes Skytterlag",
+      "shooterId": "3389806",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hannah Johansen",
+      "club": "Time Skytterlag",
+      "shooterId": "1452234",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Harald Englund",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627588",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Harald Jensen",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "968560",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hedda Lohne Tveit",
+      "club": "Tørdal Skytterlag",
+      "shooterId": "1758770",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hege Haugeplass",
+      "club": "Aurland Skyttarlag",
+      "shooterId": "2325280",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hege Rødland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326446",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Hege Tengesdal",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2642726",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Helena Metveit",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211540",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Helene Storenes",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211490",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Helge Sverre Strand",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326222",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Helge Voss",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "564112",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Helle Ramse Aamlid",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3274719",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Henriette Merkesdal Røssland",
+      "club": "Stord Skytterlag",
+      "shooterId": "3211943",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Henrik Austad",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3383726",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Henrik Midteide",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2910214",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Herman S Muren",
+      "club": "Holum Skytterlag",
+      "shooterId": "3559283",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håkon Hetland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3049160",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håkon Nyhaven Harring",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3346350",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håkon Rognstad",
+      "club": "Time Skytterlag",
+      "shooterId": "855684",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håkon Sydtveit Gudbrands",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3124401",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håvard Forsdal",
+      "club": "Rise og Løddesøl Skytterlag",
+      "shooterId": "1452606",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håvard Nesvik Voss",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "2629806",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Håvard Sørheim",
+      "club": "Stord Skytterlag",
+      "shooterId": "1336536",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ida Osmundsen",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3023140",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Inga-Tonette Grødem Oseassen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3364262",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Inge Storenes",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211482",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ingeborg Lundby",
+      "club": "Løiten Skytterlag",
+      "shooterId": "279828",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ingrid Jølle Ballestad",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3507878",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ingvald Førde Ekra",
+      "club": "Imenes Skytterlag",
+      "shooterId": "212621",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Isak Vågsvoll",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3486081",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Isebella Synnøve Birkeland",
+      "club": "Iveland Skytterlag",
+      "shooterId": "3386711",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ivar Hole",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326156",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ivar Rinde",
+      "club": "Riflen/Skoger Skytterlag",
+      "shooterId": "1237726",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jacob Santos Grinrød",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3118023",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jakob Dalene Lien",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1037266",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Berge",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "559450",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Dalene",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1036763",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Elias Bjørnsen",
+      "club": "Siljan Skytterlag",
+      "shooterId": "2712453",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Fredrik Lian",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3136637",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Kåre Moland",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404194",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jan Vidar Lundtveit",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "404129",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jane Vigemyr Johnsen",
+      "club": "Heddeland og Breland Skytterlag",
+      "shooterId": "1170067",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Janett Solberg",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3378270",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Janne Kornbrekke",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1036755",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarl Stølen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "1553932",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarle Aarhus",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284157",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarle Idland",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "321216",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarle Larsen",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1703016",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarle Lie",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2422442",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jarle Tvinnereim",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1481811",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jenny Aardalen",
+      "club": "Ullensaker Skytterlag",
+      "shooterId": "487421",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jenny Ramse-Aamlid",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3477874",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jenny Øvland",
+      "club": "Iveland Skytterlag",
+      "shooterId": "3383395",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jesper Torp",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3124476",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jo Inge S. Auren",
+      "club": "Spydeberg Skytterlag",
+      "shooterId": "106666",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jo Ivar Løvseth",
+      "club": "Løiten Skytterlag",
+      "shooterId": "998732",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johan Arthur Nygård",
+      "club": "Søgne Skytterlag",
+      "shooterId": "614677",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johan Holen",
+      "club": "Hå Skytterlag",
+      "shooterId": "1323674",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johan Sørli",
+      "club": "Søgne Skytterlag",
+      "shooterId": "1284231",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johannes Hundseid",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "1332204",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johannes Kvelland Stiland",
+      "club": "Holum Skytterlag",
+      "shooterId": "3350907",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johannes Netland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2897205",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johannes Storaker",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3252210",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "John Kjell Lien",
+      "club": "Fyresdal Skyttarlag",
+      "shooterId": "1348127",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "John Steinar Hansen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3217437",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "John Torvald Omland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "3260809",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Johnny Helgesen",
+      "club": "Sarpsborg Skytterlag",
+      "shooterId": "904748",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jon Fjellheim Valbø",
+      "club": "Sannidal Skytterlag",
+      "shooterId": "638445",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jon Olav Jåtun",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627554",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jon Terje Hauger",
+      "club": "Stord Skytterlag",
+      "shooterId": "1337609",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jonas Andersen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3417805",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jonas Fylkesnes",
+      "club": "Stord Skytterlag",
+      "shooterId": "3273091",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jonas Norum",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "2066975",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jonathan Glomsaker",
+      "club": "Holum Skytterlag",
+      "shooterId": "3566890",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jonathan Røinås Haugen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "2953602",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jostein Lian",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3044252",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jostein Myklebust",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326107",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jostein Skalle Lian",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3044252",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Julianne Skallerud Brekke",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3459062",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Julianne Skallerud Brekke",
+      "club": "Råde Skytterlag",
+      "shooterId": "2518751",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Julie K. Tvinnereim",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2410587",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Julie Marie Ottesen",
+      "club": "Aas Skytterlag",
+      "shooterId": "2822708",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "June Røinås Haugen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3314754",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Jørgen Erikson Fylkesnes",
+      "club": "Bremnes Skytterlag",
+      "shooterId": "2678423",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kacper Tarczynski",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3380201",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kai Egil Berntsen",
+      "club": "Froland Skytterlag",
+      "shooterId": "1685007",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Karen-Oline Røyland Jacobsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "971119",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kari Jørgensen",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "2338267",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Karl Alfred Byggstøyl",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "3364163",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Karl Vemmelvik-Holmen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3361631",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Karsten Olav Dæhlen Tønsberg",
+      "club": "Urskog Skytterlag",
+      "shooterId": "2703015",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Karsten Valand",
+      "club": "Grindølen Skytterlag",
+      "shooterId": "1492321",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kasper Gudbrandsen Lie",
+      "club": "Holum Skytterlag",
+      "shooterId": "2671691",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kate Santaya Sornphet Hansen",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "3196557",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kenneth Dahlberg",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2540128",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kenneth Rakkestad",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "1507490",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kenneth Stubstad",
+      "club": "Mandal Skytterlag",
+      "shooterId": "924845",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kim Johan Vemmelvik",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2107456",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kirsten Elin Bergsvik",
+      "club": "Finnøy Skytterlag",
+      "shooterId": "1032036",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kirsten Sørli",
+      "club": "Søgne Skytterlag",
+      "shooterId": "1284249",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Arild Kleivkås",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "627562",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Bang",
+      "club": "Holum Skytterlag",
+      "shooterId": "970590",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Egil Norum",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "377242",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Helge Berge",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2561892",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Ivar Løvbrøtte",
+      "club": "Søndre Land Skytterlag",
+      "shooterId": "2304517",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Stangborli",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326024",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Strand Hovland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "317651",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjell Tore Skarmyr",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "1684992",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjetil Høland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3118056",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjetil jr. Igland",
+      "club": "Imenes Skytterlag",
+      "shooterId": "212035",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kjetil Matre",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "3191350",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Klara Elisabeth K. Tvinnereim",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2799583",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Knut Bråthen",
+      "club": "Kongsberg Skytterlag",
+      "shooterId": "823385",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Knut Homme",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "3035417",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Knut Sverre Mykletun",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3505690",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Krister Engvoll",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1919166",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristi Skår",
+      "club": "Røyken og Hurum Skytterlag",
+      "shooterId": "757815",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristian Fjellheim",
+      "club": "Sannidal Skytterlag",
+      "shooterId": "637470",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristian Netland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2742278",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristian Olsen Lie",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2417731",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristian Sagemoen",
+      "club": "Ugland Skytterlag",
+      "shooterId": "2817328",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristian Storenes",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211508",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristin Krogsgaard Helland",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3164324",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristin Møll",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3389996",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristine Austvoll Gramstad",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3317831",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristoffer Aamdal Flåt",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3462439",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kristoffer Soma",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "563460",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kurt Eirik Bekkevold",
+      "club": "Sørskogbygda Skytterlag",
+      "shooterId": "484253",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kåre Bjørn Morka",
+      "club": "Ugland Skytterlag",
+      "shooterId": "331033",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Kåre Storenes",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211474",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Laila Kristine Tveite",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3345840",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Bugge",
+      "club": "Frogn og Drøbak Skytterlag",
+      "shooterId": "486076",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars David jr Øvrum",
+      "club": "Nannestad Skytterlag",
+      "shooterId": "1500719",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Esse",
+      "club": "Bamble Skytterlag",
+      "shooterId": "1250133",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Jozef Halseid",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3037512",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Kristian Solheim",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "1230861",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Marius Felle",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3175759",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Myrstuen",
+      "club": "Rælingen Skytterlag",
+      "shooterId": "974022",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Næprud",
+      "club": "Lillehammer Skytterlag",
+      "shooterId": "1148691",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Rakkestad",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "1510460",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Skår",
+      "club": "Time Skytterlag",
+      "shooterId": "1669126",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lars Tvedt Iversen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3265931",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lea Frøysaa Eriksen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "2819027",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leander Hobbesland",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3364080",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leander Tønnesen-Skår",
+      "club": "Holum Skytterlag",
+      "shooterId": "3043411",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leiv-Guttorm Olsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3507837",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lene Korsvik Netland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2774164",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lennarth Olsen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "627331",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leo Larsen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3276367",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leon Evensen-Belegu",
+      "club": "Imenes Skytterlag",
+      "shooterId": "3376092",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Leon Parchiniak",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "3401940",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lia Annabelle Solberg",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3364296",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Liam Drange Frandsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3275732",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lillian Levang",
+      "club": "Fyresdal Skyttarlag",
+      "shooterId": "1349786",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lilly Ann Halseid",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3134608",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lilly Genda Bergstøl",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3488475",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Linda Songe",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "3409307",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Linda-Marie Langfjord",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3331519",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Line Rødland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326479",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Line Sjøberg",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3028230",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Linn Stølan Herfoss",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3353489",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lise Marie Noven",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3236502",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lise Tvedt",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3265923",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Liv Kirsti Gabrielsen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "103960",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Logen Lian Fairweather",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3507829",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lukas Kristensen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3048394",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lukas Utne Nesse",
+      "club": "Stord Skytterlag",
+      "shooterId": "2930519",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lukas Wehus",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3557865",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Lydia Tørreseen",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "3486123",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Madelen Svanøe",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3200599",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Magne Lorentzen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "628206",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Magnus Michaelsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3408655",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Magnus Selland Skaiå",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2842193",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Magnus Vik Risnes",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "3431988",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Maja Austvoll Gramstad",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2750776",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Malina Hammer Fjeldstad",
+      "club": "Time Skytterlag",
+      "shooterId": "3464625",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Malvin Røssland Larsen",
+      "club": "Stord Skytterlag",
+      "shooterId": "3246584",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marcus Klepp Bersagel",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3346566",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Margit Undheim",
+      "club": "Time Skytterlag",
+      "shooterId": "3396561",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mari Åsen",
+      "club": "Øvrebø Skytterlag",
+      "shooterId": "3010535",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Maria Krohn",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2647428",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Maria Winsjansen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2434553",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mariann Austvoll",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1327220",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marianne Rossevatn",
+      "club": "Øvre Eiken Skytterlag",
+      "shooterId": "725457",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marie Asbjørnsen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "569889",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marie Brovoll",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3152683",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marie Mørch Lislien",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "834242",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marinius Husa-Brekke",
+      "club": "Holum Skytterlag",
+      "shooterId": "3280914",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marita Kyllingstad Folkvord",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3293131",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marita Midteide",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2910222",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marius Rinde",
+      "club": "Riflen/Skoger Skytterlag",
+      "shooterId": "1554245",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marius Rinde",
+      "club": "Riflen/Skoger Skytterlag",
+      "shooterId": "2818797",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marius Solberg",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3382777",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Markus E. Lie",
+      "club": "Holum Skytterlag",
+      "shooterId": "2543387",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Markus H Solberg",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3019809",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Markus Håbesland Aabel",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3291432",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marselius Hauge",
+      "club": "Holum Skytterlag",
+      "shooterId": "3186053",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marte Natalie Jacobsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "971127",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Marte Nisja Sørli",
+      "club": "Sunndal Skytterlag",
+      "shooterId": "471300",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Martin Hermansen-Ytreøy",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3192523",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Martin Høgsveen",
+      "club": "Porsgrunds Skytterlag",
+      "shooterId": "2891760",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Martin Saxebøl",
+      "club": "Frogn og Drøbak Skytterlag",
+      "shooterId": "385120",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Martin Wathne",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3504420",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mathea Lovise Junge Hauger",
+      "club": "Stord Skytterlag",
+      "shooterId": "2634871",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Matheo Husa-Brekke",
+      "club": "Holum Skytterlag",
+      "shooterId": "3067857",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Matheo Lid",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3248713",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mathias Bø Naas",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3377538",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mathias H. Aabel",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3445434",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mathias S. Havn",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3124930",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mathias Thorgrimsen Marker",
+      "club": "Gjerpen Skytterlag",
+      "shooterId": "2856441",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mats Langfjord",
+      "club": "Mandal Skytterlag",
+      "shooterId": "2621910",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mats Skeivoll",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "2744860",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Max Aaserud Lågstad",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3462314",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Maximillian Bakkane",
+      "club": "Stord Skytterlag",
+      "shooterId": "3561818",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "May Britt Gjerstad",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211383",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "May Elin Frøyland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "968602",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "May Lise Aas",
+      "club": "Bolkesjø Skytterlag",
+      "shooterId": "1129816",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mette Elisabeth Finnestad",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627547",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mie Othilie Bakken-Sløgedal",
+      "club": "Heddeland og Breland Skytterlag",
+      "shooterId": "3410438",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mikkel Bjørnestad Stene",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3020245",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mille Langfjord",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3047529",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Milliam Markussen Haukenes",
+      "club": "Mælum Skytterlag",
+      "shooterId": "3019148",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mina Wårøy Møll",
+      "club": "Holum Skytterlag",
+      "shooterId": "2196210",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Miriam Amalie Pedersen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3363041",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Mona Tveite",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3553138",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Morgan Lindheim",
+      "club": "Klepp Skytterlag",
+      "shooterId": "404186",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Morten Auestad",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3458452",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Morten Larsen Clausen",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3451143",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Morten Lunde",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1325984",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nico Nygård",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3365228",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nikolai Hansen Snesrud",
+      "club": "Ullensaker Skytterlag",
+      "shooterId": "2762797",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nikolai Pedersen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3019940",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nikolai Rinde",
+      "club": "Farsund Skytterlag",
+      "shooterId": "2426377",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nils Edvin Friberg-Stokke",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3512001",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nils Morten Nilsen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3286952",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nils Seldal",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1608108",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Noah Eiken Espelid",
+      "club": "Evje og Hornnes Skytterlag",
+      "shooterId": "3382728",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Noah Holberg",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3282639",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nora Aadland Flatås",
+      "club": "Stord Skytterlag",
+      "shooterId": "2426567",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nora Sofie Kvam",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3471059",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Nora Solberg",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3361441",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Norunn Aa. Strand",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326214",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oda Linnea Røssland Larsen",
+      "club": "Stord Skytterlag",
+      "shooterId": "3278371",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oda Malmin",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3124906",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odd Arild Stava",
+      "club": "Karmøy Skytterlag",
+      "shooterId": "1553999",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odd Frank Olsen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1210087",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odd Kolsrud",
+      "club": "Begnadalen Skyttarlag",
+      "shooterId": "875286",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odd-Arild Bergsagel",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3360559",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odd-Henrik Båtnes",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3456589",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oddbjørn Auglend",
+      "club": "Time Skytterlag",
+      "shooterId": "331769",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oddbjørn Larsen",
+      "club": "Torridal Skytterlag",
+      "shooterId": "1582279",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oddvar Skov-Skov",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "1506294",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odin Honnemyr",
+      "club": "Øvre Eiken Skytterlag",
+      "shooterId": "3263431",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Odin Svela",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2374932",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ola Petter Transet",
+      "club": "Røyken og Hurum Skytterlag",
+      "shooterId": "393884",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ola Tvedt Iversen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3135910",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olaf Parchiniak",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "3401957",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olai Håland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3045754",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olai Lindland Johnsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3465887",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olav Anders Olstad",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "1685171",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olav Måge",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2115616",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olav Ree Sivertsen",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3040318",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole Anders Westby",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "3532157",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole Bjørn Svartangen",
+      "club": "Siljan Skytterlag",
+      "shooterId": "3050150",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole Håkon Eidså",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284017",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole K Netland",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1893122",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole Kristian Håland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "925446",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ole Morten Austvoll Lunde",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1786144",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Olina H. Birkeland",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "2633899",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oliver Seljeskog Høland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "3118064",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Oscar Tveit",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "3514320",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Osmund Norum",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "377176",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ove Steinkjellå",
+      "club": "Karmøy Skytterlag",
+      "shooterId": "325571",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Paul Mjaaland",
+      "club": "Mykland Skytterlag",
+      "shooterId": "739219",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Paul Notto Mikkelsen",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211656",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Paul Vaule",
+      "club": "Hå Skytterlag",
+      "shooterId": "1324409",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Paula Franielle Glemmestad Furholt",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2859486",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Peder Amandus Vanebo-Høyland",
+      "club": "Mykland Skytterlag",
+      "shooterId": "2924231",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Per Christian Berg",
+      "club": "Kråkstad og Ski Skytterlag",
+      "shooterId": "912295",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Per Egil Storsveen",
+      "club": "Løiten Skytterlag",
+      "shooterId": "998526",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Per Sverre Risa",
+      "club": "Time Skytterlag",
+      "shooterId": "332494",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Per Torleiv Tveiten",
+      "club": "Bykle Skyttarlag",
+      "shooterId": "1680545",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Per Tønnes Try",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2760684",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Peter Sørli",
+      "club": "Søgne Skytterlag",
+      "shooterId": "1284256",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Phillip Tjoland",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3294717",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Preben Øidne",
+      "club": "Grindølen Skytterlag",
+      "shooterId": "2545937",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Pål Kristian Kværneng",
+      "club": "Løiten Skytterlag",
+      "shooterId": "998682",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ragnhild Salte Rønneberg",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2531952",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Rasmus Drange",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3285012",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Regine Langbakk",
+      "club": "Gjerpen Skytterlag",
+      "shooterId": "807313",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Reidar Rødne",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2173284",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Reidar Ågedal",
+      "club": "Grindølen Skytterlag",
+      "shooterId": "1492347",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Reidun Oline Foss Nilsen",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "2960102",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Renate Sydtveit Reiten",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3145463",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Reno Alexander Haugen",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3247624",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Rita Guggedal",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1327089",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Roar Engen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2733889",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Roar Torkildsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "1553957",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Robert Larsen",
+      "club": "Råde Skytterlag",
+      "shooterId": "1145473",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Robin Erdal Adanc",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3265972",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ronny Melhus",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "2701639",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Roy Jøran Fredriksen",
+      "club": "Rygge Skytterlag",
+      "shooterId": "1142694",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Roy Oftedal",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "320143",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Runa Rødland Abrahamsen",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3460391",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Runar Tveito",
+      "club": "Lunde Skytterlag",
+      "shooterId": "1077411",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Rune Metveit",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211524",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Rune Stangeland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3292190",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sander Eide Aase",
+      "club": "Hardanger Skyttarlag",
+      "shooterId": "2022358",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sander Gjermundnes",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3265287",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sander Hærum-Syvertsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3364270",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sander Litland",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3127453",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sara Iselin Gauksrud",
+      "club": "Gransherad og Heddal Skyttarlag",
+      "shooterId": "2897221",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sara Josefine Dypedal",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2699429",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sara Josefine Dypedal",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2699429",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Scott Erik Drangsholt",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3247608",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sebastian Antonsen",
+      "club": "Imenes Skytterlag",
+      "shooterId": "2855682",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sebastian Dahlberg",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2185601",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sebastian.K. Dahlberg",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2185601",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Selma Tomine Hobbesland",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3474988",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Severin Karlsen",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3346368",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sigbjørn Undheim",
+      "club": "Time Skytterlag",
+      "shooterId": "332882",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Signe J. D. Stangborli",
+      "club": "Klepp Skytterlag",
+      "shooterId": "2439917",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Signe Sætre",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2825792",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sigrid Margrethe Gandrud Stillingen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3486669",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sigurd Harstad Grødum",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3486503",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sigve Vik",
+      "club": "Odda Skyttarlag",
+      "shooterId": "1390962",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Silje Billy Ottersland Østbøll",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "729913",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Silje Gjesdal",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2824803",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Silje Metveit",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211532",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simen Hillesund Kåfjord",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3486107",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simen Litland",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3502994",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simon Gerhard Simonsen",
+      "club": "Karmøy Skytterlag",
+      "shooterId": "323410",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simon Myhren",
+      "club": "Spydeberg Skytterlag",
+      "shooterId": "2492908",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simon Sirekrok",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2626174",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simon Skeivoll",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3401080",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Simon Vesterbæk Skeivoll",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3401080",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sindre Svalebjørg Slokvik",
+      "club": "Sauherad Skytterlag",
+      "shooterId": "3176401",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sissel Taanevig",
+      "club": "Mandal Skytterlag",
+      "shooterId": "1553874",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Siv Tone Rossevatn Forgard",
+      "club": "Øvre Eiken Skytterlag",
+      "shooterId": "724781",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Snorre Tanem",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "3000692",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sofie Skarpeid",
+      "club": "Øvrebø Skytterlag",
+      "shooterId": "3010527",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sokrates Vasby",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3295821",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sol Solberg Løvdal",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3515186",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Solveig Engvoll",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2223683",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Stein Feyling Østbøll",
+      "club": "Birkenes Skytterlag",
+      "shooterId": "726364",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Stein Taanevig",
+      "club": "Mandal Skytterlag",
+      "shooterId": "1554013",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Steinar Norum",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "377259",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Steinar Skoland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "968594",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Steinar Skorpa",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "561993",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Steinar Syvertsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "1555788",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Stian Rustøen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3147691",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Stian Voje",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2634020",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Stig-Andre Gauksrud",
+      "club": "Gransherad og Heddal Skyttarlag",
+      "shooterId": "3276128",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ståle Kloster",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1660901",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Svein Brødsjø",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2954857",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Svein Jåtun",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284355",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Svein Kå. Søyland",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "317701",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Svein M Hellevik",
+      "club": "Egersund Skytterlag",
+      "shooterId": "767947",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Svein Magne Stokkevåg",
+      "club": "Vindafjord Skytterlag",
+      "shooterId": "584615",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sven Inge Ødegård",
+      "club": "Time Skytterlag",
+      "shooterId": "332932",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sverre Brovoll",
+      "club": "Oslo Østre Skytterlag",
+      "shooterId": "485896",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sverre Jacobsen",
+      "club": "Holum Skytterlag",
+      "shooterId": "104307",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sverre Jacosben",
+      "club": "Holum Skytterlag",
+      "shooterId": "104307",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Sylvester Daniel  Gjelsås Bjorå",
+      "club": "Søgne Skytterlag",
+      "shooterId": "3503984",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tallak Christoffersen Rosåsen",
+      "club": "Farsund Skytterlag",
+      "shooterId": "3480878",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Teo-Andrei Ørting",
+      "club": "Notodden Skytterlag",
+      "shooterId": "3267259",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje Allum",
+      "club": "Siljan Skytterlag",
+      "shooterId": "2028645",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje G. Pleym Iversen",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "933788",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje Grøterud",
+      "club": "Sigdal Skytterlag",
+      "shooterId": "830307",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje Høyland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "2627008",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje Høyland",
+      "club": "Time Skytterlag",
+      "shooterId": "332221",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Terje Nisja",
+      "club": "Sunndal Skytterlag",
+      "shooterId": "469338",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thea Askland Terjesen",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3149945",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thea Vorland",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3343506",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thomas Andreassen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3362506",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thomas Berge",
+      "club": "Laudal Skytterlag",
+      "shooterId": "2498731",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thomas Mong",
+      "club": "Egersund Skytterlag",
+      "shooterId": "768523",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thomas Vemmelvik-Holmen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2498244",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thor Høgsveen",
+      "club": "Porsgrunds Skytterlag",
+      "shooterId": "1207521",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thor Inge Levang",
+      "club": "Fyresdal Skyttarlag",
+      "shooterId": "1349042",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thor Jakob Grødum Homme",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3504289",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thor Vigre",
+      "club": "Imenes Skytterlag",
+      "shooterId": "211664",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thorbjørn Samland",
+      "club": "Skånevik Skyttarlag",
+      "shooterId": "1702141",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Thore Hynne",
+      "club": "Kråkstad og Ski Skytterlag",
+      "shooterId": "912956",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tiffany Talulah Mccombie",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3307238",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tiril Ramse Aamlid",
+      "club": "Dølemo Skyttarlag",
+      "shooterId": "3270832",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tiril Stølan Herfoss",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3367067",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tobias Aasen",
+      "club": "Holum Skytterlag",
+      "shooterId": "3384708",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tobias Lie",
+      "club": "Holum Skytterlag",
+      "shooterId": "2420198",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tom Nyhaven",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627679",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tom Sørdalen",
+      "club": "Tørdal Skytterlag",
+      "shooterId": "2107910",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tom Wårøy",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "2592392",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tomine Bjørkestøl Rislå",
+      "club": "Lillesand Skytterlag",
+      "shooterId": "3291614",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tomine Hermansen-Ytrøy",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3270238",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Arnfinn Homme",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1037159",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Edvard Bringsdal",
+      "club": "Holum Skytterlag",
+      "shooterId": "2170074",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Erlend Gudbrands",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3184520",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Fasseland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "924902",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Harald Lund",
+      "club": "Søgne Skytterlag",
+      "shooterId": "627539",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Henning Post",
+      "club": "Ugland Skytterlag",
+      "shooterId": "328153",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Ivan Torsvik",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2839058",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Jarle Nystuen",
+      "club": "Nøtterø Skytterlag",
+      "shooterId": "1154459",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tor Vetle Hanserud",
+      "club": "Søgne Skytterlag",
+      "shooterId": "766758",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torbjørn Dragland",
+      "club": "Lyngdal Skytterlag",
+      "shooterId": "968701",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torbjørn Nervik",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "933895",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torbjørn Sirekrok",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2648913",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torbjørn Slettedal",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3035276",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torbjørn Tørnes Naas",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "2632024",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tore Allum",
+      "club": "Siljan Skytterlag",
+      "shooterId": "414441",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tore Byberg",
+      "club": "Mandal Skytterlag",
+      "shooterId": "474288",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tore Indreiten",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "566950",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tore Nedland",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "932285",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tore Rødland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1326461",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torgeir Jåtun",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "1284371",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torgeir Pleym Iversen",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "933796",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torgeir W Lia",
+      "club": "Gransherad og Heddal Skyttarlag",
+      "shooterId": "260646",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torjus Idland",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3019825",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torleik Auglend",
+      "club": "Time Skytterlag",
+      "shooterId": "331785",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tormod Brovoll",
+      "club": "Ugland Skytterlag",
+      "shooterId": "3254760",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tormod Måge",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "1929199",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torunn Rønning",
+      "club": "Rennebu Skytterlag",
+      "shooterId": "2419273",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Torvald Velde",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "3271145",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Triana Svendsen Kvidbergskår",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3252202",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Trine Byggstøyl",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2362812",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tron Bjerkreim",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "320283",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Trond Inge Rødland",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1325976",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Trond Lønberg",
+      "club": "Eidsberg Skytterlag",
+      "shooterId": "1142785",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Trond Saksvik",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "932368",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Troy Taner Øygarden",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3124393",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Truls Gunnar Håland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "926014",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Truls Håland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "926014",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Trym Andreas Strand",
+      "club": "Drangedal Skytterlag",
+      "shooterId": "3401049",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Turid Aina Andersen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "1613025",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Turid Lien",
+      "club": "Løiten Skytterlag",
+      "shooterId": "3498086",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Tuva Eskeland",
+      "club": "Stord Skytterlag",
+      "shooterId": "2429025",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ulf Larsen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "2795748",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ulrik Myhren Stephensen",
+      "club": "Ugland Skytterlag",
+      "shooterId": "2919553",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ulrik-Olai Homme Hagen",
+      "club": "Vennesla Skytterlag",
+      "shooterId": "3563533",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vebjørn Bringsdal",
+      "club": "Holum Skytterlag",
+      "shooterId": "3183985",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vegard Glemmestad Furholt",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "620963",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vetle Lorang Andersen",
+      "club": "Søgne Skytterlag",
+      "shooterId": "2948081",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vetle Sand",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3258423",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vidar Haugeplass",
+      "club": "Aurland Skyttarlag",
+      "shooterId": "941419",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vidar Kvalevåg",
+      "club": "Haugesund og Sveio Skyttarlag",
+      "shooterId": "2416782",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vidar Kåsene",
+      "club": "Tørdal Skytterlag",
+      "shooterId": "1211556",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Viggo Hanssen",
+      "club": "Heddeland og Breland Skytterlag",
+      "shooterId": "1170570",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Viggo Tønnesland",
+      "club": "Lindesnes Skytterlag",
+      "shooterId": "379354",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Viktoria Haga Øvrevik",
+      "club": "Gann Skytterlag",
+      "shooterId": "2390995",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Viktoria Haga Øvrevik",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "2390995",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vilde Dalva Revheim",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3135886",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vilde Eiken Espelid",
+      "club": "Evje og Hornnes Skytterlag",
+      "shooterId": "3488228",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vilde Gausdal Andreassen",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "3354651",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Vilde Håland",
+      "club": "Mandal Skytterlag",
+      "shooterId": "3169182",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Wenche Belsvik",
+      "club": "Egersund Skytterlag",
+      "shooterId": "1607753",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Wenche Reppen",
+      "club": "Stavanger Skytterlag",
+      "shooterId": "3427184",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Wiktoria Korsfur Båtnes",
+      "club": "Gjesdal Skytterlag",
+      "shooterId": "3361425",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "William Tjoland",
+      "club": "Greipstad Skytterlag",
+      "shooterId": "3294683",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ådne Jenssen",
+      "club": "Mandal Skytterlag",
+      "shooterId": "926170",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ådne Kleiv von Haffenbrädl",
+      "club": "Mælum Skytterlag",
+      "shooterId": "3468568",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Ånen Horneland",
+      "club": "Stord Skytterlag",
+      "shooterId": "3155173",
+      "source": "https://sorlandskula.one/sammenlagt/2024/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Øystein Matre",
+      "club": "Fikse Skyttarlag",
+      "shooterId": "2126225",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Øyvind Guggedal",
+      "club": "Klepp Skytterlag",
+      "shooterId": "1327097",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Øyvind Lilledrange",
+      "club": "Flikka Skytterlag",
+      "shooterId": "950139",
+      "source": "https://sorlandskula.one/sammenlagt/2026/index?view=sammenlagt&klasse=ALLE"
+    },
+    {
+      "shooter": "Øyvind Versto",
+      "club": "Kristiansand og Omegn Skytterlag",
+      "shooterId": "2252088",
+      "source": "https://sorlandskula.one/sammenlagt/2025/index?view=sammenlagt&klasse=ALLE"
+    }
+  ]
+}

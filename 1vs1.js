@@ -11,6 +11,36 @@ function shooterIdentity(result) {
   return `${result.shooter}\u0000${result.clubId || result.club || ""}`;
 }
 
+function profileIdentity(name, club) {
+  const normalize = value => value.normalize("NFC").trim().replace(/\s+/g, " ").toLocaleLowerCase("nb");
+  return `${normalize(name)}\u0000${normalize(club).replace(/\s+skytterlag$/, "")}`;
+}
+
+function matchShooterProfiles(shooters, profiles) {
+  const idsByIdentity = new Map();
+  for (const profile of profiles) {
+    if (typeof profile.shooter !== "string" || typeof profile.club !== "string" ||
+      typeof profile.shooterId !== "string" || !/^[1-9]\d*$/.test(profile.shooterId)) {
+      throw new Error("Ugyldig skytterprofil.");
+    }
+    const key = profileIdentity(profile.shooter, profile.club);
+    if (!idsByIdentity.has(key)) idsByIdentity.set(key, new Set());
+    idsByIdentity.get(key).add(profile.shooterId);
+  }
+  const identityCounts = new Map();
+  for (const shooter of shooters) {
+    const key = profileIdentity(shooter.name, shooter.club);
+    identityCounts.set(key, (identityCounts.get(key) || 0) + 1);
+  }
+  const matches = new Map();
+  for (const shooter of shooters) {
+    const key = profileIdentity(shooter.name, shooter.club);
+    const ids = idsByIdentity.get(key);
+    if (identityCounts.get(key) === 1 && ids?.size === 1) matches.set(shooter.id, [...ids][0]);
+  }
+  return matches;
+}
+
 function compareShooters(data, first, second, series) {
   const events = new Map(data.events.filter(event => event.type === "Inne").map(event => [event.id, event]));
   const scores = new Map([[first.id, new Map()], [second.id, new Map()]]);
@@ -62,10 +92,13 @@ if (typeof document !== "undefined") {
   const comparison = document.getElementById("comparison");
   const updated = document.getElementById("updated");
   const coverage = document.getElementById("coverage");
+  const profileStatus = document.getElementById("profile-status");
   const number = new Intl.NumberFormat("nb-NO");
   let data;
   let shootersByLabel = new Map();
   let archiveStatus = "";
+  let profileIds = new Map();
+  let displayedShooters;
 
   function makeShooterList(results) {
     const shooters = new Map();
@@ -99,8 +132,28 @@ if (typeof document !== "undefined") {
     const avatar = document.createElement("div");
     avatar.className = "duell-avatar";
     avatar.setAttribute("role", "img");
-    avatar.setAttribute("aria-label", `Avatar for ${shooter.name}, shown with initials`);
+    avatar.setAttribute("aria-label", `Initialar for ${shooter.name}`);
     avatar.textContent = initials;
+    const shooterId = profileIds.get(shooter.id);
+    const identity = document.createElement("span");
+    identity.className = "shooter-id";
+    identity.textContent = shooterId ? `Skytter-ID: ${shooterId} · Hentar bilete...` : "Skytter-ID ikkje funnen";
+    if (shooterId) {
+      const photo = document.createElement("img");
+      photo.alt = `Portrett av ${shooter.name}`;
+      photo.decoding = "async";
+      photo.addEventListener("load", () => {
+        avatar.replaceChildren(photo);
+        avatar.removeAttribute("role");
+        avatar.removeAttribute("aria-label");
+        identity.textContent = `Skytter-ID: ${shooterId}`;
+      }, { once: true });
+      photo.addEventListener("error", () => {
+        identity.textContent = `Skytter-ID: ${shooterId} · Bilete ikkje tilgjengeleg`;
+        console.warn(`Kunne ikkje laste profilbilete for skytter-ID ${shooterId}.`);
+      }, { once: true });
+      photo.src = `https://skytterbilder.no/bilder/${shooterId}.jpg`;
+    }
     const name = document.createElement("span");
     name.className = "shooter-name";
     name.textContent = shooter.name;
@@ -109,11 +162,11 @@ if (typeof document !== "undefined") {
     club.textContent = shooter.club;
     const search = document.createElement("a");
     search.className = "shooter-search";
-    search.href = `https://lsres.no/search/?s=${encodeURIComponent(shooter.name)}`;
+    search.href = shooterId ? `https://lsres.no/shooter/${shooterId}` : `https://lsres.no/search/?s=${encodeURIComponent(shooter.name)}`;
     search.target = "_blank";
     search.rel = "noopener noreferrer";
     search.textContent = "Sjå i Results";
-    target.append(avatar, name, club, search);
+    target.append(avatar, name, club, identity, search);
   }
 
   function seriesRow(first, second, series, result) {
@@ -161,6 +214,7 @@ if (typeof document !== "undefined") {
   }
 
   function renderComparison(first, second) {
+    displayedShooters = [first, second];
     shooterCard(document.getElementById("first-card"), first);
     shooterCard(document.getElementById("second-card"), second);
     const container = document.getElementById("series-results");
@@ -201,9 +255,26 @@ if (typeof document !== "undefined") {
       archiveStatus = `Søk blant ${number.format(shootersByLabel.size)} skyttarar · ${number.format(loaded.events.length)} innandørsstevner i arkivet${archiveAvailable && loaded.complete ? "" : " · Ufullstendig arkiv"}`;
       status.textContent = archiveStatus;
       submit.disabled = false;
+      await loadProfiles();
     } catch (error) {
       status.className = "error";
       status.textContent = "Kunne ikkje hente arkivet. Prøv igjen seinare.";
+      profileStatus.textContent = "Skytterprofilar vart ikkje lasta.";
+      console.error(error);
+    }
+  }
+
+  async function loadProfiles() {
+    try {
+      const response = await fetch("data/shooter_profiles.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Skytterprofilar: HTTP ${response.status}`);
+      const loaded = await response.json();
+      if (!Array.isArray(loaded.profiles)) throw new Error("Ugyldig profilregister.");
+      profileIds = matchShooterProfiles([...shootersByLabel.values()], loaded.profiles);
+      profileStatus.textContent = `Skytter-ID funnen for ${number.format(profileIds.size)} skyttarar. Initialar blir viste når ID eller bilete manglar.`;
+      if (!comparison.hidden && displayedShooters) renderComparison(...displayedShooters);
+    } catch (error) {
+      profileStatus.textContent = "Kunne ikkje hente skytter-ID-ar. Viser initialar i staden for bilete.";
       console.error(error);
     }
   }
