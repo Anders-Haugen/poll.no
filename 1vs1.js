@@ -13,7 +13,7 @@ function shooterIdentity(result) {
 
 function profileIdentity(name, club) {
   const normalize = value => value.normalize("NFC").trim().replace(/\s+/g, " ").toLocaleLowerCase("nb");
-  return `${normalize(name)}\u0000${normalize(club).replace(/\s+skytterlag$/, "")}`;
+  return `${normalize(name)}\u0000${normalize(club).replace(/\s+skytt(?:er|ar)lag$/, "")}`;
 }
 
 function matchShooterProfiles(shooters, profiles) {

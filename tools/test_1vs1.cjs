@@ -26,6 +26,14 @@ test("conflicting IDs and duplicate local identities are not linked", () => {
   assert.equal(matchShooterProfiles([shooter], [profile, profile]).get("local"), "123");
 });
 
+test("matches Skyttarlag as well as Skytterlag without relaxing club identity", () => {
+  const nynorsk = { ...profile, club: "Test Skyttarlag" };
+  assert.equal(matchShooterProfiles([shooter], [nynorsk]).get("local"), "123");
+  assert.equal(matchShooterProfiles([{ ...shooter, club: "Test Skytterlag" }], [nynorsk]).get("local"), "123");
+  assert.equal(matchShooterProfiles([shooter], [nynorsk, { ...profile, shooterId: "456" }]).size, 0);
+  assert.equal(matchShooterProfiles([shooter], [{ ...nynorsk, club: "Other Skyttarlag" }]).size, 0);
+});
+
 test("invalid IDs are rejected rather than used as image or link URLs", () => {
   for (const shooterId of ["", "0", "../image", "123.jpg", 123]) {
     assert.throws(() => matchShooterProfiles([shooter], [{ ...profile, shooterId }]), /Ugyldig skytterprofil/);

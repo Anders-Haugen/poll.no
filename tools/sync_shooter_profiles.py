@@ -18,7 +18,7 @@ SOURCES = tuple(
 def profile_key(profile):
     name = " ".join(unicodedata.normalize("NFC", profile["shooter"]).lower().split())
     club = " ".join(unicodedata.normalize("NFC", profile["club"]).lower().split())
-    return name, re.sub(r"\s+skytterlag$", "", club)
+    return name, re.sub(r"\s+skytt(?:er|ar)lag$", "", club)
 
 
 def parse_profiles(page, source):

@@ -81,9 +81,9 @@ Til-dato er som standard dagens dato i norsk tid, avgrensa til sesongen.
 25 skot, 15-skotserie og 10-skotserie. Eit stevne tel ein gong per øving;
 høgast poengsum vinn, og for 25- og 35-skot tel innertreff ved like poeng.
 Namn og skytterlag blir brukte som identitet. `data/shooter_profiles.json`
-koplar namn og lag til offentlege skytter-ID-ar frå Sørlandskula 2024–2026
-og manuelt stadfesta Results-profilar. Berre eintydige treff på både namn
-og lag blir kopla; avsluttande «Skytterlag» og ulik bokstavstorleik blir
+koplar namn og lag til offentlege skytter-ID-ar frå Sørlandskula 2024–2026,
+Norgescupen 2026 og manuelt stadfesta Results-profilar. Berre eintydige treff på både namn
+og lag blir kopla; avsluttande «Skytterlag»/«Skyttarlag» og ulik bokstavstorleik blir
 ignorerte. Historiske lagsbyte og namnendringar blir ikkje gjetta.
 ID-en blir vist under namnet, og bileta blir lasta direkte frå
 `https://skytterbilder.no/bilder/<skytter-id>.jpg`, med DFS som fotokjelde.
@@ -94,6 +94,11 @@ Oppdater profilregisteret med `python tools/sync_shooter_profiles.py`.
 Scriptet hentar dei tre offentlege «Vis alle deltakere»-listene utan
 innlogging og bevarer eksisterande koplingar, inkludert manuelt stadfesta
 oppføringar med kjelde-URL. Feil under innhenting bevarer eksisterande fil.
+Oppføringane frå Norgescupen er eit manuelt innhenta uttrekk av offentleg
+viste namn, lag og bilete-ID-ar frå bane-samanlagtlista (klasse 3–5 og veteranar).
+Søkefilteret viser bilete også for skyttarar utanfor dei første 50 i totallista.
+Desse koplingane blir bevarte ved synk, men Norgescupen blir ikkje henta
+automatisk av scriptet. Manglande bilete eller ID-ar i kjelda blir ikkje gjetta.
 Motstridande ID-ar blir bevarte som tvitydige og ikkje kopla på sida.
 Dette dekkjer ikkje alle skyttarar i DFS-arkivet. Ingen bilete blir kopierte
 til repoet, og ingen Results-token blir brukte.

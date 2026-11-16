@@ -58,6 +58,17 @@ class ShooterProfileTests(unittest.TestCase):
                     sync()
             self.assertEqual(output.read_text(encoding="utf-8"), previous)
 
+    def test_merge_normalizes_both_club_suffixes_and_keeps_conflicts(self):
+        original = {"shooter": "Test", "club": "Test", "shooterId": "123", "source": SOURCE}
+        variants = [
+            {**original, "club": "Test Skytterlag"},
+            {**original, "club": "Test Skyttarlag"},
+        ]
+        self.assertEqual(len(merge_profiles([original], variants)), 1)
+        conflict = {**original, "club": "Test Skyttarlag", "shooterId": "456"}
+        other_club = {**original, "club": "Other Skyttarlag"}
+        self.assertEqual(len(merge_profiles([original], [*variants, conflict, other_club])), 3)
+
 
 if __name__ == "__main__":
     unittest.main()
