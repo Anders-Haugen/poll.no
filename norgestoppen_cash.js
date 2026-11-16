@@ -25,7 +25,9 @@ function rankCashResults(data, filters) {
       medals: best.filter(result => result.medal).length,
       gold: best.filter(result => result.medal?.toLocaleLowerCase("nb").includes("gylt")).length,
     };
-    const total = totals[filters.mode];
+    const total = filters.mode === "money" && filters.hourly
+      ? totals.money / (awards.size * 40 / 60)
+      : totals[filters.mode];
     if (!total) continue;
     rows.push({
       shooter: best[0].shooter,
@@ -47,11 +49,12 @@ function rankCashResults(data, filters) {
 if (typeof module !== "undefined") module.exports = { rankCashResults };
 
 if (typeof document !== "undefined") {
-  const controls = Object.fromEntries(["mode", "class", "club", "from", "to", "search", "limit"].map(id => [id, document.getElementById(id)]));
+  const controls = Object.fromEntries(["mode", "class", "club", "from", "to", "search", "limit", "hourly"].map(id => [id, document.getElementById(id)]));
   const status = document.getElementById("status");
   const tbody = document.getElementById("results");
   const refresh = document.getElementById("refresh");
   const number = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 0 });
+  const hourlyRate = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 1 });
   const currency = new Intl.NumberFormat("nb-NO", { style: "currency", currency: "NOK", maximumFractionDigits: 0 });
   const dateParts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
     timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit",
@@ -94,6 +97,7 @@ if (typeof document !== "undefined") {
       return;
     }
     const filters = Object.fromEntries(Object.entries(controls).map(([key, control]) => [key, control.value]));
+    filters.hourly = controls.hourly.checked;
     filters.limit = Number(filters.limit);
     const rows = rankCashResults(data, filters);
     const fragment = document.createDocumentFragment();
@@ -112,11 +116,16 @@ if (typeof document !== "undefined") {
         details.append(summary, ...result.best.map(eventLink));
         eventCell.append(details);
       }
-      addCell(row, controls.mode.value === "money" ? currency.format(result.total) : number.format(result.total));
+      addCell(row, controls.mode.value === "money"
+        ? controls.hourly.checked ? `${hourlyRate.format(result.total)} kr/h` : currency.format(result.total)
+        : number.format(result.total));
       fragment.append(row);
     }
     tbody.replaceChildren(fragment);
-    document.getElementById("total-heading").textContent = controls.mode.value === "money" ? "Premiepengar" : controls.mode.value === "gold" ? "Gylte medaljar" : "Medaljar";
+    document.getElementById("hourly-filter").hidden = controls.mode.value !== "money";
+    document.getElementById("total-heading").textContent = controls.mode.value === "money"
+      ? controls.hourly.checked ? "Timesbetaling (kr/h)" : "Premiepengar"
+      : controls.mode.value === "gold" ? "Gylte medaljar" : "Medaljar";
     document.getElementById("empty").hidden = rows.length > 0;
     const eventIds = new Set(data.events.filter(event => event.date >= filters.from && event.date <= filters.to).map(event => event.id));
     const resultEventIds = new Set(data.results.filter(result => result.exercise === "main" && eventIds.has(result.eventId)).map(result => result.eventId));

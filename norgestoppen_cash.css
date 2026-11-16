@@ -6,3 +6,11 @@
 .norgestoppen-cash-page .resultat-tabell td:nth-child(5) { min-width: 180px; max-width: 300px; }
 .norgestoppen-cash-page .resultat-tabell details p { margin: .45rem 0; }
 .norgestoppen-cash-page .resultat-tabell details small { color: #666; }
+.norgestoppen-cash-page .cash-hourly-filter { display: flex; align-items: center; gap: .45rem; }
+.norgestoppen-cash-page .cash-hourly-filter[hidden] { display: none; }
+.norgestoppen-cash-page .cash-hourly-filter label { flex-direction: row; align-items: center; gap: .35rem; cursor: pointer; }
+.norgestoppen-cash-page .cash-hourly-filter input { width: auto; margin: 0; accent-color: #174f42; }
+.norgestoppen-cash-page .cash-hourly-help { position: relative; font-size: .75rem; }
+.norgestoppen-cash-page .cash-hourly-help summary { display: grid; place-items: center; width: 1rem; height: 1rem; border: 1px solid #777; border-radius: 50%; color: #555; cursor: pointer; font-size: .65rem; line-height: 1; }
+.norgestoppen-cash-page .cash-hourly-help summary::-webkit-details-marker { display: none; }
+.norgestoppen-cash-page .cash-hourly-help p { position: absolute; z-index: 1; top: 100%; left: 0; width: 15rem; margin: .35rem 0 0; padding: .6rem; border: 1px solid #bbb; border-radius: 4px; background: #fff; color: #333; font-size: .72rem; font-weight: 400; box-shadow: 0 2px 6px #0002; }
