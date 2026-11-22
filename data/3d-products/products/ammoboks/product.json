@@ -1,0 +1,17 @@
+{
+  "id": "ammoboks",
+  "slug": "ammoboks",
+  "name": "Ammoboks for 6,5",
+  "description": "Boks utan lokk for 6,5-ammunisjon. Størrelse kan tilpassast.",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [
+    "ammo"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/ammoboks/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

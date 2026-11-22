@@ -1,22 +1,74 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-29",
+  "updatedAt": "2026-11-22",
   "products": [
     {
-      "id": "magasinbunn-engbo-22",
-      "meta": "data/3d-products/products/magasinbunn-engbo-22/product.json"
+      "id": "ammoboks",
+      "meta": "data/3d-products/products/ammoboks/product.json"
     },
     {
-      "id": "hullkorn-hjerte",
-      "meta": "data/3d-products/products/hullkorn-hjerte/product.json"
+      "id": "diskstativ",
+      "meta": "data/3d-products/products/diskstativ/product.json"
+    },
+    {
+      "id": "framsiktebeskyttar",
+      "meta": "data/3d-products/products/framsiktebeskyttar/product.json"
+    },
+    {
+      "id": "hevarmskule",
+      "meta": "data/3d-products/products/hevarmskule/product.json"
+    },
+    {
+      "id": "hullkorn",
+      "meta": "data/3d-products/products/hullkorn/product.json"
+    },
+    {
+      "id": "hurtiglade-boks-22",
+      "meta": "data/3d-products/products/hurtiglade-boks-22/product.json"
+    },
+    {
+      "id": "hurtiglader-22",
+      "meta": "data/3d-products/products/hurtiglader-22/product.json"
+    },
+    {
+      "id": "hylsebrett",
+      "meta": "data/3d-products/products/hylsebrett/product.json"
+    },
+    {
+      "id": "kinnstøtteforhøgar",
+      "meta": "data/3d-products/products/kinnstøtteforhøgar/product.json"
     },
     {
       "id": "kolbeforlenger",
       "meta": "data/3d-products/products/kolbeforlenger/product.json"
     },
     {
-      "id": "diskstativ",
-      "meta": "data/3d-products/products/diskstativ/product.json"
+      "id": "løpvektsholder",
+      "meta": "data/3d-products/products/løpvektsholder/product.json"
+    },
+    {
+      "id": "magasinbunn-65",
+      "meta": "data/3d-products/products/magasinbunn-65/product.json"
+    },
+    {
+      "id": "magasinbunn-engbo-22",
+      "meta": "data/3d-products/products/magasinbunn-engbo-22/product.json"
+    },
+    {
+      "id": "magasinbunn-sauer-22",
+      "meta": "data/3d-products/products/magasinbunn-sauer-22/product.json"
+    },
+    {
+      "id": "magasinholder-65",
+      "meta": "data/3d-products/products/magasinholder-65/product.json"
+    },
+    {
+      "id": "sinnataggen-magasin",
+      "meta": "data/3d-products/products/sinnataggen-magasin/product.json"
+    },
+    {
+      "id": "sluttstykkeholder-22",
+      "meta": "data/3d-products/products/sluttstykkeholder-22/product.json"
     },
     {
       "id": "sluttstykkeholder-65",

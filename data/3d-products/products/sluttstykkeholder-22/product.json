@@ -1,0 +1,19 @@
+{
+  "id": "sluttstykkeholder-22",
+  "slug": "sluttstykkeholder-22",
+  "name": "Sluttstykkeholder 22",
+  "description": "Holder for å spenne ned og beskytte sluttstykket.",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [
+    "sluttstykke"
+  ],
+  "images": [
+    "data/3d-products/products/sluttstykkeholder-22/images/sluttstykkeholder_22_render.png"
+  ],
+  "stl": {
+    "file": "data/3d-products/products/sluttstykkeholder-22/models/Sluttstykkerør_22_utan_navn.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

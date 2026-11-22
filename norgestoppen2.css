@@ -30,5 +30,13 @@
 .resultat-empty { padding: 2.5rem 0; text-align: center; color: #666; }
 .resultat-source { border-top: 1px solid #ddd; margin-top: 1.5rem; padding-top: 1rem; font-size: .75rem; color: #777; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.cash-hourly-filter { display: flex; align-items: center; gap: .45rem; }
+.cash-hourly-filter[hidden] { display: none; }
+.cash-hourly-filter label { flex-direction: row; align-items: center; gap: .35rem; cursor: pointer; }
+.cash-hourly-filter input { width: auto; margin: 0; accent-color: #174f42; }
+.cash-hourly-help { position: relative; font-size: .75rem; }
+.cash-hourly-help summary { display: grid; place-items: center; width: 1rem; height: 1rem; border: 1px solid #777; border-radius: 50%; color: #555; cursor: pointer; font-size: .65rem; line-height: 1; }
+.cash-hourly-help summary::-webkit-details-marker { display: none; }
+.cash-hourly-help p { position: absolute; z-index: 1; top: 100%; left: 0; width: 15rem; margin: .35rem 0 0; padding: .6rem; border: 1px solid #bbb; border-radius: 4px; background: #fff; color: #333; font-size: .72rem; font-weight: 400; box-shadow: 0 2px 6px #0002; }
 @media (max-width: 800px) { .resultat-filter { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .norgestoppen { padding: 0 1rem; margin-top: 1.5rem; } .resultat-heading { align-items: flex-start; flex-direction: column; } .resultat-heading h2 { font-size: 1.4rem; } .resultat-filter { gap: .8rem; } }

@@ -1,0 +1,15 @@
+{
+  "id": "sinnataggen-magasin",
+  "slug": "sinnataggen-magasin",
+  "name": "Sinnataggen Magasin",
+  "description": "Mjukt magasin du kan bruke for å få ut frustrasjon.",
+  "priceNok": 100,
+  "category": "skyting",
+  "tags": [],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/sinnataggen-magasin/models/Rage-magasin.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

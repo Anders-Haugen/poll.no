@@ -1,0 +1,17 @@
+{
+  "id": "hurtiglade-boks-22",
+  "slug": "hurtiglade-boks-22",
+  "name": "Hurtiglade-boks 22",
+  "description": "Lyfter annakvart skot så det er enklare å få tak.",
+  "priceNok": 50,
+  "category": "skyting",
+  "tags": [
+    "ammo"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/hurtiglade-boks-22/models/Hurtigladeboks.STL",
+    "units": "mm"
+  },
+  "status": "active"
+}

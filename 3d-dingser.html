@@ -220,11 +220,6 @@
       line-height: 1.45;
     }
 
-    .price {
-      font-weight: 700;
-      color: #222;
-    }
-
     .card-actions {
       margin-top: auto;
       display: grid;
@@ -379,6 +374,27 @@
       position: relative;
     }
 
+    .card-stl-fallback {
+      min-height: 240px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #e0e0e0;
+      background: linear-gradient(135deg, #edf3f7, #dce7ef);
+      color: #31526b;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .modal-no-image {
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #e0e0e0;
+      background: linear-gradient(135deg, #edf3f7, #dce7ef);
+      color: #31526b;
+      text-align: center;
+    }
+
     /* footer handled by style.css */
 
     @media (max-width: 860px) {
@@ -409,6 +425,7 @@
   <nav>
     <a href="index.html">Framsida</a>
     <a href="norgestoppen2.html">Norgestoppen2</a>
+    <a href="3d-dingser.html" class="aktiv">3D-dingser</a>
     <a href="hardetvorteskote350påls.html">350 i klasse 3-5?</a>
     <a href="memes.html">Memes</a>
   </nav>
@@ -447,7 +464,7 @@
       <article class="gallery">
         <h2 id="modal-title"></h2>
         <p id="modal-desc" class="desc"></p>
-        <p id="modal-price" class="price"></p>
+        <div id="modal-no-image" class="modal-no-image" hidden></div>
         <div class="image-stage" id="modal-image-stage">
           <button id="previous-image" class="image-nav previous" type="button" aria-label="Førre bilete">&#8592;</button>
           <img id="modal-main-image" src="" alt="Produktbilete" />
@@ -493,7 +510,7 @@
     const modalEl = document.getElementById("product-modal");
     const modalTitleEl = document.getElementById("modal-title");
     const modalDescEl = document.getElementById("modal-desc");
-    const modalPriceEl = document.getElementById("modal-price");
+    const modalNoImageEl = document.getElementByById("modal-no-image");
     const modalMainImageEl = document.getElementById("modal-main-image");
     const modalThumbsEl = document.getElementById("modal-thumbs");
     const modalImageStageEl = document.getElementById("modal-image-stage");
@@ -692,17 +709,23 @@
         const images = product.images || [];
         const previewImage = images[0] || "";
         const hasStl = Boolean(product.stl && product.stl.file);
+        const mediaHtml = previewImage
+          ? `
+            <div class="card-image-stage${images.length > 1 ? " has-navigation" : ""}">
+              <button class="image-nav previous card-previous" type="button" aria-label="Førre bilete">&#8592;</button>
+              <img class="card-image" src="${previewImage}" alt="${product.name}" loading="lazy" />
+              <button class="image-nav next card-next" type="button" aria-label="Neste bilete">&#8594;</button>
+            </div>
+          `
+          : hasStl
+            ? '<div class="card-image-stage card-stl-fallback">Ingen bilete — vis STL-modell i 3D</div>'
+            : '<div class="card-image-stage card-stl-fallback">Ingen bilete eller STL-modell</div>';
 
         card.innerHTML = `
-          <div class="card-image-stage${images.length > 1 ? " has-navigation" : ""}">
-            <button class="image-nav previous card-previous" type="button" aria-label="Førre bilete">&#8592;</button>
-            <img class="card-image" src="${previewImage}" alt="${product.name}" loading="lazy" />
-            <button class="image-nav next card-next" type="button" aria-label="Neste bilete">&#8594;</button>
-          </div>
+          ${mediaHtml}
           <div class="card-body">
             <h3>${product.name}</h3>
             <p class="desc">${product.description || ""}</p>
-            <p class="price">Pris: ${product.priceNok ?? "?"} kr</p>
             <div class="card-actions">
               ${hasStl ? '<button type="button" class="btn-warn">Sjå i 3D</button>' : ""}
               <button type="button" class="btn-ghost">Vis produkt</button>
@@ -712,13 +735,15 @@
 
         let cardImageIndex = 0;
         const cardImageEl = card.querySelector(".card-image");
-        const showCardImage = (step) => {
-          cardImageIndex = (cardImageIndex + step + images.length) % images.length;
-          cardImageEl.src = images[cardImageIndex];
-        };
+        if (cardImageEl) {
+          const showCardImage = (step) => {
+            cardImageIndex = (cardImageIndex + step + images.length) % images.length;
+            cardImageEl.src = images[cardImageIndex];
+          };
 
-        card.querySelector(".card-previous").addEventListener("click", () => showCardImage(-1));
-        card.querySelector(".card-next").addEventListener("click", () => showCardImage(1));
+          card.querySelector(".card-previous").addEventListener("click", () => showCardImage(-1));
+          card.querySelector(".card-next").addEventListener("click", () => showCardImage(1));
+        }
 
         card.querySelectorAll(".card-actions button").forEach((actionBtn) => {
           actionBtn.addEventListener("click", () => openModal(product));
@@ -731,26 +756,35 @@
     function openModal(product) {
       modalTitleEl.textContent = product.name;
       modalDescEl.textContent = product.description || "";
-      modalPriceEl.textContent = `Pris: ${product.priceNok ?? "?"} kr`;
 
       modalImages = product.images || [];
       modalImageIndex = 0;
       modalImageStageEl.classList.toggle("has-navigation", modalImages.length > 1);
-      modalMainImageEl.src = modalImages[modalImageIndex] || "";
-      modalMainImageEl.alt = product.name;
       modalThumbsEl.innerHTML = "";
+      if (modalImages.length > 0) {
+        modalNoImageEl.hidden = true;
+        modalImageStageEl.hidden = false;
+        modalMainImageEl.src = modalImages[modalImageIndex];
+        modalMainImageEl.alt = product.name;
 
-      modalImages.forEach((imagePath, index) => {
-        const thumbBtn = document.createElement("button");
-        thumbBtn.type = "button";
-        thumbBtn.title = `Bilete ${index + 1}`;
-        thumbBtn.innerHTML = `<img src="${imagePath}" alt="${product.name} - ${index + 1}" />`;
-        thumbBtn.addEventListener("click", () => {
-          modalImageIndex = index;
-          modalMainImageEl.src = modalImages[modalImageIndex];
+        modalImages.forEach((imagePath, index) => {
+          const thumbBtn = document.createElement("button");
+          thumbBtn.type = "button";
+          thumbBtn.title = `Bilete ${index + 1}`;
+          thumbBtn.innerHTML = `<img src="${imagePath}" alt="${product.name} - ${index + 1}" />`;
+          thumbBtn.addEventListener("click", () => {
+            modalImageIndex = index;
+            modalMainImageEl.src = modalImages[modalImageIndex];
+          });
+          modalThumbsEl.appendChild(thumbBtn);
         });
-        modalThumbsEl.appendChild(thumbBtn);
-      });
+      } else {
+        modalImageStageEl.hidden = true;
+        modalNoImageEl.hidden = false;
+        modalNoImageEl.textContent = product.stl?.file
+          ? "Ingen bilete er tilgjengelege. STL-modellen er vist til høgre."
+          : "Ingen bilete eller STL-modell er registrert for dette produktet.";
+      }
 
       modalEl.showModal();
       if (product.stl && product.stl.file) {

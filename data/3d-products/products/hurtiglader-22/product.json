@@ -1,0 +1,17 @@
+{
+  "id": "hurtiglader-22",
+  "slug": "hurtiglader-22",
+  "name": "Hurtiglader 22",
+  "description": "\"Hurtiglader\" for 22-kaliber. Gjer det enklare for små fingre å lade magasin.",
+  "priceNok": 50,
+  "category": "skyting",
+  "tags": [
+    "magasin"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/hurtiglader-22/models/Hurtiglader 22.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

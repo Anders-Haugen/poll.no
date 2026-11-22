@@ -1,0 +1,17 @@
+{
+  "id": "kinnstøtteforhøgar",
+  "slug": "kinnstøtteforhøgar",
+  "name": "Kinnstøtteforhøgar",
+  "description": "Forhøgar kinnstøtta på rifla for betre kontakt. Ooooog for kulare farge :).",
+  "priceNok": 50,
+  "category": "skyting",
+  "tags": [
+    "skyt-med-stil"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/kinnstøtteforhøgar/models/kinnstøtteforhøgar-Flat.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

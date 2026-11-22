@@ -1,0 +1,15 @@
+{
+  "id": "framsiktebeskyttar",
+  "slug": "framsiktebeskyttar",
+  "name": "Framsiktebeskyttar",
+  "description": "Beskytt framsiktet for støv og skader. Praktisk om du har stopperkorn, eller forstørring.",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/framsiktebeskyttar/models/Framsiktebeskyttar.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

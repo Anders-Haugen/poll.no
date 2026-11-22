@@ -17,6 +17,7 @@
     <a href="index.html">Framsida</a>
     <a href="norgestoppen2.html" class="aktiv" aria-current="page">Norgestoppen2</a>
     <a href="1vs1.html">1 mot 1</a>
+    <a href="3d-dingser.html">3D-dingser</a>
     <a href="hardetvorteskote350påls.html">350 i klasse 3-5?</a>
     <a href="memes.html">Memes</a>
   </nav>
@@ -29,7 +30,22 @@
       <button id="refresh" type="button">Hent oppdatert liste</button>
     </div>
     <form id="filters" class="resultat-filter">
-      <label>Øving
+      <label>Liste
+        <select id="mode">
+          <option value="points">Poeng</option>
+          <option value="money">Premiepengar</option>
+          <option value="medals">Medaljar totalt</option>
+          <option value="gold">Gylte medaljar</option>
+        </select>
+      </label>
+      <div id="hourly-filter" class="cash-hourly-filter" hidden>
+        <label for="hourly"><input id="hourly" type="checkbox" /> Timesbetaling</label>
+        <details class="cash-hourly-help">
+          <summary title="Rekna med 40 minutt jobb/skytetid per stevne.">?</summary>
+          <p>Timesbetaling er premiepengar delt på 40 minutt jobb/skytetid per stevne. Viser kroner per time (kr/h). Det er ikkje lønna matpause. Reisetid blir ikkje kompensert.</p>
+        </details>
+      </div>
+      <label id="exercise-filter">Øving
         <select id="exercise"><option value="main">Hovud &middot; 25 skot</option><option value="final">Finale &middot; 35 skot</option></select>
       </label>
       <label>Klasse
@@ -41,7 +57,7 @@
       <label id="samlag-filter" hidden>Skyttersamlag
         <select id="samlag"><option value="">Alle skyttersamlag</option></select>
       </label>
-      <label>Beste resultat per skyttar
+      <label id="count-filter">Beste resultat per skyttar
         <select id="count"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
       </label>
       <label>Frå dato
@@ -64,7 +80,7 @@
     <div class="resultat-scroll" tabindex="0" role="region" aria-label="Rangert resultatliste">
       <table class="resultat-tabell">
         <caption class="sr-only">Norgestoppen2: innandørsresultat sortert etter poeng og innertreff</caption>
-        <thead><tr><th scope="col">Plass</th><th scope="col">Skyttar</th><th scope="col">Klasse</th><th scope="col">Skytterlag</th><th scope="col">Stevne</th><th scope="col" id="score-heading">Sum</th><th scope="col">Innertreff</th></tr></thead>
+        <thead><tr><th scope="col">Plass</th><th scope="col">Skyttar</th><th scope="col">Klasse</th><th scope="col">Skytterlag</th><th scope="col">Stevne</th><th scope="col" id="score-heading">Sum</th><th scope="col" id="inner-heading">Innertreff</th></tr></thead>
         <tbody id="results"></tbody>
       </table>
     </div>

@@ -1,0 +1,15 @@
+{
+  "id": "løpvektsholder",
+  "slug": "løpvektsholder",
+  "name": "Løpvektsholder",
+  "description": "Holder for løpvekter på rifla for å få same tyngdepunkt på 0.22- som 6,5-kaliber.",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/løpvektsholder/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

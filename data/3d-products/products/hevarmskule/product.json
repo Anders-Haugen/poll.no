@@ -1,0 +1,19 @@
+{
+  "id": "hevarmskule",
+  "slug": "hevarmskule",
+  "name": "Hevarmskule",
+  "description": "Hevarmskule for sluttstykke. Kan lagast glatt, i strikkamønster eller anna ru overslate for meir grep.",
+  "priceNok": 50,
+  "category": "skyting",
+  "tags": [
+    "sluttstykke",
+    "strikking",
+    "skyt-med-stil"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/hevarmskule/models/Hevarmskule 28mm.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}

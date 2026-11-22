@@ -91,19 +91,19 @@ def main() -> int:
         raise FileNotFoundError(f"Missing index file: {INDEX_PATH}")
 
     index_data = read_json(INDEX_PATH)
-    products = index_data.get("products", [])
+    products_dir = ROOT / "data" / "3d-products" / "products"
+    product_paths = sorted(
+        (path for path in products_dir.iterdir() if path.is_dir()),
+        key=lambda path: path.name.lower(),
+    )
 
     updated_count = 0
     summary_lines: list[str] = []
 
-    for entry in products:
-        meta = entry.get("meta")
-        if not meta:
-            continue
-
-        product_path = ROOT / Path(meta)
+    for product_dir in product_paths:
+        product_path = product_dir / "product.json"
         if not product_path.exists():
-            summary_lines.append(f"- SKIP {meta} (missing)")
+            summary_lines.append(f"- SKIP {product_dir.name} (missing product.json)")
             continue
 
         before = read_json(product_path)
@@ -116,9 +116,17 @@ def main() -> int:
 
         status = "UPDATED" if changed else "OK"
         summary_lines.append(
-            f"- {status} {meta} | images={image_count} | stl={'yes' if has_stl else 'no'}"
+            f"- {status} {to_posix_relative(product_path)} | images={image_count} | stl={'yes' if has_stl else 'no'}"
         )
 
+    index_data["products"] = [
+        {
+            "id": read_json(product_dir / "product.json").get("id", product_dir.name),
+            "meta": to_posix_relative(product_dir / "product.json"),
+        }
+        for product_dir in product_paths
+        if (product_dir / "product.json").exists()
+    ]
     index_data["updatedAt"] = date.today().isoformat()
     write_json(INDEX_PATH, index_data)
 

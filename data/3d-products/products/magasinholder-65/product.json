@@ -1,0 +1,17 @@
+{
+  "id": "magasinholder-65",
+  "slug": "magasinholder-65",
+  "name": "Magasinholder 6,5",
+  "description": "Holder for 6,5-kaliber magasiner. Valgfri størrelse.",
+  "priceNok": 200,
+  "category": "skyting",
+  "tags": [
+    "magasin"
+  ],
+  "images": [],
+  "stl": {
+    "file": "data/3d-products/products/magasinholder-65/models/10x magasinboks 6_5.stl",
+    "units": "mm"
+  },
+  "status": "active"
+}
