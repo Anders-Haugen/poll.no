@@ -381,8 +381,13 @@
       border: 1px solid #e0e0e0;
       background: linear-gradient(135deg, #edf3f7, #dce7ef);
       color: #31526b;
-      font-weight: 800;
-      text-align: center;
+      cursor: pointer;
+    }
+
+    .card-stl-fallback::before {
+      content: "◇";
+      font-size: 4rem;
+      line-height: 1;
     }
 
     .modal-no-image {
@@ -611,7 +616,9 @@
           return autoFillAssets(product, entry.meta);
         });
 
-        state.products = (await Promise.all(productPromises)).filter((product) => product.status !== "hidden");
+        state.products = (await Promise.all(productPromises)).filter((product) =>
+          !["hidden", "inactive"].includes(product.status)
+        );
         statusEl.textContent = `${state.products.length} produkt lasta inn.`;
         buildFilterChips();
         renderProducts();
@@ -718,8 +725,8 @@
             </div>
           `
           : hasStl
-            ? '<div class="card-image-stage card-stl-fallback">Ingen bilete — vis STL-modell i 3D</div>'
-            : '<div class="card-image-stage card-stl-fallback">Ingen bilete eller STL-modell</div>';
+            ? '<button type="button" class="card-image-stage card-stl-fallback" aria-label="Sjå STL-modell i 3D"></button>'
+            : '<div class="card-image-stage"></div>';
 
         card.innerHTML = `
           ${mediaHtml}
@@ -748,6 +755,7 @@
         card.querySelectorAll(".card-actions button").forEach((actionBtn) => {
           actionBtn.addEventListener("click", () => openModal(product));
         });
+        card.querySelector(".card-stl-fallback")?.addEventListener("click", () => openModal(product));
 
         productsEl.appendChild(card);
       });
@@ -780,10 +788,8 @@
         });
       } else {
         modalImageStageEl.hidden = true;
-        modalNoImageEl.hidden = false;
-        modalNoImageEl.textContent = product.stl?.file
-          ? "Ingen bilete er tilgjengelege. STL-modellen er vist til høgre."
-          : "Ingen bilete eller STL-modell er registrert for dette produktet.";
+        modalNoImageEl.hidden = true;
+        modalNoImageEl.textContent = "";
       }
 
       modalEl.showModal();
