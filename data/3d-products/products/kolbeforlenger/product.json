@@ -5,14 +5,18 @@
   "description": "Forlenger kolba. 8 mm er standard, men kan lagast i andre tjukkelsar.",
   "priceNok": 50,
   "category": "skyting",
-  "tags": ["skyt-med-stil", "tilpassing"],
+  "tags": [
+    "skyt-med-stil",
+    "tilpassing"
+  ],
   "images": [
     "data/3d-products/products/kolbeforlenger/images/rosa.JPG",
     "data/3d-products/products/kolbeforlenger/images/svart.JPG"
   ],
   "stl": {
     "file": "",
-    "units": "mm"
+    "units": "mm",
+    "files": []
   },
   "status": "active"
 }

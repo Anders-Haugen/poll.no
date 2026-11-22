@@ -476,7 +476,10 @@
       <article class="viewer">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;">
           <h3 style="margin:0;">3D-modell (STL)</h3>
-          <div style="display:flex;gap:0.4rem;">
+          <div style="display:flex;gap:0.4rem;align-items:center;">
+            <button id="previous-stl" class="btn-ghost" type="button" aria-label="Førre STL-variant" hidden>&#8592;</button>
+            <span id="stl-label" class="status" hidden></span>
+            <button id="next-stl" class="btn-ghost" type="button" aria-label="Neste STL-variant" hidden>&#8594;</button>
             <button id="close-modal" class="btn-ghost" type="button">Lukk</button>
           </div>
         </div>
@@ -519,9 +522,14 @@
     const nextImageEl = window.document.getElementById("next-image");
     const stlCanvasEl = window.document.getElementById("stl-canvas");
     const stlStatusEl = window.document.getElementById("stl-status");
+    const previousStlEl = window.document.getElementById("previous-stl");
+    const nextStlEl = window.document.getElementById("next-stl");
+    const stlLabelEl = window.document.getElementById("stl-label");
 
     let modalImages = [];
     let modalImageIndex = 0;
+    let modalStlFiles = [];
+    let modalStlIndex = 0;
 
     const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"];
 
@@ -568,6 +576,7 @@
         images: [...(product.images || [])],
         stl: {
           file: product.stl?.file || "",
+          files: [...(product.stl?.files || [])],
           units: product.stl?.units || "mm"
         }
       };
@@ -583,13 +592,12 @@
         .map((fileName) => `${baseDir}images/${fileName}`);
       result.images = [...new Set([...result.images, ...discoveredImages])];
 
-      if (!result.stl.file) {
-        const modelFiles = await listDirectoryFiles(`${baseDir}models/`);
-        const stlFile = modelFiles.find((fileName) => fileName.toLowerCase().endsWith(".stl"));
-        if (stlFile) {
-          result.stl.file = `${baseDir}models/${stlFile}`;
-        }
-      }
+      const modelFiles = await listDirectoryFiles(`${baseDir}models/`);
+      const discoveredStls = modelFiles
+        .filter((fileName) => fileName.toLowerCase().endsWith(".stl"))
+        .map((fileName) => `${baseDir}models/${fileName}`);
+      result.stl.files = [...new Set([...result.stl.files, ...discoveredStls])];
+      if (!result.stl.file) result.stl.file = result.stl.files[0] || "";
 
       return result;
     }
@@ -711,7 +719,8 @@
 
         const images = product.images || [];
         const previewImage = images[0] || "";
-        const hasStl = Boolean(product.stl && product.stl.file);
+        const stlFiles = product.stl?.files?.length ? product.stl.files : (product.stl?.file ? [product.stl.file] : []);
+        const hasStl = stlFiles.length > 0;
         const mediaHtml = previewImage
           ? `
             <div class="card-image-stage${images.length > 1 ? " has-navigation" : ""}">
@@ -800,8 +809,14 @@
       }
 
       modalEl.showModal();
-      if (product.stl && product.stl.file) {
-        loadStl(product.stl && product.stl.file ? product.stl.file : "");
+      modalStlFiles = product.stl?.files?.length
+        ? product.stl.files
+        : (product.stl?.file ? [product.stl.file] : []);
+      const selectedStl = product.stl?.file;
+      modalStlIndex = Math.max(0, modalStlFiles.indexOf(selectedStl));
+      updateStlControls();
+      if (modalStlFiles.length > 0) {
+        loadStl(modalStlFiles[modalStlIndex]);
       } else {
         teardownStlViewer();
         stlStatusEl.textContent = "Dette produktet manglar STL-fil.";
@@ -820,6 +835,30 @@
 
     previousImageEl.addEventListener("click", () => showAdjacentImage(-1));
     nextImageEl.addEventListener("click", () => showAdjacentImage(1));
+
+    function stlFileLabel(stlPath) {
+      return decodeURIComponent(stlPath.split("/").pop() || "STL").replace(/\.stl$/i, "").replace(/_/g, " ");
+    }
+
+    function updateStlControls() {
+      const multiple = modalStlFiles.length > 1;
+      previousStlEl.hidden = !multiple;
+      nextStlEl.hidden = !multiple;
+      stlLabelEl.hidden = !multiple;
+      if (multiple) {
+        stlLabelEl.textContent = `${modalStlIndex + 1}/${modalStlFiles.length} · ${stlFileLabel(modalStlFiles[modalStlIndex])}`;
+      }
+    }
+
+    function showAdjacentStl(step) {
+      if (modalStlFiles.length < 2) return;
+      modalStlIndex = (modalStlIndex + step + modalStlFiles.length) % modalStlFiles.length;
+      updateStlControls();
+      loadStl(modalStlFiles[modalStlIndex]);
+    }
+
+    previousStlEl.addEventListener("click", () => showAdjacentStl(-1));
+    nextStlEl.addEventListener("click", () => showAdjacentStl(1));
 
     function renderCardStl(container, stlFilePath) {
       if (!container || !stlFilePath || !window.THREE || !THREE.STLLoader) {

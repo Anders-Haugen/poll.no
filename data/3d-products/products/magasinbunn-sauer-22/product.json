@@ -12,7 +12,11 @@
   "images": [],
   "stl": {
     "file": "data/3d-products/products/magasinbunn-sauer-22/models/Sauer_22_magasinbunn.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/magasinbunn-sauer-22/models/Sauer_22_magasinbunn.stl",
+      "data/3d-products/products/magasinbunn-sauer-22/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl"
+    ]
   },
   "status": "active"
 }

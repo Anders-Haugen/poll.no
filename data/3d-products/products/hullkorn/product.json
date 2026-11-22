@@ -13,7 +13,30 @@
   ],
   "stl": {
     "file": "data/3d-products/products/hullkorn/models/down_under.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/hullkorn/models/down_under.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn antifokus.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn dobbel.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn elg 2.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn finger.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn fokus ish.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn fokus.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn her.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn hjerte ø2 t1_5.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn kikkert.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn opp og nede.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn oval.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn p.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn person.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn skiskyting.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn skrå.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn stripe liggande.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn stripe ståande.stl",
+      "data/3d-products/products/hullkorn/models/Hullkorn tre.stl",
+      "data/3d-products/products/hullkorn/models/hullkorn_ol.stl",
+      "data/3d-products/products/hullkorn/models/hullkorn_rock.stl"
+    ]
   },
   "status": "active"
 }

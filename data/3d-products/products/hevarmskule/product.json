@@ -15,7 +15,11 @@
   ],
   "stl": {
     "file": "data/3d-products/products/hevarmskule/models/Hevarmskule 28mm.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/hevarmskule/models/Hevarmskule 28mm.stl",
+      "data/3d-products/products/hevarmskule/models/Hevarmskule 28mm_Knitting_amp0p70.stl"
+    ]
   },
   "status": "active"
 }

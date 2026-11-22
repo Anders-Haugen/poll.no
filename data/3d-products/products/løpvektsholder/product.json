@@ -9,7 +9,11 @@
   "images": [],
   "stl": {
     "file": "data/3d-products/products/løpvektsholder/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/løpvektsholder/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl",
+      "data/3d-products/products/løpvektsholder/models/Vektholder Sauer 22 V2.stl"
+    ]
   },
   "status": "active"
 }

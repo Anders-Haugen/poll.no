@@ -56,19 +56,24 @@ def sync_product(product_path: Path) -> tuple[int, bool]:
         changed = True
 
     models_dir = product_dir / "models"
-    stl_file = ""
+    stl_paths: list[str] = []
     if models_dir.exists() and models_dir.is_dir():
         stl_candidates = [
             file_path
             for file_path in sorted(models_dir.iterdir(), key=lambda p: p.name.lower())
-            if file_path.is_file() and file_path.suffix.lower() == ".stl"
+            if file_path.is_file() and file_path.suffix.lower() in {".stl", ".stl"}
         ]
-        if stl_candidates:
-            stl_file = to_posix_relative(stl_candidates[0])
+        stl_paths = [to_posix_relative(file_path) for file_path in stl_candidates]
+
+    stl_file = stl_paths[0] if stl_paths else ""
 
     stl = product.get("stl")
     if not isinstance(stl, dict):
         stl = {}
+
+    if stl.get("files") != stl_paths:
+        stl["files"] = stl_paths
+        changed = True
 
     if stl.get("file") != stl_file:
         stl["file"] = stl_file

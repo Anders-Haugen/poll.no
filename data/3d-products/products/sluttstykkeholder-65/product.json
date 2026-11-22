@@ -5,13 +5,18 @@
   "description": "Holder for å spenne ned og beskytte sluttstykket.",
   "priceNok": 200,
   "category": "skyting",
-  "tags": ["sluttstykke"],
+  "tags": [
+    "sluttstykke"
+  ],
   "images": [
     "data/3d-products/products/sluttstykkeholder-65/images/sluttstykkerør_65_gul.JPG"
   ],
   "stl": {
     "file": "data/3d-products/products/sluttstykkeholder-65/models/Sluttstykkerør_6_5_uten_navn.STL",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/sluttstykkeholder-65/models/Sluttstykkerør_6_5_uten_navn.STL"
+    ]
   },
   "status": "active"
 }

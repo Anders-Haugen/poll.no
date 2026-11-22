@@ -17,7 +17,10 @@
   ],
   "stl": {
     "file": "data/3d-products/products/magasinbunn-engbo-22/models/Magasin_bunn_utan_navn.STL",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/magasinbunn-engbo-22/models/Magasin_bunn_utan_navn.STL"
+    ]
   },
   "status": "active"
 }

@@ -11,7 +11,10 @@
   ],
   "stl": {
     "file": "data/3d-products/products/framsiktebeskyttar/models/Framsiktebeskyttar.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/framsiktebeskyttar/models/Framsiktebeskyttar.stl"
+    ]
   },
   "status": "active"
 }

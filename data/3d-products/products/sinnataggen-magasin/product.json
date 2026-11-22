@@ -9,7 +9,11 @@
   "images": [],
   "stl": {
     "file": "data/3d-products/products/sinnataggen-magasin/models/Rage-magasin.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/sinnataggen-magasin/models/Rage-magasin.stl",
+      "data/3d-products/products/sinnataggen-magasin/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl"
+    ]
   },
   "status": "active"
 }

@@ -11,7 +11,12 @@
   "images": [],
   "stl": {
     "file": "data/3d-products/products/kinnstøtteforhøgar/models/kinnstøtteforhøgar-Flat.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/kinnstøtteforhøgar/models/kinnstøtteforhøgar-Flat.stl",
+      "data/3d-products/products/kinnstøtteforhøgar/models/kinnstøtteforhøgar-Skrå.stl",
+      "data/3d-products/products/kinnstøtteforhøgar/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl"
+    ]
   },
   "status": "active"
 }

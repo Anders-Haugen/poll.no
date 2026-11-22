@@ -13,7 +13,10 @@
   ],
   "stl": {
     "file": "data/3d-products/products/sluttstykkeholder-22/models/Sluttstykkerør_22_utan_navn.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/sluttstykkeholder-22/models/Sluttstykkerør_22_utan_navn.stl"
+    ]
   },
   "status": "active"
 }

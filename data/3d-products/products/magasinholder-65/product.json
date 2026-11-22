@@ -11,7 +11,11 @@
   "images": [],
   "stl": {
     "file": "data/3d-products/products/magasinholder-65/models/10x magasinboks 6_5.stl",
-    "units": "mm"
+    "units": "mm",
+    "files": [
+      "data/3d-products/products/magasinholder-65/models/10x magasinboks 6_5.stl",
+      "data/3d-products/products/magasinholder-65/models/skuddboks_5x12_tgrid1_2tvegg2_0.stl"
+    ]
   },
   "status": "active"
 }
