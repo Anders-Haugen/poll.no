@@ -502,22 +502,22 @@
       animationFrame: null
     };
 
-    const statusEl = document.getElementById("load-status");
-    const productsEl = document.getElementById("products");
-    const categoryChipsEl = document.getElementById("category-chips");
-    const tagChipsEl = document.getElementById("tag-chips");
-    const resetFiltersEl = document.getElementById("reset-filters");
-    const modalEl = document.getElementById("product-modal");
-    const modalTitleEl = document.getElementById("modal-title");
-    const modalDescEl = document.getElementById("modal-desc");
-    const modalNoImageEl = document.getElementByById("modal-no-image");
-    const modalMainImageEl = document.getElementById("modal-main-image");
-    const modalThumbsEl = document.getElementById("modal-thumbs");
-    const modalImageStageEl = document.getElementById("modal-image-stage");
-    const previousImageEl = document.getElementById("previous-image");
-    const nextImageEl = document.getElementById("next-image");
-    const stlCanvasEl = document.getElementById("stl-canvas");
-    const stlStatusEl = document.getElementById("stl-status");
+    const statusEl = window.document.getElementById("load-status");
+    const productsEl = window.document.getElementById("products");
+    const categoryChipsEl = window.document.getElementById("category-chips");
+    const tagChipsEl = window.document.getElementById("tag-chips");
+    const resetFiltersEl = window.document.getElementById("reset-filters");
+    const modalEl = window.document.getElementById("product-modal");
+    const modalTitleEl = window.document.getElementById("modal-title");
+    const modalDescEl = window.document.getElementById("modal-desc");
+    const modalNoImageEl = window.document.getElementById("modal-no-image");
+    const modalMainImageEl = window.document.getElementById("modal-main-image");
+    const modalThumbsEl = window.document.getElementById("modal-thumbs");
+    const modalImageStageEl = window.document.getElementById("modal-image-stage");
+    const previousImageEl = window.document.getElementById("previous-image");
+    const nextImageEl = window.document.getElementById("next-image");
+    const stlCanvasEl = window.document.getElementById("stl-canvas");
+    const stlStatusEl = window.document.getElementById("stl-status");
 
     let modalImages = [];
     let modalImageIndex = 0;
@@ -644,7 +644,7 @@
       tagChipsEl.innerHTML = "";
 
       categories.forEach((category) => {
-        const chip = document.createElement("button");
+        const chip = window.document.createElement("button");
         chip.type = "button";
         chip.className = `chip ${state.selectedCategory === category ? "active" : ""}`;
         chip.textContent = category === "all" ? "Alle" : formatFilterLabel(category);
@@ -657,7 +657,7 @@
       });
 
       tags.forEach((tag) => {
-        const chip = document.createElement("button");
+        const chip = window.document.createElement("button");
         chip.type = "button";
         chip.className = `chip ${state.selectedTags.includes(tag) ? "active" : ""}`;
         chip.textContent = formatFilterLabel(tag);
@@ -695,7 +695,7 @@
       productsEl.innerHTML = "";
 
       if (products.length === 0) {
-        const empty = document.createElement("p");
+        const empty = window.document.createElement("p");
         empty.className = "status";
         empty.textContent = "Ingen produkt treff vala filter akkurat no.";
         productsEl.appendChild(empty);
@@ -703,7 +703,7 @@
       }
 
       products.forEach((product) => {
-        const card = document.createElement("article");
+        const card = window.document.createElement("article");
         card.className = "card";
 
         const images = product.images || [];
@@ -768,7 +768,7 @@
         modalMainImageEl.alt = product.name;
 
         modalImages.forEach((imagePath, index) => {
-          const thumbBtn = document.createElement("button");
+          const thumbBtn = window.document.createElement("button");
           thumbBtn.type = "button";
           thumbBtn.title = `Bilete ${index + 1}`;
           thumbBtn.innerHTML = `<img src="${imagePath}" alt="${product.name} - ${index + 1}" />`;
@@ -938,7 +938,7 @@
       state.animationFrame = null;
     }
 
-    document.getElementById("close-modal").addEventListener("click", () => {
+    window.document.getElementById("close-modal").addEventListener("click", () => {
       modalEl.close();
       teardownStlViewer();
       stlStatusEl.textContent = "Lukka. Opne eit produkt for ny visning.";
