@@ -10,7 +10,9 @@
     "strikking",
     "skyt-med-stil"
   ],
-  "images": [],
+  "images": [
+    "data/3d-products/products/hevarmskule/images/strikka_hevarmskule_render.png"
+  ],
   "stl": {
     "file": "data/3d-products/products/hevarmskule/models/Hevarmskule 28mm.stl",
     "units": "mm"
