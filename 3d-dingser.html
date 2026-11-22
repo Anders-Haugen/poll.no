@@ -376,19 +376,14 @@
 
     .card-stl-fallback {
       min-height: 240px;
-      display: grid;
-      place-items: center;
       border: 1px solid #e0e0e0;
       background: linear-gradient(135deg, #edf3f7, #dce7ef);
-      color: #31526b;
       cursor: pointer;
+      overflow: hidden;
     }
 
-    .card-stl-fallback::before {
-      content: "◇";
-      font-size: 4rem;
-      line-height: 1;
-    }
+    .card-stl-canvas { width: 100%; height: 240px; }
+    .card-stl-canvas canvas { width: 100%; height: 240px; display: block; }
 
     .modal-no-image {
       min-height: 280px;
@@ -725,7 +720,7 @@
             </div>
           `
           : hasStl
-            ? '<button type="button" class="card-image-stage card-stl-fallback" aria-label="Sjå STL-modell i 3D"></button>'
+            ? '<div class="card-image-stage card-stl-fallback" role="button" tabindex="0" aria-label="Sjå STL-modell i 3D"><div class="card-stl-canvas"></div></div>'
             : '<div class="card-image-stage"></div>';
 
         card.innerHTML = `
@@ -755,7 +750,18 @@
         card.querySelectorAll(".card-actions button").forEach((actionBtn) => {
           actionBtn.addEventListener("click", () => openModal(product));
         });
-        card.querySelector(".card-stl-fallback")?.addEventListener("click", () => openModal(product));
+        const cardStlFallback = card.querySelector(".card-stl-fallback");
+        if (cardStlFallback) {
+          const openCardModal = () => openModal(product);
+          cardStlFallback.addEventListener("click", openCardModal);
+          cardStlFallback.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openCardModal();
+            }
+          });
+          renderCardStl(cardStlFallback.querySelector(".card-stl-canvas"), product.stl.file);
+        }
 
         productsEl.appendChild(card);
       });
@@ -813,6 +819,55 @@
 
     previousImageEl.addEventListener("click", () => showAdjacentImage(-1));
     nextImageEl.addEventListener("click", () => showAdjacentImage(1));
+
+    function renderCardStl(container, stlFilePath) {
+      if (!container || !stlFilePath || !window.THREE || !THREE.STLLoader) {
+        return;
+      }
+
+      const width = container.clientWidth || 300;
+      const height = 240;
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xf0f5fb);
+
+      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 5000);
+      camera.position.set(80, 80, 120);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      scene.add(new THREE.AmbientLight(0xffffff, 1.3));
+      const key = new THREE.DirectionalLight(0xffffff, 1);
+      key.position.set(60, 100, 40);
+      scene.add(key);
+
+      new THREE.STLLoader().load(
+        stlFilePath,
+        (geometry) => {
+          geometry.center();
+          const material = new THREE.MeshStandardMaterial({
+            color: 0x1f6fa8,
+            metalness: 0.16,
+            roughness: 0.54
+          });
+          const mesh = new THREE.Mesh(geometry, material);
+          scene.add(mesh);
+
+          const box = new THREE.Box3().setFromObject(mesh);
+          const size = box.getSize(new THREE.Vector3());
+          const fit = Math.max(size.x, size.y, size.z, 1);
+          camera.position.set(fit * 0.75, fit * 0.65, fit * 1.05);
+          camera.lookAt(0, 0, 0);
+          renderer.render(scene, camera);
+        },
+        undefined,
+        () => {
+          container.textContent = "";
+        }
+      );
+    }
 
     function setupStlViewer() {
       teardownStlViewer();
